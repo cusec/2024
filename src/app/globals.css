@@ -1,14 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 :root {
-  --gradient-colors: linear-gradient(135deg, #AC65E3 0%, #E38AB6 45%, #FFB963 90%);
+  --gradient-colors: linear-gradient(
+    135deg,
+    #ac65e3 0%,
+    #e38ab6 45%,
+    #ffb963 90%
+  );
+  --square-size: .1vw;
 }
+
+/* #46529800 calc(95 * var(--square-size)) */
 
 html {
   height: 100%;
-  background: var(--gradient-colors);
+
+  background: var(--gradient-colors),
+    repeating-linear-gradient(
+      to right,
+      white,
+      white 1px,
+      #46529800 1px,
+      #46529800 clamp(80px,calc(95 * var(--square-size)),93px)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      white,
+      white 1px,
+      #46529800 1px,
+      /* #46529800 calc(95 * var(--square-size)) */
+      #46529800 clamp(80px,calc(95 * var(--square-size)),93px)
+    );
+
+  background-blend-mode: overlay;
+
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-size: 28px; */
 }
 
 /* :root {
