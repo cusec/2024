@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 :root {
+  --gradient-colors: linear-gradient(135deg, #AC65E3 0%, #E38AB6 45%, #FFB963 90%);
+}
+
+html {
+  height: 100%;
+  background: var(--gradient-colors);
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +33,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
