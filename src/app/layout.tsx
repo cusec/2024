@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'CUSEC 2024',
-  description: 'Made with 💖 by the CUSEC Team',
+  description: 'Official website for the 2024 edition of the Canadian University Software Engineering Conference.',
 }
 
 export default function RootLayout({
