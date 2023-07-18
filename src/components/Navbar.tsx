@@ -7,6 +7,7 @@ import logo from "../assets/logo.svg";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const [active, setActive] = useState("nav_menu");
   const [toggleIcon, setToggleIcon] = useState("nav_toggler");
   const navToggle = () => {
@@ -40,32 +41,31 @@ export default function Navbar() {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 href="/"
-                className="rounded-md text-sm font-medium px-3 py-2 text-gray-300 bg-clip-text hover:text-transparent hover:bg-gradient-to-r   
-            from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-linear duration-300"
+                className="rounded-md text-sm font-medium px-3 py-2 text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="rounded-md text-sm font-medium px-3 py-2 text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 About Us
               </Link>
               <Link
                 href="/event"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="rounded-md text-sm font-medium px-3 py-2 text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 Event Details
               </Link>
               <Link
                 href="/faq"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="rounded-md text-sm font-medium px-3 py-2 text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 FAQ
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="rounded-md text-sm font-medium px-3 py-2 text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 Contact
               </Link>
