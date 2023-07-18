@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <nav className="bg-black/80">
       {/* Desktop Navbar */}
-      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-24 uppercase">
+      <div className="max-w-full mx-auto px-6 lg:px-24 uppercase">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
@@ -126,7 +126,7 @@ export default function Navbar() {
           }`
         }
       >
-        <div className="flex flex-col mx-6 sm:ml-7 mt-24 space-y-10 uppercase">
+        <div className="flex flex-col mx-6 ml-6 mt-24 space-y-10 uppercase">
           <Link
             href="/"
             className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500"
