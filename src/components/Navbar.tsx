@@ -25,6 +25,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-black/80">
+          {/* Desktop Navbar */}
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-24 uppercase">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
@@ -36,7 +37,6 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Desktop Navbar */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
@@ -97,7 +97,7 @@ export default function Navbar() {
               </svg>
               {/* Close icon */}
               <svg
-                className={`${isMobileMenuOpen ? "block" : "hidden"} h-8 w-8 transition ease-in-out duration-500`}
+                className={`${isMobileMenuOpen ? "block" : "hidden"} h-8 w-8`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -122,39 +122,39 @@ export default function Navbar() {
         {
           // `transform top-0 right-0 mt-16 w-full fixed h-full bg-black/80 overflow-auto ease-in-out transition-all duration-300 z-30 ${isMobileMenuOpen ? "translate-y-0" : "translate-y-full"}`
           
-        `transform top-0 right-0 mt-16 w-full fixed h-full bg-black/80 overflow-auto ease-in-out transition-all duration-300 z-30 ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`
+        `transform top-0 right-0 mt-16 w-full fixed h-full bg-black/80 overflow-auto ease-in-out transition-all duration-700 z-30 ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`
 
         }
 
       >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 uppercase">
+        <div className="flex flex-col mx-6 sm:ml-7 mt-24 space-y-10 uppercase">
           <Link
             href="/"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500"
           >
             Home
           </Link>
           <Link
             href="/about"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500"
           >
             About Us
           </Link>
           <Link
             href="/event"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500"
           >
             Event Details
           </Link>
           <Link
             href="/faq"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500"
           >
             FAQ
           </Link>
           <Link
             href="/contact"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500"
           >
             Contact
           </Link>

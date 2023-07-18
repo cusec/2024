@@ -18,7 +18,10 @@ module.exports = {
         roseQuartz: '#E087BB',
         goldenApricot: '#FFB963',
         royalBlue: '#0569FF',
-      }
+      },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [
