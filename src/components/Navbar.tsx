@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-black/80">
-          {/* Desktop Navbar */}
+      {/* Desktop Navbar */}
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-24 uppercase">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
@@ -118,14 +118,13 @@ export default function Navbar() {
 
       {/* Mobile Navbar */}
       <div
-        className=
-        {
+        className={
           // `transform top-0 right-0 mt-16 w-full fixed h-full bg-black/80 overflow-auto ease-in-out transition-all duration-300 z-30 ${isMobileMenuOpen ? "translate-y-0" : "translate-y-full"}`
-          
-        `border-t border-stone-700 transform top-0 right-0 mt-16 w-full fixed h-full bg-black/80 overflow-auto ease-in-out transition-all duration-700 z-30 ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`
 
+          `border-t border-stone-700 transform top-0 right-0 mt-16 w-full fixed h-full bg-black/80 overflow-auto ease-in-out transition-all duration-700 z-30 ${
+            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`
         }
-
       >
         <div className="flex flex-col mx-6 sm:ml-7 mt-24 space-y-10 uppercase">
           <Link
