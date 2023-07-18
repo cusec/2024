@@ -6,11 +6,21 @@ import Image from "next/image";
 import logo from "../assets/logo.svg";
 
 export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // Funtionality to display event details children text
+  const [isEventDetailsClicked, setIsEventDetailsClicked] = useState(false);
+  const toggleEventDetails = () => {
+    setIsEventDetailsClicked(!isEventDetailsClicked);
+  };
 
+  // Functionality for hamburger icon
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    toggleEventDetails();
   };
+
+
+  // Close mobile menu when window is resized to desktop size
   useEffect(() => {
     const hideMenu = () => {
       if (window.innerWidth > 768 && isMobileMenuOpen) {
@@ -152,11 +162,13 @@ export default function Navbar() {
             About Us
           </Link>
           <Link
-            onClick={toggleMobileMenu}
-            href="/event"
-            className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
+            onClick={toggleEventDetails}
+            href="/"
+            className="flex text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
           >
-            Event Details
+            Event Details {isEventDetailsClicked ? 
+              " +"
+            : " -"}
           </Link>
           <Link
             onClick={toggleMobileMenu}

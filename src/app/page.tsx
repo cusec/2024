@@ -116,8 +116,8 @@ import Main from '../components/Main'
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <Main />
+      <Navbar/>
+      <Main/>
     </>
   )
 }
