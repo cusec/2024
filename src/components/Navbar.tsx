@@ -41,31 +41,31 @@ export default function Navbar() {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 href="/"
-                className="rounded-md text-sm font-medium px-3 py-2 text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
+                className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="rounded-md text-sm font-medium px-3 py-2 text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
+                className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 About Us
               </Link>
               <Link
                 href="/event"
-                className="rounded-md text-sm font-medium px-3 py-2 text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
+                className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 Event Details
               </Link>
               <Link
                 href="/faq"
-                className="rounded-md text-sm font-medium px-3 py-2 text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
+                className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 FAQ
               </Link>
               <Link
                 href="/contact"
-                className="rounded-md text-sm font-medium px-3 py-2 text-gray-300 bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
+                className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 Contact
               </Link>
@@ -76,12 +76,12 @@ export default function Navbar() {
           <div className="flex md:hidden">
             <button
               onClick={toggleMobileMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:scale-125 transition ease-in-out duration-500"
             >
               <span className="sr-only">Open mobile menu</span>
               {/* Hamburger icon */}
               <svg
-                className={`${isMobileMenuOpen ? "hidden" : "block"} h-6 w-6`}
+                className={`${isMobileMenuOpen ? "hidden" : "block"} h-8 w-8`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -97,7 +97,7 @@ export default function Navbar() {
               </svg>
               {/* Close icon */}
               <svg
-                className={`${isMobileMenuOpen ? "block" : "hidden"} h-6 w-6`}
+                className={`${isMobileMenuOpen ? "block" : "hidden"} h-8 w-8 transition ease-in-out duration-500`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -118,9 +118,14 @@ export default function Navbar() {
 
       {/* Mobile Navbar */}
       <div
-        className={`transform top-0 right-0 mt-16 w-64 fixed h-full bg-black/80 overflow-auto ease-in-out transition-all duration-300 z-30 ${
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className=
+        {
+          // `transform top-0 right-0 mt-16 w-full fixed h-full bg-black/80 overflow-auto ease-in-out transition-all duration-300 z-30 ${isMobileMenuOpen ? "translate-y-0" : "translate-y-full"}`
+          
+        `transform top-0 right-0 mt-16 w-full fixed h-full bg-black/80 overflow-auto ease-in-out transition-all duration-300 z-30 ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`
+
+        }
+
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 uppercase">
           <Link
