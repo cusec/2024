@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../assets/logo.svg";
+import triangle from "../assets/triangle.svg";
 
 export default function Navbar() {
   // Funtionality to display event details children text
@@ -16,9 +17,8 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    toggleEventDetails();
+    isEventDetailsClicked ? '' : toggleEventDetails();
   };
-
 
   // Close mobile menu when window is resized to desktop size
   useEffect(() => {
@@ -163,12 +163,12 @@ export default function Navbar() {
           </Link>
           <Link
             onClick={toggleEventDetails}
-            href="/"
+            href=""
             className="flex text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
           >
-            Event Details {isEventDetailsClicked ? 
-              " +"
-            : " -"}
+            Event Details
+          <span className="px-2"></span>
+              <Image src={triangle} alt="Triangle" width={20} height={20} className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 ${isEventDetailsClicked ? "":"rotate-180"}`} />
           </Link>
           <Link
             onClick={toggleMobileMenu}
