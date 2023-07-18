@@ -32,31 +32,31 @@ export default function Navbar() {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link
+              <Link 
                 href="/"
                 className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 Home
               </Link>
-              <Link
+              <Link 
                 href="/about"
                 className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 About Us
               </Link>
-              <Link
+              <Link  
                 href="/event"
                 className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 Event Details
               </Link>
-              <Link
+              <Link 
                 href="/faq"
                 className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 FAQ
               </Link>
-              <Link
+              <Link 
                 href="/contact"
                 className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
@@ -116,31 +116,31 @@ export default function Navbar() {
         }
       >
         <div className="flex flex-col mx-6 ml-6 mt-24 space-y-10 uppercase">
-          <Link
+          <Link onClick={toggleMobileMenu}
             href="/"
             className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500"
           >
             Home
           </Link>
-          <Link
+          <Link onClick={toggleMobileMenu}
             href="/about"
             className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500"
           >
             About Us
           </Link>
-          <Link
+          <Link onClick={toggleMobileMenu}
             href="/event"
             className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500"
           >
             Event Details
           </Link>
-          <Link
+          <Link onClick={toggleMobileMenu}
             href="/faq"
             className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500"
           >
             FAQ
           </Link>
-          <Link
+          <Link onClick={toggleMobileMenu}
             href="/contact"
             className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500"
           >
