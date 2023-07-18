@@ -122,7 +122,7 @@ export default function Navbar() {
         {
           // `transform top-0 right-0 mt-16 w-full fixed h-full bg-black/80 overflow-auto ease-in-out transition-all duration-300 z-30 ${isMobileMenuOpen ? "translate-y-0" : "translate-y-full"}`
           
-        `transform top-0 right-0 mt-16 w-full fixed h-full bg-black/80 overflow-auto ease-in-out transition-all duration-700 z-30 ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`
+        `border-t border-stone-700 transform top-0 right-0 mt-16 w-full fixed h-full bg-black/80 overflow-auto ease-in-out transition-all duration-700 z-30 ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`
 
         }
 
