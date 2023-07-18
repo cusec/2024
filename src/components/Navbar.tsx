@@ -8,7 +8,7 @@ import triangle from "../assets/triangle.svg";
 
 export default function Navbar() {
   // Funtionality to display event details children text
-  const [isEventDetailsClicked, setIsEventDetailsClicked] = useState(false);
+  const [isEventDetailsClicked, setIsEventDetailsClicked] = useState(true);
   const toggleEventDetails = () => {
     setIsEventDetailsClicked(!isEventDetailsClicked);
   };
@@ -17,7 +17,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    isEventDetailsClicked ? '' : toggleEventDetails();
+    isEventDetailsClicked ? null : toggleEventDetails();
   };
 
   // Close mobile menu when window is resized to desktop size
@@ -161,15 +161,56 @@ export default function Navbar() {
           >
             About Us
           </Link>
-          <Link
+          <div
             onClick={toggleEventDetails}
-            href=""
-            className="flex text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
+            className="text-white text-2xl font-semibold w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 cursor-pointer"
           >
-            Event Details
-          <span className="px-2"></span>
-              <Image src={triangle} alt="Triangle" width={20} height={20} className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 ${isEventDetailsClicked ? "":"rotate-180"}`} />
-          </Link>
+            <div
+              className={`flex bg-clip-text transition-all ease-in-out duration-500 ${
+                isEventDetailsClicked
+                  ? "hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
+                  : "scale-105 text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
+              }`}
+            >
+              Event Details
+              <span className="px-2"></span>
+              <Image
+                src={triangle}
+                alt="Triangle"
+                width={20}
+                height={20}
+                className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 ${
+                  isEventDetailsClicked ? "" : "rotate-180"
+                }`}
+              />
+            </div>
+            <div
+              className={`ml-4 mt-4 text-xl transition-all ease-in-out duration-1000 overflow-hidden ${
+                isEventDetailsClicked ? "max-h-0" : "max-h-28"
+              }`}
+            >
+              <ul className="space-y-2 flex flex-col">
+                <Link
+                  href="#"
+                  className="pl-4 w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
+                >
+                  Sign up
+                </Link>
+                <Link
+                  href="#"
+                  className="pl-4 w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
+                >
+                  Schedule
+                </Link>
+                <Link
+                  href="#"
+                  className="pl-4 w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
+                >
+                  Sponsors
+                </Link>
+              </ul>
+            </div>
+          </div>
           <Link
             onClick={toggleMobileMenu}
             href="/faq"
