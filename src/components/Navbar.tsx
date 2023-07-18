@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../assets/logo.svg";
@@ -11,6 +11,18 @@ export default function Navbar() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  useEffect(() => {
+    const hideMenu = () => {
+      if (window.innerWidth > 768 && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", hideMenu);
+
+    return () => {
+      window.removeEventListener("resize", hideMenu);
+    };
+  });
 
   return (
     <nav className={`bg-black/80 `}>
@@ -32,31 +44,31 @@ export default function Navbar() {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link 
+              <Link
                 href="/"
                 className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 Home
               </Link>
-              <Link 
+              <Link
                 href="/about"
                 className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 About Us
               </Link>
-              <Link  
+              <Link
                 href="/event"
                 className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 Event Details
               </Link>
-              <Link 
+              <Link
                 href="/faq"
                 className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 FAQ
               </Link>
-              <Link 
+              <Link
                 href="/contact"
                 className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
@@ -67,37 +79,46 @@ export default function Navbar() {
 
           {/*Hamburger Button */}
           <div className="flex md:hidden">
-            <button className="transform transition ease-in-out duration-500 hover:scale-125 group" onClick={toggleMobileMenu}>
-                <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
-                  <div
-                    className={`bg-white h-[2px] w-7 transform transition-all duration-300 origin-left ${
-                      isMobileMenuOpen ? "translate-x-10" : ""
-                    } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
-                  ></div>
-                  <div
-                    className={`bg-white h-[2px] w-7 rounded transform transition-all duration-700 delay-75 ${
-                      isMobileMenuOpen ? "translate-x-10" : ""
-                    } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
-                  ></div>
-                  <div
-                    className={`bg-white h-[2px] w-7 transform transition-all duration-700 origin-left delay-150 ${
-                      isMobileMenuOpen ? "translate-x-10" : ""
-                    } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
-                  ></div>
+            <button
+              className="transform transition ease-in-out duration-500 hover:scale-125 group"
+              onClick={toggleMobileMenu}
+            >
+              <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
+                <div
+                  className={`bg-white h-[2px] w-7 transform transition-all duration-300 origin-left ${
+                    isMobileMenuOpen ? "translate-x-10" : ""
+                  } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
+                ></div>
+                <div
+                  className={`bg-white h-[2px] w-7 rounded transform transition-all duration-700 delay-75 ${
+                    isMobileMenuOpen ? "translate-x-10" : ""
+                  } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
+                ></div>
+                <div
+                  className={`bg-white h-[2px] w-7 transform transition-all duration-700 origin-left delay-150 ${
+                    isMobileMenuOpen ? "translate-x-10" : ""
+                  } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
+                ></div>
 
-                  <div className={`absolute items-center justify-between transform transition-all duration-500 top-2.5 flex ${isMobileMenuOpen ?'translate-x-0  w-12': 'translate-x-10 w-0'}`}>
-                    <div
-                      className={`absolute bg-white h-[2px] w-5 transform transition-all duration-700 delay-300 ${
-                        isMobileMenuOpen ? "rotate-45" : "rotate-0"
-                      } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
-                    ></div>
-                    <div
-                      className={`absolute bg-white h-[2px] w-5 transform transition-all duration-700 delay-300 ${
-                        isMobileMenuOpen ? "-rotate-45" : "rotate-0"
-                      } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
-                    ></div>
-                  </div>
+                <div
+                  className={`absolute items-center justify-between transform transition-all duration-500 top-2.5 flex ${
+                    isMobileMenuOpen
+                      ? "translate-x-0  w-12"
+                      : "translate-x-10 w-0"
+                  }`}
+                >
+                  <div
+                    className={`absolute bg-white h-[2px] w-5 transform transition-all duration-700 delay-300 ${
+                      isMobileMenuOpen ? "rotate-45" : "rotate-0"
+                    } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
+                  ></div>
+                  <div
+                    className={`absolute bg-white h-[2px] w-5 transform transition-all duration-700 delay-300 ${
+                      isMobileMenuOpen ? "-rotate-45" : "rotate-0"
+                    } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
+                  ></div>
                 </div>
+              </div>
             </button>
           </div>
         </div>
@@ -116,31 +137,36 @@ export default function Navbar() {
         }
       >
         <div className="flex flex-col mx-6 ml-6 mt-24 space-y-10 uppercase">
-          <Link onClick={toggleMobileMenu}
+          <Link
+            onClick={toggleMobileMenu}
             href="/"
             className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
           >
             Home
           </Link>
-          <Link onClick={toggleMobileMenu}
+          <Link
+            onClick={toggleMobileMenu}
             href="/about"
             className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
           >
             About Us
           </Link>
-          <Link onClick={toggleMobileMenu}
+          <Link
+            onClick={toggleMobileMenu}
             href="/event"
             className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
           >
             Event Details
           </Link>
-          <Link onClick={toggleMobileMenu}
+          <Link
+            onClick={toggleMobileMenu}
             href="/faq"
             className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
           >
             FAQ
           </Link>
-          <Link onClick={toggleMobileMenu}
+          <Link
+            onClick={toggleMobileMenu}
             href="/contact"
             className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
           >
