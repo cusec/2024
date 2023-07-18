@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="800px" height="800px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="225.148" y1="0" x2="225.148" y2="404.677" id="gradient-0" gradientTransform="matrix(0.823329, -0.567564, 0.599712, 0.869961, -2.321988, 168.646949)">
+      <stop offset="0" style="stop-color: rgb(255, 185, 99);"/>
+      <stop offset="0.439" style="stop-color: rgb(227, 138, 182);"/>
+      <stop offset="1" style="stop-color: rgb(172, 101, 227);"/>
+    </linearGradient>
+  </defs>
+  <title>triangle-filled</title>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="drop" fill="#000000" transform="translate(32.000000, 42.666667)">
+      <path d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z" id="Combined-Shape" style="stroke-opacity: 0.99; stroke: rgb(250, 227, 227); stroke-width: 0px; paint-order: fill; fill: url(#gradient-0);"/>
+    </g>
+  </g>
+</svg>
