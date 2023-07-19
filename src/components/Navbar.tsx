@@ -7,12 +7,15 @@ import logo from "../assets/logo.svg";
 import triangle from "../assets/triangle.svg";
 
 export default function Navbar() {
+
+  
+  
   // Funtionality to display event details children text
   const [isEventDetailsClicked, setIsEventDetailsClicked] = useState(true);
   const toggleEventDetails = () => {
     setIsEventDetailsClicked(!isEventDetailsClicked);
   };
-
+  
   // Functionality for hamburger icon and mobile menu
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggleMobileMenu = () => {

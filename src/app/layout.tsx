@@ -10,16 +10,22 @@ export const metadata: Metadata = {
     "Official website for the 2024 edition of the Canadian University Software Engineering Conference.",
 };
 
+type MobileMenuToggleHandler = (isOpen: boolean) => void;
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+  }) {
+  
+  const handleMobileMenuToggle: MobileMenuToggleHandler = (isOpen: boolean) => {
+    console.log("Mobile menu is now " + (isOpen ? "open" : "closed"));
+  };
+  
   return (
     <html lang="en">
       <body>
         <div className="gradientBackground w-full top-0 left-0 z-negative">
-          <Navbar />
+          <Navbar/>
           <Main />
         </div>
           <About />
