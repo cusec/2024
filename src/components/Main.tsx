@@ -5,7 +5,7 @@ import greyEllipse from '../assets/grey-ellipse.svg'
 
 const Main = () => {
   return (
-    <main className="mx-6 lg:mx-24 relative p-[7px] mt-12">
+    <main className="mx-6 lg:max-w-6xl lg:mx-auto relative p-[7px] mt-12">
       <div className="w-[17px] md:w-[21px] aspect-square bg-white border-[2px] border-blue-600 absolute top-0 left-0"></div>
       <div className="w-[17px] md:w-[21px] aspect-square bg-white border-[2px] border-blue-600 absolute top-0 right-0"></div>
       <div className="w-[17px] md:w-[21px] aspect-square bg-white border-[2px] border-blue-600 absolute bottom-0 left-0"></div>
