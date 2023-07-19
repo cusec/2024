@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoPrimaryDark from '../assets/logo-primary-dark.svg'
-import greyEllipse from '../assets/grey-ellipse.svg'
+import logoPrimaryDark from "../assets/logo-primary-dark.svg";
+import greyEllipse from "../assets/grey-ellipse.svg";
 
 const Main = () => {
   return (
@@ -12,14 +12,14 @@ const Main = () => {
       <div className="w-[17px] md:w-[21px] aspect-square bg-white border-[2px] border-blue-600 absolute bottom-0 right-0"></div>
       <div className="w-full h-full bg-white bg-opacity-70 border-[5px] border-blue-600">
         <section className="p-8 text-center mx-auto space-y-5">
-        <Image
-          src={logoPrimaryDark}
+          <Image
+            src={logoPrimaryDark}
             alt="CUSEC 2024 logo primary dark"
             layout="responsive"
             className="max-w-lg mx-auto"
           />
           <p className="font-semibold text-[18px] leading-[25px] tracking-wider">
-          Canadian University Software Engineering Conference
+            Canadian University Software Engineering Conference
           </p>
           <p className="text-[15px] text-[#615757]">
             January 12-24
@@ -30,13 +30,16 @@ const Main = () => {
             ></Image>
             In-Person Event
           </p>
-          <button className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-5 md:px-20 py-3 text-center rounded-full uppercase text-[18px] font-semibold text-white tracking-wide">
-          Join Now
+          <button className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-5 md:px-20 py-3 text-center rounded-full uppercase text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-royalPurple">
+            Join Now
           </button>
-          <Link href="" className="md:hidden block text-royalBlue font-semibold underline underline-offset-2 decoration-2">
-          Interested in Sponsoring?
+          <Link
+            href=""
+            className="md:hidden block text-royalBlue font-semibold underline underline-offset-2 decoration-2"
+          >
+            Interested in Sponsoring?
           </Link>
-          <button className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] hidden md:inline bg-[#FDF3FF] border-2 border-royalBlue ml-9 px-[85px] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalBlue tracking-wide">
+          <button className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] hidden md:inline bg-[#FDF3FF] border-2 border-royalBlue ml-9 px-[85px] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalBlue hover:text-white ">
             Sponsor
           </button>
         </section>
