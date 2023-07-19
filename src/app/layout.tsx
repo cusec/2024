@@ -22,13 +22,12 @@ export default function RootLayout({
 
   const isMobileMenuOpen = () => {
     setfadeBackground(!fadeBackground);
-    console.log('clicked');
   };
 
   return (
     <html lang="en">
       <body>
-        <div className="gradientBackground w-full top-0 left-0 z-negative">
+        <div className="gradientGridBackground w-full top-0 left-0 z-negative">
           <Navbar clicked={isMobileMenuOpen}/>
           <div className={`transition-opacity ease-in-out duration-[1500ms] ${fadeBackground ? 'opacity-0' : 'opacity-100'}`}>
           <Main />
