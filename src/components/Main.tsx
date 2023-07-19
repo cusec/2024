@@ -17,7 +17,7 @@ const Main = () => {
             alt="CUSEC 2024 logo primary dark"
             layout="responsive"
             className="max-w-lg mx-auto"
-          />
+            />
           <p className="font-semibold text-[18px] leading-[25px] tracking-wider">
             Canadian University Software Engineering Conference
           </p>

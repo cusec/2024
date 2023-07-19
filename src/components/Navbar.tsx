@@ -35,7 +35,7 @@ export default function Navbar() {
   });
 
   return (
-    <nav className="bg-black/[.80]">
+    <nav className="bg-black/[.80] z-10">
       {/* Desktop Navbar */}
       <div
         className={`max-w-full mx-6 lg:mx-24 uppercase transition ease-out duration-1000 ${
