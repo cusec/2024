@@ -30,13 +30,13 @@ const Main = () => {
             ></Image>
             In-Person Event
           </p>
-          <button className="bg-[#AD65E3] px-5 md:px-20 py-3 text-center rounded-full uppercase text-[18px] font-semibold text-white tracking-wide">
+          <button className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-5 md:px-20 py-3 text-center rounded-full uppercase text-[18px] font-semibold text-white tracking-wide">
           Join Now
           </button>
           <Link href="" className="md:hidden block text-royalBlue font-semibold underline underline-offset-2 decoration-2">
           Interested in Sponsoring?
           </Link>
-          <button className="hidden md:inline bg-[#FDF3FF] border-2 border-royalBlue ml-9 px-[85px] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalBlue tracking-wide">
+          <button className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] hidden md:inline bg-[#FDF3FF] border-2 border-royalBlue ml-9 px-[85px] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalBlue tracking-wide">
             Sponsor
           </button>
         </section>
