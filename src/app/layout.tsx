@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Main from "@/components/Main";
+import About from "@/components/About";
 
 export const metadata: Metadata = {
   title: "CUSEC 2024",
@@ -17,10 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="gradientBackground h-full w-full fixed top-0 left-0 z-negative">
+        <div className="gradientBackground w-full top-0 left-0 z-negative">
           <Navbar />
           <Main />
         </div>
+          <About />
         {/* {children} */}
       </body>
     </html>

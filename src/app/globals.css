@@ -1,59 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
   --gradient-colors: linear-gradient(
     135deg,
-    #AC65E3 0%,
+    #ac65e3 0%,
     #e38ab6 45%,
     #ffb963 90%
   );
-  --square-size: .1vw;
+  --square-size: 0.1vw;
+  /* --gradient-height: calc(100vh+50px); */
 }
 
 /* #46529800 calc(95 * var(--square-size)) */
 
 html {
-
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   /* font-size: 28px; */
 }
 
-.gradientBackground{
+.gradientBackground {
+  min-height: calc(100vh + 50px);
+  z-index:0;
   background: var(--gradient-colors),
     repeating-linear-gradient(
       to right,
       white,
       white 1px,
       #46529800 1px,
-      #46529800 clamp(80px,calc(95 * var(--square-size)),93px)
+      #46529800 clamp(80px, calc(95 * var(--square-size)), 93px)
     ),
     repeating-linear-gradient(
       to bottom,
       white,
       white 1px,
       #46529800 1px,
-      /* #46529800 calc(95 * var(--square-size)) */
-      #46529800 clamp(80px,calc(95 * var(--square-size)),93px)
+      /* #46529800 calc(95 * var(--square-size)) */ #46529800
+        clamp(80px, calc(95 * var(--square-size)), 93px)
     );
 
   background-blend-mode: overlay;
 }
 
-/* @layer components{
-  .nav-link{
-  @apply rounded-md text-sm font-medium px-3 py-2 text-gray-300 bg-clip-text hover:text-transparent hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-300
-  }
-} */
-
-
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* overlay gradient */
+.gradientBackground:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: calc(100vh + 50px);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) calc(100vh - 25px),
+    rgba(255, 255, 255, 1) 100%
+  );
 }
+
+/* 
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -71,4 +79,6 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-} */
+} 
+
+*/
