@@ -35,10 +35,10 @@ export default function Navbar() {
   });
 
   return (
-    <nav className={`bg-black/80 `}>
+    <nav className="bg-black/[.80]">
       {/* Desktop Navbar */}
       <div
-        className={`max-w-full mx-auto px-6 lg:px-24 uppercase transition ease-out duration-1000 ${
+        className={`max-w-full mx-6 lg:mx-24 uppercase transition ease-out duration-1000 ${
           isMobileMenuOpen ? "backdrop-blur-[2px]" : "backdrop-blur-none"
         }`}
       >
@@ -139,7 +139,7 @@ export default function Navbar() {
         className={
           // `transform top-0 right-0 mt-16 w-full fixed h-full bg-black/80 overflow-auto ease-in-out transition-all duration-300 z-30 ${isMobileMenuOpen ? "translate-y-0" : "translate-y-full"}`
 
-          `border-t border-stone-700 transform top-0 right-0 mt-16 w-full fixed h-full bg-black/80 overflow-auto transition duration-1000 ease-in-out z-30 ${
+          `border-t border-stone-700 transform top-0 right-0 mt-16 w-full fixed h-full bg-inherit overflow-auto transition duration-1000 ease-in-out z-30 ${
             isMobileMenuOpen
               ? "translate-x-0 backdrop-blur-[2px]"
               : "translate-x-full backdrop-blur-none"
