@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import logoPrimaryDark from '../assets/logo-primary-dark.svg'
+import greyEllipse from '../assets/grey-ellipse.svg'
+
 const Main = () => {
   return (
     <main className="mx-6 lg:mx-24 relative p-[7px] mt-12">
@@ -19,8 +21,14 @@ const Main = () => {
           <p className="font-semibold text-[18px] leading-[25px] trakcing-wider">
           Canadian University Software Engineering Conference
           </p>
-          <p>
-          Janury 12-24 <span>ellipse</span> In-Person Event
+          <p className="text-[15px] text-[#615757]">
+            January 12-24
+            <Image
+              src={greyEllipse}
+              alt="Grey Ellipse Icon"
+              className="inline-block mx-3"
+            ></Image>
+            In-Person Event
           </p>
           <button>
           Join Now Button
