@@ -6,7 +6,12 @@ import Image from "next/image";
 import logo from "../assets/logo.svg";
 import triangle from "../assets/triangle.svg";
 
-export default function Navbar() {
+type ChildProps = {
+  clicked: () => void;
+};
+
+
+export default function Navbar({clicked}:ChildProps) {
 
   
   
@@ -21,6 +26,7 @@ export default function Navbar() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
     isEventDetailsClicked ? null : toggleEventDetails();
+    clicked();
   };
 
   // Close mobile menu when window is resized to desktop size
