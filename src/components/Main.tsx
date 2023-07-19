@@ -11,14 +11,14 @@ const Main = () => {
       <div className="w-[17px] md:w-[21px] aspect-square bg-white border-[2px] border-blue-600 absolute bottom-0 left-0"></div>
       <div className="w-[17px] md:w-[21px] aspect-square bg-white border-[2px] border-blue-600 absolute bottom-0 right-0"></div>
       <div className="w-full h-full bg-white bg-opacity-70 border-[5px] border-blue-600">
-        <section className="p-8 text-center mx-auto">
+        <section className="p-8 text-center mx-auto space-y-5">
         <Image
           src={logoPrimaryDark}
             alt="CUSEC 2024 logo primary dark"
             layout="responsive"
-            className="max-w-sm mx-auto"
+            className="max-w-lg mx-auto"
           />
-          <p className="font-semibold text-[18px] leading-[25px] trakcing-wider">
+          <p className="font-semibold text-[18px] leading-[25px] tracking-wider">
           Canadian University Software Engineering Conference
           </p>
           <p className="text-[15px] text-[#615757]">
@@ -30,12 +30,15 @@ const Main = () => {
             ></Image>
             In-Person Event
           </p>
-          <button>
-          Join Now Button
+          <button className="bg-[#AD65E3] px-5 md:px-20 py-3 text-center rounded-full uppercase text-[18px] font-semibold text-white tracking-wide">
+          Join Now
           </button>
-          <Link href="" className="block">
+          <Link href="" className="md:hidden block text-royalBlue font-semibold underline underline-offset-2 decoration-2">
           Interested in Sponsoring?
           </Link>
+          <button className="hidden md:inline bg-[#FDF3FF] border-2 border-royalBlue ml-9 px-[85px] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalBlue tracking-wide">
+            Sponsor
+          </button>
         </section>
       </div>
     </main>
