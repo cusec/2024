@@ -38,7 +38,7 @@ export default function Navbar() {
     <nav className={`bg-black/80 `}>
       {/* Desktop Navbar */}
       <div
-        className={`max-w-full mx-auto px-6 lg:px-24 uppercase transition ease-out duration-1000 ${
+        className={`max-w-full mx-6 lg:mx-24 uppercase transition ease-out duration-1000 ${
           isMobileMenuOpen ? "backdrop-blur-[2px]" : "backdrop-blur-none"
         }`}
       >
