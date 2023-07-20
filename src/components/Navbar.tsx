@@ -10,17 +10,13 @@ type ChildProps = {
   clicked: () => void;
 };
 
-
-export default function Navbar({clicked}:ChildProps) {
-
-  
-  
+export default function Navbar({ clicked }: ChildProps) {
   // Funtionality to display event details children text
   const [isEventDetailsClicked, setIsEventDetailsClicked] = useState(true);
   const toggleEventDetails = () => {
     setIsEventDetailsClicked(!isEventDetailsClicked);
   };
-  
+
   // Functionality for hamburger icon and mobile menu
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggleMobileMenu = () => {
