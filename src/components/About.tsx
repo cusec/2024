@@ -1,3 +1,6 @@
+import Image from "next/image";
+import decagon_1 from "../assets/decagon_1.svg";
+
 export default function About() {
   return (
     <>
@@ -10,7 +13,23 @@ export default function About() {
           knowledge shared by speakers, a chance to network with sponsoring
           companies, and make lifelong friendships within a safe and comfortable
           space.
-              </p>
+        </p>
+
+        {/* <div className="decagon bg-gradient-to-tr from-royalPurple to-goldenApricot absolute top-0 left-0"></div> */}
+
+        <div
+          className="relative border border-red-900 flex items-center justify-center w-100"
+          style={{
+            backgroundImage: `url(${decagon_1.src})`,
+            backgroundSize: "cover",
+            height: "200px", // You should set this to the height of your image
+            width: "200px", // You should set this to the width of your image
+          }}
+        >
+          <p className="font-semibold">
+            40+ <br /> Speakers
+          </p>
+              </div>
               
       </section>
     </>

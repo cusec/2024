@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description:
     "Official website for the 2024 edition of the Canadian University Software Engineering Conference.",
 };
+
 export default function RootLayout({
   children,
 }: {
