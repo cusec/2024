@@ -1,4 +1,4 @@
-import Main from '../components/Main'
+import type { Metadata } from "next";
 
 // export default function Home() {
 //   return (
@@ -111,6 +111,12 @@ import Main from '../components/Main'
 //     </main>
 //   )
 // }
+
+export const metadata: Metadata = {
+  title: "CUSEC 2024",
+  description:
+    "Official website for the 2024 edition of the Canadian University Software Engineering Conference.",
+};
 
 export default function Home() {
   return (
