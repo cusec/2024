@@ -25,15 +25,15 @@ export default function RootLayout({
         <div className={`${fadeBackground ? 'gradientBackground':'gradientGridBackground'} w-full top-0 left-0 z-negative`}>
           <Navbar clicked={isMobileMenuOpen}/>
           <div className={`transition-opacity ease-in-out duration-[1500ms] ${fadeBackground ? 'opacity-0' : 'opacity-100'}`}>
-          <Main />
+          {/* <Main /> */}
           </div>
+        {children}
         </div>
 
 
           <div className={`transition-opacity ease-in-out duration-[1500ms] ${fadeBackground ? 'opacity-0' : 'opacity-100'}`}>
           <About />
           </div>
-        {/* {children} */}
      </body>
     </html>
   );

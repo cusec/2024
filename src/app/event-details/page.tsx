@@ -1,4 +1,4 @@
-export default function about() {
+export default function eventDetails() {
     return (
         <div>
         Event Details page

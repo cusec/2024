@@ -72,7 +72,7 @@ export default function Navbar({ clicked }: ChildProps) {
                 About Us
               </Link>
               <Link
-                href="/event"
+                href="/event-details"
                 className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
               >
                 Event Details
