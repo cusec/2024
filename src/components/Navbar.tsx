@@ -39,6 +39,20 @@ export default function Navbar({ clicked }: ChildProps) {
     };
   });
 
+  type NavLinkProps = {
+    href: string;
+    children: React.ReactNode;
+  };
+
+  const NavLink: React.FC<NavLinkProps> = ({ href, children }) => (
+    <Link
+      href={href}
+      className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium"
+    >
+      {children}
+    </Link>
+  );
+
   return (
     <nav className="bg-black/[.85] z-50 sticky top-0">
       {/* Desktop Navbar */}
@@ -59,24 +73,9 @@ export default function Navbar({ clicked }: ChildProps) {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link
-                href="/"
-                className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
-              >
-                About Us
-              </Link>
-              <Link
-                href="/contact"
-                className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
-              >
-                Contact
-              </Link>
+              <NavLink href="/">Home</NavLink>
+              <NavLink href="/about">About Us</NavLink>
+              <NavLink href="/contact">Contact</NavLink>
             </div>
           </div>
 
@@ -140,27 +139,9 @@ export default function Navbar({ clicked }: ChildProps) {
         }
       >
         <div className="flex flex-col mx-6 ml-6 mt-24 space-y-10 uppercase">
-          <Link
-            onClick={toggleMobileMenu}
-            href="/"
-            className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
-          >
-            Home
-          </Link>
-          <Link
-            onClick={toggleMobileMenu}
-            href="/about"
-            className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
-          >
-            About Us
-          </Link>
-          <Link
-            onClick={toggleMobileMenu}
-            href="/contact"
-            className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
-          >
-            Contact
-          </Link>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/about">About Us</NavLink>
+          <NavLink href="/contact">Contact</NavLink>
         </div>
       </div>
     </nav>
