@@ -3,7 +3,7 @@ import Link from "next/link";
 import logoPrimaryDark from "../assets/logo-primary-dark.svg";
 import greyEllipse from "../assets/grey-ellipse.svg";
 
-const Main = () => {
+const Landingbox = () => {
   return (
 
     <main className="mx-6 lg:max-w-6xl lg:mx-auto relative p-[7px] mt-12">
@@ -49,4 +49,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Landingbox;

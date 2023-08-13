@@ -2,7 +2,6 @@
 
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Main from "@/components/Main";
 import About from "@/components/About";
 import {useState} from "react"
 
