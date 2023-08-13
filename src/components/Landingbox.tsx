@@ -5,7 +5,6 @@ import greyEllipse from "../assets/grey-ellipse.svg";
 
 const Landingbox = () => {
   return (
-
     <main className="mx-6 lg:max-w-6xl lg:mx-auto relative p-[7px] mt-12">
       <div className="w-[17px] md:w-[21px] aspect-square bg-white border-[2px] border-blue-600 absolute top-0 left-0"></div>
       <div className="w-[17px] md:w-[21px] aspect-square bg-white border-[2px] border-blue-600 absolute top-0 right-0"></div>
@@ -29,7 +28,7 @@ const Landingbox = () => {
               alt="Grey Ellipse Icon"
               className="inline-block mx-3"
             ></Image>
-            In-Person Event
+            Montreal, QC
           </p>
           <button className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-5 md:px-20 py-3 text-center rounded-full uppercase text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white">
             Join Now
