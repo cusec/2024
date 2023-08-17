@@ -11,7 +11,7 @@ export const useFadeBackground = () => useContext(FadeBackgroundContext);
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["300","400","500","600","700","800","900"],
   variable: "--font-poppins",
 });
 
@@ -29,9 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} font-sans scrollbar-thin scrollbar-thumb-royalPurple scrollbar-track-goldenApricot scrollbar-thumb-rounded-full`}
+        className={`${poppins.variable} font-sans scrollbar-thin scrollbar-thumb-royalPurple scrollbar-track-goldenApricot scrollbar-thumb-rounded-full z-50`}
       >
-        <Navbar clicked={isMobileMenuOpen} />
+      <Navbar clicked={isMobileMenuOpen} />
         <FadeBackgroundContext.Provider value={fadeBackground}>
           {children}
         </FadeBackgroundContext.Provider>

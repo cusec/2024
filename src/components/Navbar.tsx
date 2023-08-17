@@ -54,7 +54,7 @@ export default function Navbar({ clicked }: ChildProps) {
   );
 
   return (
-    <nav className="bg-black/[.85] z-50 sticky top-0">
+    <nav className="bg-black/[.85] z-50 fixed top-0 w-full">
       {/* Desktop Navbar */}
       <div
         className={`max-w-full mx-6 lg:mx-24 uppercase transition ease-out duration-1000 ${

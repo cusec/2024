@@ -22,19 +22,23 @@ export default function About() {
           space.
         </p>
 
-        {/* <div className="decagon bg-gradient-to-tr from-royalPurple to-goldenApricot absolute top-0 left-0"></div> */}
+        {/* <div className="decagon bg-gradient-to-tr from-royalPurple to-goldenApricot absolute top-0 left-0">40+ Speakers</div> */}
 
         <div
           className="relative border border-red-900 flex items-center justify-center w-100"
           style={{
             backgroundImage: `url(${decagon_1.src})`,
             backgroundSize: "cover",
-            height: "200px", // You should set this to the height of your image
-            width: "200px", // You should set this to the width of your image
+            height: "200px", 
+            width: "200px", 
           }}
           >
-          <p className="font-semibold">
-            40+ <br /> Speakers
+          <p className="font-semibold text-[24px]">
+            400+
+          </p>
+          <br />
+          <p className="font-medium text-[12px]">
+          Attendees
           </p>
               </div>
               
