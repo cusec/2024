@@ -2,7 +2,7 @@
 
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import About from "@/components/About";
+import About from "@/components/Landing Page/About";
 import {useState} from "react"
 
 

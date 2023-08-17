@@ -1,5 +1,5 @@
 import Image from "next/image";
-import decagon_1 from "../assets/decagon_1.svg";
+import decagon_1 from "/src/assets/decagon_1.svg";
 
 export default function About() {
   return (

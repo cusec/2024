@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoPrimaryDark from "../assets/logo-primary-dark.svg";
-import greyEllipse from "../assets/grey-ellipse.svg";
+import logoPrimaryDark from "src/assets/logo-primary-dark.svg";
+import greyEllipse from "src/assets/grey-ellipse.svg";
 
 const Landingbox = () => {
   return (

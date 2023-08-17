@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import Landingbox from "@/components/Landingbox";
-import About from "@/components/About";
+import Landingbox from "@/components/Landing Page/Landingbox";
+import About from "@/components/Landing Page/About";
 
 // export default function Home() {
 //   return (
