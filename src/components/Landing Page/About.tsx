@@ -1,9 +1,16 @@
 import Image from "next/image";
 import decagon_1 from "/src/assets/decagon_1.svg";
+import { useFadeBackground } from "@/app/layout";
 
 export default function About() {
+  const fadeBackground = useFadeBackground();
   return (
-    <>
+
+              <div
+          className={`transition-opacity ease-in-out duration-[1500ms] ${
+            fadeBackground ? "opacity-0" : "opacity-100"
+          }`}
+        >
       <section className="mx-14 lg:mx-80 mt-14 space-y-6">
         <p className="font-semibold text-[28px] ">Get To Know Us</p>
         <p className="font-regular text-[15px]">
@@ -25,13 +32,13 @@ export default function About() {
             height: "200px", // You should set this to the height of your image
             width: "200px", // You should set this to the width of your image
           }}
-        >
+          >
           <p className="font-semibold">
             40+ <br /> Speakers
           </p>
               </div>
               
       </section>
-    </>
+      </div>
   );
 }
