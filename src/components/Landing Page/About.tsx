@@ -11,7 +11,7 @@ export default function About() {
             fadeBackground ? "opacity-0" : "opacity-100"
           }`}
         >
-      <section className="mx-14 lg:mx-80 mt-14 space-y-6">
+      <section className="lg:max-w-[1024px] max-w-[768px] mx-12 mt-14 space-y-6">
         <p className="font-semibold text-[28px] ">Get To Know Us</p>
         <p className="font-regular text-[15px]">
           CUSEC is a student-led software engineering conference for students

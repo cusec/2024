@@ -11,7 +11,7 @@ const Landingbox = () => {
     <div
       className={`transition-opacity ease-in-out duration-[1500ms] ${
         fadeBackground ? "opacity-0" : "opacity-100"
-      } mx-6 lg:mx-24 lg:w-[1200px]`}
+      } mx-6 lg:mx-24 lg:w-[1024px]`}
     >
       <main className="relative p-[7px]">
         <div className="w-[17px] md:w-[21px] aspect-square bg-white border-[2px] border-blue-600 absolute top-0 left-0"></div>
