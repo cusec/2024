@@ -16,7 +16,7 @@ export default function About() {
         fadeBackground ? "opacity-0" : "opacity-100"
       }`}
     >
-      <section className="lg:max-w-[1024px] max-w-[768px] mx-12 mt-14 space-y-6">
+      <section className="lg:max-w-[1024px] max-w-[768px] mx-10 mt-14 space-y-6">
         <p className="font-semibold text-[28px] ">Get To Know Us</p>
         <p className="font-regular text-[15px]">
           CUSEC is a student-led software engineering conference for students
@@ -29,36 +29,38 @@ export default function About() {
       </section>
 
       <div className="flex flex-col justify-center items-center py-10 space-y-2">
-        <section className="flex space-x-6">
-          <Decagon1
-            image={decagon_gradient_1}
-            TitleText={"400+"}
-            SubtitleText={"Attendees"}
-          />
-          <Decagon1
-            image={decagon_gradient_2}
-            TitleText={"40+"}
-            SubtitleText={"Speakers"}
-          />
-        </section>
-        <section className="flex items-center space-x-4">
-          <Decagon1
-            image={decagon_gradient_3}
-            TitleText={"50+"}
-            SubtitleText={"Sponsors"}
-          />
-          <Decagon2
-            image={large_decagon}
-            TitleText={"21"}
-            SubtitleText={"Events"}
-          />
-          <Decagon1
-            image={decagon_gradient_4}
-            TitleText={"30+"}
-            SubtitleText={"VIP Members"}
-          />
-        </section>
-      </div>
+  <section className="flex space-x-6">
+    <Decagon1
+      image={decagon_gradient_1}
+      TitleText={"400+"}
+      SubtitleText={"Attendees"}
+    />
+    <Decagon1
+      image={decagon_gradient_2}
+      TitleText={"40+"}
+      SubtitleText={"Speakers"}
+    />
+  </section>
+  <section className="flex flex-wrap items-center space-x-4 max-[390px]:justify-center">
+    <Decagon1
+      image={decagon_gradient_3}
+      TitleText={"50+"}
+      SubtitleText={"Sponsors"}
+    />
+    <div className="min-[390px]:w-auto max-[390px]:order-last">
+      <Decagon2
+        image={large_decagon}
+        TitleText={"21"}
+        SubtitleText={"Events"}
+      />
+    </div>
+    <Decagon1
+      image={decagon_gradient_4}
+      TitleText={"30+"}
+      SubtitleText={"VIP Members"}
+    />
+  </section>
+</div>
     </div>
   );
 }
