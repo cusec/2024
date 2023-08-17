@@ -1,6 +1,11 @@
-import decagon_1 from "@/assets/decagon_1.svg";
+import decagon_gradient_1 from "@/assets/decagon_gradient_1.svg";
+import decagon_gradient_2 from "@/assets/decagon_gradient_2.svg";
+import decagon_gradient_3 from "@/assets/decagon_gradient_3.svg";
+import decagon_gradient_4 from "@/assets/decagon_gradient_4.svg";
+import large_decagon from "@/assets/large_decagon.svg";
 import { useFadeBackground } from "@/app/layout";
 import Decagon1 from "./Decagon1";
+import Decagon2 from "./Decagon2";
 
 export default function About() {
   const fadeBackground = useFadeBackground();
@@ -22,13 +27,38 @@ export default function About() {
           space.
         </p>
       </section>
-        
-      <section className="flex">
-        <Decagon1 image={decagon_1} TitleText={'400+'} SubtitleText={'Attendees'} />
-        <Decagon1 image={decagon_1} TitleText={'40+'} SubtitleText={'Speakers'} />
-        <Decagon1 image={decagon_1} TitleText={'50+'} SubtitleText={'Sponsors'} />
-        <Decagon1 image={decagon_1} TitleText={'30+'} SubtitleText={'VIP Members'} />
-      </section>
+
+      <div className="flex flex-col justify-center items-center py-10 space-y-2">
+        <section className="flex space-x-6">
+          <Decagon1
+            image={decagon_gradient_1}
+            TitleText={"400+"}
+            SubtitleText={"Attendees"}
+          />
+          <Decagon1
+            image={decagon_gradient_2}
+            TitleText={"40+"}
+            SubtitleText={"Speakers"}
+          />
+        </section>
+        <section className="flex items-center space-x-4">
+          <Decagon1
+            image={decagon_gradient_3}
+            TitleText={"50+"}
+            SubtitleText={"Sponsors"}
+          />
+          <Decagon2
+            image={large_decagon}
+            TitleText={"21"}
+            SubtitleText={"Events"}
+          />
+          <Decagon1
+            image={decagon_gradient_4}
+            TitleText={"30+"}
+            SubtitleText={"VIP Members"}
+          />
+        </section>
+      </div>
     </div>
   );
 }

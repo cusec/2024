@@ -17,10 +17,11 @@ export default function Decagon1({ image, TitleText, SubtitleText}:Decagon1Props
 
   return (
     <article
-      className="relative flex items-center justify-center h-[100px] w-[100px] md:h-[170px] md:w-[170px]"
+      className="relative flex items-center justify-center h-[120px] w-[105px] md:h-[210px] md:w-[195px] pb-2"
       style={{
         backgroundImage: `url(${image.src})`,
         backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <div>
