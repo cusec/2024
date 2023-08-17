@@ -1,16 +1,16 @@
-import Image from "next/image";
-import decagon_1 from "/src/assets/decagon_1.svg";
+import decagon_1 from "@/assets/decagon_1.svg";
 import { useFadeBackground } from "@/app/layout";
+import Decagon1 from "./Decagon1";
 
 export default function About() {
   const fadeBackground = useFadeBackground();
-  return (
 
-              <div
-          className={`transition-opacity ease-in-out duration-[1500ms] ${
-            fadeBackground ? "opacity-0" : "opacity-100"
-          }`}
-        >
+  return (
+    <div
+      className={`transition-opacity ease-in-out duration-[1500ms] ${
+        fadeBackground ? "opacity-0" : "opacity-100"
+      }`}
+    >
       <section className="lg:max-w-[1024px] max-w-[768px] mx-12 mt-14 space-y-6">
         <p className="font-semibold text-[28px] ">Get To Know Us</p>
         <p className="font-regular text-[15px]">
@@ -21,28 +21,14 @@ export default function About() {
           companies, and make lifelong friendships within a safe and comfortable
           space.
         </p>
-
-        {/* <div className="decagon bg-gradient-to-tr from-royalPurple to-goldenApricot absolute top-0 left-0">40+ Speakers</div> */}
-
-        <div
-          className="relative border border-red-900 flex items-center justify-center w-100"
-          style={{
-            backgroundImage: `url(${decagon_1.src})`,
-            backgroundSize: "cover",
-            height: "200px", 
-            width: "200px", 
-          }}
-          >
-          <p className="font-semibold text-[24px]">
-            400+
-          </p>
-          <br />
-          <p className="font-medium text-[12px]">
-          Attendees
-          </p>
-              </div>
-              
       </section>
-      </div>
+        
+      <section className="flex">
+        <Decagon1 image={decagon_1} TitleText={'400+'} SubtitleText={'Attendees'} />
+        <Decagon1 image={decagon_1} TitleText={'40+'} SubtitleText={'Speakers'} />
+        <Decagon1 image={decagon_1} TitleText={'50+'} SubtitleText={'Sponsors'} />
+        <Decagon1 image={decagon_1} TitleText={'30+'} SubtitleText={'VIP Members'} />
+      </section>
+    </div>
   );
 }

@@ -11,7 +11,7 @@
     #ffb963 90%
   );
   --square-size: 0.1vw;
-  --decagon-width: 50%;
+  --decagon-width: 100px;
 }
 
 /* #46529800 calc(95 * var(--square-size)) */
@@ -70,19 +70,15 @@ html {
 }
 
 
-
 .decagon{
-width: var(--decagon-width);
-  padding-top: calc(var(--decagon-width) * 1.08); /* Aspect ratio: 10:10.8 */
-}
-
-/*
-.decagon{
-width: var(--decagon-width);
-  padding-top: calc(var(--decagon-width) * 1.08); Aspect ratio: 10:10.8 
+  width: var(--decagon-width);
+  /* height: calc(var(-- decagon-width) * 1.08);  */
+  /* padding-top: calc(var(--decagon-width) * 1.08); Aspect ratio: 10:10.8 */
+height: 100px;
+  /* Aspect ratio: 10:10.8  */
 clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
 
-}*/
+}
 
 
 /*
