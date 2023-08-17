@@ -3,7 +3,15 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import About from "@/components/Landing Page/About";
-import {useState} from "react"
+import { useState } from "react"
+import { Poppins } from "@next/font/google"
+
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-poppins",
+})
 
 
 export default function RootLayout({
@@ -20,7 +28,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <body className={`${poppins.variable} font-sans`}>
         <div className={`${fadeBackground ? 'gradientBackground':'gradientGridBackground'} w-full top-0 left-0 z-negative`}>
           <Navbar clicked={isMobileMenuOpen}/>
           <div className={`transition-opacity ease-in-out duration-[1500ms] ${fadeBackground ? 'opacity-0' : 'opacity-100'}`}>

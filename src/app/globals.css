@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
   --gradient-colors: linear-gradient(
@@ -17,7 +17,6 @@
 /* #46529800 calc(95 * var(--square-size)) */
 
 html {
-  font-family: "Poppins", sans-serif;
   /* font-size: 28px; */
 }
 
