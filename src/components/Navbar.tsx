@@ -54,12 +54,10 @@ export default function Navbar({ clicked }: ChildProps) {
   );
 
   return (
-    <nav className="bg-black/[.85] z-50 fixed top-0 w-full flex justify-center">
+    <nav className="bg-black/[.85] z-50 fixed top-0 w-full flex justify-center bg-clip-padding">
       {/* Desktop Navbar */}
       <div
-        className={`w-full max-w-screen-2xl mx-6 lg:mx-24 uppercase transition ease-out duration-1000 ${
-          isMobileMenuOpen ? "backdrop-blur-[2px]" : "backdrop-blur-none"
-        }`}
+        className={`w-full max-w-screen-2xl mx-6 lg:mx-24 uppercase  backdrop-blur-[2px]`}
       >
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
