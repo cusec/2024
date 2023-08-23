@@ -15,7 +15,7 @@ export default function Footer() {
         fadeBackground ? "opacity-0" : "opacity-100 text-red"
       }`}
     >
-      <section className="flex items-baseline py-4 space-x-4 px-6 lg:mx-24">
+      <section className="flex items-baseline space-x-4 px-6 lg:mx-24 py-4">
         <Link
           href="/privacy"
           className="text-white font-[16px] bg-clip-text hover:text-transparent bg-gradient-to-tr from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3"
@@ -28,11 +28,43 @@ export default function Footer() {
         >
           Code of Conduct
         </Link>
-        <section className="flex items-center text-white space-x-4">
-          <FaFacebookF />
-          <FaInstagram />
-          <FaLinkedinIn />
-          <FaYoutube />
+
+        {/* The following workaround with and svg had to be used because the react-icons package currently does not support a background gradient for its SVGs using the tailwind approach which is used in the NavLink components. */}
+        <svg width="0" height="0">
+          <linearGradient
+            id="custom-gradient"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%"
+          >
+            <stop stopColor="#AC65E3" offset="0%" />
+            <stop stopColor="#E087BB" offset="50%" />
+            <stop stopColor="#FFB963" offset="100%" />
+          </linearGradient>
+        </svg>
+
+        <section className="flex items-center">
+          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm px-[2.5px] min-[390px]:px-3 md:px-4">
+            <Link href={""}>
+            <FaFacebookF style={{ fill: "url(#custom-gradient)" }} />
+            </Link>
+          </span>
+          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm px-[2.5px] min-[390px]:px-3 md:px-4">
+            <Link href={""}>
+            <FaInstagram style={{ fill: "url(#custom-gradient)" }} />
+          </Link>
+          </span>
+          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm px-[2.5px] min-[390px]:px-3 md:px-4">
+            <Link href={""}>
+            <FaLinkedinIn style={{ fill: "url(#custom-gradient)" }} />
+            </Link>
+          </span>
+          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm px-[2.5px] min-[390px]:px-3 md:px-4">
+            <Link href={""}>
+            <FaYoutube style={{ fill: "url(#custom-gradient)" }} />
+            </Link>
+          </span>
         </section>
       </section>
     </footer>
