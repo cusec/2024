@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function Home() {
   const fadeBackground = useFadeBackground();
   return (
-    <div className="w-full absolute z-negative top-0 left-0">
+    <div className="w-full">
       <div
         className={`${
           fadeBackground ? "gradientBackground" : "gradientGridBackground"
