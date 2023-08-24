@@ -20,11 +20,12 @@ module.exports = {
         royalBlue: '#0569FF',
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        sans: ['var(--font-poppins)'],
       },
     },
   },
   plugins: [
-    // require("daisyui")
+    // require("daisyui"),
+    require('tailwind-scrollbar')({nocompatible:true}),
   ],
 };

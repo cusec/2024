@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import NavLink from "./NavLink";
 import Image from "next/image";
 import logo from "../assets/logo.svg";
 import triangle from "../assets/triangle.svg";
+
 
 type ChildProps = {
   clicked: () => void;
@@ -30,6 +32,7 @@ export default function Navbar({ clicked }: ChildProps) {
     const hideMenu = () => {
       if (window.innerWidth > 768 && isMobileMenuOpen) {
         setIsMobileMenuOpen(false);
+        clicked();
       }
     };
     window.addEventListener("resize", hideMenu);
@@ -39,13 +42,12 @@ export default function Navbar({ clicked }: ChildProps) {
     };
   });
 
+
   return (
-    <nav className="bg-black/[.80] z-50 sticky top-0">
+    <nav className="bg-black/[.85] z-50 fixed top-0 w-full flex justify-center bg-clip-padding">
       {/* Desktop Navbar */}
       <div
-        className={`max-w-full mx-6 lg:mx-24 uppercase transition ease-out duration-1000 ${
-          isMobileMenuOpen ? "backdrop-blur-[2px]" : "backdrop-blur-none"
-        }`}
+        className={`w-full max-w-screen-2xl mx-6 lg:mx-24 uppercase backdrop-blur-[2px]`}
       >
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
@@ -59,36 +61,9 @@ export default function Navbar({ clicked }: ChildProps) {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link
-                href="/"
-                className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
-              >
-                About Us
-              </Link>
-              <Link
-                href="/event"
-                className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
-              >
-                Event Details
-              </Link>
-              <Link
-                href="/faq"
-                className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
-              >
-                FAQ
-              </Link>
-              <Link
-                href="/contact"
-                className="rounded-md text-sm font-medium px-3 py-2 text-white bg-clip-text hover:text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all hover:scale-125 ease-in-out duration-500"
-              >
-                Contact
-              </Link>
+              <NavLink href="/">Home</NavLink>
+              <NavLink href="/about">About Us</NavLink>
+              <NavLink href="/contact">Contact</NavLink>
             </div>
           </div>
 
@@ -152,84 +127,9 @@ export default function Navbar({ clicked }: ChildProps) {
         }
       >
         <div className="flex flex-col mx-6 ml-6 mt-24 space-y-10 uppercase">
-          <Link
-            onClick={toggleMobileMenu}
-            href="/"
-            className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
-          >
-            Home
-          </Link>
-          <Link
-            onClick={toggleMobileMenu}
-            href="/about"
-            className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
-          >
-            About Us
-          </Link>
-          <div
-            onClick={toggleEventDetails}
-            className="text-white text-2xl font-semibold w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 cursor-pointer"
-          >
-            <div
-              className={`flex bg-clip-text transition-all ease-in-out duration-500 ${
-                isEventDetailsClicked
-                  ? "hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
-                  : "scale-105 text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
-              }`}
-            >
-              Event Details
-              <span className="px-2"></span>
-              <Image
-                src={triangle}
-                alt="Triangle"
-                width={20}
-                height={20}
-                className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 ${
-                  isEventDetailsClicked ? "" : "rotate-180"
-                }`}
-              />
-            </div>
-            <div
-              className={`ml-4 mt-4 text-xl transition-all ease-in-out duration-1000 overflow-hidden ${
-                isEventDetailsClicked ? "max-h-0" : "max-h-28"
-              }`}
-            >
-              <ul className="space-y-2 flex flex-col">
-                <Link
-                  href="#"
-                  className="pl-4 w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
-                >
-                  Sign up
-                </Link>
-                <Link
-                  href="#"
-                  className="pl-4 w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
-                >
-                  Schedule
-                </Link>
-                <Link
-                  href="#"
-                  className="pl-4 w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
-                >
-                  Sponsors
-                </Link>
-              </ul>
-            </div>
-          </div>
-          <Link
-            onClick={toggleMobileMenu}
-            href="/faq"
-            className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
-          >
-            FAQ
-          </Link>
-          <Link
-            onClick={toggleMobileMenu}
-            href="/contact"
-            className="text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110"
-          >
-            Contact
-          </Link>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/about">About Us</NavLink>
+          <NavLink href="/contact">Contact</NavLink>
         </div>
       </div>
     </nav>
