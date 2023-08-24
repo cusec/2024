@@ -46,23 +46,23 @@ export default function Footer() {
 
         <section className="flex items-center">
           <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm px-[2.5px] min-[390px]:px-3 md:px-4">
-            <Link href={""}>
-            <FaFacebookF style={{ fill: "url(#custom-gradient)" }} />
+            <Link href={"https://www.facebook.com/cusecofficial/"} target="_blank">
+              <FaFacebookF style={{ fill: "url(#custom-gradient)" }} />
             </Link>
           </span>
           <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm px-[2.5px] min-[390px]:px-3 md:px-4">
-            <Link href={""}>
-            <FaInstagram style={{ fill: "url(#custom-gradient)" }} />
-          </Link>
-          </span>
-          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm px-[2.5px] min-[390px]:px-3 md:px-4">
-            <Link href={""}>
-            <FaLinkedinIn style={{ fill: "url(#custom-gradient)" }} />
+            <Link href={"https://www.instagram.com/cusecofficial/?hl=en"} target="_blank">
+              <FaInstagram style={{ fill: "url(#custom-gradient)" }} />
             </Link>
           </span>
           <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm px-[2.5px] min-[390px]:px-3 md:px-4">
-            <Link href={""}>
-            <FaYoutube style={{ fill: "url(#custom-gradient)" }} />
+            <Link href={"https://www.linkedin.com/company/cusec/mycompany/"} target="_blank">
+              <FaLinkedinIn style={{ fill: "url(#custom-gradient)" }} />
+            </Link>
+          </span>
+          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm px-[2.5px] min-[390px]:px-3 md:px-4">
+            <Link href={"https://www.youtube.com/channel/UCZ7j8F6h1CxD-uC0od9rHBw"} target="_blank">
+              <FaYoutube style={{ fill: "url(#custom-gradient)" }} />
             </Link>
           </span>
         </section>
