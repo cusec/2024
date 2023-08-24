@@ -48,7 +48,7 @@ import youtubeIcon from "/public/images/youtube-icon.png";
 export default function email_signature() {
   return (
     <>
-      <div className="email-signature mt-20">
+      <div className="email-signature mt-20 min-h-screen">
         <table>
           <tbody>
             <tr>
