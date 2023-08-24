@@ -71,8 +71,8 @@ export default function Footer() {
           </span>
           <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-[2.5px] min-[390px]:px-3 md:px-4">
             <Link
-              href={"https://www.youtube.com/channel/UCZ7j8F6h1CxD-uC0od9rHBw"}
-              target="_blank"
+            href={"https://www.youtube.com/channel/UCZ7j8F6h1CxD-uC0od9rHBw"}
+            target="_blank"
             >
               <FaYoutube style={{ fill: "url(#custom-gradient)" }} />
             </Link>

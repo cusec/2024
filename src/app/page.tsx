@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import Landingbox from "@/components/Landing Page/Landingbox";
 import About from "@/components/Landing Page/About";
+import Contact from "@/components/Landing Page/Contact";
 import { useFadeBackground } from "./layout";
 
 export const metadata: Metadata = {
@@ -25,6 +26,9 @@ export default function Home() {
       </div>
       <div className="flex items-center justify-center">
       <About /> 
+      </div>
+      <div className="flex items-center justify-center pb-10">
+      <Contact/>
       </div>
     </div>
   );
