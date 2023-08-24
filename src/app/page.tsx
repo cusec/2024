@@ -1,13 +1,14 @@
 "use client";
 
 import type { Metadata } from "next";
+import Head from "next/head";
 
 import Landingbox from "@/components/Landing Page/Landingbox";
 import About from "@/components/Landing Page/About";
 import Contact from "@/components/Landing Page/Contact";
 import { useFadeBackground } from "./layout";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "CUSEC 2024",
   description:
     "Official website for the 2024 edition of the Canadian University Software Engineering Conference.",
@@ -16,6 +17,11 @@ export const metadata: Metadata = {
 export default function Home() {
   const fadeBackground = useFadeBackground();
   return (
+    <>
+  <Head>
+    <title>CUSEC 2024 Home</title>
+    <meta name = "description" content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."></meta>
+  </Head>
     <div className="w-full">
       <div
         className={`${
@@ -34,5 +40,6 @@ export default function Home() {
       </div>
       </div>
     </div>
+          </>
   );
 }
