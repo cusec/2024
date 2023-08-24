@@ -16,18 +16,18 @@ export default function Footer() {
       }`}
     >
       <div className="flex items-baseline space-x-4 px-6 lg:mx-24 py-4">
-          <Link
-            href="/privacy"
-            className="text-white bg-clip-text hover:text-transparent bg-gradient-to-tr from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-lg md:px-3"
-          >
-            Privacy
-          </Link>
-          <Link
-            href="/code-of-conduct"
-            className="text-white bg-clip-text hover:text-transparent bg-gradient-to-tr from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-lg md:px-3"
-          >
-            Code of Conduct
-          </Link>
+        <Link
+          href="/privacy"
+          className="text-white bg-clip-text hover:text-transparent bg-gradient-to-tr from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-lg md:px-3"
+        >
+          Privacy
+        </Link>
+        <Link
+          href="/code-of-conduct"
+          className="text-white bg-clip-text hover:text-transparent bg-gradient-to-tr from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-lg md:px-3"
+        >
+          Code of Conduct
+        </Link>
 
         {/* The following workaround with the svg had to be used because the react-icons package currently does not support a background gradient for its SVGs using the tailwind approach which is used in the NavLink components. */}
         <svg width="0" height="0">
@@ -71,8 +71,8 @@ export default function Footer() {
           </span>
           <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-[2.5px] min-[390px]:px-3 md:px-4">
             <Link
-            href={"https://www.youtube.com/channel/UCZ7j8F6h1CxD-uC0od9rHBw"}
-            target="_blank"
+              href={"https://www.youtube.com/channel/UCZ7j8F6h1CxD-uC0od9rHBw"}
+              target="_blank"
             >
               <FaYoutube style={{ fill: "url(#custom-gradient)" }} />
             </Link>

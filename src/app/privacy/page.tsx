@@ -9,7 +9,7 @@ export default function Privacy() {
     <div
       className={`transition-opacity ease-in-out duration-[1500ms] ${
         fadeBackground ? "opacity-0" : "opacity-100"
-      } lg:max-w-[1024px] max-w-[768px] mx-auto mt-14 space-y-6 py-10 px-10 flex flex-col justify-center items-center`}
+      } lg:max-w-[1024px] max-w-[768px] mx-auto space-y-6 py-10 px-10 flex flex-col justify-center items-center min-h-screen`}
     >
       <h1 className="font-semibold text-[28px] ">Privacy Policy</h1>
       <p className="font-regular text-[15px]">
