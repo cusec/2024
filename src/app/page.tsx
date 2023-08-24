@@ -24,11 +24,14 @@ export default function Home() {
       >
         <Landingbox />
       </div>
-      <div className="flex items-center justify-center">
+
+      <div className="flex flex-col items-center">
+      <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full">
       <About /> 
       </div>
-      <div className="flex items-center justify-center pb-10">
+      <div className="mx-6 lg:mx-24 pb-10 max-w-screen-lg lg:w-full">
       <Contact/>
+      </div>
       </div>
     </div>
   );
