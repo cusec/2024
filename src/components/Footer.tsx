@@ -32,7 +32,7 @@ export default function Footer() {
         {/* The following workaround with the svg had to be used because the react-icons package currently does not support a background gradient for its SVGs using the tailwind approach which is used in the NavLink components. */}
         <svg width="0" height="0">
           <linearGradient
-            id="custom-gradient"
+            id="footer-icons-gradient"
             x1="0%"
             y1="0%"
             x2="0%"
@@ -50,7 +50,7 @@ export default function Footer() {
               href={"https://www.facebook.com/cusecofficial/"}
               target="_blank"
             >
-              <FaFacebookF style={{ fill: "url(#custom-gradient)" }} />
+              <FaFacebookF style={{ fill: "url(#footer-icons-gradient)" }} />
             </Link>
           </span>
           <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-[2.5px] min-[390px]:px-3 md:px-4">
@@ -58,7 +58,7 @@ export default function Footer() {
               href={"https://www.instagram.com/cusecofficial/?hl=en"}
               target="_blank"
             >
-              <FaInstagram style={{ fill: "url(#custom-gradient)" }} />
+              <FaInstagram style={{ fill: "url(#footer-icons-gradient)" }} />
             </Link>
           </span>
           <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-[2.5px] min-[390px]:px-3 md:px-4">
@@ -66,7 +66,7 @@ export default function Footer() {
               href={"https://www.linkedin.com/company/cusec/mycompany/"}
               target="_blank"
             >
-              <FaLinkedinIn style={{ fill: "url(#custom-gradient)" }} />
+              <FaLinkedinIn style={{ fill: "url(#footer-icons-gradient)" }} />
             </Link>
           </span>
           <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-[2.5px] min-[390px]:px-3 md:px-4">
@@ -74,7 +74,7 @@ export default function Footer() {
               href={"https://www.youtube.com/channel/UCZ7j8F6h1CxD-uC0od9rHBw"}
               target="_blank"
             >
-              <FaYoutube style={{ fill: "url(#custom-gradient)" }} />
+              <FaYoutube style={{ fill: "url(#footer-icons-gradient)" }} />
             </Link>
           </span>
         </section>
