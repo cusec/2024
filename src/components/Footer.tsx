@@ -44,8 +44,8 @@ export default function Footer() {
           </linearGradient>
         </svg>
 
-        <section className="flex items-center md:text-xl">
-          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-[2.5px] min-[390px]:px-3 md:px-4">
+        <section className="flex flex-wrap items-center md:text-xl">
+          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-4 max-[490px]:pb-4 md:px-4">
             <Link
               href={"https://www.facebook.com/cusecofficial/"}
               target="_blank"
@@ -53,7 +53,7 @@ export default function Footer() {
               <FaFacebookF style={{ fill: "url(#footer-icons-gradient)" }} />
             </Link>
           </span>
-          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-[2.5px] min-[390px]:px-3 md:px-4">
+          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-4 max-[490px]:pb-4 md:px-4">
             <Link
               href={"https://www.instagram.com/cusecofficial/?hl=en"}
               target="_blank"
@@ -61,7 +61,7 @@ export default function Footer() {
               <FaInstagram style={{ fill: "url(#footer-icons-gradient)" }} />
             </Link>
           </span>
-          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-[2.5px] min-[390px]:px-3 md:px-4">
+          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-4 max-[490px]:pb-4 md:px-4">
             <Link
               href={"https://www.linkedin.com/company/cusec/mycompany/"}
               target="_blank"
@@ -69,7 +69,7 @@ export default function Footer() {
               <FaLinkedinIn style={{ fill: "url(#footer-icons-gradient)" }} />
             </Link>
           </span>
-          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-[2.5px] min-[390px]:px-3 md:px-4">
+          <span className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-4 max-[490px]:pb-4 md:px-4">
             <Link
               href={"https://www.youtube.com/channel/UCZ7j8F6h1CxD-uC0od9rHBw"}
               target="_blank"
