@@ -41,7 +41,7 @@ export default function About() {
       SubtitleText={"Speakers"}
     />
   </section>
-  <section className="flex flex-wrap items-center space-x-4 max-[390px]:justify-center">
+  <section className="flex max-[390px]:flex-wrap items-center space-x-4 max-[390px]:justify-center">
     <Decagon1
       image={decagon_gradient_3}
       TitleText={"50+"}
