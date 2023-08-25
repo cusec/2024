@@ -6,6 +6,7 @@ import Head from "next/head";
 import Main from "@/components/Landing Page/Main";
 import About from "@/components/Landing Page/About";
 import Sponsor from "@/components/Landing Page/Sponsor";
+import Tickets from "@/components/Landing Page/Tickets";
 import Contact from "@/components/Landing Page/Contact";
 import Faq from "@/components/Landing Page/Faq";
 import { useFadeBackground } from "./layout";
@@ -42,10 +43,15 @@ export default function Home() {
           </div>
           <div className="w-full gradientBackground">
           <Sponsor/>
+            </div>
+          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full">
+            <Tickets />
+          </div>
+          <div className="w-full gradientBackground">
             <Faq />
+            </div>
             <div className="mx-6 lg:mx-24 pb-10 max-w-screen-lg lg:w-full">
               <Contact />
-            </div>
           </div>
         </div>
       </div>

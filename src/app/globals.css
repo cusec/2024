@@ -19,7 +19,7 @@ html {
 }
 
 .gradientGridBackground{
-  min-height: calc(100vh + 50px);
+  height: calc(100vh + 50px);
   z-index:0;
   background: var(--gradient-colors),
     repeating-linear-gradient(
@@ -43,7 +43,7 @@ html {
 
 
 .gradientBackground {
-  min-height: calc(100vh + 50px);
+  height: calc(100vh + 50px);
   z-index:0;
   background: var(--gradient-colors);
 

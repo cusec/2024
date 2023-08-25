@@ -14,12 +14,12 @@ export default function Sponsor() {
           <h2 className="text-[28px] text-center font-semibold pb-10 block md:hidden">
             Sponsor CUSEC 2024
           </h2>
-          <div className="relative max-w-md aspect-square mx-auto">
+          <div className="relative max-w-md aspect-square">
             <div className="absolute top-[-17px] right-[-18px] bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-[95%]">
               {/* This div is for the background gradient */}
             </div>
             <BlueBorderSquareBox>
-              <div className="p-24 aspect-square">Some content here</div>
+              <div className="aspect-square">Some content here</div>
             </BlueBorderSquareBox>
           </div>
 
