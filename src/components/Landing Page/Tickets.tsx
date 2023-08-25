@@ -2,6 +2,7 @@ import { useFadeBackground } from "@/app/layout";
 import Image from "next/image";
 import circle_grid_vertical from "@/assets/circle_grid_vertical.svg";
 import circle_grid_horizontal from "@/assets/circle_grid_horizontal.svg";
+import TicketCard from "./TicketCard";
 
 export default function Sponsor() {
   const fadeBackground = useFadeBackground();
@@ -19,16 +20,18 @@ export default function Sponsor() {
         Pricing Plans
       </p>
 
-      <span className="flex justify-end mr-[-40px]">
+      <span className="flex justify-end mr-[-45px]">
         <Image
           src={circle_grid_horizontal}
           alt="Horizontal grid of grey circles"
+          className="w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] "
         />
       </span>
 
-      <div className="bg-black bg-opacity-60 shadow mx-auto px-20 text-white">
-        
+      <div>
+        <TicketCard/>
       </div>
+
     </div>
   );
 }
