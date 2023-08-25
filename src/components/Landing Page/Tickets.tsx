@@ -29,9 +29,20 @@ export default function Sponsor() {
       </span>
 
       <div>
-        <TicketCard/>
+        <TicketCard
+          title={"Basic"}
+          description={"Learn, network, and grow with CUSEC"}
+          studentPrice={80}
+          professionalPrice={100}
+          features={[
+            "Social Events",
+            "Networking Benefits",
+            "Workshops & Talks hosted by sponsors",
+          ]}
+          buttonLink="/"
+          themeColor="roseQuartz"
+        />
       </div>
-
     </div>
   );
 }
