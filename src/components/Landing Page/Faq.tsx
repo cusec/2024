@@ -1,8 +1,13 @@
 import Link from "next/link";
+import { useState } from "react";
 import { useFadeBackground } from "@/app/layout";
 
 export default function Faq() {
   const fadeBackground = useFadeBackground();
+  const [isCardClicked, setIsCardClicked] = useState(true);
+  const toggleCardClicked = () => {
+    setIsCardClicked(!isCardClicked);
+  };
 
   return (
     <div
@@ -19,13 +24,16 @@ export default function Faq() {
         <div>
           <aside className="text-black bg-white rounded-b-lg">
             <span className="h-3 block bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot"></span>
-            <button className="w-full text-[14px] font-semibold px-4 py-2 flex justify-between">
+            <button
+              className="w-full text-[14px] font-semibold px-4 py-2 flex justify-between"
+              onClick={toggleCardClicked}
+            >
               <span className="block">
                 When & Where is CUSEC 2024 happening?
               </span>
               <span className="block">
                 <svg
-                  className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 fill-black`}
+                  className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 fill-black ${isCardClicked ? 'rotate-0' : 'rotate-180'}`}
                   width="12px"
                   height="20px"
                   viewBox="0 0 512 512"
@@ -53,20 +61,32 @@ export default function Faq() {
                 </svg>
               </span>
             </button>
-            <span className="h-0.5 block bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot"></span>
-            <section className="px-4 py-5 space-y-3 font-medium">
-              <p>
-                <em>When: </em> January 12, 13, and 14.
-              </p>
-              <p className="flex">
-                <span className="block">
-                  <em>Where:&nbsp;</em>
-                </span>
-                <span className="block">
-                  Hotel Bonaventure located in Downtown Montreal, QC.
-                </span>
-              </p>
-            </section>
+
+            <div
+              className={`transition-all ease-in-out duration-1000 overflow-hidden ${
+                isCardClicked ? "max-h-0" : "max-h-40"
+              }`}
+            >
+              <span
+  className={`h-0.5 block bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all duration-1000 ease-in-out ${
+    isCardClicked ? "opacity-0 invisible" : "opacity-100 visible"
+  }`}
+></span>
+
+              <section className="px-4 py-5 space-y-3 font-medium">
+                <p>
+                  <em>When: </em> January 12, 13, and 14.
+                </p>
+                <p className="flex">
+                  <span className="block">
+                    <em>Where:&nbsp;</em>
+                  </span>
+                  <span className="block">
+                    Hotel Bonaventure located in Downtown Montreal, QC.
+                  </span>
+                </p>
+              </section>
+            </div>
           </aside>
         </div>
       </div>
