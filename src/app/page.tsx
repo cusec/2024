@@ -6,6 +6,7 @@ import Head from "next/head";
 import Landingbox from "@/components/Landing Page/Landingbox";
 import About from "@/components/Landing Page/About";
 import Contact from "@/components/Landing Page/Contact";
+import Faq from "@/components/Landing Page/Faq";
 import { useFadeBackground } from "./layout";
 
 const metadata: Metadata = {
@@ -34,6 +35,9 @@ export default function Home() {
       <div className="flex flex-col items-center">
       <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full">
       <About /> 
+      </div>
+      <div className="mx-6 lg:mx-24 pb-10 max-w-screen-lg lg:w-full">
+      <Faq/>
       </div>
       <div className="mx-6 lg:mx-24 pb-10 max-w-screen-lg lg:w-full">
       <Contact/>
