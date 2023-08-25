@@ -1,16 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoPrimaryDark from "../assets/logo-primary-dark.svg";
-import greyEllipse from "../assets/grey-ellipse.svg";
+import logoPrimaryDark from "src/assets/logo-primary-dark.svg";
+import greyEllipse from "src/assets/grey-ellipse.svg";
+import { useFadeBackground } from "@/app/layout";
+import BlueBorderSquareBox from "./BlueBorderSquareBox";
 
-const Main = () => {
+const Landingbox = () => {
+  const fadeBackground = useFadeBackground();
+
   return (
-    <main className="mx-6 lg:max-w-6xl lg:mx-auto relative p-[7px] mt-12">
-      <div className="w-[17px] md:w-[21px] aspect-square bg-white border-[2px] border-blue-600 absolute top-0 left-0"></div>
-      <div className="w-[17px] md:w-[21px] aspect-square bg-white border-[2px] border-blue-600 absolute top-0 right-0"></div>
-      <div className="w-[17px] md:w-[21px] aspect-square bg-white border-[2px] border-blue-600 absolute bottom-0 left-0"></div>
-      <div className="w-[17px] md:w-[21px] aspect-square bg-white border-[2px] border-blue-600 absolute bottom-0 right-0"></div>
-      <div className="w-full h-full bg-white bg-opacity-70 border-[5px] border-blue-600">
+    <main
+      className={`transition-opacity ease-in-out duration-[1500ms] ${
+        fadeBackground ? "opacity-0" : "opacity-100"
+      } mx-6 lg:mx-24 lg:w-[1024px]`}
+    >
+      <BlueBorderSquareBox>
         <section className="p-8 text-center mx-auto space-y-5">
           <Image
             src={logoPrimaryDark}
@@ -28,10 +32,10 @@ const Main = () => {
               alt="Grey Ellipse Icon"
               className="inline-block mx-3"
             ></Image>
-            In-Person Event
+            Montreal, QC
           </p>
           <button className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-5 md:px-20 py-3 text-center rounded-full uppercase text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white">
-            Join Now
+            Become a Speaker
           </button>
           <Link
             href=""
@@ -43,9 +47,9 @@ const Main = () => {
             Sponsor
           </button>
         </section>
-      </div>
+      </BlueBorderSquareBox>
     </main>
   );
 };
 
-export default Main;
+export default Landingbox;

@@ -3,7 +3,7 @@
 import type { Metadata } from "next";
 import Head from "next/head";
 
-import Landingbox from "@/components/Landing Page/Landingbox";
+import Main from "@/components/Landing Page/Main";
 import About from "@/components/Landing Page/About";
 import Contact from "@/components/Landing Page/Contact";
 import Faq from "@/components/Landing Page/Faq";
@@ -32,7 +32,7 @@ export default function Home() {
             fadeBackground ? "gradientBackground" : "gradientGridBackground"
           } flex items-center justify-center`}
         >
-          <Landingbox />
+          <Main />
         </div>
 
         <div className="flex flex-col items-center">

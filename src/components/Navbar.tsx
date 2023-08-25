@@ -105,7 +105,7 @@ export default function Navbar({ clicked }: ChildProps) {
                   </svg>
                 </span>
                 <div
-                  className={`absolute top-full left-0 right-5 mt-3 text-xl transition-all ease-in-out duration-1000 overflow-hidden ${
+                  className={`absolute top-full mt-3 left-0 right-5 text-xl transition-all ease-in-out duration-1000 overflow-hidden ${
                     isEventDetailsClicked ? "max-h-0" : "max-h-40"
                   }`}
                 >
