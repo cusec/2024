@@ -33,7 +33,9 @@ export default function Sponsor() {
             possible while providing students invaluable opportunities to create
             lasting connections with seasoned professionals.
           </p>
-          
+          <button className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-5 md:px-20 py-3 mt-3 md:mt-6 text-center rounded-full uppercase text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white">
+          Learn More
+          </button>
           </div>
 
         </div>
