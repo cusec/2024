@@ -1,14 +1,11 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import Link from "next/link";
-import { useState } from "react";
 import { useFadeBackground } from "@/app/layout";
 import FaqCard from "./FaqCard";
 
 export default function Faq() {
   const fadeBackground = useFadeBackground();
-  const [isCardClicked, setIsCardClicked] = useState(true);
-  const toggleCardClicked = () => {
-    setIsCardClicked(!isCardClicked);
-  };
 
   return (
     <div
@@ -16,16 +13,14 @@ export default function Faq() {
         fadeBackground ? "opacity-0" : "opacity-100"
       }`}
     >
-      <div className="min-h-screen bg-black bg-opacity-60 shadow text-white flex flex-col items-center px-8">
+      <div className="bg-black bg-opacity-60 shadow text-white px-8">
         <h2 className="text-[28px] text-center font-semibold py-14 px-10">
           Frequently Asked Questions
         </h2>
-        <span className="w-[355px] h-[0.75px] bg-white mb-10"></span>
+        <span className="block max-w-[600px] h-[0.75px] bg-white mb-10 mx-auto"></span>
 
-        <div>
+        <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6">
           <FaqCard
-            toggleCardClicked={toggleCardClicked}
-            isCardClicked={isCardClicked}
             question="When & Where is CUSEC 2024 happening?"
             content={
               <>
@@ -43,7 +38,26 @@ export default function Faq() {
               </>
             }
           />
+          <FaqCard
+            question="Who can attend? Are there any costs?"
+            content={<></>}
+          />
+          <FaqCard question="Where should I book rooms?" content={<></>} />
+          <FaqCard
+            question="Can I get a refund or resell my ticket?"
+            content={<></>}
+          />
         </div>
+
+        <p className="text-center font-medium p-16">
+          Don't see a question you're looking for? Send us an email at{" "}
+          <Link
+            href={"mailto:info@cusec.net"}
+            className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot hover:text-blue-400 transition-colors ease-in-out duration-500"
+          >
+            info@cusec.net
+          </Link>
+        </p>
       </div>
     </div>
   );
