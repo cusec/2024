@@ -6,7 +6,7 @@ import NavLink from "./NavLink";
 import Image from "next/image";
 import logo from "../assets/logo.svg";
 import triangle from "../assets/triangle.svg";
-
+import triangle_white from "../assets/triangle_white.svg";
 
 type ChildProps = {
   clicked: () => void;
@@ -42,12 +42,11 @@ export default function Navbar({ clicked }: ChildProps) {
     };
   });
 
-
   return (
     <nav className="bg-black/[.85] z-50 fixed top-0 w-full flex justify-center bg-clip-padding">
       {/* Desktop Navbar */}
       <div
-        className={`w-full max-w-screen-2xl mx-6 lg:mx-24 uppercase backdrop-blur-[2px]`}
+        className={`w-full max-w-screen-2xl mx-6 lg:mx-24 backdrop-blur-[2px]`}
       >
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
@@ -61,8 +60,89 @@ export default function Navbar({ clicked }: ChildProps) {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
+              {/* <button
+                onClick={toggleEventDetails}
+                className="text-white text-2xl font-semibold w-fit transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3  md:font-medium tracking-wider"
+              >
+                <div
+                  className={`flex bg-clip-text transition-all ease-in-out duration-500 ${
+                    isEventDetailsClicked
+                      ? "hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
+                      : "scale-105 text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
+                  }`}
+                >
+                  Event Details
+                  <span className="px-2"></span>
+                  <Image
+                    src={triangle_white}
+                    alt="Triangle"
+                    width={20}
+                    height={20}
+                    className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 ${
+                      isEventDetailsClicked ? "" : "rotate-180"
+                    }`
+                  }/>
+                </div>
+                <div
+                  className={`ml-4 mt-4 text-xl transition-all ease-in-out duration-1000 overflow-hidden ${
+                    isEventDetailsClicked ? "max-h-0" : "max-h-28"
+                  }`}
+                >
+                  <ul className="space-y-2 flex flex-col">
+                    <Link
+                      href="#"
+                      className="pl-4 w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
+                    >
+                      Sign up
+                    </Link>
+                    <Link
+                      href="#"
+                      className="pl-4 w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
+                    >
+                      Schedule
+                    </Link>
+                    <Link
+                      href="#"
+                      className="pl-4 w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
+                    >
+                      Sponsors
+                    </Link>
+                  </ul>
+                </div>
+              </button> */}
               <NavLink href="/">Home</NavLink>
               <NavLink href="/about">About Us</NavLink>
+
+              <button
+                className="relative uppercase text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium tracking-wider"
+                onMouseEnter={() => toggleEventDetails()}
+                onMouseLeave={() => toggleEventDetails()}
+              >
+                <span className="flex space-x-2">
+                  <Link href="/">Event Details</Link>
+                  <Image
+                    src={triangle_white}
+                    alt="Triangle"
+                    width={15}
+                    height={15}
+                    className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 ${
+                      isEventDetailsClicked ? "" : "rotate-180"
+                    }`}
+                  />
+                </span>
+                <div
+                  className={`absolute top-full left-0 right-5 mt-3 text-xl transition-all ease-in-out duration-1000 overflow-hidden ${
+                    isEventDetailsClicked ? "max-h-0" : "max-h-40"
+                  }`}
+                >
+                  <ul className="space-y-2 flex flex-col bg-black/[.85] rounded-2xl p-4">
+                    <NavLink href="/">Sign up</NavLink>
+                    <NavLink href="/">Schedule</NavLink>
+                    <NavLink href="/">Sponsors</NavLink>
+                  </ul>
+                </div>
+              </button>
+
               <NavLink href="/contact">Contact</NavLink>
             </div>
           </div>
@@ -136,10 +216,10 @@ export default function Navbar({ clicked }: ChildProps) {
   );
 }
 
-
 // Past code for 'Event Details' button
 
-{/* <div
+{
+  /* <div
             onClick={toggleEventDetails}
             className="text-white text-2xl font-semibold w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 cursor-pointer"
           >
@@ -188,4 +268,5 @@ export default function Navbar({ clicked }: ChildProps) {
                 </Link>
               </ul>
             </div>
-          </div> */}
+          </div> */
+}
