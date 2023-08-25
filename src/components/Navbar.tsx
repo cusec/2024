@@ -116,6 +116,7 @@ export default function Navbar({ clicked }: ChildProps) {
                   </ul>
                 </div>
               </button>
+              <NavLink href="/faq">FAQ</NavLink>
 
               <NavLink href="/contact">Contact</NavLink>
             </div>
@@ -235,6 +236,7 @@ export default function Navbar({ clicked }: ChildProps) {
                   </ul>
                 </div>
               </button>
+              <NavLink href="/faq">FAQ</NavLink>
           <NavLink href="/contact">Contact</NavLink>
         </div>
       </div>
@@ -242,8 +244,7 @@ export default function Navbar({ clicked }: ChildProps) {
   );
 }
 
-// Past code for 'Event Details' button
-
+// Previous code for 'Event Details' button
 {
   /* <div
             onClick={toggleEventDetails}
