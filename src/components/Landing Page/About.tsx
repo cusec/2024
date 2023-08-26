@@ -56,7 +56,7 @@ export default function About() {
             TitleText={"50+"}
             SubtitleText={"Sponsors"}
           />
-          <div className="min-[390px]:w-auto max-[390px]:order-last">
+          <div className=" max-[390px]:order-last">
             <Decagon2
               image={large_decagon}
               TitleText={"21"}

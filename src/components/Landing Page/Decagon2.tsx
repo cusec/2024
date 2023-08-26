@@ -1,12 +1,12 @@
 import React from "react";
 
-type Decagon1Props = {
+type Decagon2Props = {
   image: {src: string};
   TitleText: string;
   SubtitleText: string;
 };
 
-export default function Decagon1({ image, TitleText, SubtitleText}:Decagon1Props) {
+export default function Decagon2({ image, TitleText, SubtitleText}:Decagon2Props) {
     
     // Didn't pursue the route of using a CSS-generated decagon because it just didn't look the same as the design, and it was also a pain to get it to be responsive.
     {/* <article className="decagon bg-gradient-to-tr from-royalPurple to-goldenApricot flex items-center justify-center">
@@ -17,7 +17,7 @@ export default function Decagon1({ image, TitleText, SubtitleText}:Decagon1Props
 
   return (
       <article
-        className="relative flex items-center justify-center h-[135px] w-[125px] md:h-[225px] md:w-[212px] pb-2"
+        className="flex items-center justify-center h-[145px] w-[130px] md:h-[250px] md:w-[230px] pb-2"
         style={{
           backgroundImage: `url(${image.src})`,
           backgroundSize: "cover",
