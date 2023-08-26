@@ -4,6 +4,7 @@ import circle_grid_vertical from "@/assets/circle_grid_vertical.svg";
 import circle_grid_horizontal from "@/assets/circle_grid_horizontal.svg";
 import TicketCard from "./TicketCard";
 
+
 export default function Sponsor() {
   const fadeBackground = useFadeBackground();
 
@@ -47,7 +48,7 @@ export default function Sponsor() {
       themeColor="roseQuartz"
     />
   </div>
-  <div className="flex-1">
+  <div className={`flex-1 `}>
     <TicketCard
       title={"VIP"}
       description={"Get an exclusive CUSEC experience"}

@@ -19,8 +19,20 @@ export default function TicketCard({
   buttonLink,
   themeColor,
 }: TicketCardProps) {
+  // The following 4 lines of code are for the calculation of the angle and width of the ribbon banner for the VIP Card. The width and the height can be altered to make the ribbon banner bigger or smaller. The values for width and height are in tailwind units, where 4 = 1rem, so 36 = 9rem and 28 = 7rem.
+  const width = 40;
+  const height = 30;
+  const hypotenuse = Math.sqrt(width * width + height * height);
+  const angle = Math.atan2(height, width) * (180 / Math.PI);
+
   return (
-    <div className={`${themeColor === "roseQuartz" ?"bg-gradient-to-tl from-roseQuartz to-goldenApricot":"bg-gradient-to-tr from-roseQuartz via-lavenderFog to-royalPurple"} mx-auto rounded-3xl shadow-[0_10px_60px_-15px_rgba(0,0,0,.8)]`}>
+    <div
+      className={`${
+        themeColor === "roseQuartz"
+          ? "bg-gradient-to-tl from-roseQuartz to-goldenApricot"
+          : "bg-gradient-to-tr from-roseQuartz via-lavenderFog to-royalPurple"
+      } mx-auto rounded-3xl shadow-[0_10px_60px_-15px_rgba(0,0,0,.8)] relative`}
+    >
       <section className="bg-black bg-opacity-60 text-white space-y-6 flex flex-col py-10 px-10 rounded-3xl h-full">
         <h3
           className={`text-[20px] text-center font-semibold uppercase ${
@@ -36,21 +48,32 @@ export default function TicketCard({
 
         <div className="mx-auto">
           <p>
-            <span className={`font-semibold ${themeColor === "roseQuartz" ? "text-roseQuartz" : "text-goldenApricot"}`}>
+            <span
+              className={`font-semibold ${
+                themeColor === "roseQuartz"
+                  ? "text-roseQuartz"
+                  : "text-goldenApricot"
+              }`}
+            >
               &nbsp; ${studentPrice}
               {"  "}
             </span>
             /{"  "}student
           </p>
           <p>
-            <span className={`font-semibold ${themeColor === "roseQuartz" ? "text-roseQuartz" : "text-goldenApricot"}`}>
+            <span
+              className={`font-semibold ${
+                themeColor === "roseQuartz"
+                  ? "text-roseQuartz"
+                  : "text-goldenApricot"
+              }`}
+            >
               ${professionalPrice}
               {"  "}
             </span>
             /{"  "}professional
           </p>
         </div>
-
 
         <Link
           className={`drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] ${
@@ -87,7 +110,29 @@ export default function TicketCard({
             </li>
           ))}
         </ul>
+
+        <div className={`${title === "VIP" ? "block" : "hidden"}`}></div>
       </section>
+      <div
+        className={`${
+          title === "VIP" ? "block" : "hidden"
+        } bg-amber-600 absolute -top-3 -right-3 overflow-hidden`}
+        style={{
+          width: `${width / 4}rem`,
+          height: `${height / 4}rem`,
+        }}
+      >
+        <Link
+          href="/"
+          className="block bg-goldenApricot text-center text-purple-800 font-semibold tracking-wide uppercase py-2 absolute bottom-0 right-0 origin-bottom-right"
+          style={{
+            width: `${(hypotenuse / width) * 100}%`,
+            transform: `rotate(${angle}deg)`,
+          }}
+        >
+          Popular
+        </Link>
+      </div>
     </div>
   );
 }
