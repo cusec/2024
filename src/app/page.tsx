@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Head from "next/head";
 
 import Main from "@/components/Landing Page/Main";
-import main_section_fade from "@/assets/main_section_fade.svg";
 import About from "@/components/Landing Page/About";
 import Sponsor from "@/components/Landing Page/Sponsor";
 import Tickets from "@/components/Landing Page/Tickets";
@@ -23,7 +22,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>CUSEC 2024 Home</title>
+        <title>CUSEC 2024 - Home</title>
         <meta
           name="description"
           content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."
