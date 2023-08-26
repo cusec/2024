@@ -57,8 +57,8 @@ January 12, 13, and 14.
         <p className="text-center font-medium py-16 md:px-16">
           Don't see a question you're looking for?<br /> Send us an email at{" "}
           <Link
-            href={"mailto:info@cusec.net"}
-            className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot hover:text-blue-400 transition-colors ease-in-out duration-500"
+            href={"mailto:info@cusec.net?subject=Inquiry:&body=Hello CUSEC team,"}
+            className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot hover:text-sky-400 transition-colors ease-in-out duration-500"
           >
             info@cusec.net
           </Link>
