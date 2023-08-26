@@ -39,7 +39,7 @@ export default function Home() {
           </Fade>
         </div>
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mt-[-70px] md:mt-[-100px]">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full">
             <Fade>
             <About />
