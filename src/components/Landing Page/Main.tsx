@@ -38,7 +38,7 @@ const Landingbox = () => {
             Become a Speaker
           </button>
           <Link
-            href=""
+            href="mailto:sponsor@cusec.net?subject=Sponsorship Inquiry:&body=Hello CUSEC sponsorship team,"
             className="md:hidden block text-royalBlue font-semibold underline underline-offset-2 decoration-2"
           >
             Interested in Sponsoring?
