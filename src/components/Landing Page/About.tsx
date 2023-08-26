@@ -9,6 +9,7 @@ import circle_grid_horizontal from "@/assets/circle_grid_horizontal.svg";
 import Image from "next/image";
 import Decagon1 from "./Decagon1";
 import Decagon2 from "./Decagon2";
+import Link from "next/link";
 
 export default function About() {
   const fadeBackground = useFadeBackground();
@@ -70,7 +71,15 @@ export default function About() {
           />
         </section>
       </div>
+      <div className="flex justify-center">
 
+        <Link
+          className={`drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-royalBlue hover:bg-goldenApricot mx-auto px-5 md:px-10 py-1 mt-3 md:mt-6 text-center rounded-full uppercase md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
+          href={`/`}
+        >
+        Learn More
+        </Link>
+        </div>
       <span className="flex justify-end pb-8">
       <Image
         src={circle_grid_horizontal}
