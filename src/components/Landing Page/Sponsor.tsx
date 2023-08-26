@@ -30,10 +30,10 @@ export default function Sponsor() {
               CUSEC possible while providing students invaluable opportunities
               to create lasting connections with seasoned professionals.
             </p>
-            <div className="text-center md:text-right">
+            <div className="flex justify-center md:justify-end">
               <Link
                 href={"/"}
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-5 md:px-20 py-3 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white"
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white"
               >
                 Learn&nbsp;More
               </Link>
