@@ -2,17 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import logoPrimaryDark from "src/assets/logo-primary-dark.svg";
 import greyEllipse from "src/assets/grey-ellipse.svg";
-import { useFadeBackground } from "@/app/layout";
 import BlueBorderSquareBox from "./BlueBorderSquareBox";
 
 const Landingbox = () => {
-  const fadeBackground = useFadeBackground();
-
   return (
     <main
-      className={`transition-opacity ease-in-out duration-[1500ms] ${
-        fadeBackground ? "opacity-0" : "opacity-100"
-      } mx-6 lg:mx-24 lg:w-[1024px]`}
+      className={`mx-6 lg:mx-24 lg:w-[1024px]`}
     >
       <BlueBorderSquareBox>
         <section className="p-8 text-center mx-auto space-y-5">

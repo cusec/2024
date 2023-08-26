@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 import Head from "next/head";
-
+import Fade from "@/components/Fade";
 import Main from "@/components/Landing Page/Main";
 import About from "@/components/Landing Page/About";
 import Sponsor from "@/components/Landing Page/Sponsor";
@@ -34,24 +34,36 @@ export default function Home() {
             fadeBackground ? "gradientBackground" : "gradientGridBackground"
           } flex items-center justify-center min-h-[calc(100vh+50px)]`}
         >
+          <Fade>
           <Main />
+          </Fade>
         </div>
 
         <div className="flex flex-col items-center">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full">
+            <Fade>
             <About />
+            </Fade>
           </div>
           <div className="w-full gradientBackground">
+            <Fade>
           <Sponsor/>
+            </Fade>
             </div>
           <div className="mx-6 lg:mx-24 max-w-screen-lg">
+            <Fade>
             <Tickets />
+            </Fade>
           </div>
           <div className="w-full gradientBackground">
+            <Fade>
             <Faq />
+            </Fade>
             </div>
             <div className="mx-6 lg:mx-24 pb-10 max-w-screen-lg lg:w-full">
+              <Fade>
               <Contact />
+              </Fade>
           </div>
         </div>
       </div>

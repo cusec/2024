@@ -11,9 +11,8 @@ export default function Footer() {
   const fadeBackground = useFadeBackground();
   return (
     <footer
-      className={`transition-opacity ease-in-out duration-[1500ms] bg-black/[.85] w-full flex justify-center ${
-        fadeBackground ? "opacity-0" : "opacity-100 text-red"
-      }`}
+      className={`transition-opacity ease-in-out duration-[1500ms] bg-black/[.85] w-full flex justify-center 
+      `}
     >
       <div className="flex items-baseline space-x-4 px-6 lg:mx-24 py-4">
         <Link

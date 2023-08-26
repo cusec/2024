@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 import Head from "next/head";
-import { useFadeBackground } from "../layout";
+import Fade from "@/components/Fade";
 import Image from "next/image";
 import bottom_right_gradient_lines from "./bottom_right_gradient_lines.svg";
 import top_left_gradient_lines from "./top_left_gradient_lines.svg";
@@ -15,7 +15,6 @@ const metadata: Metadata = {
 };
 
 export default function Home() {
-  const fadeBackground = useFadeBackground();
   return (
     <>
       <Head>
@@ -39,7 +38,9 @@ export default function Home() {
         <div
           className={`gradientBackground flex items-center justify-center min-h-[calc(100vh+50px)]`}
         >
-            <Main />
+            <Fade>
+              <Main />
+            </Fade>
         </div>
 
         <div className="flex flex-col items-center">

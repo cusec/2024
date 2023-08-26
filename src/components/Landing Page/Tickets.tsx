@@ -1,17 +1,11 @@
-import { useFadeBackground } from "@/app/layout";
 import Image from "next/image";
 import circle_grid_horizontal from "@/assets/circle_grid_horizontal.svg";
 import TicketCard from "./TicketCard";
 
 export default function Sponsor() {
-  const fadeBackground = useFadeBackground();
 
   return (
-    <div
-      className={`transition-opacity ease-in-out duration-[1500ms] ${
-        fadeBackground ? "opacity-0" : "opacity-100"
-      }`}
-    >
+    <>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="mt-10 md:my-10">
           <h2 className="text-[28px] font-semibold tracking-tight">
@@ -68,6 +62,6 @@ export default function Sponsor() {
           alt="Horizontal grid of grey circles"
         />
       </span>
-    </div>
+    </>
   );
 }

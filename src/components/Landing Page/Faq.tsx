@@ -1,18 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import Link from "next/link";
-import { useFadeBackground } from "@/app/layout";
 import FaqCard from "./FaqCard";
 
 export default function Faq() {
-  const fadeBackground = useFadeBackground();
 
   return (
-    <div
-      className={`transition-opacity ease-in-out duration-[1500ms] ${
-        fadeBackground ? "opacity-0" : "opacity-100"
-      }`}
-    >
+    <>
       <div className="bg-black bg-opacity-60 shadow text-white px-8">
         <h2 className="text-[28px] text-center font-semibold py-14 px-10">
           Frequently Asked Questions
@@ -28,9 +22,7 @@ export default function Faq() {
                   <span className="block">
                     <em>When:&nbsp;</em>
                   </span>
-                  <span className="block">
-January 12, 13, and 14.
-                  </span>
+                  <span className="block">January 12, 13, and 14.</span>
                 </p>
                 <p className="flex">
                   <span className="block">
@@ -55,15 +47,18 @@ January 12, 13, and 14.
         </div>
 
         <p className="text-center font-medium py-16 md:px-16">
-          Don't see a question you're looking for?<br /> Send us an email at{" "}
+          Don't see a question you're looking for?
+          <br /> Send us an email at{" "}
           <Link
-            href={"mailto:info@cusec.net?subject=Inquiry:&body=Hello CUSEC team,"}
+            href={
+              "mailto:info@cusec.net?subject=Inquiry:&body=Hello CUSEC team,"
+            }
             className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot hover:text-sky-400 transition-colors ease-in-out duration-500"
           >
             info@cusec.net
           </Link>
         </p>
       </div>
-    </div>
+    </>
   );
 }

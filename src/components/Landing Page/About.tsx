@@ -3,7 +3,6 @@ import decagon_gradient_2 from "@/assets/decagon_gradient_2.svg";
 import decagon_gradient_3 from "@/assets/decagon_gradient_3.svg";
 import decagon_gradient_4 from "@/assets/decagon_gradient_4.svg";
 import large_decagon from "@/assets/large_decagon.svg";
-import { useFadeBackground } from "@/app/layout";
 import circle_grid_vertical from "@/assets/circle_grid_vertical.svg";
 import circle_grid_horizontal from "@/assets/circle_grid_horizontal.svg";
 import Image from "next/image";
@@ -12,15 +11,9 @@ import Decagon2 from "./Decagon2";
 import Link from "next/link";
 
 export default function About() {
-  const fadeBackground = useFadeBackground();
 
   return (
-    <div
-      className={`transition-opacity ease-in-out duration-[1500ms] ${
-        fadeBackground ? "opacity-0" : "opacity-100"
-      }`}
-    >
-      
+        <>
         <Image
           src={circle_grid_vertical}
           alt="circle grid vertical"
@@ -88,6 +81,6 @@ export default function About() {
         className="w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] "
         />
         </span>
-    </div>
+        </>
   );
 }

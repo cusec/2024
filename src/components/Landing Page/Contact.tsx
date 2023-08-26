@@ -1,15 +1,9 @@
-import { useFadeBackground } from "@/app/layout";
 import Link from "next/link";
 
 export default function Contact() {
-  const fadeBackground = useFadeBackground();
 
   return (
-    <div
-      className={`transition-opacity ease-in-out duration-[1500ms] ${
-        fadeBackground ? "opacity-0" : "opacity-100"
-      }`}
-    >
+    <>
       <section className="lg:max-w-[1024px] max-w-[768px] space-y-6">
         <p className="font-semibold text-[28px] ">Contact Us</p>
         <p className="font-regular text-[15px]">
@@ -50,6 +44,6 @@ export default function Contact() {
           for improvement.
         </p>
       </section>
-    </div>
+    </>
   );
 }
