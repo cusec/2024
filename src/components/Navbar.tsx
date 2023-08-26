@@ -5,8 +5,6 @@ import Link from "next/link";
 import NavLink from "./NavLink";
 import Image from "next/image";
 import logo from "../assets/logo.svg";
-import triangle from "../assets/triangle.svg";
-import triangle_white from "../assets/triangle_white.svg";
 
 type ChildProps = {
   clicked: () => void;
@@ -60,7 +58,6 @@ export default function Navbar({ clicked }: ChildProps) {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-
               <NavLink href="/">Home</NavLink>
               <NavLink href="/about">About Us</NavLink>
 
@@ -182,62 +179,62 @@ export default function Navbar({ clicked }: ChildProps) {
         }
       >
         <div className="flex flex-col mx-6 ml-6 mt-24 space-y-10 uppercase">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/about">About Us</NavLink>
+          <NavLink toggleMobileMenu={toggleMobileMenu} href="/">Home</NavLink>
+          <NavLink toggleMobileMenu={toggleMobileMenu} href="/about">About Us</NavLink>
           <button
-                className="relative uppercase text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium tracking-wider"
-                onMouseEnter={() => toggleEventDetails()}
-                onMouseLeave={() => toggleEventDetails()}
-              >
-                <span className="flex space-x-2">
-                  <Link href="/">Event Details</Link>
+            className="relative uppercase text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium tracking-wider"
+            onMouseEnter={() => toggleEventDetails()}
+            onMouseLeave={() => toggleEventDetails()}
+          >
+            <span className="flex space-x-2">
+              <Link href="/">Event Details</Link>
 
-                  <svg
-                    className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 ${
-                      isEventDetailsClicked
-                        ? "fill-white"
-                        : "rotate-180 fill-[url(#sidebar-gradient)]"
-                    }`}
-                    width="12px"
-                    height="30px"
-                    viewBox="0 0 512 512"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <linearGradient
-                      id="sidebar-gradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="0%"
-                      y2="100%"
-                    >
-                      <stop stopColor="#AC65E3" offset="0%" />
-                      <stop stopColor="#E087BB" offset="50%" />
-                      <stop stopColor="#FFB963" offset="100%" />
-                    </linearGradient>
-                    <title>triangle-icon</title>
-                    <g id="drop" transform="translate(32.000000, 42.666667)">
-                      <path
-                        d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z"
-                        id="Combined-Shape"
-                      />
-                    </g>
-                  </svg>
-                </span>
-                <div
-                  className={`top-full left-0 right-5 mt-3 text-xl transition-all ease-in-out duration-1000 overflow-hidden ${
-                    isEventDetailsClicked ? "max-h-0" : "max-h-40"
-                  }`}
+              <svg
+                className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 ${
+                  isEventDetailsClicked
+                    ? "fill-white"
+                    : "rotate-180 fill-[url(#sidebar-gradient)]"
+                }`}
+                width="12px"
+                height="30px"
+                viewBox="0 0 512 512"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <linearGradient
+                  id="sidebar-gradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
                 >
-                  <ul className="space-y-2 flex flex-col p-4">
-                    <NavLink href="/">Sign up</NavLink>
-                    <NavLink href="/">Schedule</NavLink>
-                    <NavLink href="/">Sponsors</NavLink>
-                  </ul>
-                </div>
-              </button>
-              <NavLink href="/faq">FAQ</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
+                  <stop stopColor="#AC65E3" offset="0%" />
+                  <stop stopColor="#E087BB" offset="50%" />
+                  <stop stopColor="#FFB963" offset="100%" />
+                </linearGradient>
+                <title>triangle-icon</title>
+                <g id="drop" transform="translate(32.000000, 42.666667)">
+                  <path
+                    d="M246.312928,5.62892705 C252.927596,9.40873724 258.409564,14.8907053 262.189374,21.5053731 L444.667042,340.84129 C456.358134,361.300701 449.250007,387.363834 428.790595,399.054926 C422.34376,402.738832 415.04715,404.676552 407.622001,404.676552 L42.6666667,404.676552 C19.1025173,404.676552 7.10542736e-15,385.574034 7.10542736e-15,362.009885 C7.10542736e-15,354.584736 1.93772021,347.288125 5.62162594,340.84129 L188.099293,21.5053731 C199.790385,1.04596203 225.853517,-6.06216498 246.312928,5.62892705 Z"
+                    id="Combined-Shape"
+                  />
+                </g>
+              </svg>
+            </span>
+            <div
+              className={`top-full left-0 right-5 mt-3 text-xl transition-all ease-in-out duration-1000 overflow-hidden ${
+                isEventDetailsClicked ? "max-h-0" : "max-h-40"
+              }`}
+            >
+              <ul className="space-y-2 flex flex-col p-4">
+                <NavLink toggleMobileMenu={toggleMobileMenu} href="/">Sign up</NavLink>
+                <NavLink toggleMobileMenu={toggleMobileMenu} href="/">Schedule</NavLink>
+                <NavLink toggleMobileMenu={toggleMobileMenu} href="/">Sponsors</NavLink>
+              </ul>
+            </div>
+          </button>
+          <NavLink toggleMobileMenu={toggleMobileMenu} href="/faq">FAQ</NavLink>
+          <NavLink toggleMobileMenu={toggleMobileMenu} href="/contact">Contact</NavLink>
         </div>
       </div>
     </nav>
