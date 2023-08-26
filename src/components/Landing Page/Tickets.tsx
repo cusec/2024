@@ -13,36 +13,58 @@ export default function Sponsor() {
         fadeBackground ? "opacity-0" : "opacity-100"
       }`}
     >
-      <h2 className="text-[28px] font-semibold tracking-tight">
-        Attend Our 2024 Event
-      </h2>
-      <p className="font-semibold bg-clip-text text-transparent bg-gradient-to-tr from-royalPurple to-roseQuartz tracking-tight">
-        Pricing Plans
-      </p>
+        <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="mt-10 md:my-10">
+        <h2 className="text-[28px] font-semibold tracking-tight">
+          Attend Our 2024 Event
+        </h2>
+        <p className="font-semibold bg-clip-text text-transparent bg-gradient-to-tr from-royalPurple to-roseQuartz tracking-tight">
+          Pricing Plans
+        </p>
+      </div>
 
-      <span className="flex justify-end mr-[-45px]">
+      <span className="flex justify-end mr-[-8px] mb-4">
         <Image
           src={circle_grid_horizontal}
           alt="Horizontal grid of grey circles"
-          className="w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] "
-        />
+          />
       </span>
+          </div>
 
-      <div>
-        <TicketCard
-          title={"Basic"}
-          description={"Learn, network, and grow with CUSEC"}
-          studentPrice={80}
-          professionalPrice={100}
-          features={[
-            "Social Events",
-            "Networking Benefits",
-            "Workshops & Talks hosted by sponsors",
-          ]}
-          buttonLink="/"
-          themeColor="roseQuartz"
-        />
-      </div>
+    <div className="mb-10 md:flex space-y-5 md:space-y-0 md:space-x-4 items-stretch">
+  <div className="flex-1">
+    <TicketCard
+      title={"Basic"}
+      description={"Learn, network, and grow with CUSEC"}
+      studentPrice={80}
+      professionalPrice={100}
+      features={[
+        "Social Events",
+        "Networking Benefits",
+        "Workshops & Talks hosted by sponsors",
+      ]}
+      buttonLink="/"
+      themeColor="roseQuartz"
+    />
+  </div>
+  <div className="flex-1">
+    <TicketCard
+      title={"VIP"}
+      description={"Get an exclusive CUSEC experience"}
+      studentPrice={110}
+      professionalPrice={230}
+      features={[
+        "All Basic Benefits",
+        "Priority Networking",
+        "Exlusive CUSEC 2024 Merchandise",
+      ]}
+      buttonLink="/"
+      themeColor="goldenApricot"
+    />
+  </div>
+</div>
+
+
     </div>
   );
 }

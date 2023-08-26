@@ -44,7 +44,7 @@ export default function Home() {
           <div className="w-full gradientBackground">
           <Sponsor/>
             </div>
-          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full">
+          <div className="mx-6 lg:mx-24 max-w-screen-lg">
             <Tickets />
           </div>
           <div className="w-full gradientBackground">
