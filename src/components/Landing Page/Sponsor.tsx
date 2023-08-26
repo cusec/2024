@@ -15,13 +15,15 @@ export default function Sponsor() {
           <h2 className="text-center text-[28px] font-semibold pb-10 block md:hidden">
             Sponsor CUSEC 2024
           </h2>
-          <div className="relative max-w-md aspect-square mx-auto justify-self-stretch w-full">
+          <div className="mx-4 md:mx-0">
+          <div className="relative max-w-md aspect-square mx-auto w-full">
             <div className="absolute max-w-md aspect-square top-[-17px] right-[-18px] bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-[95%]">
               {/* This div is for the background gradient */}
             </div>
             <BlueBorderSquareBox>
               <div className="aspect-square">Some content here</div>
             </BlueBorderSquareBox>
+          </div>
           </div>
 
           <div className="md:text-right mx-auto md:pl-10">

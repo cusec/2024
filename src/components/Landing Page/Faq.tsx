@@ -49,7 +49,7 @@ export default function Faq() {
           />
         </div>
 
-        <p className="text-center font-medium p-16">
+        <p className="text-center font-medium py-16 md:px-16">
           Don't see a question you're looking for? Send us an email at{" "}
           <Link
             href={"mailto:info@cusec.net"}
