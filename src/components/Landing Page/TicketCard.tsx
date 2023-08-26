@@ -116,15 +116,18 @@ export default function TicketCard({
       <div
         className={`${
           title === "VIP" ? "block" : "hidden"
-        } bg-amber-600 absolute -top-3 -right-3 overflow-hidden`}
+        } absolute -top-3 -right-3 overflow-hidden rounded-sm`}
         style={{
           width: `${width / 4}rem`,
           height: `${height / 4}rem`,
         }}
       >
+        {/* The next 2 divs are the triangles at the top left and bottom left which provide the wraparound effect. */}
+        <div className="absolute h-3 w-5 top-0 left-0 bg-amber-600"></div>
+        <div className="absolute h-3 w-3 bottom-0 right-0 bg-amber-600"></div>
         <Link
           href="/"
-          className="block bg-goldenApricot text-center text-purple-800 font-semibold tracking-wide uppercase py-2 absolute bottom-0 right-0 origin-bottom-right"
+          className="block bg-goldenApricot text-center text-purple-800 font-semibold tracking-wide uppercase py-2 absolute bottom-0 right-0 origin-bottom-right shadow-sm transition ease-in-out duration-500 hover:bg-amber-300 hover:font-bold"
           style={{
             width: `${(hypotenuse / width) * 100}%`,
             transform: `rotate(${angle}deg)`,
