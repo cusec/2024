@@ -24,8 +24,13 @@ export default function Faq() {
             question="When & Where is CUSEC 2024 happening?"
             content={
               <>
-                <p>
-                  <em>When: </em> January 12, 13, and 14.
+                <p className="flex">
+                  <span className="block">
+                    <em>When:&nbsp;</em>
+                  </span>
+                  <span className="block">
+January 12, 13, and 14.
+                  </span>
                 </p>
                 <p className="flex">
                   <span className="block">
