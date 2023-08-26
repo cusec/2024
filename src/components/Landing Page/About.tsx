@@ -50,13 +50,13 @@ export default function About() {
             SubtitleText={"Speakers"}
           />
         </section>
-        <section className="flex max-[390px]:flex-wrap items-center space-x-4 max-[390px]:justify-center">
+        <section className="flex items-center space-x-4">
           <Decagon1
             image={decagon_gradient_3}
             TitleText={"50+"}
             SubtitleText={"Sponsors"}
           />
-          <div className=" max-[390px]:order-last">
+          <div className="">
             <Decagon2
               image={large_decagon}
               TitleText={"21"}
