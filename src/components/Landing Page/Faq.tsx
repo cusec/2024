@@ -50,7 +50,7 @@ export default function Faq() {
         </div>
 
         <p className="text-center font-medium py-16 md:px-16">
-          Don't see a question you're looking for? Send us an email at{" "}
+          Don't see a question you're looking for?<br /> Send us an email at{" "}
           <Link
             href={"mailto:info@cusec.net"}
             className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot hover:text-blue-400 transition-colors ease-in-out duration-500"

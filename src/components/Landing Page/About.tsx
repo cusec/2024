@@ -20,6 +20,7 @@ export default function About() {
         fadeBackground ? "opacity-0" : "opacity-100"
       }`}
     >
+      
         <Image
           src={circle_grid_vertical}
           alt="circle grid vertical"

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Head from "next/head";
 
 import Main from "@/components/Landing Page/Main";
+import main_section_fade from "@/assets/main_section_fade.svg";
 import About from "@/components/Landing Page/About";
 import Sponsor from "@/components/Landing Page/Sponsor";
 import Tickets from "@/components/Landing Page/Tickets";
@@ -32,7 +33,7 @@ export default function Home() {
         <div
           className={`${
             fadeBackground ? "gradientBackground" : "gradientGridBackground"
-          } flex items-center justify-center`}
+          } flex items-center justify-center min-h-[calc(100vh+50px)]`}
         >
           <Main />
         </div>

@@ -19,7 +19,6 @@ html {
 }
 
 .gradientGridBackground{
-  height: calc(100vh + 50px);
   z-index:0;
   background: var(--gradient-colors),
     repeating-linear-gradient(
@@ -43,14 +42,13 @@ html {
 
 
 .gradientBackground {
-  height: calc(100vh + 50px);
   z-index:0;
   background: var(--gradient-colors);
-
   background-blend-mode: overlay;
 }
 
 /* overlay gradient */
+
 .gradientGridBackground:after, 
 .gradientBackground:after {
   pointer-events: none;
