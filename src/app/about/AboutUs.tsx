@@ -12,7 +12,7 @@ export default function AboutUs() {
           className="w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] "
         />
       </div>
-      <section className="lg:max-w-[1024px] max-w-[768px] space-y-6 pl-12 ">
+      <section className="lg:max-w-[1024px] max-w-[768px] space-y-6 px-6 md:px-12 ">
         <p className="font-semibold text-[28px] md:text-[40px]">About Us</p>
         <p className="font-regular text-[15px] md:text-[20px]">
           CUSEC is an annual software engineering conference organized by
