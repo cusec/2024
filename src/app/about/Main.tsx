@@ -1,13 +1,11 @@
 import Image from "next/image";
 import cusec_2023_group_photo from "./cusec_2023_group_photo.svg";
-import grid_gradient_fill_lines from "./grid_gradient_fill_lines.svg";
 
 interface MainProps {
   isMediumScreen: boolean;
 }
 
 export default function Main({ isMediumScreen }: MainProps) {
-
   console.log("isMediumScreen inside Main:", isMediumScreen);
 
   return (
@@ -30,9 +28,8 @@ export default function Main({ isMediumScreen }: MainProps) {
         </defs>
       </svg>
 
-      {/* Image */}
       <div
-        className="absolute inset-0 lg:mx-1"
+        className="absolute inset-0 lg:mx-1 brightness-50"
         style={{
           clipPath: isMediumScreen ? "url(#imageClip)" : "none",
           WebkitClipPath: isMediumScreen ? "url(#imageClip)" : "none", // for Safari
@@ -47,13 +44,8 @@ export default function Main({ isMediumScreen }: MainProps) {
         />
       </div>
 
-      {/* Tint */}
       <div
-        className="absolute inset-0 bg-black bg-opacity-70 z-1 flex justify-center items-center lg:mx-1"
-        style={{
-          clipPath: isMediumScreen ? "url(#imageClip)" : "none",
-          WebkitClipPath: isMediumScreen ? "url(#imageClip)" : "none", // for Safari
-        }}
+        className="absolute inset-0 z-1 flex justify-center items-center lg:mx-1"
       >
         {/* Text */}
         <h1 className="uppercase text-white font-semibold text-[24px] mx-6 lg:ml-24 lg:mr-52 lg:text-[50px]">

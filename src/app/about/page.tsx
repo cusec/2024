@@ -8,6 +8,7 @@ import bottom_right_gradient_lines from "./bottom_right_gradient_lines.svg";
 import top_left_gradient_lines from "./top_left_gradient_lines.svg";
 import Main from "@/app/about/Main";
 import { useEffect, useState } from "react";
+import grid_gradient_fill_lines from "./grid_gradient_fill_lines.svg";
 
 const metadata: Metadata = {
   title: "CUSEC 2024",
@@ -45,15 +46,26 @@ export default function About() {
         ></meta>
       </Head>
       <div className="w-full">
+
+        {/* Top Left Gradient Lines */}
         <Image
           src={top_left_gradient_lines}
           alt="top_left_gradient_lines"
           className="absolute top-[64px] z-10"
         />
+
+        {/* Bottom Right Gradient Lines */}
         <Image
           src={bottom_right_gradient_lines}
           alt="bottom right gradient lines"
-          className="absolute bottom-[-13vh] right-0 z-10"
+          className="absolute bottom-[-13vh] right-0 z-10 md:hidden"
+        />
+
+        {/* Grid Lines behind curve*/}
+        <Image
+          src={grid_gradient_fill_lines}
+          alt="grid gradient fill lines"
+          className="absolute bottom-10 right-0 z-0"
         />
 
         {/* https://yqnn.github.io/svg-path-editor/ */}
@@ -91,7 +103,7 @@ export default function About() {
             }}
           >
             <Fade>
-              <Main isMediumScreen ={isMediumScreen}/>
+              <Main isMediumScreen={isMediumScreen} />
             </Fade>
           </div>
         </div>
