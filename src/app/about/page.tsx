@@ -6,7 +6,8 @@ import Fade from "@/components/Fade";
 import Image from "next/image";
 import bottom_right_gradient_lines from "./bottom_right_gradient_lines.svg";
 import top_left_gradient_lines from "./top_left_gradient_lines.svg";
-import Main from "@/components/About Page/Main";
+import Main from "@/app/about/Main";
+import { useEffect, useState } from "react";
 
 const metadata: Metadata = {
   title: "CUSEC 2024",
@@ -14,7 +15,26 @@ const metadata: Metadata = {
     "Official website for the 2024 edition of the Canadian University Software Engineering Conference.",
 };
 
-export default function Home() {
+export default function About() {
+  const [windowWidth, setWindowWidth] = useState(0);
+  useEffect(() => {
+    // Update the window width when the component mounts
+    setWindowWidth(window.innerWidth);
+
+    // Listen for window resize events
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  const isMediumScreen = windowWidth > 768;
+
   return (
     <>
       <Head>
@@ -28,19 +48,52 @@ export default function Home() {
         <Image
           src={top_left_gradient_lines}
           alt="top_left_gradient_lines"
-          className="absolute top-[64px]"
+          className="absolute top-[64px] z-10"
         />
         <Image
           src={bottom_right_gradient_lines}
           alt="bottom right gradient lines"
-          className="absolute -bottom-[15vh] right-0"
+          className="absolute bottom-[-13vh] right-0 z-10"
         />
+
+        {/* https://yqnn.github.io/svg-path-editor/ */}
+
+        <svg width="0" height="0">
+          <defs>
+            <clipPath id="gradientClip" clipPathUnits="objectBoundingBox">
+              <path
+                d="
+               M 0 0 
+               L 1 0 
+               L 1 0.07 
+               C 0.955 0.342 
+               0.897 0.902 
+               0.467 0.902 
+               L 0 0.9 
+               Z
+                "
+              />
+            </clipPath>
+          </defs>
+        </svg>
+
         <div
-          className={`gradientBackground flex items-center justify-center min-h-[calc(100vh+50px)]`}
+          style={{
+            filter: "drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.5))",
+          }}
         >
+          <div
+            className="bg-gradient-to-tr from-royalPurple via-roseQuartz to-goldenApricot flex items-center justify-center min-h-[calc(100vh+50px)]"
+            style={{
+              clipPath: isMediumScreen ? "url(#gradientClip)" : "none",
+              WebkitClipPath: isMediumScreen ? "url(#gradientClip)" : "none", // for Safari
+              filter: "drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.5))",
+            }}
+          >
             <Fade>
-              <Main />
+              <Main isMediumScreen ={isMediumScreen}/>
             </Fade>
+          </div>
         </div>
 
         <div className="flex flex-col items-center">
