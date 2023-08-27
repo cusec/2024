@@ -85,3 +85,21 @@ d. Search Engine Optimization (SEO): Optimize the website for search engines to 
 
 e. Analytics and Reporting: Integrate analytics tools to track website performance, user engagement, and conversion rates.
 </details>
+
+<details>
+  <summary>Learning Log</summary>
+
+- Using Next.js 13 app router, and using 'Link' and 'Image' components instead of <a> and <img> tags.🔗🖼️
+- Defining custom types using TypeScript.✅
+- Using Tailwind to rapidly create layouts and basic styling.🚀
+- Creating grid backgrounds using vanilla CSS.⏹️
+- Giving texts gradient backgrounds.🟣🟡
+- Creating better adaptive layouts with custom breakpoints.🧐
+- Creating a frosted Navbar.❄️
+- Creating a custom animated hamburger icon using hover groups, transforms, and transition timing functions.🍔
+- Passing states up and down parent and child components using the 'createContext()' and 'useContext()' React hooks.🪝
+- Finally understanding how absolute and relative positionings work in CSS.🤯
+- Using the 'styles' prop in conjunction to tailwind to add advanced inline styles, such as clip paths and svg rendering.💅
+- Using CSS clip path with the 'path' function to create custom cubic bezier curves for components.🛣️
+ 
+</details>
