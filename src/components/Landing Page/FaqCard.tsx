@@ -13,12 +13,17 @@ export default function FaqCard({ question, content }: FaqCardProps) {
 
   return (
     <aside className="text-black bg-white rounded-b-lg hover:scale-[103%] transition ease-in-out duration-500 self-start">
+      {/* Top gradient line */}
       <span className="h-3 block bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot"></span>
+
       <button
         className="w-full text-[14px] font-semibold px-4 py-2 flex justify-between"
         onClick={toggleCardClicked}
       >
+        {/* Question Text */}
         <span className="block">{question}</span>
+
+        {/* Bottom gradient line */}
         <span className="block">
           <svg
             className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 fill-black ${

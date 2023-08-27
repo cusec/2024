@@ -3,24 +3,24 @@ import decagon_gradient_2 from "@/assets/decagon_gradient_2.svg";
 import decagon_gradient_3 from "@/assets/decagon_gradient_3.svg";
 import decagon_gradient_4 from "@/assets/decagon_gradient_4.svg";
 import large_decagon from "@/assets/large_decagon.svg";
-import circle_grid_vertical from "@/assets/circle_grid_vertical.svg";
-import circle_grid_horizontal from "@/assets/circle_grid_horizontal.svg";
+import circle_grid_v1 from "@/assets/circle_grid_v1.svg";
+import circle_grid_v2 from "@/assets/circle_grid_v2.svg";
 import Image from "next/image";
 import Decagon1 from "./Decagon1";
 import Decagon2 from "./Decagon2";
 import Link from "next/link";
 
 export default function About() {
-
   return (
-        <>
-        <Image
-          src={circle_grid_vertical}
-          alt="circle grid vertical"
-          className="relative top-[70px] w-[40px] h-[80px] md:h-[120px] md:top-[80px] md:right-[40px] lg:top-[100px] lg:right-[40px] lg:h-[160px]"
-        />
-      <section className="lg:max-w-[1024px] max-w-[768px] space-y-6 pl-12 ">
+    <>
 
+      {/* Vertical grid of grey circles */}
+      <Image
+        src={circle_grid_v1}
+        alt="Vertical grid of grey circles"
+        className="relative top-[70px] w-[40px] h-[80px] md:h-[120px] md:top-[80px] md:right-[40px] lg:top-[100px] lg:right-[40px] lg:h-[160px]"
+      />
+      <section className="lg:max-w-[1024px] max-w-[768px] space-y-6 pl-12 ">
         <p className="font-semibold text-[28px]">Get To Know Us</p>
         <p className="font-regular text-[15px]">
           CUSEC is a student-led software engineering conference for students
@@ -32,6 +32,7 @@ export default function About() {
         </p>
       </section>
 
+      {/* Decagons */}
       <div className="flex flex-col justify-center items-center py-8 space-y-2">
         <section className="flex space-x-6">
           <Decagon1
@@ -66,21 +67,22 @@ export default function About() {
         </section>
       </div>
       <div className="flex justify-center">
-
         <Link
           className={`drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-royalBlue hover:bg-goldenApricot mx-auto px-5 md:px-10 py-1 mt-3 md:mt-6 text-center rounded-full uppercase md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
           href={`/`}
         >
-        Learn More
+          Learn More
         </Link>
-        </div>
+      </div>
+
+
       <span className="flex justify-end pb-8">
-      <Image
-        src={circle_grid_horizontal}
-        alt="circle grid horizontal"
-        className="w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] "
+        <Image
+          src={circle_grid_v2}
+          alt="circle grid v2"
+          className="w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] "
         />
-        </span>
-        </>
+      </span>
+    </>
   );
 }

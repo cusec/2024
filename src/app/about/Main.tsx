@@ -6,7 +6,6 @@ interface MainProps {
 }
 
 export default function Main({ isMediumScreen }: MainProps) {
-  console.log("isMediumScreen inside Main:", isMediumScreen);
 
   return (
     <div className="relative min-h-[96vh] w-[calc(100vw-10px)] translate-y-6 md:-translate-x-[1vw]">
@@ -29,34 +28,32 @@ export default function Main({ isMediumScreen }: MainProps) {
       </svg>
 
       <div
-        className="absolute inset-0 lg:mx-1 brightness-50"
+        className="absolute inset-0 lg:mx-1"
         style={{
           clipPath: isMediumScreen ? "url(#imageClip)" : "none",
           WebkitClipPath: isMediumScreen ? "url(#imageClip)" : "none", // for Safari
         }}
       >
         <Image
+          className="brightness-50"
           src={cusec_2023_group_photo}
           layout="fill"
           objectFit="cover"
           objectPosition="center"
           alt="CUSEC 2023 Group Photo"
         />
-      </div>
-
-      <div
-        className="absolute inset-0 z-1 flex justify-center items-center lg:mx-1"
-      >
-        {/* Text */}
-        <h1 className="uppercase text-white font-semibold text-[24px] mx-6 lg:ml-24 lg:mr-52 lg:text-[50px]">
-          Fueling a journey of{" "}
-          <span className="text-purple-400">knowledge</span>,
-          <br className="hidden lg:block" />{" "}
-          <span className="text-roseQuartz">inspiration</span>, &{" "}
-          <span className="text-goldenApricot">opportunity</span> for students{" "}
-          <br className="hidden lg:block" />
-          across Canada
-        </h1>
+        <div className="absolute inset-0 z-1 flex justify-center items-center lg:mx-1">
+          {/* Text */}
+          <h1 className="uppercase text-white font-semibold text-[24px] ml-10 sm:mr-24 lg:ml-24 lg:mr-52 lg:text-[50px]">
+            Fueling a journey of{" "}
+            <span className="text-purple-400">knowledge</span>,
+            <br className="hidden lg:block" />{" "}
+            <span className="text-roseQuartz">inspiration</span>, &{" "}
+            <span className="text-goldenApricot">opportunity</span> for students{" "}
+            <br className="hidden lg:block" />
+            across Canada
+          </h1>
+        </div>
       </div>
     </div>
   );

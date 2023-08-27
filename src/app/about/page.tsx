@@ -7,6 +7,7 @@ import Image from "next/image";
 import bottom_right_gradient_lines from "./bottom_right_gradient_lines.svg";
 import top_left_gradient_lines from "./top_left_gradient_lines.svg";
 import Main from "@/app/about/Main";
+import AboutUs from "@/app/about/AboutUs";
 import { useEffect, useState } from "react";
 import grid_gradient_fill_lines from "./grid_gradient_fill_lines.svg";
 
@@ -109,7 +110,11 @@ export default function About() {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full"></div>
+          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full mt-20 md:-mt-3 mb-16">
+            <Fade>
+              <AboutUs/>
+            </Fade>
+          </div>
         </div>
       </div>
     </>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import circle_grid_horizontal from "@/assets/circle_grid_horizontal.svg";
+import circle_grid_v2 from "@/assets/circle_grid_v2.svg";
 import TicketCard from "./TicketCard";
 
 export default function Sponsor() {
@@ -18,7 +18,7 @@ export default function Sponsor() {
 
         <span className="flex justify-end mr-[-8px] mb-4">
           <Image
-            src={circle_grid_horizontal}
+            src={circle_grid_v2}
             alt="Horizontal grid of grey circles"
           />
         </span>
@@ -58,7 +58,7 @@ export default function Sponsor() {
       </div>
       <span className="flex mb-4 ml-[-1rem]">
         <Image
-          src={circle_grid_horizontal}
+          src={circle_grid_v2}
           alt="Horizontal grid of grey circles"
         />
       </span>
