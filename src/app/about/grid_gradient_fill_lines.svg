@@ -1,109 +1,109 @@
-<svg width="736" height="731" viewBox="0 0 736 731" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M763 147.75L509.034 147.75" stroke="url(#paint0_diamond_449_5157)" stroke-width="1.5"/>
-<path d="M735.966 1L482 1" stroke="url(#paint1_diamond_449_5157)" stroke-width="1.5"/>
-<line x1="763" y1="221.75" x2="509.034" y2="221.75" stroke="url(#paint2_diamond_449_5157)" stroke-width="1.5"/>
-<line x1="735.966" y1="75" x2="482" y2="75" stroke="url(#paint3_diamond_449_5157)" stroke-width="1.5"/>
-<line x1="763.02" y1="303.511" x2="482.994" y2="303.511" stroke="url(#paint4_diamond_449_5157)" stroke-width="1.5"/>
-<line x1="763.002" y1="375.75" x2="434.996" y2="375.75" stroke="url(#paint5_diamond_449_5157)" stroke-width="1.5"/>
-<line x1="763.048" y1="680.71" x2="0.953369" y2="680.71" stroke="url(#paint6_diamond_449_5157)" stroke-width="1.5"/>
-<line x1="763.015" y1="451.232" x2="348.984" y2="451.232" stroke="url(#paint7_diamond_449_5157)" stroke-width="1.5"/>
-<line x1="763.005" y1="533.253" x2="302.995" y2="533.253" stroke="url(#paint8_diamond_449_5157)" stroke-width="1.5"/>
-<line x1="763.004" y1="607.242" x2="225.996" y2="607.242" stroke="url(#paint9_diamond_449_5157)" stroke-width="1.5"/>
-<line x1="663.795" y1="147" x2="663.795" y2="730" stroke="url(#paint10_diamond_449_5157)" stroke-width="1.5"/>
-<line x1="585.259" y1="147" x2="585.259" y2="730" stroke="url(#paint11_diamond_449_5157)" stroke-width="1.5"/>
-<line x1="509.784" y1="147" x2="509.784" y2="730" stroke="url(#paint12_diamond_449_5157)" stroke-width="1.5"/>
-<line x1="430.75" y1="385.953" x2="430.75" y2="730.047" stroke="url(#paint13_diamond_449_5157)" stroke-width="1.5"/>
-<line x1="187.75" y1="528.999" x2="188" y2="730.092" stroke="url(#paint14_diamond_449_5157)" stroke-width="1.5"/>
-<path d="M349.75 411.5V730.093" stroke="url(#paint15_diamond_449_5157)" stroke-width="1.5"/>
-<path d="M107 603V730.14" stroke="url(#paint16_diamond_449_5157)" stroke-width="1.5"/>
-<path d="M264 474V729.593" stroke="url(#paint17_diamond_449_5157)" stroke-width="1.5"/>
+<svg width="1001" height="731" viewBox="0 0 1001 731" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1028 147.75L27.9995 147.75" stroke="url(#paint0_diamond_449_5157)" stroke-width="1.5"/>
+<path d="M1000.97 1L747 1" stroke="url(#paint1_diamond_449_5157)" stroke-width="1.5"/>
+<line x1="1028" y1="221.75" x2="27.9995" y2="221.75" stroke="url(#paint2_diamond_449_5157)" stroke-width="1.5"/>
+<line x1="1000.97" y1="75" x2="0.96582" y2="75" stroke="url(#paint3_diamond_449_5157)" stroke-width="1.5"/>
+<line x1="1028.02" y1="303.511" x2="28.02" y2="303.511" stroke="url(#paint4_diamond_449_5157)" stroke-width="1.5"/>
+<line x1="1028" y1="375.75" x2="28.0024" y2="375.75" stroke="url(#paint5_diamond_449_5157)" stroke-width="1.5"/>
+<line x1="1028.05" y1="680.71" x2="265.953" y2="680.71" stroke="url(#paint6_diamond_449_5157)" stroke-width="1.5"/>
+<line x1="1028.01" y1="450.959" x2="160" y2="450.959" stroke="url(#paint7_diamond_449_5157)" stroke-width="1.5"/>
+<line x1="1028" y1="533.253" x2="28.0049" y2="533.253" stroke="url(#paint8_diamond_449_5157)" stroke-width="1.5"/>
+<line x1="1028" y1="607.242" x2="28.0039" y2="607.242" stroke="url(#paint9_diamond_449_5157)" stroke-width="1.5"/>
+<line x1="928.75" y1="4.99995" x2="928.795" y2="730" stroke="url(#paint10_diamond_449_5157)" stroke-width="1.5"/>
+<line x1="851.505" y1="4.99786" x2="851.505" y2="730.002" stroke="url(#paint11_diamond_449_5157)" stroke-width="1.5"/>
+<line x1="776.267" y1="0.996979" x2="776.267" y2="730.003" stroke="url(#paint12_diamond_449_5157)" stroke-width="1.5"/>
+<line x1="691.5" y1="4.99991" x2="691.5" y2="730.075" stroke="url(#paint13_diamond_449_5157)" stroke-width="1.5"/>
+<line x1="452.375" y1="4.99945" x2="452.375" y2="730.094" stroke="url(#paint14_diamond_449_5157)" stroke-width="1.5"/>
+<path d="M614.375 4.99982L614.375 730.093" stroke="url(#paint15_diamond_449_5157)" stroke-width="1.5"/>
+<path d="M370.5 4.99689L370.5 730.143" stroke="url(#paint16_diamond_449_5157)" stroke-width="1.5"/>
+<path d="M529.5 4.99966L529.5 729.593" stroke="url(#paint17_diamond_449_5157)" stroke-width="1.5"/>
 <defs>
-<radialGradient id="paint0_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(763 147.25) rotate(-179.961) scale(270.93 2.55646)">
+<radialGradient id="paint0_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1028 147.25) rotate(-179.99) scale(1066.8 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint1_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(735.966 0.5) rotate(-179.961) scale(270.93 2.55646)">
+<radialGradient id="paint1_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1000.97 0.5) rotate(-179.961) scale(270.93 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint2_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(763 220.5) rotate(-179.961) scale(270.93 2.55646)">
+<radialGradient id="paint2_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1028 220.5) rotate(-179.99) scale(1066.8 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint3_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(735.966 73.75) rotate(-179.961) scale(270.93 2.55646)">
+<radialGradient id="paint3_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1000.97 73.75) rotate(-179.99) scale(1066.8 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint4_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(763.02 302.261) rotate(-179.965) scale(298.731 2.55646)">
+<radialGradient id="paint4_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1028.02 302.261) rotate(-179.99) scale(1066.8 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint5_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(763.002 374.5) rotate(-179.97) scale(349.916 2.55646)">
+<radialGradient id="paint5_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1028 374.5) rotate(-179.99) scale(1066.8 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint6_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(763.048 679.46) rotate(-179.987) scale(813 2.55646)">
+<radialGradient id="paint6_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1028.05 679.46) rotate(-179.987) scale(813 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint7_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(763.015 449.982) rotate(-179.976) scale(441.686 2.55646)">
+<radialGradient id="paint7_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1028.01 449.709) rotate(-179.989) scale(925.995 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint8_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(763.005 532.003) rotate(-179.979) scale(490.737 2.55646)">
+<radialGradient id="paint8_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1028 532.003) rotate(-179.99) scale(1066.8 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint9_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(763.004 605.992) rotate(-179.982) scale(572.879 2.55646)">
+<radialGradient id="paint9_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1028 605.992) rotate(-179.99) scale(1066.8 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint10_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(662.545 147) rotate(90.0169) scale(621.943 2.55646)">
+<radialGradient id="paint10_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(927.5 5.00005) rotate(90.01) scale(773.428 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint11_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(584.009 147) rotate(90.0169) scale(621.943 2.55646)">
+<radialGradient id="paint11_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(850.255 4.99789) rotate(90.0136) scale(773.432 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint12_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(508.534 147) rotate(90.0169) scale(621.943 2.55646)">
+<radialGradient id="paint12_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(775.017 0.997002) rotate(90.0135) scale(777.701 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint13_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(429.5 385.954) rotate(90.0286) scale(367.077 2.55646)">
+<radialGradient id="paint13_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(690.25 4.99993) rotate(90.0136) scale(773.508 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint14_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(186.5 529.001) rotate(89.9777) scale(214.526 2.55645)">
+<radialGradient id="paint14_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(451.125 4.99947) rotate(90.0136) scale(773.528 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint15_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(349.25 411.5) rotate(90.0309) scale(339.874 2.55646)">
+<radialGradient id="paint15_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(613.875 4.99984) rotate(90.0136) scale(773.527 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint16_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(106.5 603) rotate(90.0774) scale(135.632 2.55645)">
+<radialGradient id="paint16_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(370 4.99691) rotate(90.0136) scale(773.583 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>
 </radialGradient>
-<radialGradient id="paint17_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(263.5 474) rotate(90.0385) scale(272.666 2.55646)">
+<radialGradient id="paint17_diamond_449_5157" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(529 4.99969) rotate(90.0136) scale(772.994 2.55646)">
 <stop stop-color="#AC65E3"/>
 <stop offset="0.449369" stop-color="#DA83C0"/>
 <stop offset="1" stop-color="#FFB963"/>

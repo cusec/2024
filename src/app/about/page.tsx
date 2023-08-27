@@ -6,10 +6,13 @@ import Fade from "@/components/Fade";
 import Image from "next/image";
 import bottom_right_gradient_lines from "./bottom_right_gradient_lines.svg";
 import top_left_gradient_lines from "./top_left_gradient_lines.svg";
+import grid_gradient_fill_lines from "./grid_gradient_fill_lines.svg";
 import Main from "@/app/about/Main";
 import AboutUs from "@/app/about/AboutUs";
 import { useEffect, useState } from "react";
-import grid_gradient_fill_lines from "./grid_gradient_fill_lines.svg";
+
+// Had to remove this import because the file was too large to upload to GitHub.
+// import carousel_about_us from "./Carousel Images/carousel_about_us.svg";
 
 const metadata: Metadata = {
   title: "CUSEC 2024",
@@ -47,7 +50,6 @@ export default function About() {
         ></meta>
       </Head>
       <div className="w-full">
-
         {/* Top Left Gradient Lines */}
         <Image
           src={top_left_gradient_lines}
@@ -112,10 +114,20 @@ export default function About() {
         <div className="flex flex-col items-center">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full mt-20 md:-mt-3 mb-16">
             <Fade>
-              <AboutUs/>
+              <AboutUs />
             </Fade>
           </div>
         </div>
+        
+            <Fade>
+
+                  {/* <Image
+        src={carousel_about_us}
+        alt="Carousel of images of CUSEC attendees"
+        className="w-full h-full"
+        /> */}
+
+            </Fade>
       </div>
     </>
   );

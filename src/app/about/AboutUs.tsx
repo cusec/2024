@@ -3,6 +3,7 @@ import circle_grid_v1 from "@/assets/circle_grid_v1.svg";
 import circle_grid_v2 from "@/assets/circle_grid_v2.svg";
 
 export default function AboutUs() {
+
   return (
     <div className="relative">
       <div className="absolute -right-[0vw] -top-10 hidden md:block">
