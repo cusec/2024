@@ -89,7 +89,7 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 <details>
   <summary>Learning Log</summary>
 
-- Using Next.js 13 app router, and using 'Link' and 'Image' components instead of <a> and <img> tags.🔗🖼️
+- Using Next.js 13 app router, and using 'Link' and 'Image' components instead of '<a>' and '<img>' tags.🔗🖼️
 - Defining custom types using TypeScript.✅
 - Using Tailwind to rapidly create layouts and basic styling.🚀
 - Creating grid backgrounds using vanilla CSS.⏹️
