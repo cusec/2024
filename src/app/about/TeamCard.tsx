@@ -22,7 +22,7 @@ type TeamCardProps = {
 
 export default function TeamCard(props: TeamCardProps) {
   return (
-    <div className="flex flex-col items-center justify-center mx-6">
+    <div className="flex flex-col items-center justify-center mx-6 mt-8">
       <div className="aspect-square rounded-full bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot  w-[140px] md:w-[165px] relative">
         {props.image && (
           <Image
@@ -56,9 +56,9 @@ export default function TeamCard(props: TeamCardProps) {
         <p>{props.fun_fact}</p> */}
 
       {/*Pagination circles*/}
-      <div>
-        <span className="block h-6 rounded-full"></span>
-        <span className="block h-6 rounded-full"></span>
+      <div className="flex space-x-1 mt-8">
+        <span className="block h-3 w-3 rounded-full bg-purple-400"></span>
+        <span className="block h-3 w-3 rounded-full bg-gray-300"></span>
       </div>
     </div>
   );
