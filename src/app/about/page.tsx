@@ -117,11 +117,7 @@ export default function About() {
             <Fade>
               <AboutUs />
             </Fade>
-          </div>
-        </div>
-        
             <Fade>
-
                   {/* <Image
         src={carousel_about_us}
         alt="Carousel of images of CUSEC attendees"
@@ -130,6 +126,9 @@ export default function About() {
         <Team />
             </Fade>
       </div>
+          </div>
+        </div>
+        
     </>
   );
 }
