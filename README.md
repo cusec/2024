@@ -94,6 +94,8 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Using Tailwind to rapidly create layouts and basic styling.🚀
 - Soft resetting the head to undo the most recent commit, but not getting rid of the changes locally.🧠
 - Reverting git commits and resetting the head back to past commits.🕜
+- Adding files to past git commits that weren't pushed.➕
+- Adding files to past git commits that were pushed, and force pushing them.➕➕
 - Creating grid backgrounds using vanilla CSS.⏹️
 - Giving texts gradient backgrounds.🟣🟡
 - Creating better adaptive layouts with custom breakpoints.🧐
