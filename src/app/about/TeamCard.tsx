@@ -1,6 +1,6 @@
-import { StaticImageData } from 'next/image';
-import Image from 'next/image';
-import BlueBorderSquareBox from '@/components/Landing Page/BlueBorderSquareBox';
+import { StaticImageData } from "next/image";
+import Image from "next/image";
+import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
 
 type TeamCardProps = {
   name: string;
