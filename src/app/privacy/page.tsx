@@ -7,12 +7,12 @@ export default function Privacy() {
   return (
     <div className="w-full gradientGridBackground min-h-screen flex justify-center items-center">
       <div className="mx-6 lg:max-w-[1024px] max-w-[768px] lg:mx-24 my-28">
+          <Fade>
         <BlueBorderSquareBox>
           <main
             className={`
           space-y-6 px-10 lg:px-20 flex flex-col items-center py-8 md:py-20`}
           >
-            <Fade>
               <h1 className="font-semibold text-[20px] sm:text-[28px] md:text-[32px]">
                 Privacy Policy
               </h1>
@@ -52,9 +52,9 @@ export default function Privacy() {
                 personal information, feel free to contact us. This policy is
                 effective as of 15 September 2020.
               </p>
-            </Fade>
           </main>
         </BlueBorderSquareBox>
+            </Fade>
       </div>
     </div>
   );
