@@ -12,7 +12,6 @@ export default function Team() {
       </div>
 
       {/* Render team member cards */}
-      {/* <div className="flex flex-wrap justify-center mt-32"> */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-24">
         {teamMembers.map((member, index) => (
           <TeamCard
