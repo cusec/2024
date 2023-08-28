@@ -7,9 +7,10 @@ type TeamCardProps = {
   university: string;
   image: StaticImageData;
   university_image: StaticImageData;
-  pronoun: string;
+  pronouns: string;
   role: string;
   sub_role?: string; // Optional parameter
+  program: string; 
   linkedin?: string; // Optional parameter
   instagram?: string; // Optional parameter
   github?: string; // Optional parameter
@@ -32,10 +33,11 @@ export default function TeamCard(props: TeamCardProps) {
         <p className="font-semibold">{props.name}</p>
         <p>{props.university}</p>
         <p className="text-[8px] bg-clip-text text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot">
-          {props.pronoun}
+          {props.pronouns}
         </p>
         <p className="text-[12px]">{props.role}</p>
         {/* <p>{props.sub_role}</p>
+         <p>{props.program}</p>
         <p>{props.linkedin}</p>
         <p>{props.instagram}</p>
         <p>{props.github}</p>
