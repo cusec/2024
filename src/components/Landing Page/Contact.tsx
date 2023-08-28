@@ -13,7 +13,7 @@ export default function Contact() {
           <hr className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-roseQuartz" />
           <Link
             href={"mailto:info@cusec.net"}
-            className="flex transition ease-in-out duration-500 hover:scale-105 group max-w-fit"
+            className="flex transition ease-in-out duration-500 hover:scale-105 group max-w-fit items-center"
           >
             <HiEnvelope className="fill-royalPurple group-hover:fill-royalBlue transition ease-in-out duration-700" />
             <span className="text-[12px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-royalPurple group-hover:bg-royalBlue transition ease-in-out duration-1000">
