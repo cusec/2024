@@ -5,7 +5,7 @@ import { HiEnvelope } from "react-icons/hi2";
 export default function Contact() {
   return (
     <BlueBorderSquareBox>
-      <form className="lg:max-w-[1024px] max-w-[768px] py-16 px-8 md:px-12">
+      <form className="py-16 px-8 md:px-12">
         <h2 className="font-semibold text-[28px] md:text-[40px] tracking-tight">
           Contact Us
         </h2>

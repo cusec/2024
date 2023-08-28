@@ -66,6 +66,7 @@ export default function Navbar({ clicked }: ChildProps) {
                 onMouseEnter={() => toggleEventDetails()}
                 onMouseLeave={() => toggleEventDetails()}
               >
+                {/* Event Details button is special case, it has a dropdown menu */}
                 <span className="flex space-x-2">
                   <Link href="/">Event Details</Link>
 
@@ -106,11 +107,13 @@ export default function Navbar({ clicked }: ChildProps) {
                     isEventDetailsClicked ? "max-h-0" : "max-h-40"
                   }`}
                 >
-                  <ul className="space-y-2 flex flex-col bg-black/[.85] rounded-2xl p-4">
-                    <NavLink href="/">Sign up</NavLink>
-                    <NavLink href="/">Schedule</NavLink>
-                    <NavLink href="/">Sponsors</NavLink>
-                  </ul>
+                  <div className="bg-gradient-to-r from-lavederFog to-goldenApricot rounded-2xl">
+                    <ul className="space-y-2 flex flex-col bg-black/[.65] rounded-2xl p-4">
+                      <NavLink href="/">Sign up</NavLink>
+                      <NavLink href="/">Schedule</NavLink>
+                      <NavLink href="/">Sponsors</NavLink>
+                    </ul>
+                  </div>
                 </div>
               </button>
               <NavLink href="/faq">FAQ</NavLink>
@@ -179,8 +182,12 @@ export default function Navbar({ clicked }: ChildProps) {
         }
       >
         <div className="flex flex-col mx-6 ml-6 mt-24 space-y-10 uppercase">
-          <NavLink toggleMobileMenu={toggleMobileMenu} href="/">Home</NavLink>
-          <NavLink toggleMobileMenu={toggleMobileMenu} href="/about">About Us</NavLink>
+          <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
+            Home
+          </NavLink>
+          <NavLink toggleMobileMenu={toggleMobileMenu} href="/about">
+            About Us
+          </NavLink>
           <button
             className="relative uppercase text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium tracking-wider"
             onMouseEnter={() => toggleEventDetails()}
@@ -227,14 +234,24 @@ export default function Navbar({ clicked }: ChildProps) {
               }`}
             >
               <ul className="space-y-2 flex flex-col p-4">
-                <NavLink toggleMobileMenu={toggleMobileMenu} href="/">Sign up</NavLink>
-                <NavLink toggleMobileMenu={toggleMobileMenu} href="/">Schedule</NavLink>
-                <NavLink toggleMobileMenu={toggleMobileMenu} href="/">Sponsors</NavLink>
+                <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
+                  Sign up
+                </NavLink>
+                <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
+                  Schedule
+                </NavLink>
+                <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
+                  Sponsors
+                </NavLink>
               </ul>
             </div>
           </button>
-          <NavLink toggleMobileMenu={toggleMobileMenu} href="/faq">FAQ</NavLink>
-          <NavLink toggleMobileMenu={toggleMobileMenu} href="/contact">Contact</NavLink>
+          <NavLink toggleMobileMenu={toggleMobileMenu} href="/faq">
+            FAQ
+          </NavLink>
+          <NavLink toggleMobileMenu={toggleMobileMenu} href="/contact">
+            Contact
+          </NavLink>
         </div>
       </div>
     </nav>
