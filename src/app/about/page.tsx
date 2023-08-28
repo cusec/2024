@@ -9,6 +9,7 @@ import top_left_gradient_lines from "./top_left_gradient_lines.svg";
 import grid_gradient_fill_lines from "./grid_gradient_fill_lines.svg";
 import Main from "@/app/about/Main";
 import AboutUs from "@/app/about/AboutUs";
+import Team from "./Team";
 import { useEffect, useState } from "react";
 
 // Had to remove this import because the file was too large to upload to GitHub.
@@ -126,7 +127,7 @@ export default function About() {
         alt="Carousel of images of CUSEC attendees"
         className="w-full h-full"
         /> */}
-
+        <Team />
             </Fade>
       </div>
     </>
