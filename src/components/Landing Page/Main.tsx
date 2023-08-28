@@ -7,7 +7,6 @@ import BlueBorderSquareBox from "./BlueBorderSquareBox";
 const Landingbox = () => {
   return (
     <main
-      className={``}
     >
       <BlueBorderSquareBox>
         <section className="py-8 px-8 text-center mx-auto space-y-5">
