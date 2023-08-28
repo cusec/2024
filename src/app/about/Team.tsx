@@ -1,4 +1,5 @@
 import TeamCard from "./TeamCard";
+import teamMembers from "./teamMembers.json";
 
 export default function Team() {
     return(
