@@ -35,36 +35,40 @@ export default function Home() {
           } flex items-center justify-center min-h-[calc(100vh+50px)]`}
         >
           <Fade>
-          <Main />
+            <Main />
           </Fade>
         </div>
 
         <div className="flex flex-col items-center mt-[-70px] md:mt-[-100px]">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full">
             <Fade>
-            <About />
+              <About />
             </Fade>
           </div>
           <div className="w-full gradientBackground">
             <Fade>
-          <Sponsor/>
+              <Sponsor />
             </Fade>
-            </div>
+          </div>
           <div className="mx-6 lg:mx-24 max-w-screen-lg">
             <Fade>
-            <Tickets />
+              <Tickets />
             </Fade>
           </div>
           <div className="w-full gradientBackground">
             <Fade>
-            <Faq />
+              <Faq />
             </Fade>
-            </div>
-            <div className="mx-6 lg:mx-24 pb-10 max-w-screen-lg lg:w-full">
-              <Fade>
-              <Contact />
-              </Fade>
           </div>
+        </div>
+        <div
+          className={`${
+            fadeBackground ? "gradientBackground" : "gradientGridBackground"
+          }`}
+        >
+          <Fade>
+            <Contact />
+          </Fade>
         </div>
       </div>
     </>

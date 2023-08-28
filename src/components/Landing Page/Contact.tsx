@@ -1,9 +1,11 @@
 import Link from "next/link";
+import BlueBorderSquareBox from "./BlueBorderSquareBox";
 
 export default function Contact() {
 
   return (
-    <>
+    <BlueBorderSquareBox>
+
       <section className="lg:max-w-[1024px] max-w-[768px] space-y-6">
         <p className="font-semibold text-[28px] ">Contact Us</p>
         <p className="font-regular text-[15px]">
@@ -44,6 +46,6 @@ export default function Contact() {
           for improvement.
         </p>
       </section>
-    </>
+    </BlueBorderSquareBox>
   );
 }
