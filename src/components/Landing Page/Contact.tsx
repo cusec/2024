@@ -16,7 +16,7 @@ export default function Contact() {
             className="flex transition ease-in-out duration-500 hover:scale-105 group max-w-fit"
           >
             <HiEnvelope className="fill-royalPurple group-hover:fill-royalBlue transition ease-in-out duration-700" />
-            <span className="text-[12px] font-semibold bg-clip-text text-transparent bg-royalPurple group-hover:bg-royalBlue transition ease-in-out duration-1000">
+            <span className="text-[12px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-royalPurple group-hover:bg-royalBlue transition ease-in-out duration-1000">
               &nbsp;info@cusec.net
             </span>
           </Link>
