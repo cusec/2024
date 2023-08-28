@@ -30,7 +30,7 @@ export default function Home() {
       </Head>
       <div className="w-full">
         <div
-          className={`${
+          className={`bottomFade ${
             fadeBackground ? "gradientBackground" : "gradientGridBackground"
           } flex items-center justify-center min-h-[calc(100vh+50px)]`}
         >

@@ -18,8 +18,8 @@
 html {
 }
 
-.gradientGridBackground{
-  z-index:0;
+.gradientGridBackground {
+  z-index: 0;
   background: var(--gradient-colors),
     repeating-linear-gradient(
       to right,
@@ -36,19 +36,17 @@ html {
       /* #46529800 calc(95 * var(--square-size)) */ #46529800
         clamp(80px, calc(95 * var(--square-size)), 93px)
     );
-
   background-blend-mode: overlay;
 }
 
-
 .gradientBackground {
-  z-index:0;
+  z-index: 0;
   background: var(--gradient-colors);
   background-blend-mode: overlay;
 }
 
 /* overlay gradient */
-
+/*
 .gradientGridBackground:after, 
 .gradientBackground:after {
   pointer-events: none;
@@ -63,19 +61,43 @@ html {
     rgba(255, 255, 255, 0) calc(100vh - 25px),
     rgba(255, 255, 255, 1) 100%
   );
+}*/
+
+
+ .bottomFade:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: calc(100vh + 50px);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) calc(100vh - 25px),
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
-
-.decagon{
+.decagon {
   width: var(--decagon-width);
   /* height: calc(var(-- decagon-width) * 1.08);  */
   /* padding-top: calc(var(--decagon-width) * 1.08); Aspect ratio: 10:10.8 */
-height: 100px;
+  height: 100px;
   /* Aspect ratio: 10:10.8  */
-clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
-
+  clip-path: polygon(
+    50% 0%,
+    80% 10%,
+    100% 35%,
+    100% 70%,
+    80% 90%,
+    50% 100%,
+    20% 90%,
+    0% 70%,
+    0% 35%,
+    20% 10%
+  );
 }
-
 
 /*
   @media (prefers-color-scheme: dark) {
