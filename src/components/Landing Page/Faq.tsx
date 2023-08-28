@@ -53,7 +53,7 @@ export default function Faq() {
             href={
               "mailto:info@cusec.net?subject=Inquiry:&body=Hello CUSEC team,"
             }
-            className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot hover:text-sky-400 transition-colors ease-in-out duration-500"
+            className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot hover:text-blue-500 transition-colors ease-in-out duration-500"
           >
             info@cusec.net
           </Link>
