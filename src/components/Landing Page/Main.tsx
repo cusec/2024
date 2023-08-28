@@ -7,10 +7,10 @@ import BlueBorderSquareBox from "./BlueBorderSquareBox";
 const Landingbox = () => {
   return (
     <main
-      className={`mx-6 lg:mx-24 lg:w-[1024px]`}
+      className={``}
     >
       <BlueBorderSquareBox>
-        <section className="p-8 text-center mx-auto space-y-5">
+        <section className="py-8 px-8 text-center mx-auto space-y-5">
           <Image
             src={logoPrimaryDark}
             alt="CUSEC 2024 logo primary dark"

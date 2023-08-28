@@ -34,9 +34,11 @@ export default function Home() {
             fadeBackground ? "gradientBackground" : "gradientGridBackground"
           } flex items-center justify-center min-h-[calc(100vh+50px)]`}
         >
+          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full">
           <Fade>
             <Main />
           </Fade>
+          </div>
         </div>
 
         <div className="flex flex-col items-center mt-[-70px] md:mt-[-100px]">
