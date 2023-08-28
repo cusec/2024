@@ -64,11 +64,14 @@ export default function Home() {
         <div
           className={`${
             fadeBackground ? "gradientBackground" : "gradientGridBackground"
-          }`}
+          } flex justify-center`}
         >
+        
+          <div className="my-20 mx-6 lg:mx-24 max-w-screen-md">
           <Fade>
             <Contact />
           </Fade>
+          </div>
         </div>
       </div>
     </>
