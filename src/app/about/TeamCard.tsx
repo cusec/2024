@@ -5,8 +5,8 @@ import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
 type TeamCardProps = {
   name: string;
   university: string;
-  image: StaticImageData;
-  university_image: StaticImageData;
+  image?: StaticImageData;
+  university_image?: StaticImageData;
   pronouns: string;
   role: string;
   sub_role?: string; // Optional parameter
@@ -24,11 +24,11 @@ export default function TeamCard(props: TeamCardProps) {
     <div>
       <div className="flex flex-col items-center justify-center">
         <div className="w-[200px] aspect-square rounded-full bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot">
-          <Image
+          {/* <Image
             src={props.image}
             alt={props.name}
             className="overflow-none p-6"
-          />
+          /> */}
         </div>
         <p className="font-semibold">{props.name}</p>
         <p>{props.university}</p>
