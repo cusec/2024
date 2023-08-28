@@ -13,7 +13,7 @@ export default function Faq() {
         </h2>
         <span className="block max-w-[600px] h-[0.75px] bg-white mb-10 mx-auto"></span>
 
-        <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6">
           <FaqCard
             question="When & Where is CUSEC 2024 happening?"
             content={
