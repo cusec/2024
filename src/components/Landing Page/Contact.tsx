@@ -36,7 +36,7 @@ export default function Contact() {
               id="fullName"
               name="fullName"
               className="w-1/2 outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
-              placeholder="Full Name"
+              placeholder="Full Name*"
               required
             ></input>
             <input
@@ -44,7 +44,7 @@ export default function Contact() {
               id="email"
               name="email"
               className="w-1/2 outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
-              placeholder="Email Address"
+              placeholder="Email Address*"
               required
             ></input>
           </div>
@@ -54,18 +54,17 @@ export default function Contact() {
               name="Message"
               rows={4}
               className="w-full resize-y outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
-              placeholder="Message"
+              placeholder="Message*"
               required
             ></textarea>
           </div>
         </div>
         <span className="flex justify-center mt-4">
-              <Link
-                href={"/"}
+              <button type="submit" 
                 className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-white px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-royalBlue hover:text-white border-2 border-royalBlue"
                 >
                 Submit
-              </Link>
+              </button>
                   </span>
                 </form>
     </BlueBorderSquareBox>
