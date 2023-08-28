@@ -2,7 +2,7 @@
   {
     "name": "Jordon Hong",
     "university": "UManitoba",
-    "image": "",
+    "image": "jordon_image.png",
     "university_image": "",
     "pronouns": "He/Him",
     "role": "Co-Chair",
@@ -18,7 +18,7 @@
   {
     "name": "Denys Popov",
     "university": "UManitoba",
-    "image": "",
+    "image": "denys_image.png",
     "university_image": "",
     "pronouns": "He/Him",
     "role": "Co-Chair",
@@ -34,7 +34,7 @@
   {
     "name": "Kha Pham",
     "university": "UManitoba",
-    "image": "",
+    "image": "kha_image.png",
     "university_image": "",
     "pronouns": "He/Him",
     "role": "Director of Logistics",
@@ -50,7 +50,7 @@
   {
     "name": "Abdul-Hakim Skaik",
     "university": "ConcordiaU",
-    "image": "",
+    "image": "abdul_image.png",
     "university_image": "",
     "pronouns": "He/Him",
     "role": "Director of Logistics",
@@ -66,7 +66,7 @@
   {
     "name": "Jaelyn Wick",
     "university": "UManitoba",
-    "image": "",
+    "image": "jaelyn_image.png",
     "university_image": "",
     "pronouns": "She/Her",
     "role": "Director of Sponsorship",
@@ -82,7 +82,7 @@
   {
     "name": "Mumtahin Farabi",
     "university": "CarletonU",
-    "image": "",
+    "image": "farabi_image.png",
     "university_image": "",
     "pronouns": "He/Him",
     "role": "Director of Technology",
@@ -98,7 +98,7 @@
   {
     "name": "Bavneet Sandhu",
     "university": "LaurierU",
-    "image": "",
+    "image": "bavneet_image.png",
     "university_image": "",
     "pronouns": "She/Her",
     "role": "Technology Team",
@@ -114,7 +114,7 @@
   {
     "name": "Angeleeca Jocson",
     "university": "UOttawa",
-    "image": "",
+    "image": "angie_image.png",
     "university_image": "",
     "pronouns": "She/Her",
     "role": "Director of Speakers",
@@ -130,7 +130,7 @@
   {
     "name": "Smriti Hari",
     "university": "UAlberta",
-    "image": "",
+    "image": "smriti_image.png",
     "university_image": "",
     "pronouns": "She/Her",
     "role": "Speakers Team",
@@ -146,7 +146,7 @@
   {
     "name": "Timothy J. Klint",
     "university": "Abbott College",
-    "image": "",
+    "image": "timothy_image.png",
     "university_image": "",
     "pronouns": "He/Him",
     "role": "Director of Events",
@@ -162,7 +162,7 @@
   {
     "name": "Anjali Patel",
     "university": "CarletonU",
-    "image": "",
+    "image": "anjali_image.png",
     "university_image": "",
     "pronouns": "She/Her",
     "role": "Director of Promotions",
@@ -178,7 +178,7 @@
   {
     "name": "Ethan Tang",
     "university": "UOttawa",
-    "image": "",
+    "image": "ethan_image.png",
     "university_image": "",
     "pronouns": "He/Him",
     "role": "Promotions Team",
@@ -194,7 +194,7 @@
   {
     "name": "Arfah Huda",
     "university": "UWindsor",
-    "image": "",
+    "image": "arfah_image.png",
     "university_image": "",
     "pronouns": "She/Her",
     "role": "Head Delegate",
@@ -210,7 +210,7 @@
   {
     "name": "Hoang Minh Phan",
     "university": "UManitoba",
-    "image": "",
+    "image": "hoang_image.png",
     "university_image": "",
     "pronouns": "He/Him",
     "role": "Head Delegate",
@@ -226,7 +226,7 @@
   {
     "name": "Maheen Raza",
     "university": "UCalgary",
-    "image": "",
+    "image": "maheen_image.png",
     "university_image": "",
     "pronouns": "She/Her",
     "role": "Head Delegate",
@@ -242,7 +242,7 @@
   {
     "name": "Ayesha Izzati",
     "university": "UBC",
-    "image": "",
+    "image": "ayesha_image.png",
     "university_image": "",
     "pronouns": "She/Her",
     "role": "Head Delegate",
@@ -258,7 +258,7 @@
   {
     "name": "Aran Saseelan",
     "university": "McMaster",
-    "image": "",
+    "image": "aran_image.png",
     "university_image": "",
     "pronouns": "He/Him",
     "role": "Head Delegate",
@@ -274,7 +274,7 @@
   {
     "name": "Shashwat Murawala",
     "university": "UWaterloo",
-    "image": "",
+    "image": "shashwat_image.png",
     "university_image": "",
     "pronouns": "He/Him",
     "role": "Head Delegate",
@@ -290,7 +290,7 @@
   {
     "name": "Sirine Tarhouni",
     "university": "McGill",
-    "image": "",
+    "image": "sirine_image.png",
     "university_image": "",
     "pronouns": "She/Her",
     "role": "Head Delegate",
@@ -306,7 +306,7 @@
   {
     "name": "Hanine Tydrini",
     "university": "ConcordiaU",
-    "image": "",
+    "image": "hanine_image.png",
     "university_image": "",
     "pronouns": "She/Her",
     "role": "Head Delegate",
@@ -322,7 +322,7 @@
   {
     "name": "Ryan Chisholm",
     "university": "LaurierU",
-    "image": "",
+    "image": "ryan_image.png",
     "university_image": "",
     "pronouns": "He/Him",
     "role": "Head Delegate",
@@ -338,7 +338,7 @@
   {
     "name": "Samih Karroum",
     "university": "UOttawa",
-    "image": "",
+    "image": "samih_image.png",
     "university_image": "",
     "pronouns": "He/Him",
     "role": "Head Delegate",
@@ -354,7 +354,7 @@
   {
     "name": "Julie Wechsler",
     "university": "CarletonU",
-    "image": "",
+    "image": "julie_image.png",
     "university_image": "",
     "pronouns": "She/Her",
     "role": "Head Delegate",

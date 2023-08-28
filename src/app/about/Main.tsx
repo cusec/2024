@@ -1,5 +1,5 @@
 import Image from "next/image";
-import cusec_2023_group_photo from "./cusec_2023_group_photo.svg";
+import cusec_2023_group_photo from "./cusec_2023_group_photo.png";
 
 interface MainProps {
   isMediumScreen: boolean;

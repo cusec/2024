@@ -5,7 +5,8 @@ import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
 type TeamCardProps = {
   name: string;
   university: string;
-  image?: StaticImageData;
+  //   image?: StaticImageData;
+  image?: string;
   university_image?: StaticImageData;
   pronouns: string;
   role: string;
@@ -22,19 +23,29 @@ type TeamCardProps = {
 export default function TeamCard(props: TeamCardProps) {
   return (
     <div className="flex flex-col items-center justify-center mx-6">
-      <div className="aspect-square rounded-full bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot  w-[140px] md:w-[165px]">
-        {/* <Image
+      <div className="aspect-square rounded-full bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot  w-[140px] md:w-[165px] relative">
+        {props.image && (
+          <Image
             src={props.image}
             alt={props.name}
-            className="overflow-none p-6"
-          /> */}
+            // width={140}
+            // height={140}
+            layout="fill" 
+      objectFit="cover"
+            className="overflow-none p-1"
+          />
+        )}
       </div>
-      <p className="text-center font-semibold md:text-[20px] whitespace-nowrap">{props.name}</p>
+      <p className="text-center font-semibold md:text-[20px] whitespace-nowrap">
+        {props.name}
+      </p>
       <p>{props.university}</p>
       <p className="text-center text-[8px] md:text-[12px] bg-clip-text text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot">
         {props.pronouns}
       </p>
-      <p className="text-center text-[12px] md:text-[18px] whitespace-nowrap">{props.role}</p>
+      <p className="text-center text-[12px] md:text-[18px] whitespace-nowrap">
+        {props.role}
+      </p>
       {/* <p>{props.sub_role}</p>
          <p>{props.program}</p>
         <p>{props.linkedin}</p>

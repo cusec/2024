@@ -18,8 +18,8 @@ export default function Team() {
             key={index}
             name={member.name}
             university={member.university}
-            // image={member.image}  // You'll need to import or convert these images to StaticImageData
-            // university_image={member.university_image}  // Same as above
+            image={`/images/team member images/${member.image}`} 
+            // university_image={member.university_image}
             pronouns={member.pronouns}
             role={member.role}
             sub_role={member.sub_role}
