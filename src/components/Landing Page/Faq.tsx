@@ -7,7 +7,7 @@ export default function Faq() {
 
   return (
     <>
-      <div className="bg-black bg-opacity-60 shadow text-white px-8">
+      <div className="bg-black bg-opacity-60 text-white px-8">
         <h2 className="text-[28px] text-center font-semibold py-14 px-10">
           Frequently Asked Questions
         </h2>

@@ -4,7 +4,9 @@ import Link from "next/link";
 export default function Sponsor() {
   return (
     <>
-      <div className="bg-black bg-opacity-60 shadow mx-auto px-5 sm:px-20 text-white">
+      <div className="bg-black bg-opacity-60 shadow mx-auto px-5 sm:px-20 text-white"
+                style={{ boxShadow: "0px 3px 8px 4px rgba(0, 0, 0, 0.5), 0px -3px 8px 4px rgba(0, 0, 0, 0.5)" }}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 py-14 md:py-32 max-w-6xl mx-auto">
           <h2 className="text-center text-[28px] font-semibold pb-10 block md:hidden">
             Sponsor CUSEC 2024

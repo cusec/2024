@@ -55,7 +55,9 @@ export default function Home() {
               <Tickets />
             </Fade>
           </div>
-          <div className="w-full gradientBackground">
+          <div className="w-full gradientBackground"
+          style={{ boxShadow: "0px 3px 8px 4px rgba(0, 0, 0, 0.5), 0px -3px 8px 4px rgba(0, 0, 0, 0.5)" }}
+          >
             <Fade>
               <Faq />
             </Fade>
