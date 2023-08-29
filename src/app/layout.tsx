@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} font-sans scrollbar-thin scrollbar-thumb-royalPurple scrollbar-track-goldenApricot scrollbar-thumb-rounded-full`}
+        className={`${poppins.variable} font-sans scrollbar scrollbar-w-3 scrollbar-thumb-royalPurple scrollbar-track-goldenApricot scrollbar-thumb-rounded-sm`}
       >
         <Navbar clicked={isMobileMenuOpen} />
         <FadeBackgroundContext.Provider value={fadeBackground}>
