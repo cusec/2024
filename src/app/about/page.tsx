@@ -42,7 +42,7 @@ export default function About() {
   const isMediumScreen = windowWidth > 768;
 
   return (
-    <>
+    <div className="overflow-hidden">
       <Head>
         <title>CUSEC 2024 - About Us</title>
         <meta
@@ -129,6 +129,6 @@ export default function About() {
           </div>
         </div>
         
-    </>
+    </div>
   );
 }
