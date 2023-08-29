@@ -8,11 +8,11 @@ export default function Sponsor() {
     <>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="mt-10 md:my-10">
-          <h2 className="text-[28px] font-semibold tracking-tight">
+          <h2 className="text-[28px] md:text-[40px] font-semibold tracking-tight">
             Attend Our 2024 Event
           </h2>
               <hr className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-purple-500 mb-6 mt-1" />
-          <p className="font-semibold bg-clip-text text-transparent bg-gradient-to-tr from-royalPurple to-roseQuartz tracking-tight">
+          <p className="md:text-[24px] font-semibold bg-clip-text text-transparent bg-gradient-to-tr from-royalPurple to-roseQuartz tracking-tight">
             Pricing Plans
           </p>
         </div>
@@ -25,8 +25,8 @@ export default function Sponsor() {
         </span>
       </div>
 
-      <div className="mb-10 md:flex space-y-5 md:space-y-0 md:space-x-4 items-stretch">
-        <div className="flex-1">
+      <div className="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-10">
+        <div className="">
           <TicketCard
             title={"Basic"}
             description={"Learn, network, and grow with CUSEC"}
@@ -41,7 +41,7 @@ export default function Sponsor() {
             themeColor="roseQuartz"
           />
         </div>
-        <div className={`flex-1 `}>
+        <div className="">
           <TicketCard
             title={"VIP"}
             description={"Get an exclusive CUSEC experience"}
@@ -50,7 +50,7 @@ export default function Sponsor() {
             features={[
               "All Basic Benefits",
               "Priority Networking",
-              "Exlusive CUSEC 2024 Merchandise",
+              "Exclusive CUSEC 2024 Merchandise",
             ]}
             buttonLink="/"
             themeColor="goldenApricot"

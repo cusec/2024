@@ -33,23 +33,23 @@ export default function TicketCard({
           : "bg-gradient-to-tr from-roseQuartz via-lavenderFog to-royalPurple"
       } mx-auto rounded-3xl shadow-[0_10px_60px_-15px_rgba(0,0,0,.8)] relative`}
     >
-      <section className="bg-black bg-opacity-60 text-white space-y-6 flex flex-col py-10 px-10 rounded-3xl h-full">
+      <section className="bg-black bg-opacity-60 text-white flex flex-col justify-center items-center py-10 px-10 lg:px-4 rounded-3xl h-full">
         <h3
-          className={`text-[20px] text-center font-semibold uppercase ${
+          className={`text-[20px] md:text-[40px] font-semibold uppercase ${
             themeColor === "roseQuartz"
               ? "text-roseQuartz"
               : "text-goldenApricot"
-          }`}
+          } mb-6`}
         >
           {title}
         </h3>
 
-        <p className="text-center">{description}</p>
+        <p className="mb-8 md:text-[20px] text-center">{description}</p>
 
-        <div className="mx-auto">
-          <p>
+        <div className="">
+          <p className="">
             <span
-              className={`font-semibold ${
+              className={`text-[20px] md:text-[32px] font-semibold ${
                 themeColor === "roseQuartz"
                   ? "text-roseQuartz"
                   : "text-goldenApricot"
@@ -58,11 +58,12 @@ export default function TicketCard({
               &nbsp; ${studentPrice}
               {"  "}
             </span>
-            /{"  "}student
+            <span>/</span>
+            {"  "} <span className="md:text-[20px]">student</span>
           </p>
           <p>
             <span
-              className={`font-semibold ${
+              className={`text-[20px] md:text-[32px] font-semibold ${
                 themeColor === "roseQuartz"
                   ? "text-roseQuartz"
                   : "text-goldenApricot"
@@ -71,79 +72,85 @@ export default function TicketCard({
               ${professionalPrice}
               {"  "}
             </span>
-            /{"  "}professional
+            /{"  "} <span className="md:text-[20px]">professional</span>
           </p>
         </div>
 
-        <Link
-          className={`drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] ${
-            themeColor === "roseQuartz"
-              ? "bg-roseQuartz hover:bg-royalBlue hover:text-rose-400"
-              : "bg-goldenApricot hover:bg-royalBlue hover:text-amber-300"
-          } mx-auto px-5 md:px-10 py-1 mt-3 md:mt-6 text-center rounded-full uppercase md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
-          href={buttonLink}
-        >
-          Buy Now
-        </Link>
-        <ul className="space-y-4">
-          {features.map((feature, index) => (
-            <li key={index} className="flex align-center">
-              <span className="pr-4 relative flex items-center justify-center">
-                {/* Checkmark background decagon*/}
-                <svg
-                  width="25"
-                  height="25"
-                  viewBox="0 0 22 23"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={`${
-                    themeColor === "roseQuartz"
-                      ? "fill-roseQuartz"
-                      : "fill-goldenApricot"
-                  }`}
-                >
-                  <path
-                    d="M4.35654 20.7689L10.8486 22.7606L17.4689 20.7689L21.4837 15.4162V8.73579L17.4689 3.00969L10.8486 0.769043L4.01485 3.00969L0 8.73579V15.4162L4.35654 20.7689Z"
-                    // fill="#E48BB7"
-                  />
-                </svg>
+        <span className="flex my-10">
+          <Link
+            className={`drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] ${
+              themeColor === "roseQuartz"
+                ? "bg-roseQuartz hover:bg-royalBlue hover:text-rose-400"
+                : "bg-goldenApricot hover:bg-royalBlue hover:text-amber-300"
+            } mx-auto px-12 md:px-16 py-1 text-center rounded-full uppercase md:text-[20px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
+            href={buttonLink}
+          >
+            Buy Now
+          </Link>
+        </span>
 
-                {/* Checkmark */}
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={`absolute`}
-                >
-                  <rect width="18" height="18" fill="url(#pattern0)" />
-                  <defs>
-                    <pattern
-                      id="pattern0"
-                      patternContentUnits="objectBoundingBox"
-                      width="1"
-                      height="1"
+
+          <div className="w-full md:px-10 lg:px-20">
+            <ul className="space-y-6">
+              {features.map((feature, index) => (
+                <li key={index} className="flex align-center group md:text-[20px]">
+                  {/* Checkmark background decagon and checkmark */}
+                  <span className="mr-4 relative flex items-center justify-center group-hover:rotate-[360deg] transition ease-in-out duration-500">
+                    {/* Checkmark background decagon*/}
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 22 23"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`${
+                        themeColor === "roseQuartz"
+                          ? "fill-roseQuartz"
+                          : "fill-goldenApricot"
+                      }`}
                     >
-                      <use
-                        href="#image0_217_621"
-                        transform="scale(0.0208333)"
+                      <path
+                        d="M4.35654 20.7689L10.8486 22.7606L17.4689 20.7689L21.4837 15.4162V8.73579L17.4689 3.00969L10.8486 0.769043L4.01485 3.00969L0 8.73579V15.4162L4.35654 20.7689Z"
+                        // fill="#E48BB7"
                       />
-                    </pattern>
-                    <image
-                      id="image0_217_621"
-                      width="48"
-                      height="48"
-                      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABCUlEQVR4nO2YQQ6CMBAA+0M4EA76Hj2oVz8ovkI0YxqKJiZIgdpucSfhJMEZ08KiMYqiKMpaAQqgAa5AaXICqICWN3dgazKVzyeCYXn5EUA9It9jzylMpvI9F5OxvJwA5snLWEKMb9ihTbxJ7a7y6142QOnmjybkZoklX/1iBkklHyQitfyiiJhrvvW4sD2nFiVvcRvWF6+IqA8pursNoSKiP2HxX0KjEcnGA+Z/8VbMbMOCiBA/QBBmijycTFr5hREy5CNExHspJ3xE/H8U6CJuWcovfG+dPYJIi0gv/xExFRnyPcBxgvzBSAQ4ecifjWT4HiFbfiQiD/keYO/u8fbYvT5QFEX5C54al06Bh89naQAAAABJRU5ErkJggg=="
-                    />
-                  </defs>
-                </svg>
-              </span>
-              {feature}
-            </li>
-          ))}
-        </ul>
+                    </svg>
+                    {/* Checkmark */}
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`absolute`}
+                    >
+                      <rect width="18" height="18" fill="url(#pattern0)" />
+                      <defs>
+                        <pattern
+                          id="pattern0"
+                          patternContentUnits="objectBoundingBox"
+                          width="1"
+                          height="1"
+                        >
+                          <use
+                            href="#image0_217_621"
+                            transform="scale(0.0208333)"
+                          />
+                        </pattern>
+                        <image
+                          id="image0_217_621"
+                          width="48"
+                          height="48"
+                          href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABCUlEQVR4nO2YQQ6CMBAA+0M4EA76Hj2oVz8ovkI0YxqKJiZIgdpucSfhJMEZ08KiMYqiKMpaAQqgAa5AaXICqICWN3dgazKVzyeCYXn5EUA9It9jzylMpvI9F5OxvJwA5snLWEKMb9ihTbxJ7a7y6142QOnmjybkZoklX/1iBkklHyQitfyiiJhrvvW4sD2nFiVvcRvWF6+IqA8pursNoSKiP2HxX0KjEcnGA+Z/8VbMbMOCiBA/QBBmijycTFr5hREy5CNExHspJ3xE/H8U6CJuWcovfG+dPYJIi0gv/xExFRnyPcBxgvzBSAQ4ecifjWT4HiFbfiQiD/keYO/u8fbYvT5QFEX5C54al06Bh89naQAAAABJRU5ErkJggg=="
+                        />
+                      </defs>
+                    </svg>
+                  </span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <div className={`${title === "VIP" ? "block" : "hidden"}`}></div>
+        {/* <div className={`${title === "VIP" ? "block " : "hidden"}`}></div> */}
       </section>
       <div
         className={`${
