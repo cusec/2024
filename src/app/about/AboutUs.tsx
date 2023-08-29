@@ -11,6 +11,7 @@ export default function AboutUs() {
           src={circle_grid_v2}
           alt="Horizontal grid of grey circles"
           className="w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] "
+          priority
         />
       </div>
       <section className="lg:max-w-[1024px] max-w-[768px] space-y-6 px-6 md:px-12 ">
