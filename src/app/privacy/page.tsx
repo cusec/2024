@@ -10,13 +10,12 @@ export default function Privacy() {
           <Fade>
         <BlueBorderSquareBox>
           <main
-            className={`
-          space-y-6 px-10 lg:px-20 flex flex-col items-center py-8 md:py-20`}
+            className={`px-10 lg:px-20 flex flex-col py-8 md:py-20`}
           >
-              <h1 className="font-semibold text-[20px] sm:text-[28px] md:text-[32px]">
+              <h1 className="font-semibold text-[20px] sm:text-[28px] md:text-[32px] mb-1">
                 Privacy Policy
               </h1>
-              <hr className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-roseQuartz mb-10" />
+              <hr className="block w-[2rem] md:w-[3rem] h-2 bg-purple-400 mb-10" />
               <p className="font-regular text-[10px] sm:text-[12px] md:text-[16px]">
                 Your privacy is important to us. It is CUSEC's policy to respect
                 your privacy regarding any information we may collect from you
