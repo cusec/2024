@@ -37,19 +37,19 @@ export default function About() {
         <section className="flex space-x-6">
           <Decagon1
             image={decagon_gradient_1}
-            TitleText={"400+"}
+            TitleText={"1K+"}
             SubtitleText={"Attendees"}
           />
           <Decagon1
             image={decagon_gradient_2}
-            TitleText={"40+"}
+            TitleText={"220+"}
             SubtitleText={"Speakers"}
           />
         </section>
         <section className="flex items-center space-x-4">
           <Decagon1
             image={decagon_gradient_3}
-            TitleText={"50+"}
+            TitleText={"280+"}
             SubtitleText={"Sponsors"}
           />
           <div className="">
@@ -61,7 +61,7 @@ export default function About() {
           </div>
           <Decagon1
             image={decagon_gradient_4}
-            TitleText={"30+"}
+            TitleText={"50+"}
             SubtitleText={"VIP Members"}
           />
         </section>
