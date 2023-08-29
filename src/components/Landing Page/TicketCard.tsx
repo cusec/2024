@@ -89,7 +89,6 @@ export default function TicketCard({
           {features.map((feature, index) => (
             <li key={index} className="flex align-center">
               <span className="pr-4 relative flex items-center justify-center">
-                
                 {/* Checkmark background decagon*/}
                 <svg
                   width="25"
@@ -107,7 +106,7 @@ export default function TicketCard({
                     // fill="#E48BB7"
                   />
                 </svg>
-                
+
                 {/* Checkmark */}
                 <svg
                   width="14"
@@ -138,8 +137,6 @@ export default function TicketCard({
                     />
                   </defs>
                 </svg>
-
-
               </span>
               {feature}
             </li>
@@ -162,13 +159,15 @@ export default function TicketCard({
         <div className="absolute h-3 w-3 bottom-0 right-0 bg-amber-600"></div>
         <Link
           href="/"
-          className="block bg-goldenApricot text-center text-purple-800 font-semibold tracking-wide uppercase py-2 absolute bottom-0 right-0 origin-bottom-right shadow-sm transition ease-in-out duration-500 hover:bg-amber-300 hover:font-bold"
+          className="flex justify-center bg-goldenApricot text-purple-800 font-semibold tracking-wide uppercase py-2 absolute bottom-0 right-0 origin-bottom-right shadow-sm transition ease-in-out duration-500 hover:bg-amber-300 group"
           style={{
             width: `${(hypotenuse / width) * 100}%`,
             transform: `rotate(${angle}deg)`,
           }}
         >
-          Popular
+          <span className="group-hover:scale-110 transition ease-in-out duration-500">
+            Popular
+          </span>
         </Link>
       </div>
     </div>
