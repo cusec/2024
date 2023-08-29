@@ -15,6 +15,7 @@ const Landingbox = () => {
             alt="CUSEC 2024 logo primary dark"
             layout="responsive"
             className="max-w-lg mx-auto"
+            priority
           />
           <p className="font-semibold text-[18px] leading-[25px] tracking-wider">
             Canadian University Software Engineering Conference
