@@ -49,7 +49,14 @@ export default function Navbar({ clicked }: ChildProps) {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
-              <Image src={logo} alt="Logo" width={44} height={44} className="hover:scale-105 transition ease-in-out duration-1000 hover:rotate-180" />
+              <Image
+                src={logo}
+                alt="Logo"
+                width={44}
+                height={44}
+                className="hover:scale-105 transition ease-in-out duration-1000 hover:rotate-180"
+                priority
+              />
               <span className="ml-2 text-white text-lg font-semibold">
                 {/* CUSEC */}
               </span>
