@@ -8,8 +8,9 @@ export default function Faq() {
   return (
     <>
       <div className="bg-black bg-opacity-60 text-white px-8">
-        <h2 className="text-[28px] text-center font-semibold py-14 px-10">
-          Frequently Asked Questions
+        <h2 className="text-[28px] flex justify-center font-semibold py-14 px-10">
+                        <hr className="block w-2 h-10 bg-purple-500 mr-4" />
+                        Frequently Asked Questions
         </h2>
         <span className="block max-w-[600px] h-[0.75px] bg-white mb-10 mx-auto"></span>
 

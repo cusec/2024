@@ -13,15 +13,16 @@ import Link from "next/link";
 export default function About() {
   return (
     <>
-
       {/* Vertical grid of grey circles */}
       <Image
         src={circle_grid_v1}
         alt="Vertical grid of grey circles"
         className="relative top-[70px] w-[40px] h-[80px] md:h-[120px] md:top-[80px] md:right-[40px] lg:top-[100px] lg:right-[40px] lg:h-[160px]"
       />
-      <section className="lg:max-w-[1024px] max-w-[768px] space-y-6 pl-12 ">
+      <section className="lg:max-w-[1024px] max-w-[768px] pl-12 ">
         <p className="font-semibold text-[28px]">Get To Know Us</p>
+              <hr className="block max-w-[3rem] md:max-w-[2.5rem] h-2 bg-roseQuartz mb-10 mt-2" />
+              <section className="space-y-6">
         <p className="font-regular text-[15px]">
           CUSEC is a student-led software engineering conference for students
           across Canada that has educated and inspired many for the last 21
@@ -30,6 +31,7 @@ export default function About() {
           companies, and make lifelong friendships within a safe and comfortable
           space.
         </p>
+              </section>
       </section>
 
       {/* Decagons */}

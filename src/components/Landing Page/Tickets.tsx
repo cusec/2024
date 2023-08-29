@@ -11,6 +11,7 @@ export default function Sponsor() {
           <h2 className="text-[28px] font-semibold tracking-tight">
             Attend Our 2024 Event
           </h2>
+              <hr className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-purple-500 mb-6 mt-1" />
           <p className="font-semibold bg-clip-text text-transparent bg-gradient-to-tr from-royalPurple to-roseQuartz tracking-tight">
             Pricing Plans
           </p>

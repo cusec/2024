@@ -7,10 +7,14 @@ export default function Sponsor() {
       <div className="bg-black bg-opacity-60 shadow mx-auto px-5 sm:px-20 text-white"
                 style={{ boxShadow: "0px 3px 8px 4px rgba(0, 0, 0, 0.5), 0px -3px 8px 4px rgba(0, 0, 0, 0.5)" }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 py-14 md:py-32 max-w-6xl mx-auto">
-          <h2 className="text-center text-[28px] font-semibold pb-10 block md:hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 py-14 md:py-32 max-w-6xl mx-auto w-fit">
+          
+          <span className="flex justify-center text-[28px] font-semibold pb-10 md:hidden">
+          <h2 className="w-fit">
             Sponsor CUSEC 2024
+              <hr className="max-w-[3rem] md:max-w-[4rem] h-2 bg-orange-300 mb-2 mt-2 ml-auto" />
           </h2>
+          </span>
           <div className="mx-4 md:mx-0">
             <div className="relative max-w-md aspect-square mx-auto w-full">
               <div className="absolute max-w-md aspect-square top-[-17px] right-[-18px] bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-[95%]">
@@ -26,6 +30,7 @@ export default function Sponsor() {
             <h2 className="text-[28px] md:text-[40px] font-semibold hidden md:block">
               Sponsor CUSEC 2024
             </h2>
+              <hr className="hidden md:block max-w-[3rem] md:max-w-[4rem] h-2 bg-orange-300 mb-2 mt-2 ml-auto" />
             <p className="md:text-[20px] font-regular pt-10 pb-6">
               Over the last 21 years, CUSEC has collaborated with an extensive
               array of industry leaders. These partnerships have helped make

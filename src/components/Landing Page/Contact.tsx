@@ -10,7 +10,7 @@ export default function Contact() {
           Contact Us
         </h2>
         <div className="space-y-6">
-          <hr className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-roseQuartz" />
+          <hr className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-purple-500" />
           <Link
             href={"mailto:info@cusec.net"}
             className="flex transition ease-in-out duration-500 hover:scale-105 group max-w-fit items-center"
