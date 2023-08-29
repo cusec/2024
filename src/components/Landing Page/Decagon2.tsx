@@ -25,10 +25,10 @@ export default function Decagon2({ image, TitleText, SubtitleText}:Decagon2Props
         }}
       >
         <div>
-          <p className="font-semibold text-[30px] min-[390px]:text-[40px] md:text-[50px] tracking-tighter text-center bg-clip-text text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot">
+          <p className="font-semibold text-[30px] min-[390px]:text-[40px] md:text-[80px] tracking-tight text-center bg-clip-text text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot">
           { TitleText}
           </p>
-          <p className="font-regular text-[10px] min-[390px]:text-[12px] md:text-[19px] tracking-tight text-center text-white">
+          <p className="font-regular text-[10px] min-[390px]:text-[12px] md:text-[24px] tracking-tight text-center text-white">
             {SubtitleText}
           </p>
         </div>
