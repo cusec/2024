@@ -32,7 +32,7 @@ export default function Home() {
         <div
           className={`bottomFade ${
             fadeBackground ? "gradientBackground" : "gradientGridBackground"
-          } flex items-center justify-center min-h-[calc(100vh+50px)]`}
+          } flex items-center justify-center min-h-screen`}
         >
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full">
           <Fade>
