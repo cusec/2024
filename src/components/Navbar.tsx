@@ -44,7 +44,7 @@ export default function Navbar({ clicked }: ChildProps) {
     <nav className="bg-black/[.85] z-50 fixed top-0 w-full flex justify-center bg-clip-padding">
       {/* Desktop Navbar */}
       <div
-        className={`w-full max-w-screen-2xl mx-6 lg:mx-24 backdrop-blur-[2px]`}
+        className={`w-full max-w-screen-2xl mx-6 lg:mx-24 backdrop-blur-[6px]`}
       >
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
@@ -183,7 +183,7 @@ export default function Navbar({ clicked }: ChildProps) {
 
           `border-t border-stone-700 transform top-0 right-0 mt-16 w-full fixed h-full bg-inherit overflow-auto transition duration-1000 ease-in-out z-10 ${
             isMobileMenuOpen
-              ? "translate-x-0 backdrop-blur-[2px]"
+              ? "translate-x-0 backdrop-blur-[6px]"
               : "translate-x-full backdrop-blur-none"
           }`
         }
