@@ -27,11 +27,11 @@ export default function TeamCard(props: TeamCardProps) {
         {props.image && (
           <Image
             src={props.image}
-            alt={props.name}
+            alt={"Image of " + props.name}
             // width={140}
             // height={140}
-            layout="fill" 
-      objectFit="cover"
+            layout="fill"
+            objectFit="cover"
             className="overflow-none p-1"
           />
         )}
@@ -46,8 +46,8 @@ export default function TeamCard(props: TeamCardProps) {
       <p className="text-center text-[12px] md:text-[18px] whitespace-nowrap">
         {props.role}
       </p>
-      {/* <p>{props.sub_role}</p>
-         <p>{props.program}</p>
+      {/* <p>{props.sub_role}</p> */}
+      {/* <p>{props.program}</p>
         <p>{props.linkedin}</p>
         <p>{props.instagram}</p>
         <p>{props.github}</p>
