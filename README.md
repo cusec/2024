@@ -107,6 +107,7 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Finally understanding how absolute and relative positionings work in CSS.🤯
 - Using the 'styles' prop in conjunction to tailwind to add advanced inline styles, such as clip paths and svg rendering.💅
 - Using CSS clip path with the 'path' function to create custom cubic bezier curves for components.🛣️
+- Using Swiper.js React API to create image carousels.🎡
 - Setting types for images that are expected as props inside a child component.🖼️
 - Making certain props optional using the '?' operator.❓
  
