@@ -60,11 +60,12 @@ export default function AboutUs() {
         <Image src={circle_grid_v2} alt="Horizontal grid of grey circles" />
       </div>
 
-      <div className="bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot py-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
-          style={{
-boxShadow: "inset 0px 2px 4px rgba(0, 0, 0, 0.5)"
-        }}>
-
+      <div
+        className="bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot px-2 py-3 mt-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+        style={{
+          boxShadow: "inset 0px 2px 4px rgba(0, 0, 0, 0.5)",
+        }}
+      >
         <Swiper
           modules={[
             Navigation,
