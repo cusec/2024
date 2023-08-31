@@ -60,57 +60,69 @@ export default function AboutUs() {
         <Image src={circle_grid_v2} alt="Horizontal grid of grey circles" />
       </div>
 
-      <Swiper
-        modules={[
-          Navigation,
-          Pagination,
-          Scrollbar,
-          A11y,
-          EffectFlip,
-          Keyboard,
-        ]}
-        spaceBetween={10}
-        speed={1000}
-        slidesPerView={"auto"}
-        grabCursor={true}
-        loop={true}
-        navigation={true}
-        mousewheel={true}
-        keyboard={true}
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-        breakpoints={{
-          // when window width is >= 640px
-          640: {
-            slidesPerView: 1,
-          },
-          // when window width is >= 768px
-          768: {
-            slidesPerView: 2,
-          },
-          // when window width is >= 1024px
-          1024: {
-            slidesPerView: 3,
-          },
-        }}
-        // className="sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto"
-        className="mx-auto my-10"
-      >
-        <SwiperSlide>
-          <Image src={carousel_image_1} alt="" className="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={carousel_image_2} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={carousel_image_3} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={carousel_image_4} alt="" />
-        </SwiperSlide>
-      </Swiper>
+      <div className="bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot py-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+          style={{
+boxShadow: "inset 0px 2px 4px rgba(0, 0, 0, 0.5)"
+        }}>
+
+        <Swiper
+          modules={[
+            Navigation,
+            Pagination,
+            Scrollbar,
+            A11y,
+            EffectFlip,
+            Keyboard,
+          ]}
+          spaceBetween={5}
+          speed={1000}
+          slidesPerView={"auto"}
+          grabCursor={true}
+          loop={true}
+          navigation={true}
+          mousewheel={true}
+          keyboard={true}
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 2,
+            },
+            // when window width is >= 1024px
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          // className="sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto"
+          className="mx-auto"
+        >
+          <SwiperSlide>
+            <Image src={carousel_image_1} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image src={carousel_image_2} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image src={carousel_image_3} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image src={carousel_image_4} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image src={carousel_image_5} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image src={carousel_image_6} alt="" />
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </div>
   );
 }
