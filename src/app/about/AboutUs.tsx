@@ -51,6 +51,7 @@ export default function AboutUs() {
           and comfortable space.
         </p>
       </section>
+
       <Image
         src={circle_grid_v1}
         alt="Vertical grid of grey circles"
@@ -66,6 +67,7 @@ export default function AboutUs() {
           boxShadow: "inset 0px 2px 4px rgba(0, 0, 0, 0.5)",
         }}
       >
+        {/* Image Carousel */}
         <Swiper
           modules={[
             Navigation,
@@ -105,22 +107,28 @@ export default function AboutUs() {
           className="mx-auto"
         >
           <SwiperSlide>
-            <Image src={carousel_image_1} alt="" />
+            <Image
+              src={carousel_image_1}
+              alt="People seated watching keynote speech"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={carousel_image_2} alt="" />
+            <Image
+              src={carousel_image_2}
+              alt="CUSEC 2023 team holding up banner"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={carousel_image_3} alt="" />
+            <Image src={carousel_image_3} alt="People playing board games" />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={carousel_image_4} alt="" />
+            <Image src={carousel_image_4} alt="People during a workshop" />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={carousel_image_5} alt="" />
+            <Image src={carousel_image_5} alt="Attendees under chandelier" />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={carousel_image_6} alt="" />
+            <Image src={carousel_image_6} alt="People playing card games" />
           </SwiperSlide>
         </Swiper>
       </div>
