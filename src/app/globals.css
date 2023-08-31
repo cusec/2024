@@ -17,6 +17,7 @@
 
 html {
 }
+
 .homeMainGradientGridBackground {
   z-index: 0;
   background: var(--gradient-colors),
