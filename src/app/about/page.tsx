@@ -10,6 +10,7 @@ import grid_gradient_fill_lines from "./grid_gradient_fill_lines.svg";
 import Main from "@/app/about/Main";
 import AboutUs from "@/app/about/AboutUs";
 import Team from "./Team";
+import WhyJoin from "./WhyJoin";
 import { useEffect, useState } from "react";
 
 // Had to remove this import because the file was too large to upload to GitHub.
@@ -116,6 +117,9 @@ export default function About() {
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full mt-20 md:-mt-3 mb-16">
             <Fade>
               <AboutUs />
+            </Fade>
+            <Fade>
+              <WhyJoin />
             </Fade>
             <Fade>
                   {/* <Image
