@@ -48,21 +48,34 @@ export default function WhyJoin() {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
         breakpoints={{}}
-        // className="sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto"
-        className="mx-auto"
       >
         <SwiperSlide>
-          {/* <Image
-            src={connect_decagon}
-            alt="Decagon with icon and gradient that says 'Connect with like-minded individuals'"
-          /> */}
+          <div className="flex justify-center border border-black">
           <WhyJoinDecagon
             BackgroundImage={connect_decagon}
             IconImage={connect_icon}
-            //   AltText="Decagon with icon and gradient that says 'Connect with like-minded individuals'"
             TitleText="Connect"
             SubtitleText="with like-minded individuals"
-          />
+            />
+            </div>
+        </SwiperSlide><SwiperSlide>
+          <div className="flex justify-center">
+          <WhyJoinDecagon
+            BackgroundImage={connect_decagon}
+            IconImage={connect_icon}
+            TitleText="Connect"
+            SubtitleText="with like-minded individuals"
+            />
+            </div>
+        </SwiperSlide><SwiperSlide>
+          <div className="flex justify-center">
+          <WhyJoinDecagon
+            BackgroundImage={connect_decagon}
+            IconImage={connect_icon}
+            TitleText="Connect"
+            SubtitleText="with like-minded individuals"
+            />
+            </div>
         </SwiperSlide>
       </Swiper>
 

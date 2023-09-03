@@ -3,7 +3,6 @@ import Image from "next/image";
 type Props = {
   BackgroundImage: { src: string };
   IconImage: { src: string };
-  //   AltText: string;
   TitleText: string;
   SubtitleText: string;
 };
@@ -11,7 +10,6 @@ type Props = {
 export default function WhyJoinDecagon({
   BackgroundImage,
   IconImage,
-  //   AltText,
   TitleText,
   SubtitleText,
 }: Props) {
@@ -23,7 +21,7 @@ export default function WhyJoinDecagon({
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="flex flex-col items-center justify-center w-[250px] h-[270px]"
+      className="flex flex-col items-center justify-center w-[250px] h-[270px] md:w-[420px] md:h-[450px]"
     >
       <p className="text-[24px] md:text-[40px] text-white font-semibold tracking-tight text-center">
         {TitleText}
@@ -33,9 +31,9 @@ export default function WhyJoinDecagon({
         alt="Icon"
         width={50}
         height={50}
-        className="w-[100px] h-[100px]"
+        className="w-[100px] h-[100px] md:w-[165px] md:h-[165px]"
       />{" "}
-      <p className="text-[16px] md:text-[20px] text-white font-medium text-center max-w-[159px]">
+      <p className="text-[16px] md:text-[20px] text-white font-medium text-center max-w-[159px] md:max-w-[266px]">
         {SubtitleText}
       </p>
     </div>
