@@ -1,14 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  EffectFlip,
-  Keyboard,
-} from "swiper/modules";
+import { Navigation, Pagination, A11y, Keyboard, EffectCoverflow} from "swiper/modules";
 
 // import "swiper/css";
 import "swiper/css/bundle";
@@ -27,55 +20,58 @@ export default function WhyJoin() {
 
       {/* Image Carousel */}
       <Swiper
-        modules={[
-          Navigation,
-          Pagination,
-          Scrollbar,
-          A11y,
-          EffectFlip,
-          Keyboard,
-        ]}
-        spaceBetween={5}
+        modules={[Navigation, Pagination, A11y, Keyboard, EffectCoverflow]}
+        // spaceBetween={5}
+        initialSlide={1}
         speed={1000}
         slidesPerView={"auto"}
+        // slidesPerView={1}
         grabCursor={true}
         loop={true}
+        centeredSlides={true}
         navigation={true}
         mousewheel={true}
         keyboard={true}
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-        breakpoints={{}}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          // slideShadows: true,
+        }}
+
+        className="w-50 h-50"
       >
         <SwiperSlide>
-          <div className="flex justify-center border border-black">
-          <WhyJoinDecagon
-            BackgroundImage={connect_decagon}
-            IconImage={connect_icon}
-            TitleText="Connect"
-            SubtitleText="with like-minded individuals"
-            />
-            </div>
-        </SwiperSlide><SwiperSlide>
           <div className="flex justify-center">
-          <WhyJoinDecagon
-            BackgroundImage={connect_decagon}
-            IconImage={connect_icon}
-            TitleText="Connect"
-            SubtitleText="with like-minded individuals"
+            <WhyJoinDecagon
+              BackgroundImage={connect_decagon}
+              IconImage={connect_icon}
+              TitleText="Connect"
+              SubtitleText="with like-minded individuals"
             />
-            </div>
-        </SwiperSlide><SwiperSlide>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
           <div className="flex justify-center">
-          <WhyJoinDecagon
-            BackgroundImage={connect_decagon}
-            IconImage={connect_icon}
-            TitleText="Connect"
-            SubtitleText="with like-minded individuals"
+            <WhyJoinDecagon
+              BackgroundImage={connect_decagon}
+              IconImage={connect_icon}
+              TitleText="Connect"
+              SubtitleText="with like-minded individuals"
             />
-            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex justify-center">
+            <WhyJoinDecagon
+              BackgroundImage={connect_decagon}
+              IconImage={connect_icon}
+              TitleText="Connect"
+              SubtitleText="with like-minded individuals"
+            />
+          </div>
         </SwiperSlide>
       </Swiper>
 
