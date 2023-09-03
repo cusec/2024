@@ -118,21 +118,19 @@ export default function About() {
             <Fade>
               <AboutUs />
             </Fade>
-            <Fade>
-              <WhyJoin />
-            </Fade>
-            <Fade>
-                  {/* <Image
-        src={carousel_about_us}
-        alt="Carousel of images of CUSEC attendees"
-        className="w-full h-full"
-        /> */}
-        <Team />
-            </Fade>
-      </div>
           </div>
         </div>
-        
+        <Fade>
+          <WhyJoin />
+        </Fade>
+        <div className="flex flex-col items-center">
+          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full mt-20 md:-mt-3 mb-16">
+            <Fade>
+              <Team />
+            </Fade>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

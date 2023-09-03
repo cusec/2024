@@ -14,7 +14,6 @@ import {
   Pagination,
   Scrollbar,
   A11y,
-  EffectFlip,
   Keyboard,
 } from "swiper/modules";
 
@@ -69,68 +68,87 @@ export default function AboutUs() {
       >
         {/* Image Carousel */}
         <Swiper
-          modules={[
-            Navigation,
-            Pagination,
-            Scrollbar,
-            A11y,
-            EffectFlip,
-            Keyboard,
-          ]}
+          modules={[Navigation, Pagination, Scrollbar, A11y, Keyboard]}
           spaceBetween={5}
           speed={1000}
           slidesPerView={"auto"}
+          // slidesPerView={2}
           grabCursor={true}
           loop={true}
           navigation={true}
           mousewheel={true}
           keyboard={true}
+          centeredSlides={true}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
           breakpoints={{
-            // when window width is >= 640px
-            640: {
-              slidesPerView: 1,
-            },
-            // when window width is >= 768px
-            768: {
-              slidesPerView: 2,
-            },
             // when window width is >= 1024px
             1024: {
               slidesPerView: 3,
+              centeredSlides: false,
             },
           }}
-          // className="sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto"
-          className="mx-auto"
         >
           <SwiperSlide>
-            <Image
-              src={carousel_image_1}
-              alt="People seated watching keynote speech"
-            />
+            <div className="flex justify-center lg:block">
+              <Image
+                src={carousel_image_1}
+                alt="People seated watching keynote speech"
+              />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <Image
-              src={carousel_image_2}
-              alt="CUSEC 2023 team holding up banner"
-            />
+            <div className="flex justify-center lg:block">
+              <Image
+                src={carousel_image_2}
+                alt="CUSEC 2023 team holding up banner"
+              />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={carousel_image_3} alt="People playing board games" />
+            <div className="flex justify-center lg:block">
+              <Image src={carousel_image_3} alt="People playing board games" />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={carousel_image_4} alt="People during a workshop" />
+            <div className="flex justify-center lg:block">
+              <Image src={carousel_image_4} alt="People during a workshop" />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={carousel_image_5} alt="Attendees under chandelier" />
+            <div className="flex justify-center lg:block">
+              <Image src={carousel_image_5} alt="Attendees under chandelier" />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={carousel_image_6} alt="People playing card games" />
+            <div className="flex justify-center lg:block">
+              <Image src={carousel_image_6} alt="People playing card games" />
+            </div>
           </SwiperSlide>
         </Swiper>
+
+        {/* <Swiper
+          slidesPerView={4}
+          spaceBetween={30}
+          centeredSlides={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper h-20"
+        >
+          <SwiperSlide className="border border-black">Slide 1</SwiperSlide>
+          <SwiperSlide className="border border-black">Slide 2</SwiperSlide>
+          <SwiperSlide className="border border-black">Slide 3</SwiperSlide>
+          <SwiperSlide className="border border-black">Slide 4</SwiperSlide>
+          <SwiperSlide className="border border-black">Slide 5</SwiperSlide>
+          <SwiperSlide className="border border-black">Slide 6</SwiperSlide>
+          <SwiperSlide className="border border-black">Slide 7</SwiperSlide>
+          <SwiperSlide className="border border-black">Slide 8</SwiperSlide>
+          <SwiperSlide className="border border-black">Slide 9</SwiperSlide>
+        </Swiper> */}
       </div>
     </div>
   );
