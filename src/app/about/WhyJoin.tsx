@@ -13,8 +13,13 @@ import {
 import "swiper/css/bundle";
 
 import WhyJoinDecagon from "./WhyJoinDecagon";
+import learn_decagon from "./Carousel Images/learn_decagon.svg";
+import learn_icon from "./Carousel Images/learn_icon.svg";
 import connect_decagon from "./Carousel Images/connect_decagon.svg";
 import connect_icon from "./Carousel Images/connect_icon.svg";
+import discover_decagon from "./Carousel Images/discover_decagon.svg";
+import discover_icon from "./Carousel Images/discover_icon.svg";
+
 
 import { useState, useEffect } from "react";
 
@@ -41,7 +46,7 @@ export default function WhyJoin() {
         Why Join?
       </h2>
 
-      {/* Decagon Carousel approach*/}
+      {/* Decagon Carousel*/}
       <div className="w-full h-[270px] md:h-[450px]">
         <Swiper
           modules={[Navigation, Pagination, A11y, Keyboard, EffectCoverflow]}
@@ -63,9 +68,9 @@ export default function WhyJoin() {
             <div className="flex justify-center">
               <WhyJoinDecagon
                 BackgroundImage={connect_decagon}
-                IconImage={connect_icon}
-                TitleText="Connect"
-                SubtitleText="with like-minded individuals"
+                IconImage={learn_icon}
+                TitleText="Learn"
+                SubtitleText="from world-renowned experts"
               />
             </div>
           </SwiperSlide>
@@ -83,40 +88,14 @@ export default function WhyJoin() {
             <div className="flex justify-center">
               <WhyJoinDecagon
                 BackgroundImage={connect_decagon}
-                IconImage={connect_icon}
-                TitleText="Connect"
-                SubtitleText="with like-minded individuals"
+                IconImage={discover_icon}
+                TitleText="Discover"
+                SubtitleText="opportunities with companies"
               />
             </div>
           </SwiperSlide>
         </Swiper>
       </div>
-
-      {/* Test Carousel */}
-      {/* <div className="w-[300px] h-[200px] lg:w-[800px] lg:h-[400px] border border-black">
-        <Swiper
-          modules={[Navigation, Pagination, A11y, Keyboard, EffectCoverflow]}
-          loop={true}
-          slidesPerView={2}
-          centeredSlides={true}
-          effect="coverflow"
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 20,
-            depth: 300,
-            modifier: 1,
-            slideShadows: false,
-          }}
-          navigation={true}
-          className="h-full"
-        >
-          <SwiperSlide className="bg-red-500">Slide 1</SwiperSlide>
-          <SwiperSlide className="bg-green-500">Slide 2</SwiperSlide>
-          <SwiperSlide className="bg-blue-500">Slide 3</SwiperSlide>
-          <SwiperSlide className="bg-red-500">Slide 1</SwiperSlide>
-          <SwiperSlide className="bg-green-500">Slide 2</SwiperSlide>
-        </Swiper>
-      </div> */}
 
       <div className="flex flex-col items-center mt-16">
         <p className="md:text-[24px]">
