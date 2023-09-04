@@ -17,14 +17,15 @@ export default function FaqCard({ question, content }: FaqCardProps) {
       <span className="h-3 block bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot"></span>
 
       <button
-        className="w-full text-[14px] font-semibold px-4 py-2 flex justify-between"
+        className="w-full text-[14px] font-semibold px-4 py-2 flex justify-items-end"
         onClick={toggleCardClicked}
       >
+        <div className="flex justify-between w-full">
         {/* Question Text */}
-        <span className="block">{question}</span>
+        <div className="text-left mr-4">{question}</div>
 
-        {/* Bottom gradient line */}
-        <span className="block">
+        {/* Triangle Icon */}
+        <div>
           <svg
             className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 fill-black ${
               isCardClicked ? "rotate-0" : "rotate-180"
@@ -54,13 +55,18 @@ export default function FaqCard({ question, content }: FaqCardProps) {
               />
             </g>
           </svg>
-        </span>
+        </div>
+        </div>
       </button>
+
+
       <div
-        className={`transition-all ease-in-out duration-1000 overflow-hidden ${
-          isCardClicked ? "max-h-0" : "max-h-40"
+        className={`transition-all ease-in-out duration-[1500ms] overflow-hidden ${
+          isCardClicked ? "max-h-0" : "max-h-screen"
         }`}
       >
+
+        {/* Bottom gradient line */}
         <span
           className={`h-0.5 block bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot transition-all duration-1000 ease-in-out ${
             isCardClicked ? "opacity-0 invisible" : "opacity-100 visible"
