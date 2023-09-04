@@ -17,7 +17,7 @@ export default function Decagon1({ image, TitleText, SubtitleText}:Decagon1Props
 
   return (
     <article
-      className="relative flex items-center justify-center h-[120px] w-[105px] md:h-[210px] md:w-[195px] pb-2"
+      className="relative flex items-center justify-center h-[80px] w-[70px] min-[390px]:h-[120px] min-[390px]:w-[105px] md:h-[210px] md:w-[195px] pb-2"
       style={{
         backgroundImage: `url(${image.src})`,
         backgroundSize: "cover",
@@ -25,10 +25,10 @@ export default function Decagon1({ image, TitleText, SubtitleText}:Decagon1Props
       }}
     >
       <div>
-        <p className="font-semibold text-[24px] md:text-[50px] tracking-tighter text-center text-white">
+        <p className="font-semibold text-[18px] min-[390px]:text-[24px] md:text-[50px] tracking-tighter text-center text-white">
         { TitleText}
         </p>
-        <p className="font-regular text-[12px] md:text-[19px] tracking-tight text-center text-white">
+        <p className="font-regular text-[8px] min-[390px]:text-[12px] md:text-[19px] tracking-tight text-center text-white">
           {SubtitleText}
         </p>
       </div>

@@ -1,0 +1,34 @@
+<svg width="182" height="148" viewBox="0 0 182 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="181.529" y1="98.0073" x2="-0.000259399" y2="98.0073" stroke="url(#paint0_diamond_428_612)" stroke-width="1.5"/>
+<line x1="117.549" y1="6.59668" x2="-0.000839233" y2="6.59668" stroke="url(#paint1_diamond_428_612)" stroke-width="1.5"/>
+<line x1="151.891" y1="48.8691" x2="-0.000152588" y2="48.8691" stroke="url(#paint2_diamond_428_612)" stroke-width="1.5"/>
+<line x1="75.3521" y1="0.843506" x2="75.3521" y2="126.844" stroke="url(#paint3_diamond_428_612)" stroke-width="1.5"/>
+<line x1="24.9355" y1="0.84375" x2="24.9356" y2="147.844" stroke="url(#paint4_diamond_428_612)" stroke-width="1.5"/>
+<defs>
+<radialGradient id="paint0_diamond_428_612" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(181.529 96.7573) rotate(-179.946) scale(193.655 2.55645)">
+<stop stop-color="#AC65E3"/>
+<stop offset="0.449369" stop-color="#DA83C0"/>
+<stop offset="1" stop-color="#FFB963"/>
+</radialGradient>
+<radialGradient id="paint1_diamond_428_612" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(117.549 5.34668) rotate(-179.916) scale(125.402 2.55645)">
+<stop stop-color="#AC65E3"/>
+<stop offset="0.449369" stop-color="#DA83C0"/>
+<stop offset="1" stop-color="#FFB963"/>
+</radialGradient>
+<radialGradient id="paint2_diamond_428_612" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(151.891 47.6191) rotate(-179.935) scale(162.037 2.55645)">
+<stop stop-color="#AC65E3"/>
+<stop offset="0.449369" stop-color="#DA83C0"/>
+<stop offset="1" stop-color="#FFB963"/>
+</radialGradient>
+<radialGradient id="paint3_diamond_428_612" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(74.1021 0.84351) rotate(90.0781) scale(134.417 2.55645)">
+<stop stop-color="#AC65E3"/>
+<stop offset="0.449369" stop-color="#DA83C0"/>
+<stop offset="1" stop-color="#FFB963"/>
+</radialGradient>
+<radialGradient id="paint4_diamond_428_612" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(23.6855 0.843755) rotate(90.067) scale(156.819 2.55645)">
+<stop stop-color="#AC65E3"/>
+<stop offset="0.449369" stop-color="#DA83C0"/>
+<stop offset="1" stop-color="#FFB963"/>
+</radialGradient>
+</defs>
+</svg>
