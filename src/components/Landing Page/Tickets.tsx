@@ -31,7 +31,7 @@ export default function Sponsor() {
             title={"Basic"}
             description={"Learn, network, and grow with CUSEC"}
             studentPrice={80}
-            professionalPrice={100}
+            professionalPrice={200}
             features={[
               "Social Events",
               "Networking Benefits",
