@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
 import Image from "next/image";
+import Link from "next/link";
 import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
 
 type TeamCardProps = {
@@ -46,17 +47,31 @@ export default function TeamCard(props: TeamCardProps) {
       <p className="text-center text-[12px] md:text-[18px] whitespace-nowrap">
         {props.role}
       </p>
-      {/* <p>{props.sub_role}</p> */}
+
+      {props.sub_role ? (
+        <p className="text-center text-[12px] md:text-[18px] whitespace-nowrap">
+          <em>{props.sub_role}</em>
+        </p>
+      ) : props.email ? (
+        <Link
+          href={`mailto:${props.email}`}
+          className="text-[10px] md:text-[14px] text-royalBlue hover:scale-105 transition ease-in-out duration-500"
+        >
+          {props.email}
+        </Link>
+      ) : (
+        <br />
+      )}
+
       {/* <p>{props.program}</p>
         <p>{props.linkedin}</p>
         <p>{props.instagram}</p>
         <p>{props.github}</p>
         <p>{props.website}</p>
-        <p>{props.email}</p>
         <p>{props.fun_fact}</p> */}
 
       {/*Pagination circles*/}
-      <div className="flex space-x-1 mt-8">
+      <div className="flex space-x-1 mt-4">
         <span className="block h-3 w-3 rounded-full bg-purple-400"></span>
         <span className="block h-3 w-3 rounded-full bg-gray-300"></span>
       </div>
