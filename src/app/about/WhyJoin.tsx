@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y, Keyboard, EffectCoverflow} from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  A11y,
+  Keyboard,
+  EffectCoverflow,
+} from "swiper/modules";
 
 // import "swiper/css";
 import "swiper/css/bundle";
@@ -10,72 +16,109 @@ import WhyJoinDecagon from "./WhyJoinDecagon";
 import connect_decagon from "./Carousel Images/connect_decagon.svg";
 import connect_icon from "./Carousel Images/connect_icon.svg";
 
+import { useState, useEffect } from "react";
+
 export default function WhyJoin() {
+  const [stretchValue, setStretchValue] = useState(300);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setStretchValue(window.innerWidth > 1024 ? 300 : 100);
+    };
+
+    handleResize(); // initial call
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className="flex flex-col items-center">
-      <h2 className="flex items-center font-semibold text-[28px] md:text-[40px] tracking-tight">
+      <h2 className="flex items-center font-semibold text-[28px] md:text-[40px] tracking-tight mb-16">
         <hr className="block w-2 h-10 bg-orange-300 mr-4" />
         Why Join?
       </h2>
 
-      {/* Image Carousel */}
-      <Swiper
-        modules={[Navigation, Pagination, A11y, Keyboard, EffectCoverflow]}
-        // spaceBetween={5}
-        initialSlide={1}
-        speed={1000}
-        slidesPerView={"auto"}
-        // slidesPerView={1}
-        grabCursor={true}
-        loop={true}
-        centeredSlides={true}
-        navigation={true}
-        mousewheel={true}
-        keyboard={true}
-        pagination={{ clickable: true }}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          // slideShadows: true,
-        }}
+      {/* Decagon Carousel approach*/}
+      <div className="w-full h-[270px] md:h-[450px]">
+        <Swiper
+          modules={[Navigation, Pagination, A11y, Keyboard, EffectCoverflow]}
+          slidesPerView={2}
+          initialSlide={1}
+          centeredSlides={true}
+          effect="coverflow"
+          coverflowEffect={{
+            rotate: 0,
+            stretch: stretchValue,
+            depth: 300,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          navigation={true}
+          keyboard={true}
+        >
+          <SwiperSlide>
+            <div className="flex justify-center">
+              <WhyJoinDecagon
+                BackgroundImage={connect_decagon}
+                IconImage={connect_icon}
+                TitleText="Connect"
+                SubtitleText="with like-minded individuals"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex justify-center">
+              <WhyJoinDecagon
+                BackgroundImage={connect_decagon}
+                IconImage={connect_icon}
+                TitleText="Connect"
+                SubtitleText="with like-minded individuals"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex justify-center">
+              <WhyJoinDecagon
+                BackgroundImage={connect_decagon}
+                IconImage={connect_icon}
+                TitleText="Connect"
+                SubtitleText="with like-minded individuals"
+              />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
 
-        className="w-50 h-50"
-      >
-        <SwiperSlide>
-          <div className="flex justify-center">
-            <WhyJoinDecagon
-              BackgroundImage={connect_decagon}
-              IconImage={connect_icon}
-              TitleText="Connect"
-              SubtitleText="with like-minded individuals"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex justify-center">
-            <WhyJoinDecagon
-              BackgroundImage={connect_decagon}
-              IconImage={connect_icon}
-              TitleText="Connect"
-              SubtitleText="with like-minded individuals"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex justify-center">
-            <WhyJoinDecagon
-              BackgroundImage={connect_decagon}
-              IconImage={connect_icon}
-              TitleText="Connect"
-              SubtitleText="with like-minded individuals"
-            />
-          </div>
-        </SwiperSlide>
-      </Swiper>
+      {/* Test Carousel */}
+      {/* <div className="w-[300px] h-[200px] lg:w-[800px] lg:h-[400px] border border-black">
+        <Swiper
+          modules={[Navigation, Pagination, A11y, Keyboard, EffectCoverflow]}
+          loop={true}
+          slidesPerView={2}
+          centeredSlides={true}
+          effect="coverflow"
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 20,
+            depth: 300,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          navigation={true}
+          className="h-full"
+        >
+          <SwiperSlide className="bg-red-500">Slide 1</SwiperSlide>
+          <SwiperSlide className="bg-green-500">Slide 2</SwiperSlide>
+          <SwiperSlide className="bg-blue-500">Slide 3</SwiperSlide>
+          <SwiperSlide className="bg-red-500">Slide 1</SwiperSlide>
+          <SwiperSlide className="bg-green-500">Slide 2</SwiperSlide>
+        </Swiper>
+      </div> */}
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mt-16">
         <p className="md:text-[24px]">
           Be a part of our 2024 event this January!
         </p>
