@@ -67,7 +67,7 @@ export default function WhyJoin() {
           <SwiperSlide>
             <div className="flex justify-center">
               <WhyJoinDecagon
-                BackgroundImage={connect_decagon}
+                BackgroundImage={learn_decagon}
                 IconImage={learn_icon}
                 TitleText="Learn"
                 SubtitleText="from world-renowned experts"
@@ -87,7 +87,7 @@ export default function WhyJoin() {
           <SwiperSlide>
             <div className="flex justify-center">
               <WhyJoinDecagon
-                BackgroundImage={connect_decagon}
+                BackgroundImage={discover_decagon}
                 IconImage={discover_icon}
                 TitleText="Discover"
                 SubtitleText="opportunities with companies"
