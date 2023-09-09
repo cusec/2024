@@ -80,9 +80,9 @@ export default function TicketCard({
           <Link
             className={`drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] ${
               themeColor === "roseQuartz"
-                ? "bg-roseQuartz hover:bg-royalBlue hover:text-rose-400"
-                : "bg-goldenApricot hover:bg-royalBlue hover:text-amber-300"
-            } mx-auto px-12 md:px-16 py-1 text-center rounded-full uppercase md:text-[20px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
+              ? "border-roseQuartz hover:bg-roseQuartz text-roseQuartz"
+              : "border-goldenApricot hover:bg-goldenApricot text-goldenApricot"
+            } border-2 mx-auto px-12 md:px-16 py-1 text-center rounded-full uppercase md:text-[20px] font-semibold tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
             href={buttonLink}
           >
             Buy Now
