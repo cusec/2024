@@ -19,7 +19,7 @@ export default function Team() {
             name={member.name}
             university={member.university}
             image={`/images/team member images/${member.image}`} 
-            // university_image={member.university_image}
+            university_image={`/images/university logos/${member.university_image}`}
             pronouns={member.pronouns}
             role={member.role}
             sub_role={member.sub_role}
@@ -31,7 +31,7 @@ export default function Team() {
             email={member.email}
             fun_fact={member.fun_fact}
           />
-        ))}
+          ))}
       </div>
     </>
   );
