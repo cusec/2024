@@ -73,7 +73,7 @@ export default function TeamCard(props: TeamCardProps) {
         </div>
       </p>
 
-{/* Pronouns and Program text */}
+      {/* Pronouns and Program text */}
       <p className="text-center whitespace-nowrap relative text-[8px] md:text-[12px]">
         <div className="inline-block relative">
           <span className="invisible">
@@ -90,6 +90,7 @@ export default function TeamCard(props: TeamCardProps) {
         </div>
       </p>
 
+      {/* Role and Fun Fact text */}
       <p className="text-center whitespace-nowrap relative">
         <div className="inline-block relative">
           <span className="invisible">
@@ -106,58 +107,45 @@ export default function TeamCard(props: TeamCardProps) {
         </div>
       </p>
 
-      {/* Role, sub-role, email, and fun fact text */}
-      <p className="relative">
-        <div className="inline-block relative">
-          <span className="invisible">
-            {props.role.length > props.program.length
-              ? props.role
-              : props.program}
-          </span>
-          <span className="absolute transition-opacity duration-700 ease-in-out group-hover:opacity-0 top-0 left-1/2 transform -translate-x-1/2 text-[12px] md:text-[18px]">
-            {props.sub_role && props.email ? (
-              <>
-                <p className="text-center text-[12px] md:text-[18px] whitespace-nowrap -mt-2 md:-mt-0">
-                  <em>{props.sub_role}</em>
-                </p>
-                <Link
-                  href={`mailto:${props.email}`}
-                  className="text-[10px] md:text-[14px] text-royalBlue hover:scale-105 transition ease-in-out duration-500"
-                >
-                  {props.email}
-                </Link>
-              </>
-            ) : props.sub_role ? (
-              <>
+      {/* Sub-role, email, and fun fact content */}
+      <div className="block relative">
+        <span className="invisible">
+          {props.role.length > props.program.length
+            ? props.role
+            : props.program}
+        </span>
+        <span className="absolute transition-opacity duration-700 ease-in-out group-hover:opacity-0 top-0 left-1/2 transform -translate-x-1/2 text-[12px] md:text-[18px]">
+          {props.sub_role && props.email ? (
+            <>
               <p className="text-center text-[12px] md:text-[18px] whitespace-nowrap -mt-2 md:-mt-0">
                 <em>{props.sub_role}</em>
               </p>
-              {props.name === "Timothy J. Klint" ? (
-                <></>
-              ) : (
-              <div>
-                
-              </div>
-                )
-                }
-              </>
-            ) : props.email ? (
               <Link
                 href={`mailto:${props.email}`}
                 className="text-[10px] md:text-[14px] text-royalBlue hover:scale-105 transition ease-in-out duration-500"
               >
                 {props.email}
               </Link>
-            ) : (
-              <>
-              </>
-            )}
-          </span>
-          <span className="text-center absolute opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 top-0 left-1/2 transform -translate-x-1/2 text-[8px] md:text-[10px] w-full">
-            {props.fun_fact}
-          </span>
-        </div>
-      </p>
+            </>
+          ) : props.sub_role ? (
+            <p className="text-center text-[12px] md:text-[18px] whitespace-nowrap -mt-2 md:-mt-0">
+              <em>{props.sub_role}</em>
+            </p>
+          ) : props.email ? (
+            <Link
+              href={`mailto:${props.email}`}
+              className="text-[10px] md:text-[14px] text-royalBlue hover:scale-105 transition ease-in-out duration-500"
+            >
+              {props.email}
+            </Link>
+          ) : (
+            <></>
+          )}
+        </span>
+        <span className="text-center absolute opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 top-0 left-1/2 transform -translate-x-1/2 text-[8px] md:text-[10px] w-full">
+          {props.fun_fact}
+        </span>
+      </div>
 
       {/* 
         <p>{props.linkedin}</p>
