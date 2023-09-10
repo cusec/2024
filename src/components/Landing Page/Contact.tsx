@@ -26,10 +26,8 @@ export default function Contact() {
             general inquiries related to CUSEC 2024. We&apos;re here to assist
             and appreciate any input or suggestions for further improvement.
           </p>
-          {/* Full Name Input */}
-          {/* Email Input */}
-          {/* Message Input */}
 
+          {/* Full Name Input */}
           <div className="flex space-x-4">
             <input
               type="text"
@@ -39,6 +37,7 @@ export default function Contact() {
               placeholder="Full Name*"
               required
             ></input>
+          {/* Email Input */}
             <input
               type="email"
               id="email"
@@ -46,8 +45,9 @@ export default function Contact() {
               className="w-1/2 outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
               placeholder="Email Address*"
               required
-            ></input>
+              ></input>
           </div>
+              {/* Message Input */}
           <div className="mt-4">
             <textarea
               id="Message"
