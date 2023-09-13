@@ -251,8 +251,8 @@ Cheers,
                 well.
               </li>
               <li>
-                Linking it to the contacts spreasheet to allow the user to simply
-                select a company and a contact to email.
+                Linking it to the contacts spreadsheet to allow the user to simply
+                select a company and a contact to email from a list of available options.
               </li>
               <li>
                 Integrate authetication to allow users to save their drafts and
