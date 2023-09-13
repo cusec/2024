@@ -98,7 +98,7 @@ export default function WhyJoin() {
       </div>
 
       <div className="flex flex-col items-center mt-16">
-        <p className="md:text-[24px]">
+        <p className="md:text-[24px] text-center">
           Be a part of our 2024 event this January!
         </p>
         <p className="font-semibold text-[20px] md:text-[36px] text-transparent bg-clip-text bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot w-fit">

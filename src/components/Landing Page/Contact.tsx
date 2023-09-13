@@ -26,10 +26,8 @@ export default function Contact() {
             general inquiries related to CUSEC 2024. We&apos;re here to assist
             and appreciate any input or suggestions for further improvement.
           </p>
-          {/* Full Name Input */}
-          {/* Email Input */}
-          {/* Message Input */}
 
+          {/* Full Name Input */}
           <div className="flex space-x-4">
             <input
               type="text"
@@ -39,6 +37,7 @@ export default function Contact() {
               placeholder="Full Name*"
               required
             ></input>
+          {/* Email Input */}
             <input
               type="email"
               id="email"
@@ -46,8 +45,9 @@ export default function Contact() {
               className="w-1/2 outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
               placeholder="Email Address*"
               required
-            ></input>
+              ></input>
           </div>
+              {/* Message Input */}
           <div className="mt-4">
             <textarea
               id="Message"
@@ -62,7 +62,7 @@ export default function Contact() {
         <span className="flex justify-center mt-4">
           <button
             type="submit"
-            className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-white px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-royalBlue hover:text-white border-2 border-royalBlue"
+            className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-white px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalBlue hover:text-white border-2 border-royalBlue"
           >
             Submit
           </button>
