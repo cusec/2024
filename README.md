@@ -114,6 +114,8 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Making certain props optional using the '?' operator.❓
 - Using the Swiper.js React API to create image carousels.🎡
 - Relatively positioning html elements for hover effects.🖱️
-- Selectively mergin certain commits from one branch to another using git cherry-pick.🍒
- 
+- Selectively merging certain commits from one branch to another using git cherry-pick.🍒
+- Dynamically rendering values in a textareas based on values in other textareas and DOM elements.💬
+- Using the 'useRef' React hook to to dynamically resize DOM elements.
+- Fixing build crashes by deleting the '.next' and 'node_modules' directories, and 'package-lock.json' file.
 </details>
