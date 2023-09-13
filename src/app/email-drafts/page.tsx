@@ -13,10 +13,11 @@ Since its inception in 2002, CUSEC has stood as a beacon for emerging talent and
 We're thrilled to announce that CUSEC will be making its grand return to Montreal from January 4th to 6th, 2024. We're expecting an attendance of over 300 students from Canada's leading educational institutions, offering them a unique platform to engage, learn, and potentially find their next creative or professional endeavor.
 
 We are extending an invitation to [COMPANY_NAME] to become a distinguished sponsor for CUSEC 2024. As a sponsor, you would have the unique opportunity to:
-Host specialized workshops to showcase your technologies or solutions.
-Engage directly with delegates at your exclusive booth during our career fair.
-Elevate your brand presence by sponsoring social events.
-Gain privileged access to a curated pool of resumes, delegate contact information, and dedicated interview spaces.
+•  Host specialized workshops to showcase your technologies or solutions.
+•  Engage directly with delegates at your exclusive booth during our career fair.
+•  Elevate your brand presence by sponsoring social events.
+•  Gain privileged access to a curated pool of resumes, delegate contact information, and dedicated interview spaces.
+
 Enclosed, you'll find our detailed sponsorship package, which offers a closer look at how we can tailor this partnership to meet your strategic goals. Should you have any questions or require additional information, please do not hesitate to reach out. I'd also be happy to jump on a call to further discuss how we can best meet your needs.
 
 Thank you for considering this sponsorship opportunity. We're excited about the prospect of partnering with [Your Company's Name] to make CUSEC 2024 an unforgettable experience for everyone involved. 
