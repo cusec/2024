@@ -1,7 +1,7 @@
 "use client";
 
 import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
-import { useState, ChangeEvent, useEffect } from "react";
+import { useState, ChangeEvent, useEffect, useRef} from "react";
 
 export default function EmailDrafts() {
   const initialTemplate = `Hello [REPRESENTATIVE_NAME],
@@ -80,7 +80,17 @@ Cheers,
   // Initialize result text on first render
   useEffect(() => {
     updateResultText(initialTemplate, initialInputValues);
-  }, []);
+  });
+
+  // Resize textarea to fit content
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    if (textAreaRef.current) {
+      textAreaRef.current.style.height = "auto";
+      textAreaRef.current.style.height = `${textAreaRef.current.scrollHeight}px`;
+    }
+  }, [resultText]);
 
   return (
     // TODO: Refactor code to use extract out common classes
@@ -160,7 +170,7 @@ Cheers,
                 <textarea
                   id="template"
                   name="template"
-                  className="ml-4 w-1/2 outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
+                  className="ml-40 w-full outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
                   value={templateText}
                   onChange={handleTemplateChange}
                   required
@@ -220,6 +230,8 @@ Cheers,
                   readOnly
                   className="outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
                   value={resultText}
+                  ref={textAreaRef}
+                  style={{ overflow: "hidden" }}
                 />
               </div>
             </div>
