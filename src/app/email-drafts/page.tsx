@@ -20,7 +20,7 @@ We are extending an invitation to [COMPANY_NAME] to become a distinguished spons
 
 Enclosed, you'll find our detailed sponsorship package, which offers a closer look at how we can tailor this partnership to meet your strategic goals. Should you have any questions or require additional information, please do not hesitate to reach out. I'd also be happy to jump on a call to further discuss how we can best meet your needs.
 
-Thank you for considering this sponsorship opportunity. We're excited about the prospect of partnering with [Your Company's Name] to make CUSEC 2024 an unforgettable experience for everyone involved. 
+Thank you for considering this sponsorship opportunity. We're excited about the prospect of partnering with [COMPANY_NAME] to make CUSEC 2024 an unforgettable experience for everyone involved. 
 
 
 Cheers,
@@ -29,7 +29,7 @@ Cheers,
 
   const initialInputValues = {
     YOUR_NAME: "Jaelyn Wickramarachchi",
-    COMPANY_NAME: "Company",
+    COMPANY_NAME: "Tech Company",
     REPRESENTATIVE_NAME: "Recruiter/Representative",
   };
 
