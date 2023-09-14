@@ -4,7 +4,6 @@
 
 This is the official repository for the 2024 edition of the CUSEC website.
 
-
 ## Project Brief
 <details>
 <summary>Introduction</summary>
