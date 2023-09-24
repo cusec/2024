@@ -12,13 +12,13 @@ export default function Team() {
       </div>
 
       {/* Render team member cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-24">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-24">
         {teamMembers.map((member, index) => (
           <TeamCard
             key={index}
             name={member.name}
             university={member.university}
-            image={`/images/team member images/${member.image}`} 
+            image={`/images/team member images/${member.image}`}
             university_image={`/images/university logos/${member.university_image}`}
             pronouns={member.pronouns}
             role={member.role}
@@ -31,7 +31,7 @@ export default function Team() {
             email={member.email}
             fun_fact={member.fun_fact}
           />
-          ))}
+        ))}
       </div>
     </>
   );
