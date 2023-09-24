@@ -1,7 +1,7 @@
 "use client";
 
 import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
-import { useState, ChangeEvent, useEffect, useRef} from "react";
+import { useState, ChangeEvent, useEffect, useRef } from "react";
 
 export default function EmailDrafts() {
   const initialTemplate = `Hello [REPRESENTATIVE_NAME],
@@ -93,6 +93,42 @@ Cheers,
     }
   }, [resultText]);
 
+const [copyButtonText, setCopyButtonText] = useState<string>("Ctrl + C to Copy");
+
+const handleCopyToClipboard = (event?: React.MouseEvent<HTMLButtonElement>) => {
+  if (event && event.preventDefault) {
+    event.preventDefault(); // Prevent the default behavior only if an event was passed
+  }
+  // Ensure we have a ref to the textarea and it's not null
+  if (textAreaRef.current) {
+    try {
+      navigator.clipboard.writeText(textAreaRef.current.value);
+      setCopyButtonText("Copied to Clipboard!");
+      setTimeout(() => {
+        setCopyButtonText("Ctrl + C to Copy");
+      }, 2000);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+  }
+};
+
+  useEffect(() => {
+  const handleKeyDown = (event: KeyboardEvent) => {
+    // Check if 'C' key is pressed along with Ctrl (or Cmd for Mac)
+    if ((event.ctrlKey || event.metaKey) && event.key === 'c') {
+      handleCopyToClipboard();
+    }
+  };
+
+  document.addEventListener('keydown', handleKeyDown);
+
+  // Cleanup the event listener on component unmount
+  return () => {
+    document.removeEventListener('keydown', handleKeyDown);
+  };
+}, []);
+
   return (
     // TODO: Refactor code to use extract out common classes
     <div className="min-h-screen gradientGridBackground flex items-center justify-center">
@@ -171,7 +207,7 @@ Cheers,
                 <textarea
                   id="template"
                   name="template"
-                  className="ml-40 w-full outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
+                  className="ml-40 w-full outline-none focus:ring ring-royalPurple rounded-md text-[8px] md:text-[10px] py-1 px-2 border"
                   value={templateText}
                   onChange={handleTemplateChange}
                   required
@@ -201,7 +237,7 @@ Cheers,
                     name="to"
                     className="ml-4 w-1/5 outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
                     value={""}
-                    required
+                    // required
                   />
                 </div>
                 <div className="flex items-center">
@@ -223,24 +259,36 @@ Cheers,
                   />
                 </div>
               </div>
-              <div className="mt-5 flex flex-col">
+
+              {/* Draft Text Preview */}
+              <div className="mt-5 flex flex-col relative">
                 <label htmlFor="result_text">Draft text</label>
                 <textarea
                   id="result_text"
                   name="result_text"
                   readOnly
-                  className="outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
+                  className="outline-none focus:ring ring-royalPurple rounded-md text-[8px] md:text-[10px] py-1 px-2 border"
                   value={resultText}
                   ref={textAreaRef}
                   style={{ overflow: "hidden" }}
                 />
+                <span className="absolute top-4 right-0 flex justify-center p-4">
+                  <button
+                    onClick={handleCopyToClipboard}
+                    className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-white px-1 min-[390px]:px-3 md:px-4 py-2 text-center rounded-full uppercase text-[8px] md:text-[10px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalBlue hover:text-white border-2 border-royalBlue"
+                  >
+                    {copyButtonText}
+                  </button>
+                </span>
               </div>
             </div>
+            {/* Instructions for use and planned features */}
             <p className="text-[12px] md:text-[16px]">
               <br />
               In the email template, the [YOUR_NAME], [COMPANY_NAME], and
               [REPRESENTATIVE_NAME] variables will be replaced by corresponding
-              values from the input fields. <br /> You can modify the template however you want. 😊
+              values from the input fields. <br /> You can modify the template
+              however you want. 😊
             </p>
             <br />
             Planned features:
@@ -251,8 +299,9 @@ Cheers,
                 well.
               </li>
               <li>
-                Linking it to the contacts spreadsheet to allow the user to simply
-                select a company and a contact to email from a list of available options.
+                Linking it to the contacts spreadsheet to allow the user to
+                simply select a company and a contact to email from a list of
+                available options.
               </li>
               <li>
                 Integrate authetication to allow users to save their drafts and
