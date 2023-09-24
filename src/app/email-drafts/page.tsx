@@ -6,7 +6,7 @@ import { useState, ChangeEvent, useEffect, useRef} from "react";
 export default function EmailDrafts() {
   const initialTemplate = `Hello [REPRESENTATIVE_NAME],
 
-I hope this message finds you well. My name is [YOUR_NAME], and I'm currently the Director of Technology for the Canadian University Software Engineering Conference (CUSEC) 2024.
+I hope this message finds you well. My name is [YOUR_NAME], and I'm currently the Director of Sponsorship for the Canadian University Software Engineering Conference (CUSEC) 2024.
 
 Since its inception in 2002, CUSEC has stood as a beacon for emerging talent and industry innovation in software engineering. Over the years, we've successfully curated a space where students and professionals can converge to explore the frontiers of software technology. Notably, CUSEC has become the largest student-run software engineering conference in Canada, attracting participants from premier universities nationwide.
 
@@ -80,7 +80,7 @@ Cheers,
 
   // Initialize result text on first render
   useEffect(() => {
-    updateResultText(initialTemplate, initialInputValues);
+    updateResultText(templateText, inputValues);
   });
 
   // Resize textarea to fit content
