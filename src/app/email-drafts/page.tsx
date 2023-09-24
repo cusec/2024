@@ -93,41 +93,53 @@ Cheers,
     }
   }, [resultText]);
 
-const [copyButtonText, setCopyButtonText] = useState<string>("Ctrl + C to Copy");
+  const [copyButtonText, setCopyButtonText] =
+    useState<string>("Ctrl + C to Copy");
 
-const handleCopyToClipboard = (event?: React.MouseEvent<HTMLButtonElement>) => {
-  if (event && event.preventDefault) {
-    event.preventDefault(); // Prevent the default behavior only if an event was passed
-  }
-  // Ensure we have a ref to the textarea and it's not null
-  if (textAreaRef.current) {
-    try {
-      navigator.clipboard.writeText(textAreaRef.current.value);
-      setCopyButtonText("Copied to Clipboard!");
-      setTimeout(() => {
-        setCopyButtonText("Ctrl + C to Copy");
-      }, 2000);
-    } catch (err) {
-      console.error("Failed to copy text: ", err);
+  const handleCopyToClipboard = (
+    event?: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    if (event && event.preventDefault) {
+      event.preventDefault(); // Prevent the default behavior only if an event was passed
     }
-  }
-};
+
+    // Check if any text is selected
+    const selection = window.getSelection()?.toString();
+
+    if (selection && selection.length > 0) {
+      // If any text is selected, don't proceed and let the default behavior handle copying
+      return;
+    }
+
+    // Ensure we have a ref to the textarea and it's not null
+    if (textAreaRef.current) {
+      try {
+        navigator.clipboard.writeText(textAreaRef.current.value);
+        setCopyButtonText("Copied to Clipboard!");
+        setTimeout(() => {
+          setCopyButtonText("Ctrl + C to Copy");
+        }, 2000);
+      } catch (err) {
+        console.error("Failed to copy text: ", err);
+      }
+    }
+  };
 
   useEffect(() => {
-  const handleKeyDown = (event: KeyboardEvent) => {
-    // Check if 'C' key is pressed along with Ctrl (or Cmd for Mac)
-    if ((event.ctrlKey || event.metaKey) && event.key === 'c') {
-      handleCopyToClipboard();
-    }
-  };
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Check if 'C' key is pressed along with Ctrl (or Cmd for Mac)
+      if ((event.ctrlKey || event.metaKey) && event.key === "c") {
+        handleCopyToClipboard();
+      }
+    };
 
-  document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener("keydown", handleKeyDown);
 
-  // Cleanup the event listener on component unmount
-  return () => {
-    document.removeEventListener('keydown', handleKeyDown);
-  };
-}, []);
+    // Cleanup the event listener on component unmount
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     // TODO: Refactor code to use extract out common classes
@@ -288,7 +300,9 @@ const handleCopyToClipboard = (event?: React.MouseEvent<HTMLButtonElement>) => {
               In the email template, the [YOUR_NAME], [COMPANY_NAME], and
               [REPRESENTATIVE_NAME] variables will be replaced by corresponding
               values from the input fields. <br /> You can modify the template
-              however you want. 😊
+              however you want. 😊 <br /> <br/>
+              You can also hit Ctrl + C to copy the draft text to your clipboard
+              anytime. The only time this won&apos;t work is if you have any text highlighted in this page, in which case,<br/> the highlighted text will be copied instead.
             </p>
             <br />
             Planned features:
