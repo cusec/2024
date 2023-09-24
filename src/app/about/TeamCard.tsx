@@ -36,10 +36,7 @@ export default function TeamCard(props: TeamCardProps) {
         )}
 
         {/* TODO: Fix the image clipping issues */}
-        <div
-          className="absolute rounded-none -top-4 z-100 w-[60px] h-[60px] 
-        "
-        >
+        <div className="absolute rounded-none -top-4 z-100 w-[60px] h-[60px]">
           {props.university_image && (
             <Image
               src={props.university_image}
