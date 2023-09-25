@@ -48,13 +48,9 @@ export default function TeamCard(props: TeamCardProps) {
           </div>
         </div>
 
-        {/* <p className="text-center font-semibold md:text-[20px] whitespace-nowrap">
-        {props.name}{" "}
-      </p> */}
-
         {/* Replacing text on hover with fade in/out animation */}
         {/* Name and University text */}
-        <p className="text-center font-semibold md:text-[20px] whitespace-nowrap relative">
+        <div className="text-center font-semibold md:text-[20px] whitespace-nowrap relative">
           <div className="inline-block relative">
             <span className="invisible">
               {props.name.length > props.university.length
@@ -68,10 +64,10 @@ export default function TeamCard(props: TeamCardProps) {
               {props.university}
             </span>
           </div>
-        </p>
+        </div>
 
         {/* Pronouns and Program text */}
-        <p className="text-center whitespace-nowrap relative text-[8px] md:text-[12px]">
+        <div className="text-center whitespace-nowrap relative text-[8px] md:text-[12px]">
           <div className="inline-block relative">
             <span className="invisible">
               {props.pronouns.length > props.program.length
@@ -85,10 +81,10 @@ export default function TeamCard(props: TeamCardProps) {
               {props.program}
             </span>
           </div>
-        </p>
+        </div>
 
         {/* Role and Fun Fact text */}
-        <p className="text-center whitespace-nowrap relative">
+        <div className="text-center whitespace-nowrap relative">
           <div className="inline-block relative">
             <span className="invisible">
               {props.role.length > props.program.length
@@ -102,7 +98,7 @@ export default function TeamCard(props: TeamCardProps) {
               Fun Fact
             </span>
           </div>
-        </p>
+        </div>
 
         {/* Sub-role, email, and fun fact content */}
         <div className="block relative">
@@ -159,4 +155,5 @@ export default function TeamCard(props: TeamCardProps) {
       </div>
     </BlueBorderSquareBox>
   );
+
 }

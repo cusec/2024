@@ -36,7 +36,7 @@ export default function Sponsors() {
         <Image
           src={"/images/bottom_right_gradient_lines.svg"}
           alt="bottom right gradient lines"
-          className="absolute bottom-[-13vh] right-0 z-10 md:hidden"
+          className="absolute bottom-[-4vh] right-0 z-10"
           width={200}
           height={250}
         />
