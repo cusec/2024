@@ -82,7 +82,7 @@ export default function AboutUs() {
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          // onSlideChange={() => console.log("slide change")}
           breakpoints={{
             // when window width is >= 1024px
             1024: {
