@@ -118,7 +118,7 @@ export default function Navbar({ clicked }: ChildProps) {
                     <ul className="space-y-2 flex flex-col bg-black/[.65] rounded-2xl p-4">
                       <NavLink href="/">Sign up</NavLink>
                       <NavLink href="/">Schedule</NavLink>
-                      <NavLink href="/">Sponsors</NavLink>
+                      <NavLink href="/sponsors">Sponsors</NavLink>
                     </ul>
                   </div>
                 </div>

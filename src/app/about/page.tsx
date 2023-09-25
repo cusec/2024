@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Head from "next/head";
 import Fade from "@/components/Fade";
 import Image from "next/image";
-import bottom_right_gradient_lines from "./bottom_right_gradient_lines.svg";
-import top_left_gradient_lines from "./top_left_gradient_lines.svg";
+// import bottom_right_gradient_lines from "bottom_right_gradient_lines.svg";
+// import top_left_gradient_lines from "top_left_gradient_lines.svg";
 import grid_gradient_fill_lines from "./grid_gradient_fill_lines.svg";
 import Main from "@/app/about/Main";
 import AboutUs from "@/app/about/AboutUs";
@@ -54,16 +54,20 @@ export default function About() {
       <div className="w-full">
         {/* Top Left Gradient Lines */}
         <Image
-          src={top_left_gradient_lines}
+          src={"/images/top_left_gradient_lines.svg"}
           alt="top_left_gradient_lines"
           className="absolute top-[64px] z-10"
+          width={200}
+          height={250}
         />
 
         {/* Bottom Right Gradient Lines */}
         <Image
-          src={bottom_right_gradient_lines}
+          src={"/images/bottom_right_gradient_lines.svg"}
           alt="bottom right gradient lines"
           className="absolute bottom-[-13vh] right-0 z-10 md:hidden"
+          width={200}
+          height={250}
         />
 
         {/* Grid Lines behind curve*/}
