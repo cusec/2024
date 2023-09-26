@@ -8,6 +8,7 @@ import Image from "next/image";
 // import top_left_gradient_lines from "/images/top_left_gradient_lines.svg";
 import { useEffect, useState } from "react";
 import Main from "@/app/sponsors/Main";
+import CusecSponsors from "@/app/sponsors/CusecSponsors";
 
 export default function Sponsors() {
   return (
@@ -20,8 +21,8 @@ export default function Sponsors() {
         />
       </Head>
 
-    {/* TODO: Fix gradient lines not showing up */}
-    
+      {/* TODO: Fix gradient lines not showing up */}
+
       <div className="w-full">
         {/* Top Left Gradient Lines */}
         <Image
@@ -47,13 +48,21 @@ export default function Sponsors() {
           }}
         >
           <div
-            className="bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot flex items-center justify-center min-h-[calc(100vh+50px)]"
+            className="bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot flex items-center justify-center min-h-[100vh] pt-[4.5rem] pb-4"
             style={{
-              filter: "drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.5))",
+              filter: "drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2))",
             }}
           >
             <Fade>
               <Main />
+            </Fade>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center mt-20">
+          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full md:-mt-3 mb-16">
+            <Fade>
+              <CusecSponsors />
             </Fade>
           </div>
         </div>

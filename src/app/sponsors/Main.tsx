@@ -4,7 +4,7 @@ import cusec_2023_keynote_speaker from "./cusec_2023_keynote_speaker.png";
 export default function Main(){
   return(
     
-     <div className="relative min-h-[96vh] w-[calc(100vw-10px)] translate-y-7">
+     <div className="relative min-h-[96vh] w-screen">
       <div
         className="absolute inset-0 mx-4"
       >
