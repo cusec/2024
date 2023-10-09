@@ -20,8 +20,8 @@ export default function Sponsor() {
           </span>
           <div className="mx-4 md:mx-0">
             <div className="relative max-w-md aspect-square mx-auto w-full">
-              <div className="absolute max-w-md aspect-square top-[-17px] right-[-18px] bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-[95%]">
                 {/* This div is for the background gradient */}
+              <div className="absolute max-w-md aspect-square top-[-17px] right-[-18px] bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-[95%]">
               </div>
               <BlueBorderSquareBox>
                 <div className="aspect-square">Some content here</div>
