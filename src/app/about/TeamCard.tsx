@@ -26,6 +26,7 @@ export default function TeamCard(props: TeamCardProps) {
     <BlueBorderSquareBox teamCard={true}>
       <div className="flex flex-col items-center justify-center mx-6 mt-8 group self-start mb-2">
         <div className="aspect-square rounded-full bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-[140px] md:w-[165px] relative">
+          {/* Picture of team member */}
           {props.image && (
             <Image
               src={props.image}
@@ -36,6 +37,13 @@ export default function TeamCard(props: TeamCardProps) {
             />
           )}
 
+          {props.email && (
+            <Link href={`mailto:${props.email}`} className="w-10 h-10 absolute right-1 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out">
+              <Image src={"/email_icon.svg"} alt="Email icon" layout="fill" />
+            </Link>
+          )}
+
+          {/* University logo */}
           <div className="absolute rounded-none -top-4 z-100 w-[60px] h-[60px]">
             {props.university_image && (
               <Image
@@ -155,5 +163,4 @@ export default function TeamCard(props: TeamCardProps) {
       </div>
     </BlueBorderSquareBox>
   );
-
 }
