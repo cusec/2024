@@ -4,6 +4,69 @@ import circle_grid_v2 from "@/assets/circle_grid_v2.svg";
 import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
 
 export default function CusecSponsors() {
+  const sponsorLogos = [
+    {
+      src: "/images/sponsor logos/rbc_logo.svg",
+      alt: "RBC Logo",
+      styles:
+        "w-[70px] h-[90px] md:w-[200px] md:h-[260px]",
+    },
+    {
+      src: "/images/sponsor logos/d2l_logo.svg",
+      alt: "D2L Logo",
+      styles:
+        "w-[57px] h-[24px] md:w-[165px] md:h-[70px]",
+    },
+    {
+      src: "/images/sponsor logos/accenture_logo.svg",
+      alt: "Accenture Logo",
+      styles:
+        "w-[79px] h-[20px] md:w-[230px] md:h-[60px]",
+    },
+    {
+      src: "/images/sponsor logos/unity_logo.svg",
+      alt: "Unity Logo",
+      styles:
+        "w-[114px] h-[43px] md:w-[337px] md:h-[125px]",
+    },
+    {
+      src: "/images/sponsor logos/csc_logo.svg",
+      alt: "CSC Logo",
+      styles:
+        "w-[45px] h-[45px] md:w-[130px] md:h-[130px] md:left-20",
+    },
+    {
+      src: "/images/sponsor logos/morgan_stanley_logo.svg",
+      alt: "Morgan Stanley Logo",
+      styles:
+        "w-[114px] h-[18px] md:w-[330px] md:h-[50px]",
+    },
+    {
+      src: "/images/sponsor logos/nokia_logo.svg",
+      alt: "Nokia Logo",
+      styles:
+        "w-[80px] h-[14px] md:w-[235px] md:h-[40px]",
+    },
+    {
+      src: "/images/sponsor logos/stickermule_logo.svg",
+      alt: "Sticker Mule Logo",
+      styles:
+        "w-[97px] h-[56px] md:w-[285px] md:h-[165px]",
+    },
+    {
+      src: "/images/sponsor logos/deloitte_logo.svg",
+      alt: "Deloitte Logo",
+      styles:
+        "w-[98px] h-[22px] md:w-[288px] md:h-[55px]",
+    },
+    {
+      src: "/images/sponsor logos/fellow_logo.svg",
+      alt: "Fellow Logo",
+      styles:
+        "w-[112px] h-[30px] md:w-[330px] md:h-[88px]",
+    },
+  ];
+
   return (
     <div className="relative">
       <div className="absolute -right-[6vw] -bottom-28 hidden md:block">
@@ -14,7 +77,8 @@ export default function CusecSponsors() {
           priority
         />
       </div>
-      <section className="lg:max-w-[1024px] max-w-[768px] px-6 md:px-12 ">
+
+      <section className="lg:max-w-[1024px] max-w-[768px] px-6 md:px-12 md:my-28">
         <p className="font-semibold text-[28px] md:text-[40px] tracking-tight">
           CUSEC Sponsors
         </p>
@@ -36,22 +100,27 @@ export default function CusecSponsors() {
         alt="Vertical grid of grey circles"
         className="absolute -top-0 -left-10 scale-125 w-[40px] h-[80px] md:h-[120px] md:top-[80px] md:right-[40px] lg:-top-[20px] lg:right-[40px] lg:h-[160px]"
       />
+
       <div className="flex justify-end mt-6 translate-x-3 md:hidden">
         <Image src={circle_grid_v2} alt="Horizontal grid of grey circles" />
       </div>
 
-      <div className="relative mx-auto w-full">
-        {/* This div is for the background gradient */}
-        <div className="absolute top-[-17px] right-[-18px] bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-[95%]"></div>
-        <BlueBorderSquareBox>
-  
-            <Image
-            src = {"/images/sponsor logos/accenture_logo.svg"}
-            alt="Accenture Logo"
-            height={100}
-            width={100}
-            />
+      <div className="mx-auto w-full relative">
+        <div className="bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-95 md:scale-[.99] top-[-17px] right-[-18px] absolute"></div>
 
+        <BlueBorderSquareBox>
+          <div className="h-[257px] md:h-[500px] md:gap-8 py-5 px-8 md:py-10 md:px-12 relative">
+            {sponsorLogos.map((logo) => (
+              <div key={logo.src} className={`absolute ${logo.styles}`}>
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            ))}
+          </div>
         </BlueBorderSquareBox>
       </div>
     </div>

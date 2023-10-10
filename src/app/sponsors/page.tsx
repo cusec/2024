@@ -4,11 +4,10 @@ import type { Metadata } from "next";
 import Head from "next/head";
 import Fade from "@/components/Fade";
 import Image from "next/image";
-// import bottom_right_gradient_lines from "/images/bottom_right_gradient_lines.svg";
-// import top_left_gradient_lines from "/images/top_left_gradient_lines.svg";
 import { useEffect, useState } from "react";
 import Main from "@/app/sponsors/Main";
 import CusecSponsors from "@/app/sponsors/CusecSponsors";
+import WhySponsor from "./WhySponsor";
 
 export default function Sponsors() {
   return (
@@ -63,6 +62,14 @@ export default function Sponsors() {
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full md:-mt-3 mb-16">
             <Fade>
               <CusecSponsors />
+            </Fade>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full md:-mt-3 mb-16">
+            <Fade>
+              <WhySponsor />
             </Fade>
           </div>
         </div>
