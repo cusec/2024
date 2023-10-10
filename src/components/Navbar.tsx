@@ -247,7 +247,7 @@ export default function Navbar({ clicked }: ChildProps) {
                 <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
                   Schedule
                 </NavLink>
-                <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
+                <NavLink toggleMobileMenu={toggleMobileMenu} href="/sponsors">
                   Sponsors
                 </NavLink>
               </ul>
