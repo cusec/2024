@@ -38,9 +38,9 @@ export default function TeamCard(props: TeamCardProps) {
           )}
 
           {props.email && (
-            <Link href={`mailto:${props.email}`} className="w-10 h-10 absolute right-1 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out">
+            <a href={`mailto:${props.email}`} className="w-10 h-10 absolute right-1 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out">
               <Image src={"/email_icon.svg"} alt="Email icon" layout="fill" />
-            </Link>
+            </a>
           )}
 
           {/* University logo */}

@@ -85,7 +85,7 @@ export default function Sponsors() {
               <div className="bg-black bg-opacity-60 px-8 flex flex-col justify-center items-center text-center py-48 space-y-6 md:space-y-8">
                 <p className="text-white text-[16px] md:text-[26px]">Want to help spark inspiration into tech-savvy minds?</p>
                 <p className="font-semibold text-[20px] md:text-[40px] w-fit text-transparent bg-clip-text bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot">Become a 2024 Sponsor</p>
-                <Link href="/" className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-10 md:px-20 py-1 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white">Sign Up</Link>
+                <a href="mailto:sponsor@cusec.net" className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-10 md:px-20 py-1 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white">Sign Up</a>
               </div>
             </Fade>
           </div>

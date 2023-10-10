@@ -11,7 +11,7 @@ export default function Contact() {
         </h2>
         <div className="space-y-6">
           <hr className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-purple-500" />
-          <Link
+          <a
             href={"mailto:info@cusec.net"}
             className="flex transition ease-in-out duration-500 hover:scale-105 group max-w-fit items-center"
           >
@@ -19,7 +19,7 @@ export default function Contact() {
             <span className="text-[12px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-royalPurple group-hover:bg-royalBlue transition ease-in-out duration-1000">
               &nbsp;info@cusec.net
             </span>
-          </Link>
+          </a>
 
           <p className="text-[12px] md:text-[16px]">
             Leave us a message regarding sponsorship, hotel bookings, or any
@@ -72,45 +72,3 @@ export default function Contact() {
   );
 }
 
-{
-  /* Old Content */
-}
-{
-  /* <p className="font-regular text-[15px]">
-  <strong className="hover:text-[royalBlue] transition-colors ease-in-out duration-500 hover:scale-105">
-    {" "}
-    <Link href={"mailto:sponsor@cusec.net"}>sponsor@cusec.net</Link>
-  </strong>{" "}
-  ~ Email for information about{" "}
-  <span className="underline underline-offset-1 transition-colors ease-in-out duration-500">
-    sponsoring
-  </span>{" "}
-  the event.
-</p>
-<p className="font-regular text-[15px]">
-  <strong className="hover:text-[royalBlue] transition-colors ease-in-out duration-500 hover:scale-105">
-    {" "}
-    <Link href={"mailto:info@cusec.net"}>info@cusec.net</Link>
-  </strong>{" "}
-  ~ Email for information about{" "}
-  <span className="underline underline-offset-1 transition-colors ease-in-out duration-500">
-    booking a hotel room
-  </span>{" "}
-  for the conference or any <span>general inquiries</span>.
-</p>
-<p className="font-regular text-[15px]">
-  <strong className="hover:text-[royalBlue] transition-colors ease-in-out duration-500 hover:scale-105">
-    {" "}
-    <Link href={"mailto:web@cusec.net"}>web@cusec.net</Link>
-  </strong>{" "}
-  ~ Email for information about the{" "}
-  <span className="underline underline-offset-1 transition-colors ease-in-out duration-500">
-    website
-  </span>{" "}
-  or{" "}
-  <span className="underline underline-offset-1 transition-colors ease-in-out duration-500">
-    suggestions
-  </span>{" "}
-  for improvement.
-</p> */
-}

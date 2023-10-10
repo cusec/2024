@@ -103,14 +103,14 @@ export default function Faq() {
         <p className="text-center font-medium py-16 md:px-16">
           Don't see a question you're looking for?
           <br /> Send us an email at{" "}
-          <Link
+          <a
             href={
               "mailto:info@cusec.net?subject=Inquiry:&body=Hello CUSEC team,"
             }
             className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot hover:text-blue-500 transition-colors ease-in-out duration-500"
           >
             info@cusec.net
-          </Link>
+          </a>
         </p>
       </div>
     </>
