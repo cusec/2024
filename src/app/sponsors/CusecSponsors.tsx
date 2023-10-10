@@ -110,7 +110,7 @@ export default function CusecSponsors() {
 
         <BlueBorderSquareBox>
           <div className="h-[257px] md:h-[500px] md:gap-8 py-5 px-8 md:py-10 md:px-12 relative">
-            {sponsorLogos.map((logo) => (
+            {/* {sponsorLogos.map((logo) => (
               <div key={logo.src} className={`absolute ${logo.styles}`}>
                 <Image
                   src={logo.src}
@@ -119,7 +119,7 @@ export default function CusecSponsors() {
                   objectFit="cover"
                 />
               </div>
-            ))}
+            ))} */}
           </div>
         </BlueBorderSquareBox>
       </div>

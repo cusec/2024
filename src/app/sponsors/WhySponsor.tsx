@@ -81,7 +81,7 @@ export default function WhyJoin() {
                 BackgroundImage={connect_decagon}
                 IconImage={recruit_icon}
                 TitleText="Recruit"
-                SubtitleText="top software engineering talent"
+                SubtitleText="top tech talent"
               />
             </div>
           </SwiperSlide>
