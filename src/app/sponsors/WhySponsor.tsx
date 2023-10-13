@@ -47,6 +47,9 @@ export default function WhyJoin() {
         Why Sponsor?
       </h2>
 
+
+        <div className="flex flex-col items-center">
+          <div className="max-w-screen-lg md:max-w-screen-2xl">
       {/* Decagon Carousel*/}
       <div className="w-full h-[270px] md:h-[450px]">
         <Swiper
@@ -97,6 +100,8 @@ export default function WhyJoin() {
           </SwiperSlide>
         </Swiper>
       </div>
+      </div>
+          </div>
     </section>
   );
 }
