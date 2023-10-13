@@ -126,7 +126,7 @@ export default function About() {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="max-w-screen-lg">
+          <div className="max-w-screen-lg md:max-w-screen-2xl">
             <Fade>
               <WhyJoin />
             </Fade>
