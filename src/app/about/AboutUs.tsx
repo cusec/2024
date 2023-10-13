@@ -81,7 +81,7 @@ export default function AboutUs() {
           centeredSlides={true}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
+          // onSwiper={(swiper) => console.log(swiper)}
           // onSlideChange={() => console.log("slide change")}
           breakpoints={{
             // when window width is >= 1024px
