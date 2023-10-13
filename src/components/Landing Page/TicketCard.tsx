@@ -85,7 +85,8 @@ export default function TicketCard({
             } border-2 mx-auto px-12 md:px-16 py-1 text-center rounded-full uppercase md:text-[20px] font-semibold tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
             href={buttonLink}
           >
-            Buy Now
+            {/* Buy Now */}
+            Coming soon
           </Link>
         </span>
 
