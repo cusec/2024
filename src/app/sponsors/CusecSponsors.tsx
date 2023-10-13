@@ -2,6 +2,7 @@ import Image from "next/image";
 import circle_grid_v1 from "@/assets/circle_grid_v1.svg";
 import circle_grid_v2 from "@/assets/circle_grid_v2.svg";
 import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
+import sponsor_logos from "@/assets/sponsor_logos.png";
 
 export default function CusecSponsors() {
   const sponsorLogos = [
@@ -78,7 +79,7 @@ export default function CusecSponsors() {
         />
       </div>
 
-      <section className="lg:max-w-[1024px] max-w-[768px] px-6 md:px-12 md:my-28">
+      <section className="lg:max-w-[1024px] max-w-[768px] px-6 md:px-12 md:mb-20">
         <p className="font-semibold text-[28px] md:text-[40px] tracking-tight">
           CUSEC Sponsors
         </p>
@@ -105,11 +106,11 @@ export default function CusecSponsors() {
         <Image src={circle_grid_v2} alt="Horizontal grid of grey circles" />
       </div>
 
-      <div className="mx-auto w-full relative">
+      <div className="relative max-w-xl aspect-square mx-auto w-full">
         <div className="bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-95 md:scale-[.99] top-[-17px] right-[-18px] absolute"></div>
 
         <BlueBorderSquareBox>
-          <div className="h-[257px] md:h-[500px] md:gap-8 py-5 px-8 md:py-10 md:px-12 relative">
+          {/* <div className="h-[257px] md:h-[500px] md:gap-8 py-5 px-8 md:py-10 md:px-12 relative"> */}
             {/* {sponsorLogos.map((logo) => (
               <div key={logo.src} className={`absolute ${logo.styles}`}>
                 <Image
@@ -120,7 +121,19 @@ export default function CusecSponsors() {
                 />
               </div>
             ))} */}
-          </div>
+             <div className="aspect-square flex flex-col justify-center items-center relative right-4">
+                  <Image
+                    // src={sponsor_logos}
+                    src={sponsor_logos}
+                    height={20}
+                    width={20}
+                    alt="Sponsor Logos"
+                    layout="responsive"
+                    className=""
+                    priority
+                  />
+                </div>
+          {/* </div> */}
         </BlueBorderSquareBox>
       </div>
     </div>
