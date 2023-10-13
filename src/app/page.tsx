@@ -34,7 +34,7 @@ export default function Home() {
             fadeBackground ? "homeMainGradientBackground" : "homeMainGradientGridBackground"
           } flex items-center justify-center min-h-[calc(100vh+50px)]`}
         >
-          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full">
+          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full" id="home">
           <Fade>
             <Main />
           </Fade>
@@ -42,24 +42,24 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center mt-[-70px] md:mt-[-100px]">
-          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full">
+          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full" id="about">
             <Fade>
               <About />
             </Fade>
           </div>
-          <div className="w-full gradientBackground">
+          <div className="w-full gradientBackground" id="sponsor">
             <Fade>
               <Sponsor />
             </Fade>
           </div>
-          <div className="mx-6 lg:mx-24 max-w-screen-lg">
+          <div className="mx-6 lg:mx-24 max-w-screen-lg" id="tickets">
             <Fade>
               <Tickets />
             </Fade>
           </div>
           <div className="w-full gradientBackground"
           style={{ boxShadow: "0px 3px 8px 4px rgba(0, 0, 0, 0.5), 0px -3px 8px 4px rgba(0, 0, 0, 0.5)" }}
-          >
+          id="faq">
             <Fade>
               <Faq />
             </Fade>
@@ -68,7 +68,7 @@ export default function Home() {
         <div
           className={`${
             fadeBackground ? "gradientBackground" : "gradientGridBackground"
-          } flex justify-center`}
+          } flex justify-center`} id="contact"
         >
         
           <div className="my-20 mx-6 lg:mx-24 max-w-screen-md">
