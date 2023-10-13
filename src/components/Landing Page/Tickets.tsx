@@ -37,7 +37,7 @@ export default function Sponsor() {
               "Networking Benefits",
               "Workshops & Talks hosted by sponsors",
             ]}
-            buttonLink="/"
+            buttonLink="https://www.youtube.com/watch?v=BBJa32lCaaY&ab_channel=LegacyPNDA"
             themeColor="roseQuartz"
           />
         </div>
@@ -52,7 +52,7 @@ export default function Sponsor() {
               "Priority Networking",
               "Exclusive CUSEC 2024 Merchandise",
             ]}
-            buttonLink="/"
+            buttonLink="https://www.youtube.com/watch?v=BBJa32lCaaY&ab_channel=LegacyPNDA"
             themeColor="goldenApricot"
           />
         </div>
