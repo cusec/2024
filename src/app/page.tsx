@@ -1,7 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
-import Head from "next/head";
 import Fade from "@/components/Fade";
 import Main from "@/components/Landing Page/Main";
 import About from "@/components/Landing Page/About";
@@ -10,72 +8,95 @@ import Tickets from "@/components/Landing Page/Tickets";
 import Contact from "@/components/Landing Page/Contact";
 import Faq from "@/components/Landing Page/Faq";
 import { useFadeBackground } from "./layout";
-
-const metadata: Metadata = {
-  title: "CUSEC 2024",
-  description:
-    "Official website for the 2024 edition of the Canadian University Software Engineering Conference.",
-};
+import { motion, useAnimation } from "framer-motion";
+import { InView } from "react-intersection-observer";
 
 export default function Home() {
   const fadeBackground = useFadeBackground();
+
+  const animationControls = useAnimation();
+
+  const handleViewportEnter = (inView: boolean) => {
+    if (inView) {
+      animationControls.start({
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+        },
+      });
+    }
+  };
+
   return (
     <>
-      <Head>
-        <title>CUSEC 2024 - Home</title>
-        <meta
-          name="description"
-          content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."
-        ></meta>
-      </Head>
+      <title>Home</title>
+      <meta
+        name="description"
+        content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."
+      />
+
       <div className="w-full">
         <div
           className={`${
-            fadeBackground ? "homeMainGradientBackground" : "homeMainGradientGridBackground"
+            fadeBackground
+              ? "homeMainGradientBackground"
+              : "homeMainGradientGridBackground"
           } flex items-center justify-center min-h-[calc(100vh+50px)]`}
         >
-          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full">
-          <Fade>
-            <Main />
-          </Fade>
-          </div>
+          <motion.div
+            className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full"
+            id="home"
+          >
+            <Fade>
+              <Main />
+            </Fade>
+          </motion.div>
         </div>
 
         <div className="flex flex-col items-center mt-[-70px] md:mt-[-100px]">
-          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full">
+          <motion.div
+            className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full"
+            id="about"
+          >
             <Fade>
               <About />
             </Fade>
-          </div>
-          <div className="w-full gradientBackground">
+          </motion.div>
+          <motion.div className="w-full gradientBackground" id="sponsor">
             <Fade>
               <Sponsor />
             </Fade>
-          </div>
-          <div className="mx-6 lg:mx-24 max-w-screen-lg">
+          </motion.div>
+          <motion.div className="mx-6 lg:mx-24 max-w-screen-lg" id="tickets">
             <Fade>
               <Tickets />
             </Fade>
-          </div>
-          <div className="w-full gradientBackground"
-          style={{ boxShadow: "0px 3px 8px 4px rgba(0, 0, 0, 0.5), 0px -3px 8px 4px rgba(0, 0, 0, 0.5)" }}
+          </motion.div>
+          <motion.div
+            className="w-full gradientBackground"
+            style={{
+              boxShadow:
+                "0px 3px 8px 4px rgba(0, 0, 0, 0.5), 0px -3px 8px 4px rgba(0, 0, 0, 0.5)",
+            }}
+            id="faq"
           >
             <Fade>
               <Faq />
             </Fade>
-          </div>
+          </motion.div>
         </div>
         <div
           className={`${
             fadeBackground ? "gradientBackground" : "gradientGridBackground"
           } flex justify-center`}
+          id="contact"
         >
-        
-          <div className="my-20 mx-6 lg:mx-24 max-w-screen-md">
-          <Fade>
-            <Contact />
-          </Fade>
-          </div>
+          <motion.div className="my-20 mx-6 lg:mx-24 max-w-screen-md">
+            <Fade>
+              <Contact />
+            </Fade>
+          </motion.div>
         </div>
       </div>
     </>

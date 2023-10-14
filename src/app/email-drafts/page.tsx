@@ -10,7 +10,7 @@ I hope this message finds you well. My name is [YOUR_NAME], and I'm currently th
 
 Since its inception in 2002, CUSEC has stood as a beacon for emerging talent and industry innovation in software engineering. Over the years, we've successfully curated a space where students and professionals can converge to explore the frontiers of software technology. Notably, CUSEC has become the largest student-run software engineering conference in Canada, attracting participants from premier universities nationwide.
 
-We're thrilled to announce that CUSEC will be making its grand return to Montreal from January 4th to 6th, 2024. We're expecting an attendance of over 300 students from Canada's leading educational institutions, offering them a unique platform to engage, learn, and potentially find their next creative or professional endeavor.
+We're thrilled to announce that CUSEC will be making its grand return to Montreal from January 11th to 13th, 2024. We're expecting an attendance of over 300 students from Canada's leading educational institutions, offering them a unique platform to engage, learn, and potentially find their next creative or professional endeavor.
 
 We are extending an invitation to [COMPANY_NAME] to become a distinguished sponsor for CUSEC 2024. As a sponsor, you would have the unique opportunity to:
 •  Host specialized workshops to showcase your technologies or solutions.

@@ -1,5 +1,7 @@
 import BlueBorderSquareBox from "./BlueBorderSquareBox";
 import Link from "next/link";
+import Image from "next/image";
+import sponsor_logos from "@/assets/sponsor_logos.png"
 
 export default function Sponsor() {
   return (
@@ -20,11 +22,21 @@ export default function Sponsor() {
           </span>
           <div className="mx-4 md:mx-0">
             <div className="relative max-w-md aspect-square mx-auto w-full">
-              <div className="absolute max-w-md aspect-square top-[-17px] right-[-18px] bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-[95%]">
-                {/* This div is for the background gradient */}
-              </div>
+              {/* This div is for the background gradient */}
+              <div className="absolute max-w-md aspect-square top-[-17px] right-[-18px] bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-[95%]"></div>
               <BlueBorderSquareBox>
-                <div className="aspect-square">Some content here</div>
+                <div className="aspect-square flex flex-col justify-center items-center relative right-4">
+                  <Image
+                    // src={sponsor_logos}
+                    src={sponsor_logos}
+                    height={40}
+                    width={40}
+                    alt="Sponsor Logos"
+                    layout="responsive"
+                    className=""
+                    priority
+                  />
+                </div>
               </BlueBorderSquareBox>
             </div>
           </div>
@@ -42,7 +54,7 @@ export default function Sponsor() {
             </p>
             <div className="flex justify-center md:justify-end">
               <Link
-                href={"/"}
+                href={"/sponsors"}
                 className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white"
               >
                 Learn&nbsp;More

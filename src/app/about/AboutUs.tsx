@@ -1,12 +1,12 @@
 import Image from "next/image";
 import circle_grid_v1 from "@/assets/circle_grid_v1.svg";
 import circle_grid_v2 from "@/assets/circle_grid_v2.svg";
-import carousel_image_1 from "./Carousel Images/carousel_image_1.png";
-import carousel_image_2 from "./Carousel Images/carousel_image_2.png";
-import carousel_image_3 from "./Carousel Images/carousel_image_3.png";
-import carousel_image_4 from "./Carousel Images/carousel_image_4.png";
-import carousel_image_5 from "./Carousel Images/carousel_image_5.png";
-import carousel_image_6 from "./Carousel Images/carousel_image_6.png";
+import carousel_image_1 from "@/components/About Us/Carousel Images/carousel_image_1.png";
+import carousel_image_2 from "@/components/About Us/Carousel Images/carousel_image_2.png";
+import carousel_image_3 from "@/components/About Us/Carousel Images/carousel_image_3.png";
+import carousel_image_4 from "@/components/About Us/Carousel Images/carousel_image_4.png";
+import carousel_image_5 from "@/components/About Us/Carousel Images/carousel_image_5.png";
+import carousel_image_6 from "@/components/About Us/Carousel Images/carousel_image_6.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -81,8 +81,8 @@ export default function AboutUs() {
           centeredSlides={true}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
           breakpoints={{
             // when window width is >= 1024px
             1024: {

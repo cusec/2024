@@ -26,6 +26,7 @@ export default function TeamCard(props: TeamCardProps) {
     <BlueBorderSquareBox teamCard={true}>
       <div className="flex flex-col items-center justify-center mx-6 mt-8 group self-start mb-2">
         <div className="aspect-square rounded-full bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-[140px] md:w-[165px] relative">
+          {/* Picture of team member */}
           {props.image && (
             <Image
               src={props.image}
@@ -36,6 +37,13 @@ export default function TeamCard(props: TeamCardProps) {
             />
           )}
 
+          {props.email && (
+            <a href={`mailto:${props.email}`} className="w-10 h-10 absolute right-1 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out">
+              <Image src={"/email_icon.svg"} alt="Email icon" layout="fill" />
+            </a>
+          )}
+
+          {/* University logo */}
           <div className="absolute rounded-none -top-4 z-100 w-[60px] h-[60px]">
             {props.university_image && (
               <Image
@@ -48,13 +56,9 @@ export default function TeamCard(props: TeamCardProps) {
           </div>
         </div>
 
-        {/* <p className="text-center font-semibold md:text-[20px] whitespace-nowrap">
-        {props.name}{" "}
-      </p> */}
-
         {/* Replacing text on hover with fade in/out animation */}
         {/* Name and University text */}
-        <p className="text-center font-semibold md:text-[20px] whitespace-nowrap relative">
+        <div className="text-center font-semibold md:text-[20px] whitespace-nowrap relative">
           <div className="inline-block relative">
             <span className="invisible">
               {props.name.length > props.university.length
@@ -68,10 +72,10 @@ export default function TeamCard(props: TeamCardProps) {
               {props.university}
             </span>
           </div>
-        </p>
+        </div>
 
         {/* Pronouns and Program text */}
-        <p className="text-center whitespace-nowrap relative text-[8px] md:text-[12px]">
+        <div className="text-center whitespace-nowrap relative text-[8px] md:text-[12px]">
           <div className="inline-block relative">
             <span className="invisible">
               {props.pronouns.length > props.program.length
@@ -85,10 +89,10 @@ export default function TeamCard(props: TeamCardProps) {
               {props.program}
             </span>
           </div>
-        </p>
+        </div>
 
         {/* Role and Fun Fact text */}
-        <p className="text-center whitespace-nowrap relative">
+        <div className="text-center whitespace-nowrap relative">
           <div className="inline-block relative">
             <span className="invisible">
               {props.role.length > props.program.length
@@ -102,7 +106,7 @@ export default function TeamCard(props: TeamCardProps) {
               Fun Fact
             </span>
           </div>
-        </p>
+        </div>
 
         {/* Sub-role, email, and fun fact content */}
         <div className="block relative">

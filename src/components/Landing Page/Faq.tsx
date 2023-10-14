@@ -96,21 +96,21 @@ export default function Faq() {
           />
           <FaqCard
             question="Can I get a refund or resell my ticket?"
-            content={<>It is strictly forbidden to re-sell a CUSEC ticket above the purchased price. If you cannot attend anymore, reach out to info@cusec.net and CC your head delegate if you have one. We will do our best to assist you.</>}
+            content={<>It is strictly forbidden to re-sell a CUSEC ticket above the purchased price. If you cannot attend anymore, reach out to <a href={"mailto:info@cusec.net"} className="hover:text-blue-500 transition ease-in-out duration-500">info@cusec.net</a> and CC your head delegate if you have one. We will do our best to assist you.</>}
           />
         </div>
 
         <p className="text-center font-medium py-16 md:px-16">
           Don't see a question you're looking for?
           <br /> Send us an email at{" "}
-          <Link
+          <a
             href={
               "mailto:info@cusec.net?subject=Inquiry:&body=Hello CUSEC team,"
             }
             className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot hover:text-blue-500 transition-colors ease-in-out duration-500"
           >
             info@cusec.net
-          </Link>
+          </a>
         </p>
       </div>
     </>

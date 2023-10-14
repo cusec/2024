@@ -4,14 +4,15 @@ import type { Metadata } from "next";
 import Head from "next/head";
 import Fade from "@/components/Fade";
 import Image from "next/image";
-import bottom_right_gradient_lines from "./bottom_right_gradient_lines.svg";
-import top_left_gradient_lines from "./top_left_gradient_lines.svg";
+// import bottom_right_gradient_lines from "bottom_right_gradient_lines.svg";
+// import top_left_gradient_lines from "top_left_gradient_lines.svg";
 import grid_gradient_fill_lines from "./grid_gradient_fill_lines.svg";
 import Main from "@/app/about/Main";
 import AboutUs from "@/app/about/AboutUs";
 import Team from "./Team";
 import WhyJoin from "./WhyJoin";
 import { useEffect, useState } from "react";
+import {motion} from "framer-motion";
 
 // Had to remove this import because the file was too large to upload to GitHub.
 // import carousel_about_us from "./Carousel Images/carousel_about_us.svg";
@@ -44,26 +45,28 @@ export default function About() {
 
   return (
     <div className="overflow-hidden">
-      <Head>
-        <title>CUSEC 2024 - About Us</title>
+        <title>About Us</title>
         <meta
           name="description"
           content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."
         ></meta>
-      </Head>
       <div className="w-full">
         {/* Top Left Gradient Lines */}
         <Image
-          src={top_left_gradient_lines}
+          src={"/images/top_left_gradient_lines.svg"}
           alt="top_left_gradient_lines"
           className="absolute top-[64px] z-10"
+          width={200}
+          height={250}
         />
 
         {/* Bottom Right Gradient Lines */}
         <Image
-          src={bottom_right_gradient_lines}
+          src={"/images/bottom_right_gradient_lines.svg"}
           alt="bottom right gradient lines"
           className="absolute bottom-[-13vh] right-0 z-10 md:hidden"
+          width={200}
+          height={250}
         />
 
         {/* Grid Lines behind curve*/}
@@ -121,13 +124,13 @@ export default function About() {
           </div>
         </div>
 
-        {/* <div className="flex flex-col items-center"> */}
-          {/* <div className="max-w-screen-lg"> */}
+        <div className="flex flex-col items-center">
+          <div className="max-w-screen-lg md:max-w-screen-2xl">
             <Fade>
               <WhyJoin />
             </Fade>
-        {/* </div> */}
-          {/* </div> */}
+        </div>
+          </div>
         <div className="flex flex-col items-center">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full mt-20 md:-mt-3 mb-16">
             <Fade>

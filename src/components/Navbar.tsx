@@ -5,6 +5,7 @@ import Link from "next/link";
 import NavLink from "./NavLink";
 import Image from "next/image";
 import logo from "../assets/logo.svg";
+import HamburgerButton from "@/components/HamburgerButton";
 
 type ChildProps = {
   clicked: () => void;
@@ -75,7 +76,7 @@ export default function Navbar({ clicked }: ChildProps) {
               >
                 {/* Event Details button is special case, it has a dropdown menu */}
                 <span className="flex space-x-2">
-                  <Link href="/">Event Details</Link>
+                  <Link href="/#about">Event Details</Link>
 
                   <svg
                     className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 ${
@@ -118,61 +119,22 @@ export default function Navbar({ clicked }: ChildProps) {
                     <ul className="space-y-2 flex flex-col bg-black/[.65] rounded-2xl p-4">
                       <NavLink href="/">Sign up</NavLink>
                       <NavLink href="/">Schedule</NavLink>
-                      <NavLink href="/">Sponsors</NavLink>
+                      <NavLink href="/sponsors">Sponsors</NavLink>
                     </ul>
                   </div>
                 </div>
               </button>
-              <NavLink href="/faq">FAQ</NavLink>
+              <NavLink href="/#faq">FAQ</NavLink>
 
-              <NavLink href="/contact">Contact</NavLink>
+              <NavLink href="/#contact">Contact</NavLink>
             </div>
           </div>
 
           {/*Hamburger Button */}
-          <div className="flex md:hidden">
-            <button
-              className="transform transition ease-in-out duration-500 hover:scale-125 group"
-              onClick={toggleMobileMenu}
-            >
-              <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
-                <div
-                  className={`bg-white h-[2px] w-7 transform transition-all duration-300 origin-left ${
-                    isMobileMenuOpen ? "translate-x-10" : ""
-                  } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
-                ></div>
-                <div
-                  className={`bg-white h-[2px] w-7 rounded transform transition-all duration-700 delay-75 ${
-                    isMobileMenuOpen ? "translate-x-10" : ""
-                  } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
-                ></div>
-                <div
-                  className={`bg-white h-[2px] w-7 transform transition-all duration-700 origin-left delay-150 ${
-                    isMobileMenuOpen ? "translate-x-10" : ""
-                  } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
-                ></div>
-
-                <div
-                  className={`absolute items-center justify-between transform transition-all duration-500 top-2.5 flex ${
-                    isMobileMenuOpen
-                      ? "translate-x-0  w-12"
-                      : "translate-x-10 w-0"
-                  }`}
-                >
-                  <div
-                    className={`absolute bg-white h-[2px] w-5 transform transition-all duration-700 delay-300 ${
-                      isMobileMenuOpen ? "rotate-45" : "rotate-0"
-                    } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
-                  ></div>
-                  <div
-                    className={`absolute bg-white h-[2px] w-5 transform transition-all duration-700 delay-300 ${
-                      isMobileMenuOpen ? "-rotate-45" : "rotate-0"
-                    } group-hover:bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot`}
-                  ></div>
-                </div>
-              </div>
-            </button>
-          </div>
+          <HamburgerButton
+            toggleMobileMenu={toggleMobileMenu}
+            isMobileMenuOpen={isMobileMenuOpen}
+          />
         </div>
       </div>
 
@@ -201,7 +163,7 @@ export default function Navbar({ clicked }: ChildProps) {
             onMouseLeave={() => toggleEventDetails()}
           >
             <span className="flex space-x-2">
-              <Link href="/">Event Details</Link>
+              <Link href="/#about">Event Details</Link>
 
               <svg
                 className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 ${
@@ -247,74 +209,20 @@ export default function Navbar({ clicked }: ChildProps) {
                 <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
                   Schedule
                 </NavLink>
-                <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
+                <NavLink toggleMobileMenu={toggleMobileMenu} href="/sponsors">
                   Sponsors
                 </NavLink>
               </ul>
             </div>
           </button>
-          <NavLink toggleMobileMenu={toggleMobileMenu} href="/faq">
+          <NavLink toggleMobileMenu={toggleMobileMenu} href="/#faq">
             FAQ
           </NavLink>
-          <NavLink toggleMobileMenu={toggleMobileMenu} href="/contact">
+          <NavLink toggleMobileMenu={toggleMobileMenu} href="/#contact">
             Contact
           </NavLink>
         </div>
       </div>
     </nav>
   );
-}
-
-// Previous code for 'Event Details' button
-{
-  /* <div
-            onClick={toggleEventDetails}
-            className="text-white text-2xl font-semibold w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 cursor-pointer"
-          >
-            <div
-              className={`flex bg-clip-text transition-all ease-in-out duration-500 ${
-                isEventDetailsClicked
-                  ? "hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
-                  : "scale-105 text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
-              }`}
-            >
-              Event Details
-              <span className="px-2"></span>
-              <Image
-                src={triangle}
-                alt="Triangle"
-                width={20}
-                height={20}
-                className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 ${
-                  isEventDetailsClicked ? "" : "rotate-180"
-                }`}
-              />
-            </div>
-            <div
-              className={`ml-4 mt-4 text-xl transition-all ease-in-out duration-1000 overflow-hidden ${
-                isEventDetailsClicked ? "max-h-0" : "max-h-28"
-              }`}
-            >
-              <ul className="space-y-2 flex flex-col">
-                <Link
-                  href="#"
-                  className="pl-4 w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
-                >
-                  Sign up
-                </Link>
-                <Link
-                  href="#"
-                  className="pl-4 w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
-                >
-                  Schedule
-                </Link>
-                <Link
-                  href="#"
-                  className="pl-4 w-fit bg-clip-text transition-all ease-in-out duration-500 hover:scale-110 hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
-                >
-                  Sponsors
-                </Link>
-              </ul>
-            </div>
-          </div> */
 }

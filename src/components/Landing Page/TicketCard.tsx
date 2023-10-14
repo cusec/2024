@@ -84,8 +84,10 @@ export default function TicketCard({
               : "border-goldenApricot hover:bg-goldenApricot text-goldenApricot"
             } border-2 mx-auto px-12 md:px-16 py-1 text-center rounded-full uppercase md:text-[20px] font-semibold tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
             href={buttonLink}
+            target="_blank"
           >
-            Buy Now
+            {/* Buy Now */}
+            Coming soon
           </Link>
         </span>
 
@@ -165,7 +167,8 @@ export default function TicketCard({
         <div className="absolute h-3 w-5 top-0 left-0 bg-amber-600"></div>
         <div className="absolute h-3 w-3 bottom-0 right-0 bg-amber-600"></div>
         <Link
-          href="/"
+          href="https://www.youtube.com/watch?v=BBJa32lCaaY&ab_channel=LegacyPNDA"
+          target="_blank"
           className="flex justify-center bg-goldenApricot text-purple-800 font-semibold tracking-wide uppercase py-2 absolute bottom-0 right-0 origin-bottom-right shadow-sm transition ease-in-out duration-500 hover:bg-amber-300 group"
           style={{
             width: `${(hypotenuse / width) * 100}%`,

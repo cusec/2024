@@ -1,17 +1,52 @@
-import Link from "next/link";
+import { useState } from "react";
 import BlueBorderSquareBox from "./BlueBorderSquareBox";
 import { HiEnvelope } from "react-icons/hi2";
 
 export default function Contact() {
+  const [data, setData] = useState({
+    fullName: "",
+    email: "",
+    subject: "",
+    Message: "",
+  });
+
+  const sendEmail = async (e: any) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (res.status === 200) {
+        setData({
+          fullName: "",
+          email: "",
+          subject: "",
+          Message: "",
+        });
+        console.log("Your message has been sent!");
+      }
+
+      const resData = await res.json();
+      console.log(resData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <BlueBorderSquareBox>
       <form className="py-16 px-8 md:px-12">
         <h2 className="font-semibold text-[28px] md:text-[40px] tracking-tight">
           Contact Us
         </h2>
-        <div className="space-y-6">
+        <div className="space-y-3">
           <hr className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-purple-500" />
-          <Link
+          <a
             href={"mailto:info@cusec.net"}
             className="flex transition ease-in-out duration-500 hover:scale-105 group max-w-fit items-center"
           >
@@ -19,7 +54,7 @@ export default function Contact() {
             <span className="text-[12px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-royalPurple group-hover:bg-royalBlue transition ease-in-out duration-1000">
               &nbsp;info@cusec.net
             </span>
-          </Link>
+          </a>
 
           <p className="text-[12px] md:text-[16px]">
             Leave us a message regarding sponsorship, hotel bookings, or any
@@ -37,17 +72,26 @@ export default function Contact() {
               placeholder="Full Name*"
               required
             ></input>
-          {/* Email Input */}
+            {/* Email Input */}
             <input
               type="email"
               id="email"
               name="email"
               className="w-1/2 outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
-              placeholder="Email Address*"
+              placeholder="Your Email Address*"
               required
-              ></input>
+            ></input>
           </div>
-              {/* Message Input */}
+          {/* Subject Input */}
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            className="w-full outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
+            placeholder="Subject*"
+            required
+          ></input>
+          {/* Message Input */}
           <div className="mt-4">
             <textarea
               id="Message"
@@ -63,6 +107,7 @@ export default function Contact() {
           <button
             type="submit"
             className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-white px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalBlue hover:text-white border-2 border-royalBlue"
+            onClick={sendEmail}
           >
             Submit
           </button>
@@ -70,47 +115,4 @@ export default function Contact() {
       </form>
     </BlueBorderSquareBox>
   );
-}
-
-{
-  /* Old Content */
-}
-{
-  /* <p className="font-regular text-[15px]">
-  <strong className="hover:text-[royalBlue] transition-colors ease-in-out duration-500 hover:scale-105">
-    {" "}
-    <Link href={"mailto:sponsor@cusec.net"}>sponsor@cusec.net</Link>
-  </strong>{" "}
-  ~ Email for information about{" "}
-  <span className="underline underline-offset-1 transition-colors ease-in-out duration-500">
-    sponsoring
-  </span>{" "}
-  the event.
-</p>
-<p className="font-regular text-[15px]">
-  <strong className="hover:text-[royalBlue] transition-colors ease-in-out duration-500 hover:scale-105">
-    {" "}
-    <Link href={"mailto:info@cusec.net"}>info@cusec.net</Link>
-  </strong>{" "}
-  ~ Email for information about{" "}
-  <span className="underline underline-offset-1 transition-colors ease-in-out duration-500">
-    booking a hotel room
-  </span>{" "}
-  for the conference or any <span>general inquiries</span>.
-</p>
-<p className="font-regular text-[15px]">
-  <strong className="hover:text-[royalBlue] transition-colors ease-in-out duration-500 hover:scale-105">
-    {" "}
-    <Link href={"mailto:web@cusec.net"}>web@cusec.net</Link>
-  </strong>{" "}
-  ~ Email for information about the{" "}
-  <span className="underline underline-offset-1 transition-colors ease-in-out duration-500">
-    website
-  </span>{" "}
-  or{" "}
-  <span className="underline underline-offset-1 transition-colors ease-in-out duration-500">
-    suggestions
-  </span>{" "}
-  for improvement.
-</p> */
 }

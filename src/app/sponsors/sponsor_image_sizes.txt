@@ -1,0 +1,12 @@
+Each logo needs to have a different size. Here are the sizes. The sizes are in pixels, (width, height). The first pair of parentheses has the mobile size, and the second pair is for medium screens onwards. I'm using tailwind.
+
+RBC: (70,90), (200, 260)
+D2L: (57,24), (165,70)
+Accenture: (79,20), (230, 60)
+Unity: (114,43), (337, 125)
+CSC: (45,45), (130, 130)
+Morgan Stanley: (114,18), (330, 50)
+Nokia: (80,14), (235, 40)
+Sticker Mule: (97,56), (285, 165)
+Deloitte: (98, 22), (288, 55)
+Fellow: (112, 30), (330, 88)
