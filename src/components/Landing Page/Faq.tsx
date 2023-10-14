@@ -22,14 +22,20 @@ export default function Faq() {
                   <span className="block">
                     <em>When:&nbsp;</em>
                   </span>
-                  <span className="block">January 4, 5, and 6.</span>
+                  <span className="block">January 11, 12, and 13.</span>
                 </p>
                 <p className="flex">
                   <span className="block">
                     <em>Where:&nbsp;</em>
                   </span>
                   <span className="block">
-                    Location details will be released soon.
+                    <Link
+                    href={"https://www.google.com/maps/place/Le+Centre+Sheraton+Montreal+Hotel/@45.4965835,-73.5735774,15.5z/data=!4m9!3m8!1s0x4cc91a42f46cd423:0xce6742b1fed51b6f!5m2!4m1!1i2!8m2!3d45.4979625!4d-73.5716361!16zL20vMDhrbnJm?entry=ttu"}
+                    className="hover:text-blue-500 transition ease-in-out duration-500"
+                    target="_blank"
+                    >
+Le Centre Sheraton Montreal Hotel - 1201 René-Lévesque Blvd W, Montreal, Quebec H3B 2L7
+                    </Link>
                   </span>
                 </p>
               </>
