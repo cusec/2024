@@ -20,13 +20,18 @@ const Landingbox = () => {
             Canadian University Software Engineering Conference
           </p>
           <p className="text-[15px] text-[#615757]">
-            January 12-24
+            January 11-13
             <Image
               src={greyEllipse}
               alt="Grey Ellipse Icon"
               className="inline-block mx-3"
-            ></Image>
-            Montreal, QC
+            />
+            <Link href={"https://www.google.com/maps/place/Le+Centre+Sheraton+Montreal+Hotel/@45.4965835,-73.5735774,15.5z/data=!4m9!3m8!1s0x4cc91a42f46cd423:0xce6742b1fed51b6f!5m2!4m1!1i2!8m2!3d45.4979625!4d-73.5716361!16zL20vMDhrbnJm?entry=ttu"} 
+            target="_blank"
+            className="hover:text-blue-500 transition ease-in-out duration-500"
+            >
+            Le Centre Sheraton, Montreal, QC
+            </Link>
           </p>
 
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0">
