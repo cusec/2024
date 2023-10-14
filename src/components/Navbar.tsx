@@ -115,7 +115,7 @@ export default function Navbar({ clicked }: ChildProps) {
                     isEventDetailsClicked ? "max-h-0" : "max-h-40"
                   }`}
                 >
-                  <div className="bg-gradient-to-r from-lavederFog to-goldenApricot rounded-2xl">
+                  <div className="bg-gradient-to-br from-lavenderFog to-goldenApricot rounded-2xl">
                     <ul className="space-y-2 flex flex-col bg-black/[.65] rounded-2xl p-4">
                       <NavLink href="/">Sign up</NavLink>
                       <NavLink href="/">Schedule</NavLink>
