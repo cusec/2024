@@ -66,7 +66,7 @@ export default function Navbar({ clicked }: ChildProps) {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <NavLink href="/#home">Home</NavLink>
+              <NavLink href="">Home</NavLink>
               <NavLink href="/#about">About Us</NavLink>
 
               <button
@@ -76,7 +76,7 @@ export default function Navbar({ clicked }: ChildProps) {
               >
                 {/* Event Details button is special case, it has a dropdown menu */}
                 <span className="flex space-x-2">
-                  <Link href="/">Event Details</Link>
+                  <Link href="/#about">Event Details</Link>
 
                   <svg
                     className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 ${
@@ -151,7 +151,7 @@ export default function Navbar({ clicked }: ChildProps) {
         }
       >
         <div className="flex flex-col mx-6 ml-6 mt-24 space-y-10 uppercase">
-          <NavLink toggleMobileMenu={toggleMobileMenu} href="/#home">
+          <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
             Home
           </NavLink>
           <NavLink toggleMobileMenu={toggleMobileMenu} href="/#about">
@@ -163,7 +163,7 @@ export default function Navbar({ clicked }: ChildProps) {
             onMouseLeave={() => toggleEventDetails()}
           >
             <span className="flex space-x-2">
-              <Link href="/">Event Details</Link>
+              <Link href="/#about">Event Details</Link>
 
               <svg
                 className={`scale-x-125 scale-y-75 transition ease-in-out duration-1000 ${
