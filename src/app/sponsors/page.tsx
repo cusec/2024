@@ -4,8 +4,6 @@ import type { Metadata } from "next";
 import Head from "next/head";
 import Fade from "@/components/Fade";
 import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
 import Main from "@/app/sponsors/Main";
 import CusecSponsors from "@/app/sponsors/CusecSponsors";
 import WhySponsor from "./WhySponsor";
@@ -13,13 +11,11 @@ import WhySponsor from "./WhySponsor";
 export default function Sponsors() {
   return (
     <div className="overflow-hidden">
-      <Head>
-        <title>CUSEC 2024 - About Us</title>
+        <title>Sponsors</title>
         <meta
           name="description"
           content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."
         />
-      </Head>
 
       <div className="w-full">
         {/* Top Left Gradient Lines */}

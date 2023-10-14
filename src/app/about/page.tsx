@@ -12,6 +12,7 @@ import AboutUs from "@/app/about/AboutUs";
 import Team from "./Team";
 import WhyJoin from "./WhyJoin";
 import { useEffect, useState } from "react";
+import { title } from "process";
 
 // Had to remove this import because the file was too large to upload to GitHub.
 // import carousel_about_us from "./Carousel Images/carousel_about_us.svg";
@@ -44,13 +45,11 @@ export default function About() {
 
   return (
     <div className="overflow-hidden">
-      <Head>
-        <title>CUSEC 2024 - About Us</title>
+        <title>About Us</title>
         <meta
           name="description"
           content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."
         ></meta>
-      </Head>
       <div className="w-full">
         {/* Top Left Gradient Lines */}
         <Image
