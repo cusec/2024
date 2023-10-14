@@ -42,7 +42,7 @@ export default function Navbar({ clicked }: ChildProps) {
   });
 
   return (
-    <nav className="bg-black/[.85] z-50 fixed top-0 w-full flex justify-center bg-clip-padding">
+    <nav className="bg-black/[.75] z-50 fixed top-0 w-full flex justify-center bg-clip-padding">
       {/* Desktop Navbar */}
       <div
         className={`w-full max-w-screen-2xl mx-6 lg:mx-24 backdrop-blur-[6px]`}
