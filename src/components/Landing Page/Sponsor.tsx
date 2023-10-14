@@ -43,7 +43,7 @@ export default function Sponsor() {
 
           <div className="md:text-right mx-auto md:pl-10">
             <h2 className="text-[28px] md:text-[40px] font-semibold hidden md:block">
-              Sponsor CUSEC 2024
+            Past CUSEC Sponsors
             </h2>
             <hr className="hidden md:block max-w-[3rem] md:max-w-[4rem] h-2 bg-orange-300 mb-2 mt-2 ml-auto" />
             <p className="md:text-[20px] font-regular pt-10 pb-6">

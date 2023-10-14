@@ -81,7 +81,7 @@ export default function CusecSponsors() {
 
       <section className="lg:max-w-[1024px] max-w-[768px] px-6 md:px-12 md:mb-20">
         <p className="font-semibold text-[28px] md:text-[40px] tracking-tight">
-          CUSEC Sponsors
+          Past CUSEC Sponsors
         </p>
         <hr className="block max-w-[2.5rem] md:max-w-[3.75rem] h-2 bg-roseQuartz mb-10" />
         <p className="font-regular text-[15px] md:text-[20px]">
