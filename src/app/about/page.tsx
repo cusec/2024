@@ -12,7 +12,7 @@ import AboutUs from "@/app/about/AboutUs";
 import Team from "./Team";
 import WhyJoin from "./WhyJoin";
 import { useEffect, useState } from "react";
-import { title } from "process";
+import {motion} from "framer-motion";
 
 // Had to remove this import because the file was too large to upload to GitHub.
 // import carousel_about_us from "./Carousel Images/carousel_about_us.svg";

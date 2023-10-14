@@ -8,10 +8,26 @@ import Tickets from "@/components/Landing Page/Tickets";
 import Contact from "@/components/Landing Page/Contact";
 import Faq from "@/components/Landing Page/Faq";
 import { useFadeBackground } from "./layout";
-
+import { motion, useAnimation } from "framer-motion";
+import { InView } from "react-intersection-observer";
 
 export default function Home() {
   const fadeBackground = useFadeBackground();
+
+  const animationControls = useAnimation();
+
+  const handleViewportEnter = (inView: boolean) => {
+    if (inView) {
+      animationControls.start({
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+        },
+      });
+    }
+  };
+
   return (
     <>
       <title>Home</title>
@@ -28,30 +44,36 @@ export default function Home() {
               : "homeMainGradientGridBackground"
           } flex items-center justify-center min-h-[calc(100vh+50px)]`}
         >
-          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full" id="home">
+          <motion.div
+            className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full"
+            id="home"
+          >
             <Fade>
               <Main />
             </Fade>
-          </div>
+          </motion.div>
         </div>
 
         <div className="flex flex-col items-center mt-[-70px] md:mt-[-100px]">
-          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full" id="about">
+          <motion.div
+            className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full"
+            id="about"
+          >
             <Fade>
               <About />
             </Fade>
-          </div>
-          <div className="w-full gradientBackground" id="sponsor">
+          </motion.div>
+          <motion.div className="w-full gradientBackground" id="sponsor">
             <Fade>
               <Sponsor />
             </Fade>
-          </div>
-          <div className="mx-6 lg:mx-24 max-w-screen-lg" id="tickets">
+          </motion.div>
+          <motion.div className="mx-6 lg:mx-24 max-w-screen-lg" id="tickets">
             <Fade>
               <Tickets />
             </Fade>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
             className="w-full gradientBackground"
             style={{
               boxShadow:
@@ -62,7 +84,7 @@ export default function Home() {
             <Fade>
               <Faq />
             </Fade>
-          </div>
+          </motion.div>
         </div>
         <div
           className={`${
@@ -70,11 +92,11 @@ export default function Home() {
           } flex justify-center`}
           id="contact"
         >
-          <div className="my-20 mx-6 lg:mx-24 max-w-screen-md">
+          <motion.div className="my-20 mx-6 lg:mx-24 max-w-screen-md">
             <Fade>
               <Contact />
             </Fade>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

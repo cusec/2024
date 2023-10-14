@@ -7,6 +7,7 @@ import Image from "next/image";
 import Main from "@/app/sponsors/Main";
 import CusecSponsors from "@/app/sponsors/CusecSponsors";
 import WhySponsor from "./WhySponsor";
+import {motion} from "framer-motion";
 
 export default function Sponsors() {
   return (
