@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 
 import Link from "next/link";
 import FaqCard from "./FaqCard";
@@ -107,7 +106,7 @@ Le Centre Sheraton Montreal Hotel - 1201 René-Lévesque Blvd W, Montreal, Quebe
         </div>
 
         <p className="text-center font-medium py-16 md:px-16">
-          Don't see a question you're looking for?
+          Don&apos;t see a question you&apos;re looking for?
           <br /> Send us an email at{" "}
           <a
             href={
