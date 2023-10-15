@@ -16,7 +16,7 @@ const transitionConfig = (delay = 0) => ({
   duration: 1.5,
   delay: delay,
   type: "spring",
-  bounce: 0.5,
+  bounce: 0.1,
 });
 
 const {
