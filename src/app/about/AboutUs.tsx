@@ -10,7 +10,7 @@ import carousel_image_6 from "@/components/About Us/Carousel Images/carousel_ima
 import {motion} from "framer-motion";
 
 const animateInConfigText = {
-  initial: { opacity: 0, x: -100 },
+  initial: { opacity: 0, x: 100 },
   whileInView: { opacity: 1, x: 0 },
   viewport: { once: true },
 };
@@ -43,15 +43,21 @@ import "swiper/css/bundle";
 export default function AboutUs() {
   return (
     <div className="relative">
-      <div className="absolute -right-[0vw] -top-10 hidden md:block">
+      <motion.div
+      {...animateInConfigCarousel}
+      transition={transitionConfig(0.5)}
+      className="absolute -right-[0vw] -top-10 hidden md:block">
         <Image
           src={circle_grid_v2}
           alt="Horizontal grid of grey circles"
           className="w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] "
           priority
         />
-      </div>
-      <section className="lg:max-w-[1024px] max-w-[768px] space-y-6 px-6 md:px-12 ">
+      </motion.div>
+      <motion.section
+      {...animateInConfigText}
+      transition={transitionConfig(0.5)}
+      className="lg:max-w-[1024px] max-w-[768px] space-y-6 px-6 md:px-12 ">
         <p className="font-semibold text-[28px] md:text-[40px] tracking-tight">
           About Us
         </p>
@@ -69,18 +75,29 @@ export default function AboutUs() {
           connect with sponsoring companies, and make lifelong friends in a safe
           and comfortable space.
         </p>
-      </section>
+      </motion.section>
 
+      <motion.div
+      {...animateInConfigCarousel}
+      transition={transitionConfig(0.7)}
+        className="hidden md:block absolute bottom-0 -left-10 scale-125 w-[40px] h-[80px] md:h-[120px] md:top-[80px] md:right-[40px] lg:top-[100px] lg:right-[40px] lg:h-[160px]"
+      >
       <Image
         src={circle_grid_v1}
         alt="Vertical grid of grey circles"
-        className="hidden md:block absolute bottom-0 -left-10 scale-125 w-[40px] h-[80px] md:h-[120px] md:top-[80px] md:right-[40px] lg:top-[100px] lg:right-[40px] lg:h-[160px]"
       />
-      <div className="flex justify-end mt-6 translate-x-3 md:hidden">
-        <Image src={circle_grid_v2} alt="Horizontal grid of grey circles" />
-      </div>
+      </motion.div>
 
-      <div
+      <motion.div
+      {...animateInConfigCarousel}
+      transition={transitionConfig(0.7)}
+      className="flex justify-end mt-6 translate-x-3 md:hidden">
+        <Image src={circle_grid_v2} alt="Horizontal grid of grey circles" />
+      </motion.div>
+
+      <motion.div
+      {...animateInConfigCarousel}
+      transition={transitionConfig(0.9)}
         className="bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot px-2 py-3 mt-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
         style={{
           boxShadow: "inset 0px 2px 4px rgba(0, 0, 0, 0.5)",
@@ -169,7 +186,7 @@ export default function AboutUs() {
           <SwiperSlide className="border border-black">Slide 8</SwiperSlide>
           <SwiperSlide className="border border-black">Slide 9</SwiperSlide>
         </Swiper> */}
-      </div>
+      </motion.div>
     </div>
   );
 }
