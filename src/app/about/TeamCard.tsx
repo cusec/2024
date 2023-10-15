@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 import Image from "next/image";
 import Link from "next/link";
 import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
+import { motion } from "framer-motion";
 
 type TeamCardProps = {
   name: string;
@@ -20,6 +21,25 @@ type TeamCardProps = {
   email: string;
   fun_fact: string;
 };
+
+const animateInConfig1 = {
+  initial: { opacity: 0, scale: 0.8},
+  whileInView: { opacity: 1, scale: 1},
+  viewport: { once: true },
+};
+
+const animateInConfig2 = {
+  initial: { opacity: 0, x: 50 },
+  whileInView: { opacity: 1, x: 0 },
+  viewport: { once: true },
+};
+
+const transitionConfig = (delay = 0) => ({
+  duration: 1.5,
+  delay: delay,
+  type: "spring",
+  bounce: 0.5,
+});
 
 export default function TeamCard(props: TeamCardProps) {
   return (
@@ -44,7 +64,10 @@ export default function TeamCard(props: TeamCardProps) {
           )}
 
           {/* University logo */}
-          <div className="absolute rounded-none -top-4 z-100 w-[60px] h-[60px]">
+          <motion.div 
+          {...animateInConfig1}
+          transition={transitionConfig(.5)}
+          className="absolute rounded-none -top-4 z-100 w-[60px] h-[60px]">
             {props.university_image && (
               <Image
                 src={props.university_image}
@@ -53,12 +76,15 @@ export default function TeamCard(props: TeamCardProps) {
                 objectFit="cover"
               />
             )}
-          </div>
+          </motion.div>
         </div>
 
         {/* Replacing text on hover with fade in/out animation */}
         {/* Name and University text */}
-        <div className="text-center font-semibold md:text-[20px] whitespace-nowrap relative">
+        <motion.div
+        {...animateInConfig2}
+        transition={transitionConfig(0.7)}
+        className="text-center font-semibold md:text-[20px] whitespace-nowrap relative">
           <div className="inline-block relative">
             <span className="invisible">
               {props.name.length > props.university.length
@@ -72,10 +98,13 @@ export default function TeamCard(props: TeamCardProps) {
               {props.university}
             </span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Pronouns and Program text */}
-        <div className="text-center whitespace-nowrap relative text-[8px] md:text-[12px]">
+        <motion.div 
+        {...animateInConfig2}
+        transition={transitionConfig(0.9)}
+        className="text-center whitespace-nowrap relative text-[8px] md:text-[12px]">
           <div className="inline-block relative">
             <span className="invisible">
               {props.pronouns.length > props.program.length
@@ -89,10 +118,13 @@ export default function TeamCard(props: TeamCardProps) {
               {props.program}
             </span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Role and Fun Fact text */}
-        <div className="text-center whitespace-nowrap relative">
+        <motion.div 
+        {...animateInConfig2}
+        transition={transitionConfig(1.1)}
+        className="text-center whitespace-nowrap relative">
           <div className="inline-block relative">
             <span className="invisible">
               {props.role.length > props.program.length
@@ -106,10 +138,13 @@ export default function TeamCard(props: TeamCardProps) {
               Fun Fact
             </span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Sub-role, email, and fun fact content */}
-        <div className="block relative">
+        <motion.div
+        {...animateInConfig2}
+        transition={transitionConfig(1.3)}
+        className="block relative">
           <span className="invisible">
             {props.role.length > props.program.length
               ? props.role
@@ -146,7 +181,7 @@ export default function TeamCard(props: TeamCardProps) {
           <span className="text-center absolute opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 top-0 left-1/2 transform -translate-x-1/2 text-[8px] md:text-[10px] w-full">
             {props.fun_fact}
           </span>
-        </div>
+        </motion.div>
 
         {/* 
         <p>{props.linkedin}</p>
@@ -156,10 +191,13 @@ export default function TeamCard(props: TeamCardProps) {
         <p>{props.fun_fact}</p> */}
 
         {/*Pagination circles*/}
-        <div className="flex space-x-1 mt-5">
+        <motion.div 
+        {...animateInConfig1}
+        transition={transitionConfig(1.5)}
+        className="flex space-x-1 mt-5">
           <span className="block h-3 w-3 rounded-full bg-purple-400 group-hover:bg-gray-300 transition ease-in-out duration-1000"></span>
           <span className="block h-3 w-3 rounded-full bg-gray-300 group-hover:bg-purple-400 transition ease-in-out duration-100"></span>
-        </div>
+        </motion.div>
       </div>
     </BlueBorderSquareBox>
   );
