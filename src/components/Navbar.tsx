@@ -66,7 +66,7 @@ export default function Navbar({ clicked }: ChildProps) {
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: 360 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={transitionConfig(1)}
+              transition={transitionConfig(0.5)}
             >
               <Link href="/" className="flex items-center">
                 <Image
@@ -85,21 +85,21 @@ export default function Navbar({ clicked }: ChildProps) {
             <div className="ml-10 flex items-baseline space-x-4">
               <motion.div
                 {...NavLinkAnimation}
-                transition={transitionConfig(1.3)}
+                transition={transitionConfig(0.5)}
               >
                 <NavLink href="/">Home</NavLink>
               </motion.div>
 
               <motion.div
                 {...NavLinkAnimation}
-                transition={transitionConfig(1.6)}
+                transition={transitionConfig(0.7)}
               >
                 <NavLink href="/about">About Us</NavLink>
               </motion.div>
 
               <motion.div
                 {...NavLinkAnimation}
-                transition={transitionConfig(1.9)}
+                transition={transitionConfig(0.9)}
               >
                 <button
                   className="relative uppercase text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium tracking-wider"
@@ -159,14 +159,14 @@ export default function Navbar({ clicked }: ChildProps) {
 
               <motion.div
                 {...NavLinkAnimation}
-                transition={transitionConfig(2.2)}
+                transition={transitionConfig(1.1)}
               >
                 <NavLink href="/#faq">FAQ</NavLink>
               </motion.div>
 
               <motion.div
                 {...NavLinkAnimation}
-                transition={transitionConfig(2.5)}
+                transition={transitionConfig(1.3)}
               >
                 <NavLink href="/#contact">Contact</NavLink>
               </motion.div>
