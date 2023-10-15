@@ -7,15 +7,32 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const animateInConfig = {
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+};
+
+const transitionConfig = (delay = 0) => ({
+  duration: 1.5,
+  delay: delay,
+  type: "spring",
+  bounce: 0.5,
+});
 
 export default function Footer() {
   return (
     <footer
-      className={`transition-opacity ease-in-out duration-[1500ms] bg-black/[.85] w-full flex justify-center 
+      className={`transition-opacity ease-in-out duration-[1500ms] bg-black/[.85] w-full flex justify-center overflow-hidden
       `}
     >
-      <div className="lg:max-w-screen-2xl flex justify-center lg:justify-between items-center px-6 lg:mx-24 py-4 w-full">
-
+      <motion.div
+        {...animateInConfig}
+        transition={transitionConfig(0.5)}
+        className="lg:max-w-screen-2xl flex justify-center lg:justify-between items-center px-6 lg:mx-24 py-4 w-full"
+      >
         {/* TODO: Fix logo shape missing corners*/}
         <Link href={"/"}>
           <Image
@@ -43,6 +60,7 @@ export default function Footer() {
         </section>
 
         {/* Social Media Icons */}
+
         <section className="flex max-[330px]:flex-wrap items-center md:text-xl max-[330px]:ml-2">
           {/* The following workaround with the svg had to be used because the react-icons package currently does not support a background gradient for its SVGs using the tailwind approach which is used in the NavLink components. */}
           <svg width="0" height="0">
@@ -81,6 +99,7 @@ export default function Footer() {
           >
             <FaLinkedinIn style={{ fill: "url(#footer-icons-gradient)" }} />
           </Link>
+
           <Link
             href={"https://www.youtube.com/channel/UCZ7j8F6h1CxD-uC0od9rHBw"}
             target="_blank"
@@ -89,7 +108,7 @@ export default function Footer() {
             <FaYoutube style={{ fill: "url(#footer-icons-gradient)" }} />
           </Link>
         </section>
-      </div>
+      </motion.div>
     </footer>
   );
 }
