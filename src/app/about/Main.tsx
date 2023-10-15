@@ -6,7 +6,15 @@ interface MainProps {
   isMediumScreen: boolean;
 }
 
-const animateInConfig = {
+const animateInConfigImage = {
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  viewport: { once: true },
+};
+
+
+
+const animateInConfigText = {
   initial: { opacity: 0, x: 100 },
   whileInView: { opacity: 1, x: 0 },
   viewport: { once: true },
@@ -63,6 +71,7 @@ export default function Main({ isMediumScreen }: MainProps) {
           WebkitClipPath: isMediumScreen ? "url(#imageClip)" : "none", // for Safari
         }}
       >
+        <motion.div {...animateInConfigImage} transition={transitionConfig(0)}>
         <Image
           className="brightness-50"
           src={cusec_2023_group_photo}
@@ -70,19 +79,20 @@ export default function Main({ isMediumScreen }: MainProps) {
           objectFit="cover"
           objectPosition="center"
           alt="CUSEC 2023 Group Photo"
-        />
+          />
+          </motion.div>
 
         <div className="absolute inset-0 z-1 flex justify-center items-center lg:mx-1">
           {/* Text */}
           <motion.h1
-            {...animateInConfig}
+            {...animateInConfigText}
             transition={transitionConfig(0)}
             className="uppercase text-white font-semibold text-[24px] ml-10 sm:mr-24 lg:ml-24 lg:mr-52 lg:text-[50px]"
           >
             Fueling a journey of{" "}
             <motion.span
               {...getMotionProps(purple400)}
-              transition={transitionConfig(0.9)}
+              transition={transitionConfig(0.3)}
             >
               knowledge
             </motion.span>
@@ -90,14 +100,14 @@ export default function Main({ isMediumScreen }: MainProps) {
             <br className="hidden lg:block" />{" "}
             <motion.span
               {...getMotionProps(roseQuartz)}
-              transition={transitionConfig(1.2)}
+              transition={transitionConfig(0.6)}
               >
               inspiration
             </motion.span>
             , &{" "}
             <motion.span
               {...getMotionProps(goldenApricot)}
-              transition={transitionConfig(1.5)}
+              transition={transitionConfig(0.9)}
             >
               opportunity
             </motion.span>{" "}
