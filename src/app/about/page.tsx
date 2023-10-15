@@ -1,7 +1,6 @@
 "use client";
 
 import type { Metadata } from "next";
-import Head from "next/head";
 import Fade from "@/components/Fade";
 import Image from "next/image";
 // import bottom_right_gradient_lines from "bottom_right_gradient_lines.svg";
@@ -12,7 +11,6 @@ import AboutUs from "@/app/about/AboutUs";
 import Team from "./Team";
 import WhyJoin from "./WhyJoin";
 import { useEffect, useState } from "react";
-import {motion} from "framer-motion";
 
 // Had to remove this import because the file was too large to upload to GitHub.
 // import carousel_about_us from "./Carousel Images/carousel_about_us.svg";
@@ -44,13 +42,12 @@ export default function About() {
   const isMediumScreen = windowWidth > 768;
 
   return (
-    <div className="overflow-hidden">
-        <title>About Us</title>
+    <div className="overflow-hidden w-full">
+        <title>About Us - CUSEC 2024</title>
         <meta
           name="description"
           content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."
         ></meta>
-      <div className="w-full">
         {/* Top Left Gradient Lines */}
         <Image
           src={"/images/top_left_gradient_lines.svg"}
@@ -67,14 +64,14 @@ export default function About() {
           className="absolute bottom-[-13vh] right-0 z-10 md:hidden"
           width={200}
           height={250}
-        />
+          />
 
         {/* Grid Lines behind curve*/}
         <Image
           src={grid_gradient_fill_lines}
           alt="grid gradient fill lines"
           className="absolute bottom-10 right-0 z-0"
-        />
+          />
 
         {/* https://yqnn.github.io/svg-path-editor/ */}
 
@@ -138,7 +135,6 @@ export default function About() {
             </Fade>
           </div>
         </div>
-      </div>
     </div>
   );
 }

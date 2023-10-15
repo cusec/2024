@@ -7,6 +7,26 @@ import carousel_image_3 from "@/components/About Us/Carousel Images/carousel_ima
 import carousel_image_4 from "@/components/About Us/Carousel Images/carousel_image_4.png";
 import carousel_image_5 from "@/components/About Us/Carousel Images/carousel_image_5.png";
 import carousel_image_6 from "@/components/About Us/Carousel Images/carousel_image_6.png";
+import { motion } from "framer-motion";
+
+const animateInConfigText = {
+  initial: { opacity: 0, x: 100 },
+  whileInView: { opacity: 1, x: 0 },
+  viewport: { once: true },
+};
+
+const animateInConfigCarousel = {
+  initial: { opacity: 0, scale: 0.8 },
+  whileInView: { opacity: 1, scale: 1 },
+  viewport: { once: true },
+};
+
+const transitionConfig = (delay = 0) => ({
+  duration: 1.5,
+  delay: delay,
+  type: "spring",
+  bounce: 0.1,
+});
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -21,21 +41,32 @@ import {
 import "swiper/css/bundle";
 
 export default function AboutUs() {
+
   return (
-    <div className="relative">
-      <div className="absolute -right-[0vw] -top-10 hidden md:block">
+        // The 'AboutUsSwiperOverride' class is located in the 'globals.css' file
+    <div className="relative AboutUsSwiperOverride">
+      <motion.div
+        {...animateInConfigCarousel}
+        transition={transitionConfig(0.7)}
+        className="absolute -right-[0vw] -top-10 hidden md:block"
+      >
         <Image
           src={circle_grid_v2}
           alt="Horizontal grid of grey circles"
           className="w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] "
           priority
         />
-      </div>
-      <section className="lg:max-w-[1024px] max-w-[768px] space-y-6 px-6 md:px-12 ">
+      </motion.div>
+      <motion.section
+        {...animateInConfigText}
+        transition={transitionConfig(0.5)}
+        className="lg:max-w-[1024px] max-w-[768px] px-6 md:px-12 "
+      >
         <p className="font-semibold text-[28px] md:text-[40px] tracking-tight">
           About Us
         </p>
-        <p className="font-regular text-[15px] md:text-[20px]">
+              <hr className="relative left-[5.75rem] md:left-[8rem] max-w-[2rem] md:max-w-[3.05rem] h-2 bg-roseQuartz mb-2 mr-auto" />
+        <p className="font-regular text-[15px] md:text-[20px] mt-6">
           CUSEC is an annual software engineering conference organized by
           students for students across Canada. A small team of tech enthusiasts
           founded CUSEC in 2002 on a mission to educate, inspire, and expose
@@ -43,27 +74,37 @@ export default function AboutUs() {
           computer science.
         </p>
 
-        <p className="font-regular text-[15px] md:text-[20px]">
+        <p className="font-regular text-[15px] md:text-[20px] mt-6">
           These set of values have been integrated into CUSEC for the last 21
           years while enabling attendees to discover knowledgeable speakers,
           connect with sponsoring companies, and make lifelong friends in a safe
           and comfortable space.
         </p>
-      </section>
+      </motion.section>
 
-      <Image
-        src={circle_grid_v1}
-        alt="Vertical grid of grey circles"
+      <motion.div
+        {...animateInConfigCarousel}
+        transition={transitionConfig(0.7)}
         className="hidden md:block absolute bottom-0 -left-10 scale-125 w-[40px] h-[80px] md:h-[120px] md:top-[80px] md:right-[40px] lg:top-[100px] lg:right-[40px] lg:h-[160px]"
-      />
-      <div className="flex justify-end mt-6 translate-x-3 md:hidden">
-        <Image src={circle_grid_v2} alt="Horizontal grid of grey circles" />
-      </div>
+      >
+        <Image src={circle_grid_v1} alt="Vertical grid of grey circles" />
+      </motion.div>
 
-      <div
+      <motion.div
+        {...animateInConfigCarousel}
+        transition={transitionConfig(0.7)}
+        className="flex justify-end mt-6 translate-x-3 md:hidden"
+      >
+        <Image src={circle_grid_v2} alt="Horizontal grid of grey circles" />
+      </motion.div>
+
+      <motion.div
+        {...animateInConfigCarousel}
+        transition={transitionConfig(0.7)}
         className="bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot px-2 py-3 mt-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
         style={{
           boxShadow: "inset 0px 2px 4px rgba(0, 0, 0, 0.5)",
+          
         }}
       >
         {/* Image Carousel */}
@@ -79,7 +120,7 @@ export default function AboutUs() {
           mousewheel={true}
           keyboard={true}
           centeredSlides={true}
-          pagination={{ clickable: true }}
+          pagination={{clickable: true}}
           scrollbar={{ draggable: true }}
           // onSwiper={(swiper) => console.log(swiper)}
           // onSlideChange={() => console.log("slide change")}
@@ -128,28 +169,7 @@ export default function AboutUs() {
             </div>
           </SwiperSlide>
         </Swiper>
-
-        {/* <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          centeredSlides={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper h-20"
-        >
-          <SwiperSlide className="border border-black">Slide 1</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 2</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 3</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 4</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 5</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 6</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 7</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 8</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 9</SwiperSlide>
-        </Swiper> */}
-      </div>
+      </motion.div>
     </div>
   );
 }

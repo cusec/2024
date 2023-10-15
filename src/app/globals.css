@@ -13,8 +13,6 @@
   --decagon-width: 100px;
 }
 
-/* #46529800 calc(95 * var(--square-size)) */
-
 html {
 }
 
@@ -35,22 +33,23 @@ html {
       #46529800 1px,
       /* #46529800 calc(95 * var(--square-size)) */ #46529800
         clamp(80px, calc(95 * var(--square-size)), 93px)
-    ), 
+    ),
     linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) calc(100vh - 25px),
-    rgba(255, 255, 255, 1) 100%)
-    ;
+      to bottom,
+      rgba(255, 255, 255, 0) calc(100vh - 25px),
+      rgba(255, 255, 255, 1) 100%
+    );
   background-blend-mode: overlay;
 }
 
 .homeMainGradientBackground {
   z-index: 0;
-  background: var(--gradient-colors), 
+  background: var(--gradient-colors),
     linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) calc(100vh - 25px),
-    rgba(255, 255, 255, 1) 100%);
+      to bottom,
+      rgba(255, 255, 255, 0) calc(100vh - 25px),
+      rgba(255, 255, 255, 1) 100%
+    );
   background-blend-mode: overlay;
 }
 
@@ -81,39 +80,46 @@ html {
   background-blend-mode: overlay;
 }
 
-/* Bottom fading out effect for home page main section*/
-/*
-.gradientGridBackground:after, 
-.gradientBackground:after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 0;
-  width: 100%;
-  height: calc(100vh + 50px);
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) calc(100vh - 25px),
-    rgba(255, 255, 255, 1) 100%
-  );
+/*  Override default Swiper parameters in 'AboutUs' component in about page*/
+.AboutUsSwiperOverride {
+  --swiper-pagination-color: #c594eb;
+  --swiper-pagination-bullet-inactive-color: #e9dede;
+  --swiper-pagination-bullet-inactive-opacity: 0.9;
+  --swiper-pagination-bullet-width: 1.5rem;
+  --swiper-pagination-bullet-height: 0.4rem;
+  .swiper-pagination-bullet {
+    border-radius: 0.2rem;
+  }
+  --swiper-navigation-color: #e38ab6;
 }
-*/
-/*
- .bottomFade:after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: -50px; 
-  width: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) calc(100% - 50px),
-    rgba(255, 255, 255, 1) 100%
-  );
-}*/
+
+/*  Override default Swiper parameters in 'WhyJoin' component in about page*/
+.SwiperNavigationOverride {
+  --swiper-navigation-color: #e9dede;
+  --swiper-navigation-size: 18px;
+
+  --swiper-navigation-top-offset: 91%;
+  --swiper-navigation-sides-offset: 46%;
+
+  @media (min-width: 768px) {
+    --swiper-navigation-size: 18px;
+    --swiper-navigation-top-offset: 94%;
+    --swiper-navigation-sides-offset: 47%;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    border-radius: 50%; /* Makes the shape a circle */
+    width: 32px;
+    height: 32px;
+    display: flex; /* To center the arrow icon */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1px);
+  }
+}
+
+/* #46529800 calc(95 * var(--square-size)) */
 
 .decagon {
   width: var(--decagon-width);
@@ -134,23 +140,3 @@ html {
     20% 10%
   );
 }
-
-/*
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --foreground-rgb: 255, 255, 255;
-      --background-start-rgb: 0, 0, 0;
-      --background-end-rgb: 0, 0, 0;
-    }
-  }
-
-  body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgb(var(--background-end-rgb))
-      )
-      rgb(var(--background-start-rgb));
-  } 
-*/

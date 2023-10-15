@@ -1,6 +1,22 @@
 import { useState } from "react";
 import BlueBorderSquareBox from "./BlueBorderSquareBox";
 import { HiEnvelope } from "react-icons/hi2";
+import {motion} from "framer-motion";
+
+function animateInConfig(text: boolean) {
+  return {
+    initial: { opacity: 0, scale: 0.8},
+    whileInView: { opacity: 1, scale: 1},
+    viewport: { once: true },
+  };
+}
+
+const transitionConfig = (delay = 0) => ({
+  duration: 1.5,
+  delay: delay,
+  type: "spring",
+  bounce: 0.5,
+});
 
 export default function Contact() {
   const [data, setData] = useState({
@@ -39,8 +55,15 @@ export default function Contact() {
   };
 
   return (
+    <motion.div
+    {...animateInConfig(false)}
+    transition={transitionConfig(0.5)}
+    >
     <BlueBorderSquareBox>
-      <form className="py-16 px-8 md:px-12">
+      <motion.form
+    {...animateInConfig(false)}
+    transition={transitionConfig(0.8)}
+      className="py-16 px-8 md:px-12">
         <h2 className="font-semibold text-[28px] md:text-[40px] tracking-tight">
           Contact Us
         </h2>
@@ -112,7 +135,8 @@ export default function Contact() {
             Submit
           </button>
         </span>
-      </form>
+      </motion.form>
     </BlueBorderSquareBox>
+        </motion.div>
   );
 }
