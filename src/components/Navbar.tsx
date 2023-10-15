@@ -148,7 +148,7 @@ export default function Navbar({ clicked }: ChildProps) {
                   >
                     <div className="bg-gradient-to-br from-lavenderFog to-goldenApricot rounded-2xl">
                       <ul className="space-y-2 flex flex-col bg-black/[.65] rounded-2xl p-4">
-                        <NavLink href="/">Sign up</NavLink>
+                        <NavLink href="https://www.tickettailor.com/events/cusec/943944" target="_blank">Sign up</NavLink>
                         <NavLink href="/">Schedule</NavLink>
                         <NavLink href="/sponsors">Sponsors</NavLink>
                       </ul>
@@ -246,8 +246,8 @@ export default function Navbar({ clicked }: ChildProps) {
               }`}
             >
               <ul className="space-y-2 flex flex-col p-4">
-                <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
-                  Sign up
+                <NavLink toggleMobileMenu={toggleMobileMenu} href="https://www.tickettailor.com/events/cusec/943944" target="_blank">
+                  Sign Up
                 </NavLink>
                 <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
                   Schedule
