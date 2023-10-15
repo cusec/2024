@@ -113,11 +113,13 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Using CSS clip path with the 'path' function to create custom cubic bezier curves for components.🛣️
 - Setting types for images that are expected as props inside a child component.🖼️
 - Making certain props optional using the '?' operator.❓
-- Using the Swiper.js React API to create image carousels.🎡
+- Using the [Swiper.js](https://swiperjs.com/) React API to create image carousels.🎡
+- Customizing pagination bullets and navigation arrows in Swiper.js carousels.🔨
 - Relatively positioning html elements for hover effects.🖱️
 - Selectively mergin certain commits from one branch to another using git cherry-pick.🍒
 - Using the <a> tag when using the 'mailto:' functionality instead of the <Link> tag. The <Link> tag is meant to interface with Next.js' file-based routing. Using it for 'mailto:' will result in buggy behaviour. In my case constantly opening the email whenever the page is brought back into window context.📨
 - Next's `<Image>` tag's `width` and `height` properties aren't necessarily for the actual size that the image will be displayed at. That's determined by the 'sizes' property.⁉️
-- Routing to sections in different pages using url paths in `href` tag.
+- Routing to sections in different pages using url paths in `href` tag.🛣️
+- Using [Framer Motion](https://www.framer.com/motion) to add smooth, performant, customized animations.🤸
  
 </details>
