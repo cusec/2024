@@ -7,6 +7,26 @@ import carousel_image_3 from "@/components/About Us/Carousel Images/carousel_ima
 import carousel_image_4 from "@/components/About Us/Carousel Images/carousel_image_4.png";
 import carousel_image_5 from "@/components/About Us/Carousel Images/carousel_image_5.png";
 import carousel_image_6 from "@/components/About Us/Carousel Images/carousel_image_6.png";
+import {motion} from "framer-motion";
+
+const animateInConfigText = {
+  initial: { opacity: 0, x: -100 },
+  whileInView: { opacity: 1, x: 0 },
+  viewport: { once: true },
+};
+
+const animateInConfigCarousel = {
+  initial: { opacity: 0, scale: 0.8},
+  whileInView: { opacity: 1, scale: 1},
+  viewport: { once: true },
+};
+
+const transitionConfig = (delay = 0) => ({
+  duration: 1.5,
+  delay: delay,
+  type: "spring",
+  bounce: 0.1,
+});
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import {

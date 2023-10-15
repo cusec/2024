@@ -76,13 +76,13 @@ export default function Main({ isMediumScreen }: MainProps) {
           {/* Text */}
           <motion.h1
             {...animateInConfig}
-            transition={transitionConfig(0.2)}
+            transition={transitionConfig(0)}
             className="uppercase text-white font-semibold text-[24px] ml-10 sm:mr-24 lg:ml-24 lg:mr-52 lg:text-[50px]"
           >
             Fueling a journey of{" "}
             <motion.span
               {...getMotionProps(purple400)}
-              transition={transitionConfig(0.7)}
+              transition={transitionConfig(0.9)}
             >
               knowledge
             </motion.span>
@@ -90,14 +90,14 @@ export default function Main({ isMediumScreen }: MainProps) {
             <br className="hidden lg:block" />{" "}
             <motion.span
               {...getMotionProps(roseQuartz)}
-              transition={transitionConfig(0.9)}
-            >
+              transition={transitionConfig(1.2)}
+              >
               inspiration
             </motion.span>
             , &{" "}
             <motion.span
               {...getMotionProps(goldenApricot)}
-              transition={transitionConfig(1.2)}
+              transition={transitionConfig(1.5)}
             >
               opportunity
             </motion.span>{" "}
