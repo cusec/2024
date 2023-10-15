@@ -1,52 +1,93 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import { useFadeBackground } from "@/app/layout";
 import Link from "next/link";
 import Fade from "@/components/Fade";
 import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
+import { motion } from "framer-motion";
+
+const animateInConfigImage = {
+  initial: { opacity: 0, scale: 0.8 },
+  whileInView: { opacity: 1, scale: 1 },
+  viewport: { once: true },
+};
+
+const animateInConfigText = {
+  initial: { opacity: 0, x: 100 },
+  whileInView: { opacity: 1, x: 0 },
+  viewport: { once: true },
+};
+
+const transitionConfig = (delay = 0) => ({
+  duration: 1.5,
+  delay: delay,
+  type: "spring",
+  bounce: 0.1,
+});
 
 export default function CodeofConduct() {
   return (
     <div className="w-full gradientGridBackground min-h-screen flex justify-center items-center">
-      <div className="mx-6 lg:max-w-[1024px] max-w-[768px] lg:mx-24 my-28">
+      <motion.div 
+      {...animateInConfigImage}
+      transition={transitionConfig()}
+      className="mx-6 lg:max-w-[1024px] max-w-[768px] lg:mx-24 my-28">
         <Fade>
           <BlueBorderSquareBox>
-            <div className={`px-10 lg:px-20 py-8 md:py-20`}>
-              <h1 className="font-semibold text-[20px] sm:text-[28px] md:text-[32px]">
+            <motion.div
+            {...animateInConfigImage}
+            transition={transitionConfig(0.2)}
+            className={`px-10 lg:px-20 py-8 md:py-20`}>
+              <motion.h1 
+              {...animateInConfigText}
+              transition={transitionConfig(0.3)} className="font-semibold text-[20px] sm:text-[28px] md:text-[32px]">
                 Code of Conduct
-              </h1>
+              </motion.h1>
 
-              <hr className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-roseQuartz mb-10 mt-3" />
+              <motion.hr 
+              {...animateInConfigText}
+              transition={transitionConfig(0.4)} className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-roseQuartz mb-10 mt-3" />
 
-              <p className="font-regular text-[10px] sm:text-[12px] md:text-[16px] my-6">
+              <motion.p 
+              {...animateInConfigText}
+              transition={transitionConfig(0.5)} className="font-regular text-[10px] sm:text-[12px] md:text-[16px] my-6">
                 All participants of CUSEC are expected to abide by our Code of
                 Conduct, both online and during in-person events that are hosted
                 and/or associated with CUSEC.
-              </p>
+              </motion.p>
 
-              <h2 className="font-semibold text-[24px] mb-2 text-purple-400">
+              <motion.h2 
+              {...animateInConfigText}
+              transition={transitionConfig(0.6)} className="font-semibold text-[24px] mb-2 text-purple-400">
                 The Pledge
-              </h2>
-              <p className="font-regular text-[10px] sm:text-[12px] md:text-[16px] mb-8">
+              </motion.h2>
+              <motion.p 
+              {...animateInConfigText}
+              transition={transitionConfig(0.7)} className="font-regular text-[10px] sm:text-[12px] md:text-[16px] mb-8">
                 In the interest of fostering an open and welcoming environment,
                 we pledge to make participation in our project and our community
                 a harassment-free experience for everyone, regardless of age,
                 body size, disability, ethnicity, gender identity and
                 expression, level of experience, nationality, personal
                 appearance, race, religion, or sexual identity and orientation.
-              </p>
+              </motion.p>
 
-              <h2 className="font-semibold text-[24px] mb-2 text-roseQuartz">
+              <motion.h2 
+              {...animateInConfigText}
+              transition={transitionConfig(0.8)} className="font-semibold text-[24px] mb-2 text-roseQuartz">
                 The Standards
-              </h2>
+              </motion.h2>
 
-              <p className="font-regular text-[10px] sm:text-[12px] md:text-[16px]">
+              <motion.p 
+              {...animateInConfigText}
+              transition={transitionConfig(0.9)} className="font-regular text-[10px] sm:text-[12px] md:text-[16px]">
                 Examples of behaviour that contributes to creating a positive
                 environment include:
-              </p>
+              </motion.p>
 
-              <ul className="list-disc pl-8 font-regular text-[10px] sm:text-[12px] md:text-[16px] mb-6">
+              <motion.ul 
+              {...animateInConfigText}
+              transition={transitionConfig(0.6)} className="list-disc pl-8 font-regular text-[10px] sm:text-[12px] md:text-[16px] mb-6">
                 <li>Using welcoming and inclusive language.</li>
                 <li>
                   Being respectful of differing viewpoints and experiences.
@@ -56,13 +97,17 @@ export default function CodeofConduct() {
                   Referring to people by their preferred pronouns and using
                   gender-neutral pronouns when uncertain.
                 </li>
-              </ul>
+              </motion.ul>
 
-              <p className="font-regular text-[10px] sm:text-[12px] md:text-[16px]">
+              <motion.p 
+              {...animateInConfigText}
+              transition={transitionConfig(0.6)} className="font-regular text-[10px] sm:text-[12px] md:text-[16px]">
                 Examples of unacceptable behaviour by participants include:
-              </p>
+              </motion.p>
 
-              <ul className="list-disc pl-8 font-regular text-[10px] sm:text-[12px] md:text-[16px] mb-10">
+              <motion.ul 
+              {...animateInConfigText}
+              transition={transitionConfig(0.6)} className="list-disc pl-8 font-regular text-[10px] sm:text-[12px] md:text-[16px] mb-10">
                 <li>
                   Trolling, insulting/derogatory comments, public or private
                   harassment.
@@ -101,10 +146,12 @@ export default function CodeofConduct() {
                   Other conduct which you know could reasonably be considered
                   inappropriate in a professional setting.
                 </li>
-              </ul>
-              <h2 className="font-semibold text-[24px] text-orange-400 mb-2">
+              </motion.ul>
+              <motion.h2 
+              {...animateInConfigText}
+              transition={transitionConfig(0.6)} className="font-semibold text-[24px] text-orange-400 mb-2">
                 Enforcement
-              </h2>
+              </motion.h2>
               <p className="font-regular text-[10px] sm:text-[12px] md:text-[16px] mb-6">
                 Violations of the Code of Conduct may be reported by sending an
                 email to incidents@cusec.net. All reports will be reviewed and
@@ -117,33 +164,41 @@ export default function CodeofConduct() {
                 behaviours that they deem inappropriate, threatening, offensive,
                 or harmful.
               </p>
-              <p className="font-regular text-[10px] sm:text-[12px] md:text-[16px] mb-6">
+              <motion.p 
+              {...animateInConfigText}
+              transition={transitionConfig(0.6)} className="font-regular text-[10px] sm:text-[12px] md:text-[16px] mb-6">
                 Conference staff will be happy to help participants contact
                 hotel/venue security or local law enforcement, provide escorts,
                 or otherwise assist those experiencing harassment to feel safe
                 for the duration of the conference. We value your attendance. We
                 expect participants to follow these rules at the conference
                 venue as well as any conference-related social events.
-              </p>
-              <p className="font-regular text-[10px] sm:text-[12px] md:text-[16px]">
+              </motion.p>
+              <motion.p 
+              {...animateInConfigText}
+              transition={transitionConfig(0.6)} className="font-regular text-[10px] sm:text-[12px] md:text-[16px]">
                 <strong>Email Address:</strong>
                 <Link href={"mailto:incidents@cusec.net"}>
                   {" "}
                   <span className="text-royalBlue underline underline-offset-2">incidents@cusec.net</span>
                 </Link>
-              </p>
-              <p className="font-regular text-[10px] sm:text-[12px] md:text-[16px]">
+              </motion.p>
+              <motion.p 
+              {...animateInConfigText}
+              transition={transitionConfig(0.6)} className="font-regular text-[10px] sm:text-[12px] md:text-[16px]">
                 <strong>Non-Emergency Local Law Enforcement (SPVM):</strong>
                 <Link href={"tel:+1-(514)-280-2222"}>{" "}<span className="text-royalBlue underline underline-offset-2">+1-(514)-280-2222</span></Link>
-              </p>
-              <p className="font-regular text-[10px] sm:text-[12px] md:text-[16px]">
+              </motion.p>
+              <motion.p 
+              {...animateInConfigText}
+              transition={transitionConfig(0.6)} className="font-regular text-[10px] sm:text-[12px] md:text-[16px]">
                 <strong>Emergency and Urgent Calls:</strong>
                 <Link href={"tel:911"}>{" "}<span className="text-royalBlue underline underline-offset-2">911</span></Link>
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
           </BlueBorderSquareBox>
         </Fade>
-      </div>
+      </motion.div>
     </div>
   );
 }
