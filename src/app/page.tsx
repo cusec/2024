@@ -13,7 +13,7 @@ export default function Home() {
   const fadeBackground = useFadeBackground();
   return (
     <>
-      <title>Home</title>
+      <title>Home - CUSEC 2024</title>
       <meta
         name="description"
         content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."

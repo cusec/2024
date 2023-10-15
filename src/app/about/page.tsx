@@ -43,7 +43,7 @@ export default function About() {
 
   return (
     <div className="overflow-hidden w-full">
-        <title>About Us</title>
+        <title>About Us - CUSEC 2024</title>
         <meta
           name="description"
           content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."

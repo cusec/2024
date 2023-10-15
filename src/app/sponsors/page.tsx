@@ -31,7 +31,7 @@ const transitionConfig = (delay = 0) => ({
 export default function Sponsors() {
   return (
     <div className="overflow-hidden">
-      <title>Sponsors</title>
+      <title>Sponsors - CUSEC 2024</title>
       <meta
         name="description"
         content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."

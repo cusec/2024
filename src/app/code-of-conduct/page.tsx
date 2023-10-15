@@ -27,6 +27,8 @@ const transitionConfig = (delay = 0) => ({
 
 export default function CodeofConduct() {
   return (
+    <>
+    <title>Code of Conduct - CUSEC 2024</title>
     <div className="w-full gradientGridBackground min-h-screen flex justify-center items-center">
       <motion.div 
       {...animateInConfigImage}
@@ -200,5 +202,6 @@ export default function CodeofConduct() {
         </Fade>
       </motion.div>
     </div>
+    </>
   );
 }

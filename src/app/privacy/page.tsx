@@ -25,6 +25,8 @@ const transitionConfig = (delay = 0) => ({
 
 export default function Privacy() {
   return (
+    <>
+    <title>Privacy Policy - CUSEC 2024</title>
     <div className="w-full gradientGridBackground min-h-screen flex justify-center items-center">
       <motion.div
         {...animateInConfigImage}
@@ -94,5 +96,6 @@ export default function Privacy() {
         </Fade>
       </motion.div>
     </div>
+    </>
   );
 }
