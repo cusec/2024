@@ -42,16 +42,9 @@ import "swiper/css/bundle";
 
 export default function AboutUs() {
 
-// const pagination = {
-//   clickable: true,
-//   renderBullet: function (index: any, className: string) {
-//     const bgColor = className.includes('swiper-pagination-bullet-active') ? '#E9DEDE' : '#C594EB';
-//     return `<span class="${className}" style="width: 1.5rem; height: 0.4rem; background-color: ${bgColor}; border-radius: 0.2rem; margin: 0 0.25rem;"></span>`;
-//   },
-// }
-
   return (
-    <div className="relative">
+        // The 'AboutUsSwiperOverride' class is located in the 'globals.css' file
+    <div className="relative AboutUsSwiperOverride">
       <motion.div
         {...animateInConfigCarousel}
         transition={transitionConfig(0.5)}

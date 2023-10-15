@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -40,7 +39,8 @@ export default function WhyJoin() {
   }, []);
 
   return (
-    <section className="flex flex-col items-center">
+    // The 'WhyJoinSwiperOverride' class is located in the 'globals.css' file
+    <section className="flex flex-col items-center WhyJoinSwiperOverride">
       <h2 className="flex items-center font-semibold text-[28px] md:text-[40px] tracking-tight mb-16">
         <hr className="block w-2 h-10 bg-orange-300 mr-4" />
         Why Join?
@@ -51,6 +51,7 @@ export default function WhyJoin() {
         <Swiper
           modules={[Navigation, Pagination, A11y, Keyboard, EffectCoverflow]}
           slidesPerView={2}
+          grabCursor={true}
           initialSlide={1}
           centeredSlides={true}
           effect="coverflow"
