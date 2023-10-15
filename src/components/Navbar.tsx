@@ -6,7 +6,7 @@ import NavLink from "./NavLink";
 import Image from "next/image";
 import logo from "../assets/logo.svg";
 import HamburgerButton from "@/components/HamburgerButton";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 type ChildProps = {
   clicked: () => void;
@@ -49,11 +49,11 @@ export default function Navbar({ clicked }: ChildProps) {
   };
 
   const transitionConfig = (delay = 0) => ({
-  duration: 1.5,
-  delay: delay,
-  type: "spring",
-  bounce: 0.5,
-});
+    duration: 1.5,
+    delay: delay,
+    type: "spring",
+    bounce: 0.5,
+  });
 
   return (
     <nav className="bg-black/[.75] z-50 fixed top-0 w-full flex justify-center bg-clip-padding">
@@ -64,9 +64,9 @@ export default function Navbar({ clicked }: ChildProps) {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <motion.div
-            initial = {{opacity: 0, scale: 0.8, rotate: 360}}
-            animate = {{opacity: 1, scale: 1, rotate: 0}}
-            transition = {transitionConfig(1)}
+              initial={{ opacity: 0, scale: 0.8, rotate: 360 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={transitionConfig(1)}
             >
               <Link href="/" className="flex items-center">
                 <Image
@@ -83,23 +83,24 @@ export default function Navbar({ clicked }: ChildProps) {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-
               <motion.div
-              {...NavLinkAnimation}
-              transition = {transitionConfig(1.3)}
+                {...NavLinkAnimation}
+                transition={transitionConfig(1.3)}
               >
                 <NavLink href="/">Home</NavLink>
               </motion.div>
 
               <motion.div
-              {...NavLinkAnimation}
-              transition = {transitionConfig(1.6)}>
+                {...NavLinkAnimation}
+                transition={transitionConfig(1.6)}
+              >
                 <NavLink href="/about">About Us</NavLink>
               </motion.div>
 
               <motion.div
-              {...NavLinkAnimation}
-              transition = {transitionConfig(1.9)}>
+                {...NavLinkAnimation}
+                transition={transitionConfig(1.9)}
+              >
                 <button
                   className="relative uppercase text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium tracking-wider"
                   onMouseEnter={() => toggleEventDetails()}
@@ -157,14 +158,16 @@ export default function Navbar({ clicked }: ChildProps) {
               </motion.div>
 
               <motion.div
-              {...NavLinkAnimation}
-              transition = {transitionConfig(2.2)}>
+                {...NavLinkAnimation}
+                transition={transitionConfig(2.2)}
+              >
                 <NavLink href="/#faq">FAQ</NavLink>
               </motion.div>
 
               <motion.div
-              {...NavLinkAnimation}
-              transition = {transitionConfig(2.5)}>
+                {...NavLinkAnimation}
+                transition={transitionConfig(2.5)}
+              >
                 <NavLink href="/#contact">Contact</NavLink>
               </motion.div>
             </div>
