@@ -63,7 +63,7 @@ export default function WhyJoin() {
     <section className="flex flex-col items-center WhyJoinSwiperOverride">
       <motion.h2 
       {...animateInConfig1}
-      transition={transitionConfig(0)}
+      transition={transitionConfig(0.3)}
       className="flex items-center font-semibold text-[28px] md:text-[40px] tracking-tight mb-16">
         <hr className="block w-2 h-10 bg-orange-300 mr-4" />
         Why Join?
@@ -72,7 +72,7 @@ export default function WhyJoin() {
       {/* Decagon Carousel*/}
       <motion.div
       {...animateInConfig2}
-      transition={transitionConfig(0.5)}
+      transition={transitionConfig(0.6)}
       className="w-full h-[270px] md:h-[450px]">
         <Swiper
           modules={[Navigation, Pagination, A11y, Keyboard, EffectCoverflow]}
@@ -126,7 +126,7 @@ export default function WhyJoin() {
 
       <motion.div
       {...animateInConfig1}
-      transition={transitionConfig(1)}
+      transition={transitionConfig(0.9)}
       className="flex flex-col items-center mt-16">
         <p className="md:text-[24px] text-center">
           Be a part of our 2024 event this January!

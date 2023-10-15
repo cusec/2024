@@ -47,7 +47,7 @@ export default function AboutUs() {
     <div className="relative AboutUsSwiperOverride">
       <motion.div
         {...animateInConfigCarousel}
-        transition={transitionConfig(0.5)}
+        transition={transitionConfig(0.7)}
         className="absolute -right-[0vw] -top-10 hidden md:block"
       >
         <Image
@@ -99,7 +99,7 @@ export default function AboutUs() {
 
       <motion.div
         {...animateInConfigCarousel}
-        transition={transitionConfig(0.9)}
+        transition={transitionConfig(0.7)}
         className="bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot px-2 py-3 mt-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
         style={{
           boxShadow: "inset 0px 2px 4px rgba(0, 0, 0, 0.5)",
