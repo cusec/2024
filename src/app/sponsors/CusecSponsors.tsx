@@ -159,7 +159,6 @@ export default function CusecSponsors() {
               width={20}
               alt="Sponsor Logos"
               layout="responsive"
-              className=""
               priority
             />
           </motion.div>

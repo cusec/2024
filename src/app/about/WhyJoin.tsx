@@ -20,7 +20,7 @@ import discover_decagon from "@/components/About Us/Carousel Images/discover_dec
 import discover_icon from "@/components/About Us/Carousel Images/discover_icon.svg";
 
 import { useState, useEffect } from "react";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function WhyJoin() {
   const [stretchValue, setStretchValue] = useState(300);
@@ -37,7 +37,7 @@ export default function WhyJoin() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  
+
   const animateInConfig1 = {
     initial: { opacity: 0, x: 100 },
     whileInView: { opacity: 1, x: 0 },
@@ -45,8 +45,8 @@ export default function WhyJoin() {
   };
 
   const animateInConfig2 = {
-    initial: { opacity: 0, scale: 0.8},
-    whileInView: { opacity: 1, scale: 1},
+    initial: { opacity: 0, scale: 0.8 },
+    whileInView: { opacity: 1, scale: 1 },
     viewport: { once: true },
   };
 
@@ -57,23 +57,24 @@ export default function WhyJoin() {
     bounce: 0.5,
   });
 
-
   return (
     // The 'WhyJoinSwiperOverride' class is located in the 'globals.css' file
-    <section className="flex flex-col items-center WhyJoinSwiperOverride">
-      <motion.h2 
-      {...animateInConfig1}
-      transition={transitionConfig(0.3)}
-      className="flex items-center font-semibold text-[28px] md:text-[40px] tracking-tight mb-16">
+    <section className="flex flex-col items-center SwiperNavigationOverride">
+      <motion.h2
+        {...animateInConfig1}
+        transition={transitionConfig(0.3)}
+        className="flex items-center font-semibold text-[28px] md:text-[40px] tracking-tight mb-16"
+      >
         <hr className="block w-2 h-10 bg-orange-300 mr-4" />
         Why Join?
       </motion.h2>
 
       {/* Decagon Carousel*/}
       <motion.div
-      {...animateInConfig2}
-      transition={transitionConfig(0.6)}
-      className="w-full h-[270px] md:h-[450px]">
+        {...animateInConfig2}
+        transition={transitionConfig(0.6)}
+        className="w-full h-[270px] md:h-[450px]"
+      >
         <Swiper
           modules={[Navigation, Pagination, A11y, Keyboard, EffectCoverflow]}
           slidesPerView={2}
@@ -125,9 +126,10 @@ export default function WhyJoin() {
       </motion.div>
 
       <motion.div
-      {...animateInConfig1}
-      transition={transitionConfig(0.9)}
-      className="flex flex-col items-center mt-16">
+        {...animateInConfig1}
+        transition={transitionConfig(0.9)}
+        className="flex flex-col items-center mt-16"
+      >
         <p className="md:text-[24px] text-center">
           Be a part of our 2024 event this January!
         </p>

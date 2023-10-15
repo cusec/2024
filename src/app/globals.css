@@ -94,7 +94,7 @@ html {
 }
 
 /*  Override default Swiper parameters in 'WhyJoin' component in about page*/
-.WhyJoinSwiperOverride {
+.SwiperNavigationOverride {
   --swiper-navigation-color: #e9dede;
   --swiper-navigation-size: 18px;
 
@@ -102,9 +102,9 @@ html {
   --swiper-navigation-sides-offset: 46%;
 
   @media (min-width: 768px) {
-  --swiper-navigation-size: 18px;
-  --swiper-navigation-top-offset: 94%;
-  --swiper-navigation-sides-offset: 47%;
+    --swiper-navigation-size: 18px;
+    --swiper-navigation-top-offset: 94%;
+    --swiper-navigation-sides-offset: 47%;
   }
   .swiper-button-next,
   .swiper-button-prev {
