@@ -62,7 +62,7 @@ export default function Sponsor() {
               "Networking Benefits",
               "Workshops & Talks hosted by sponsors",
             ]}
-            buttonLink="https://www.youtube.com/watch?v=BBJa32lCaaY&ab_channel=LegacyPNDA"
+            buttonLink="https://www.tickettailor.com/events/cusec/943944"
             themeColor="roseQuartz"
           />
         </motion.div>
@@ -79,7 +79,7 @@ export default function Sponsor() {
               "Priority Networking",
               "Exclusive CUSEC 2024 Merchandise",
             ]}
-            buttonLink="https://www.youtube.com/watch?v=BBJa32lCaaY&ab_channel=LegacyPNDA"
+            buttonLink="https://www.tickettailor.com/events/cusec/943944"
             themeColor="goldenApricot"
           />
         </motion.div>
