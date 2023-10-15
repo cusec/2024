@@ -7,7 +7,7 @@ import carousel_image_3 from "@/components/About Us/Carousel Images/carousel_ima
 import carousel_image_4 from "@/components/About Us/Carousel Images/carousel_image_4.png";
 import carousel_image_5 from "@/components/About Us/Carousel Images/carousel_image_5.png";
 import carousel_image_6 from "@/components/About Us/Carousel Images/carousel_image_6.png";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 const animateInConfigText = {
   initial: { opacity: 0, x: 100 },
@@ -16,8 +16,8 @@ const animateInConfigText = {
 };
 
 const animateInConfigCarousel = {
-  initial: { opacity: 0, scale: 0.8},
-  whileInView: { opacity: 1, scale: 1},
+  initial: { opacity: 0, scale: 0.8 },
+  whileInView: { opacity: 1, scale: 1 },
   viewport: { once: true },
 };
 
@@ -41,12 +41,22 @@ import {
 import "swiper/css/bundle";
 
 export default function AboutUs() {
+
+// const pagination = {
+//   clickable: true,
+//   renderBullet: function (index: any, className: string) {
+//     const bgColor = className.includes('swiper-pagination-bullet-active') ? '#E9DEDE' : '#C594EB';
+//     return `<span class="${className}" style="width: 1.5rem; height: 0.4rem; background-color: ${bgColor}; border-radius: 0.2rem; margin: 0 0.25rem;"></span>`;
+//   },
+// }
+
   return (
     <div className="relative">
       <motion.div
-      {...animateInConfigCarousel}
-      transition={transitionConfig(0.5)}
-      className="absolute -right-[0vw] -top-10 hidden md:block">
+        {...animateInConfigCarousel}
+        transition={transitionConfig(0.5)}
+        className="absolute -right-[0vw] -top-10 hidden md:block"
+      >
         <Image
           src={circle_grid_v2}
           alt="Horizontal grid of grey circles"
@@ -55,9 +65,10 @@ export default function AboutUs() {
         />
       </motion.div>
       <motion.section
-      {...animateInConfigText}
-      transition={transitionConfig(0.5)}
-      className="lg:max-w-[1024px] max-w-[768px] space-y-6 px-6 md:px-12 ">
+        {...animateInConfigText}
+        transition={transitionConfig(0.5)}
+        className="lg:max-w-[1024px] max-w-[768px] space-y-6 px-6 md:px-12 "
+      >
         <p className="font-semibold text-[28px] md:text-[40px] tracking-tight">
           About Us
         </p>
@@ -78,29 +89,28 @@ export default function AboutUs() {
       </motion.section>
 
       <motion.div
-      {...animateInConfigCarousel}
-      transition={transitionConfig(0.7)}
+        {...animateInConfigCarousel}
+        transition={transitionConfig(0.7)}
         className="hidden md:block absolute bottom-0 -left-10 scale-125 w-[40px] h-[80px] md:h-[120px] md:top-[80px] md:right-[40px] lg:top-[100px] lg:right-[40px] lg:h-[160px]"
       >
-      <Image
-        src={circle_grid_v1}
-        alt="Vertical grid of grey circles"
-      />
+        <Image src={circle_grid_v1} alt="Vertical grid of grey circles" />
       </motion.div>
 
       <motion.div
-      {...animateInConfigCarousel}
-      transition={transitionConfig(0.7)}
-      className="flex justify-end mt-6 translate-x-3 md:hidden">
+        {...animateInConfigCarousel}
+        transition={transitionConfig(0.7)}
+        className="flex justify-end mt-6 translate-x-3 md:hidden"
+      >
         <Image src={circle_grid_v2} alt="Horizontal grid of grey circles" />
       </motion.div>
 
       <motion.div
-      {...animateInConfigCarousel}
-      transition={transitionConfig(0.9)}
+        {...animateInConfigCarousel}
+        transition={transitionConfig(0.9)}
         className="bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot px-2 py-3 mt-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
         style={{
           boxShadow: "inset 0px 2px 4px rgba(0, 0, 0, 0.5)",
+          
         }}
       >
         {/* Image Carousel */}
@@ -116,7 +126,7 @@ export default function AboutUs() {
           mousewheel={true}
           keyboard={true}
           centeredSlides={true}
-          pagination={{ clickable: true }}
+          pagination={{clickable: true}}
           scrollbar={{ draggable: true }}
           // onSwiper={(swiper) => console.log(swiper)}
           // onSlideChange={() => console.log("slide change")}
@@ -165,27 +175,6 @@ export default function AboutUs() {
             </div>
           </SwiperSlide>
         </Swiper>
-
-        {/* <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          centeredSlides={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper h-20"
-        >
-          <SwiperSlide className="border border-black">Slide 1</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 2</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 3</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 4</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 5</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 6</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 7</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 8</SwiperSlide>
-          <SwiperSlide className="border border-black">Slide 9</SwiperSlide>
-        </Swiper> */}
       </motion.div>
     </div>
   );
