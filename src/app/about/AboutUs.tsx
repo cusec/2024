@@ -65,7 +65,7 @@ export default function AboutUs() {
         <p className="font-semibold text-[28px] md:text-[40px] tracking-tight">
           About Us
         </p>
-              <hr className="relative left-[5.75rem] md:left-[8rem] max-w-[2rem] md:max-w-[3.5rem] h-2 bg-roseQuartz mb-2 mr-auto" />
+              <hr className="relative left-[5.75rem] md:left-[8rem] max-w-[2rem] md:max-w-[3.05rem] h-2 bg-roseQuartz mb-2 mr-auto" />
         <p className="font-regular text-[15px] md:text-[20px] mt-6">
           CUSEC is an annual software engineering conference organized by
           students for students across Canada. A small team of tech enthusiasts
