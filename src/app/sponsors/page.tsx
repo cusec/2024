@@ -7,16 +7,35 @@ import Image from "next/image";
 import Main from "@/app/sponsors/Main";
 import CusecSponsors from "@/app/sponsors/CusecSponsors";
 import WhySponsor from "./WhySponsor";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
+
+const animateInConfigImage = {
+  initial: { opacity: 0, scale: 0.8 },
+  whileInView: { opacity: 1, scale: 1 },
+  viewport: { once: true },
+};
+
+const animateInConfigText = {
+  initial: { opacity: 0, x: 100 },
+  whileInView: { opacity: 1, x: 0 },
+  viewport: { once: true },
+};
+
+const transitionConfig = (delay = 0) => ({
+  duration: 1.5,
+  delay: delay,
+  type: "spring",
+  bounce: 0.1,
+});
 
 export default function Sponsors() {
   return (
     <div className="overflow-hidden">
-        <title>Sponsors</title>
-        <meta
-          name="description"
-          content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."
-        />
+      <title>Sponsors</title>
+      <meta
+        name="description"
+        content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."
+      />
 
       <div className="w-full">
         {/* Top Left Gradient Lines */}
@@ -70,7 +89,7 @@ export default function Sponsors() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center">
+        <motion.div className="flex flex-col items-center">
           <div
             className="w-full gradientBackground"
             style={{
@@ -80,13 +99,35 @@ export default function Sponsors() {
           >
             <Fade>
               <div className="bg-black bg-opacity-60 px-8 flex flex-col justify-center items-center text-center py-48 space-y-6 md:space-y-8">
-                <p className="text-white text-[16px] md:text-[26px]">Want to help spark inspiration into tech-savvy minds?</p>
-                <p className="font-semibold text-[20px] md:text-[40px] w-fit text-transparent bg-clip-text bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot">Become a 2024 Sponsor</p>
-                <a href="mailto:sponsor@cusec.net?subject=CUSEC 2024 Sponsorship Information Request" className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-10 md:px-20 py-1 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white">Sign Up</a>
+                <motion.p
+                  {...animateInConfigText}
+                  transition={transitionConfig()}
+                  className="text-white text-[16px] md:text-[26px]"
+                >
+                  Want to help spark inspiration into tech-savvy minds?
+                </motion.p>
+                <motion.p
+                  {...animateInConfigText}
+                  transition={transitionConfig(0.3)}
+                  className="font-semibold text-[20px] md:text-[40px] w-fit text-transparent bg-clip-text bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot"
+                >
+                  Become a 2024 Sponsor
+                </motion.p>
+                <motion.div
+                  {...animateInConfigImage}
+                  transition={transitionConfig(0.6)}
+                >
+                  <a
+                    href="mailto:sponsor@cusec.net?subject=CUSEC 2024 Sponsorship Information Request"
+                    className="flex drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-10 md:px-20 py-1 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white"
+                  >
+                    Sign Up
+                  </a>
+                </motion.div>
               </div>
             </Fade>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
