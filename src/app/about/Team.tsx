@@ -15,7 +15,7 @@ const transitionConfig = (delay = 0) => ({
   bounce: 0.5,
 });
 
-const TOTAL_ANIMATION_DURATION = 1.5; // 1.5 seconds for all cards to appear
+const TOTAL_ANIMATION_DURATION = 0.6; // 0.6 seconds for all cards to appear
 const STAGGER_DELAY = TOTAL_ANIMATION_DURATION / teamMembers.length;
 
 export default function Team() {
