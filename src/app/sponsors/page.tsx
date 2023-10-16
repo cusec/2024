@@ -121,7 +121,7 @@ export default function Sponsors() {
                     href="mailto:sponsor@cusec.net?subject=CUSEC 2024 Sponsorship Information Request"
                     className="flex drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-10 md:px-20 py-1 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white"
                   >
-                    Sign Up
+                    Contact Us
                   </a>
                 </motion.div>
               </div>
