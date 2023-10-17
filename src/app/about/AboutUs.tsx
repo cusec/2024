@@ -41,9 +41,8 @@ import {
 import "swiper/css/bundle";
 
 export default function AboutUs() {
-
   return (
-        // The 'AboutUsSwiperOverride' class is located in the 'globals.css' file
+    // The 'AboutUsSwiperOverride' class is located in the 'globals.css' file
     <div className="relative AboutUsSwiperOverride">
       <motion.div
         {...animateInConfigCarousel}
@@ -57,30 +56,42 @@ export default function AboutUs() {
           priority
         />
       </motion.div>
-      <motion.section
-        {...animateInConfigText}
-        transition={transitionConfig(0.5)}
-        className="lg:max-w-[1024px] max-w-[768px] px-6 md:px-12 "
-      >
-        <p className="font-semibold text-[28px] md:text-[40px] tracking-tight">
+      <section className="lg:max-w-[1024px] max-w-[768px] px-6 md:px-12 ">
+        <motion.p
+          {...animateInConfigText}
+          transition={transitionConfig(0)}
+          className="font-semibold text-[28px] md:text-[40px] tracking-tight"
+        >
           About Us
-        </p>
-              <hr className="relative left-[5.75rem] md:left-[8rem] max-w-[2rem] md:max-w-[3.05rem] h-2 bg-roseQuartz mb-2 mr-auto" />
-        <p className="font-regular text-[15px] md:text-[20px] mt-6">
+        </motion.p>
+        <motion.hr
+          {...animateInConfigText}
+          transition={transitionConfig(0.2)}
+          className="relative left-[5.75rem] md:left-[8rem] max-w-[2rem] md:max-w-[3.05rem] h-2 bg-roseQuartz mb-2 mr-auto"
+        />
+        <motion.p
+          {...animateInConfigText}
+          transition={transitionConfig(0.4)}
+          className="font-regular text-[15px] md:text-[20px] mt-6"
+        >
           CUSEC is an annual software engineering conference organized by
           students for students across Canada. A small team of tech enthusiasts
           founded CUSEC in 2002 on a mission to educate, inspire, and expose
           students to a diverse range of areas in software engineering and
           computer science.
-        </p>
+        </motion.p>
 
-        <p className="font-regular text-[15px] md:text-[20px] mt-6">
+        <motion.p
+          {...animateInConfigText}
+          transition={transitionConfig(0.6)}
+          className="font-regular text-[15px] md:text-[20px] mt-6"
+        >
           These set of values have been integrated into CUSEC for the last 21
           years while enabling attendees to discover knowledgeable speakers,
           connect with sponsoring companies, and make lifelong friends in a safe
           and comfortable space.
-        </p>
-      </motion.section>
+        </motion.p>
+      </section>
 
       <motion.div
         {...animateInConfigCarousel}
@@ -104,7 +115,6 @@ export default function AboutUs() {
         className="bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot px-2 py-3 mt-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
         style={{
           boxShadow: "inset 0px 2px 4px rgba(0, 0, 0, 0.5)",
-          
         }}
       >
         {/* Image Carousel */}
@@ -120,7 +130,7 @@ export default function AboutUs() {
           mousewheel={true}
           keyboard={true}
           centeredSlides={true}
-          pagination={{clickable: true}}
+          pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           // onSwiper={(swiper) => console.log(swiper)}
           // onSlideChange={() => console.log("slide change")}
@@ -133,25 +143,37 @@ export default function AboutUs() {
           }}
         >
           <SwiperSlide>
-            <div className="flex justify-center lg:block">
+            <motion.div
+              {...animateInConfigCarousel}
+              transition={transitionConfig(0.6)}
+              className="flex justify-center lg:block"
+            >
               <Image
                 src={carousel_image_1}
                 alt="People seated watching keynote speech"
               />
-            </div>
+            </motion.div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center lg:block">
+            <motion.div
+              {...animateInConfigCarousel}
+              transition={transitionConfig(0.8)}
+              className="flex justify-center lg:block"
+            >
               <Image
                 src={carousel_image_2}
                 alt="CUSEC 2023 team holding up banner"
               />
-            </div>
+            </motion.div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center lg:block">
+            <motion.div
+              {...animateInConfigCarousel}
+              transition={transitionConfig(1)}
+              className="flex justify-center lg:block"
+            >
               <Image src={carousel_image_3} alt="People playing board games" />
-            </div>
+            </motion.div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="flex justify-center lg:block">
