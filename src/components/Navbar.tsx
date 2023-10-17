@@ -55,6 +55,26 @@ export default function Navbar({ clicked }: ChildProps) {
     bounce: 0.5,
   });
 
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
+    e.preventDefault();
+
+    const offset = window.innerWidth < 768 ? 100 : 200;
+    const element = document.getElementById(id);
+
+    if (element) {
+      // If the element exists on the current page, scroll to it
+      window.scrollTo({
+        top: element.offsetTop - offset,
+        behavior: "smooth",
+      });
+    } else {
+      window.location.href = `/#${id}`;
+    }
+  };
+
   return (
     <nav className="bg-black/[.75] z-50 fixed top-0 w-full flex justify-center bg-clip-padding">
       {/* Desktop Navbar */}
@@ -171,14 +191,29 @@ export default function Navbar({ clicked }: ChildProps) {
                 {...NavLinkAnimation}
                 transition={transitionConfig(1.1)}
               >
-                <NavLink href="/#faq">FAQ</NavLink>
+                <Link
+                  href="/#faq"
+                  passHref
+                  onClick={(e) => handleNavClick(e, "faq")}
+                  className="flex uppercase text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium tracking-wider"
+                >
+                  FAQ
+                </Link>
               </motion.div>
 
               <motion.div
                 {...NavLinkAnimation}
                 transition={transitionConfig(1.3)}
               >
-                <NavLink href="/#contact">Contact</NavLink>
+                <Link
+                  href="/#contact"
+                  onClick={(e) => {
+                    handleNavClick(e, "contact");
+                  }}
+                  className="flex uppercase text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium tracking-wider"
+                >
+                  Contact
+                </Link>
               </motion.div>
             </div>
           </div>
@@ -272,12 +307,26 @@ export default function Navbar({ clicked }: ChildProps) {
               </ul>
             </div>
           </button>
-          <NavLink toggleMobileMenu={toggleMobileMenu} href="/#faq">
+          <Link
+            href="/#faq"
+            onClick={(e) => {
+              handleNavClick(e, "faq");
+              toggleMobileMenu();
+            }}
+            className="flex uppercase text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium tracking-wider"
+          >
             FAQ
-          </NavLink>
-          <NavLink toggleMobileMenu={toggleMobileMenu} href="/#contact">
+          </Link>
+          <Link
+            href="/#contact"
+            onClick={(e) => {
+              handleNavClick(e, "contact");
+              toggleMobileMenu();
+            }}
+            className="flex uppercase text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium tracking-wider"
+          >
             Contact
-          </NavLink>
+          </Link>
         </div>
       </div>
     </nav>

@@ -104,6 +104,7 @@ export default function Sponsor() {
           src={circle_grid_v2}
           alt="Horizontal grid of grey circles"
           className="scale-125"
+          id="faq"
         />
       </motion.span>
     </>
