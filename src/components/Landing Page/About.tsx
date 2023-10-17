@@ -86,7 +86,7 @@ export default function About() {
           >
             <Decagon1
               image={decagon_gradient_1}
-              TitleText={"1K+"}
+              TitleText={"10K+"}
               SubtitleText={"Attendees"}
             />
           </motion.div>
@@ -119,8 +119,8 @@ export default function About() {
             >
               <Decagon2
                 image={large_decagon}
-                TitleText={"21"}
-                SubtitleText={"Events"}
+                TitleText={"23"}
+                SubtitleText={"Years"}
               />
             </motion.div>
           </div>
@@ -130,7 +130,7 @@ export default function About() {
           >
             <Decagon1
               image={decagon_gradient_4}
-              TitleText={"50+"}
+              TitleText={"500+"}
               SubtitleText={"VIP Members"}
             />
           </motion.div>
