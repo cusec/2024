@@ -32,6 +32,7 @@ export default function Sponsor() {
           </motion.h2>
           <motion.hr
             {...animateInConfig(true)}
+            initial={{ opacity: 0, x: -50 }}
             transition={transitionConfig(0.2)}
             className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-purple-500 mb-6 mt-1"
           />
