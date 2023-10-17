@@ -11,15 +11,21 @@ import Decagon2 from "./Decagon2";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const fadeInConfig1 = {
-  initial: { opacity: 0 },
-  whileInView: { opacity: 1 },
+const fadeInConfigDecagon = {
+  initial: { opacity: 0, scale: 0.8 },
+  whileInView: { opacity: 1, scale: 1 },
   viewport: { once: true },
 };
 
-const fadeInConfig2 = {
-  initial: { opacity: 0, scale: 0.8 },
-  whileInView: { opacity: 1, scale: 1 },
+const fadeInConfigText = {
+  initial: { opacity: 0, x: 100 },
+  whileInView: { opacity: 1, x: 0 },
+  viewport: { once: true },
+};
+
+const fadeInConfigButton = {
+  initial: { opacity: 0, y: -30 },
+  whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
 };
 
@@ -34,7 +40,7 @@ export default function About() {
   return (
     <>
       {/* Vertical grid of grey circles */}
-      <motion.div {...fadeInConfig2} transition={transitionConfig(0.3)}>
+      <motion.div {...fadeInConfigDecagon} transition={transitionConfig(0.3)}>
         <Image
           src={circle_grid_v1}
           alt="Vertical grid of grey circles"
@@ -42,14 +48,24 @@ export default function About() {
         />
       </motion.div>
 
-      <motion.section
-        {...fadeInConfig1}
-        transition={transitionConfig(0.6)}
-        className="lg:max-w-[1024px] max-w-[768px] pl-12 "
-      >
-        <p className="font-semibold text-[28px]">Get To Know Us</p>
-        <hr className="block max-w-[3rem] md:max-w-[2.5rem] h-2 bg-roseQuartz mb-10 mt-2" />
-        <section className="space-y-6">
+      <section className="lg:max-w-[1024px] max-w-[768px] pl-12 ">
+        <motion.p
+          {...fadeInConfigText}
+          transition={transitionConfig(0.5)}
+          className="font-semibold text-[28px]"
+        >
+          Get To Know Us
+        </motion.p>
+        <motion.hr
+          {...fadeInConfigText}
+          transition={transitionConfig(0.7)}
+          className="block max-w-[3rem] md:max-w-[2.5rem] h-2 bg-roseQuartz mb-10 mt-2"
+        />
+        <motion.section
+          {...fadeInConfigText}
+          transition={transitionConfig(0.9)}
+          className="space-y-6"
+        >
           <p className="font-regular text-[15px]">
             CUSEC is a student-led software engineering conference for students
             across Canada that has educated and inspired many for the last 21
@@ -58,20 +74,26 @@ export default function About() {
             companies, and make lifelong friendships within a safe and
             comfortable space.
           </p>
-        </section>
-      </motion.section>
+        </motion.section>
+      </section>
 
       {/* Decagons */}
       <div className="flex flex-col justify-center items-center py-8 space-y-2">
         <section className="flex space-x-6">
-          <motion.div {...fadeInConfig2} transition={transitionConfig(0.8)}>
+          <motion.div
+            {...fadeInConfigDecagon}
+            transition={transitionConfig(0.5)}
+          >
             <Decagon1
               image={decagon_gradient_1}
               TitleText={"1K+"}
               SubtitleText={"Attendees"}
             />
           </motion.div>
-          <motion.div {...fadeInConfig2} transition={transitionConfig(1)}>
+          <motion.div
+            {...fadeInConfigDecagon}
+            transition={transitionConfig(0.7)}
+          >
             <Decagon1
               image={decagon_gradient_2}
               TitleText={"220+"}
@@ -80,7 +102,10 @@ export default function About() {
           </motion.div>
         </section>
         <section className="flex items-center space-x-4">
-          <motion.div {...fadeInConfig2} transition={transitionConfig(0.6)}>
+          <motion.div
+            {...fadeInConfigDecagon}
+            transition={transitionConfig(0.3)}
+          >
             <Decagon1
               image={decagon_gradient_3}
               TitleText={"280+"}
@@ -88,7 +113,10 @@ export default function About() {
             />
           </motion.div>
           <div className="">
-            <motion.div {...fadeInConfig2} transition={transitionConfig(1.4)}>
+            <motion.div
+              {...fadeInConfigDecagon}
+              transition={transitionConfig(1.1)}
+            >
               <Decagon2
                 image={large_decagon}
                 TitleText={"21"}
@@ -96,7 +124,10 @@ export default function About() {
               />
             </motion.div>
           </div>
-          <motion.div {...fadeInConfig2} transition={transitionConfig(1.2)}>
+          <motion.div
+            {...fadeInConfigDecagon}
+            transition={transitionConfig(0.9)}
+          >
             <Decagon1
               image={decagon_gradient_4}
               TitleText={"50+"}
@@ -106,7 +137,7 @@ export default function About() {
         </section>
       </div>
       <div className="flex justify-center">
-        <motion.div {...fadeInConfig2} transition={transitionConfig(1.6)}>
+        <motion.div {...fadeInConfigButton} transition={transitionConfig(1.3)}>
           <Link
             className={`drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-royalBlue hover:bg-goldenApricot mx-auto px-5 md:px-10 py-1 mt-3 md:mt-6 text-center rounded-full uppercase md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
             href={`/about`}
@@ -118,7 +149,7 @@ export default function About() {
 
       <motion.span
         className="flex justify-end pb-8"
-        {...fadeInConfig2}
+        {...fadeInConfigDecagon}
         transition={transitionConfig(0.3)}
       >
         <Image

@@ -19,27 +19,36 @@ const transitionConfig = (delay = 0) => ({
 });
 
 export default function Sponsor() {
-
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <motion.div
-        {...animateInConfig(true)}
-        transition = {transitionConfig(0.3)}
-        className="mt-10 md:my-10">
-          <h2 className="text-[28px] md:text-[40px] font-semibold tracking-tight">
+        <div className="mt-10 md:my-10">
+          <motion.h2
+            {...animateInConfig(true)}
+            transition={transitionConfig(0)}
+            className="text-[28px] md:text-[40px] font-semibold tracking-tight"
+          >
             Attend Our 2024 Event
-          </h2>
-              <hr className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-purple-500 mb-6 mt-1" />
-          <p className="md:text-[24px] font-semibold bg-clip-text text-transparent bg-gradient-to-tr from-royalPurple to-roseQuartz tracking-tight">
+          </motion.h2>
+          <motion.hr
+            {...animateInConfig(true)}
+            transition={transitionConfig(0.2)}
+            className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-purple-500 mb-6 mt-1"
+          />
+          <motion.p
+            {...animateInConfig(true)}
+            transition={transitionConfig(0.4)}
+            className="md:text-[24px] font-semibold bg-clip-text text-transparent bg-gradient-to-tr from-royalPurple to-roseQuartz tracking-tight"
+          >
             Pricing Plans
-          </p>
-        </motion.div>
+          </motion.p>
+        </div>
 
         <motion.span
-        {...animateInConfig(false)}
-        transition = {transitionConfig(0.3)}
-        className="flex justify-end mr-[-8px] mb-4">
+          {...animateInConfig(false)}
+          transition={transitionConfig(0.3)}
+          className="flex justify-end mr-[-8px] mb-4"
+        >
           <Image
             src={circle_grid_v2}
             alt="Horizontal grid of grey circles"
@@ -50,8 +59,9 @@ export default function Sponsor() {
 
       <div className="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-10">
         <motion.div
-        {...animateInConfig(false)}
-        transition = {transitionConfig(0.3)}>
+          {...animateInConfig(false)}
+          transition={transitionConfig(0.3)}
+        >
           <TicketCard
             title={"Basic"}
             description={"Learn, network, and grow with CUSEC"}
@@ -67,8 +77,9 @@ export default function Sponsor() {
           />
         </motion.div>
         <motion.div
-        {...animateInConfig(false)}
-        transition = {transitionConfig(0.6)}>
+          {...animateInConfig(false)}
+          transition={transitionConfig(0.6)}
+        >
           <TicketCard
             title={"VIP"}
             description={"Get an exclusive CUSEC experience"}
@@ -85,9 +96,10 @@ export default function Sponsor() {
         </motion.div>
       </div>
       <motion.span
-      {...animateInConfig(false)}
-      transition = {transitionConfig(0.3)}
-      className="flex mb-4 ml-[-1rem]">
+        {...animateInConfig(false)}
+        transition={transitionConfig(0.3)}
+        className="flex mb-4 ml-[-1rem]"
+      >
         <Image
           src={circle_grid_v2}
           alt="Horizontal grid of grey circles"

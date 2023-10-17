@@ -64,9 +64,14 @@ export default function Navbar({ clicked }: ChildProps) {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <motion.div
-              initial={{ opacity: 0, scale: 0.8, rotate: 360 }}
+              initial={{ opacity: 0, scale: 0.8, rotate: 1080 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={transitionConfig(0.5)}
+              transition={{
+                duration: 6,
+                delay: 0,
+                type: "spring",
+                bounce: 0.5,
+              }}
             >
               <Link href="/" className="flex items-center">
                 <Image
@@ -148,7 +153,12 @@ export default function Navbar({ clicked }: ChildProps) {
                   >
                     <div className="bg-gradient-to-br from-lavenderFog to-goldenApricot rounded-2xl">
                       <ul className="space-y-2 flex flex-col bg-black/[.65] rounded-2xl p-4">
-                        <NavLink href="https://www.tickettailor.com/events/cusec/943944" target="_blank">Sign up</NavLink>
+                        <NavLink
+                          href="https://www.tickettailor.com/events/cusec/943944"
+                          target="_blank"
+                        >
+                          Sign up
+                        </NavLink>
                         {/* <NavLink href="/">Schedule</NavLink> */}
                         <NavLink href="/sponsors">Sponsors</NavLink>
                       </ul>
@@ -246,7 +256,11 @@ export default function Navbar({ clicked }: ChildProps) {
               }`}
             >
               <ul className="space-y-2 flex flex-col p-4">
-                <NavLink toggleMobileMenu={toggleMobileMenu} href="https://www.tickettailor.com/events/cusec/943944" target="_blank">
+                <NavLink
+                  toggleMobileMenu={toggleMobileMenu}
+                  href="https://www.tickettailor.com/events/cusec/943944"
+                  target="_blank"
+                >
                   Sign Up
                 </NavLink>
                 {/* <NavLink toggleMobileMenu={toggleMobileMenu} href="/">

@@ -11,6 +11,11 @@ function animateInConfig(text: boolean) {
     viewport: { once: true },
   };
 }
+const fadeInConfigImage = {
+  initial: { opacity: 0, scale: 0.8 },
+  whileInView: { opacity: 1, scale: 1 },
+  viewport: { once: true },
+};
 
 const transitionConfig = (delay = 0) => ({
   duration: 1.5,
@@ -47,9 +52,17 @@ export default function Sponsor() {
               className="relative max-w-md aspect-square mx-auto w-full"
             >
               {/* This div is for the background gradient */}
-              <div className="absolute max-w-md aspect-square top-[-17px] right-[-18px] bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-[95%]"></div>
+              <motion.div
+                {...fadeInConfigImage}
+                transition={transitionConfig(0.5)}
+                className="absolute max-w-md aspect-square top-[-17px] right-[-18px] bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-[95%]"
+              ></motion.div>
               <BlueBorderSquareBox>
-                <div className="aspect-square flex flex-col justify-center items-center relative right-4">
+                <motion.div
+                  {...fadeInConfigImage}
+                  transition={transitionConfig(0.7)}
+                  className="aspect-square flex flex-col justify-center items-center relative right-4"
+                >
                   <Image
                     src={sponsor_logos}
                     height={40}
@@ -59,35 +72,47 @@ export default function Sponsor() {
                     className=""
                     priority
                   />
-                </div>
+                </motion.div>
               </BlueBorderSquareBox>
             </motion.div>
           </div>
 
-          <motion.div
-            {...animateInConfig(true)}
-            transition={transitionConfig(0.3)}
-            className="md:text-right mx-auto md:pl-10"
-          >
-            <h2 className="text-[28px] md:text-[40px] font-semibold hidden md:block">
+          <div className="md:text-right mx-auto md:pl-10">
+            <motion.h2
+              {...animateInConfig(true)}
+              transition={transitionConfig(0.3)}
+              className="text-[28px] md:text-[40px] font-semibold hidden md:block"
+            >
               Past CUSEC Sponsors
-            </h2>
-            <hr className="hidden md:block max-w-[3rem] md:max-w-[4rem] h-2 bg-orange-300 mb-2 mt-2 ml-auto" />
-            <p className="md:text-[20px] font-regular pt-10 pb-6">
+            </motion.h2>
+            <motion.hr
+              {...animateInConfig(true)}
+              transition={transitionConfig(0.5)}
+              className="hidden md:block max-w-[3rem] md:max-w-[4rem] h-2 bg-orange-300 mb-2 mt-2 ml-auto"
+            />
+            <motion.p
+              {...animateInConfig(true)}
+              transition={transitionConfig(0.7)}
+              className="md:text-[20px] font-regular pt-10 pb-6"
+            >
               Over the last 21 years, CUSEC has collaborated with an extensive
               array of industry leaders. These partnerships have helped make
               CUSEC possible while providing students invaluable opportunities
               to create lasting connections with seasoned professionals.
-            </p>
-            <div className="flex justify-center md:justify-end">
+            </motion.p>
+            <motion.div
+              {...animateInConfig(true)}
+              transition={transitionConfig(0.9)}
+              className="flex justify-center md:justify-end"
+            >
               <Link
                 href={"/sponsors"}
                 className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white"
               >
                 Learn&nbsp;More
               </Link>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </>

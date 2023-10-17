@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 function animateInConfig(text: boolean) {
   return {
-    initial: { opacity: 0, y: text ? -20 : 0 },
-    whileInView: { opacity: 1, y: 0 },
+    initial: { opacity: 0, x: text ? 100 : 0, scale: text ? 1 : 0.8 },
+    whileInView: { opacity: 1, x: 0, scale: 1 },
     viewport: { once: true },
   };
 }
@@ -20,7 +20,7 @@ const transitionConfig = (delay = 0) => ({
 export default function Faq() {
   return (
     <>
-      <div className="bg-black bg-opacity-60 text-white px-8">
+      <div className="bg-black bg-opacity-60 text-white px-8 overflow-hidden">
         <motion.h2
           {...animateInConfig(true)}
           transition={transitionConfig(0.3)}
@@ -30,7 +30,7 @@ export default function Faq() {
           Frequently Asked Questions
         </motion.h2>
         <motion.span
-          {...animateInConfig(false)}
+          {...animateInConfig(true)}
           transition={transitionConfig(0.4)}
           className="block max-w-[600px] h-[0.75px] bg-white mb-10 mx-auto"
         ></motion.span>
@@ -175,10 +175,11 @@ export default function Faq() {
           </motion.div>
         </div>
 
-        <motion.p 
-        {...animateInConfig(false)}
-        transition = {transitionConfig(1.1)}
-        className="text-center font-medium py-16 md:px-16">
+        <motion.p
+          {...animateInConfig(false)}
+          transition={transitionConfig(1.1)}
+          className="text-center font-medium py-16 md:px-16"
+        >
           Don&apos;t see a question you&apos;re looking for?
           <br /> Send us an email at{" "}
           <a
