@@ -222,24 +222,24 @@ export default function TeamCard(props: TeamCardProps) {
                 <p className="text-center text-[12px] md:text-[18px] whitespace-nowrap -mt-2 md:-mt-0">
                   <em>{props.sub_role}</em>
                 </p>
-                <Link
+                <a
                   href={`mailto:${props.email}`}
                   className="text-[10px] md:text-[14px] text-royalBlue hover:scale-105 transition ease-in-out duration-500 flex justify-center"
                 >
                   {props.email}
-                </Link>
+                </a>
               </>
             ) : props.sub_role ? (
               <p className="text-center text-[12px] md:text-[18px] whitespace-nowrap -mt-2 md:-mt-0">
                 <em>{props.sub_role}</em>
               </p>
             ) : props.email ? (
-              <Link
+              <a
                 href={`mailto:${props.email}`}
                 className="text-[10px] md:text-[14px] text-royalBlue hover:scale-105 transition ease-in-out duration-500"
               >
                 {props.email}
-              </Link>
+              </a>
             ) : (
               <></>
             )}
