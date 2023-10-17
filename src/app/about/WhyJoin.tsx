@@ -54,7 +54,7 @@ export default function WhyJoin() {
     duration: 1.5,
     delay: delay,
     type: "spring",
-    bounce: 0.5,
+    bounce: 0.2,
   });
 
   return (
@@ -62,7 +62,7 @@ export default function WhyJoin() {
     <section className="flex flex-col items-center SwiperNavigationOverride">
       <motion.h2
         {...animateInConfig1}
-        transition={transitionConfig(0.3)}
+        transition={transitionConfig(0.2)}
         className="flex items-center font-semibold text-[28px] md:text-[40px] tracking-tight mb-16"
       >
         <hr className="block w-2 h-10 bg-orange-300 mr-4" />
@@ -72,7 +72,7 @@ export default function WhyJoin() {
       {/* Decagon Carousel*/}
       <motion.div
         {...animateInConfig2}
-        transition={transitionConfig(0.6)}
+        transition={transitionConfig(0.4)}
         className="w-full h-[270px] md:h-[450px]"
       >
         <Swiper
@@ -93,57 +93,75 @@ export default function WhyJoin() {
           keyboard={true}
         >
           <SwiperSlide>
-            <div className="flex justify-center">
+            <motion.div
+              {...animateInConfig2}
+              transition={transitionConfig(0.7)}
+              className="flex justify-center"
+            >
               <WhyJoinDecagon
                 BackgroundImage={learn_decagon}
                 IconImage={learn_icon}
                 TitleText="Learn"
                 SubtitleText="from world-renowned experts"
               />
-            </div>
+            </motion.div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center">
+            <motion.div
+              {...animateInConfig2}
+              transition={transitionConfig(1.1)}
+              className="flex justify-center"
+            >
               <WhyJoinDecagon
                 BackgroundImage={connect_decagon}
                 IconImage={connect_icon}
                 TitleText="Connect"
                 SubtitleText="with like-minded individuals"
               />
-            </div>
+            </motion.div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex justify-center">
+            <motion.div
+              {...animateInConfig2}
+              transition={transitionConfig(0.9)}
+              className="flex justify-center"
+            >
               <WhyJoinDecagon
                 BackgroundImage={discover_decagon}
                 IconImage={discover_icon}
                 TitleText="Discover"
                 SubtitleText="opportunities with companies"
               />
-            </div>
+            </motion.div>
           </SwiperSlide>
         </Swiper>
       </motion.div>
 
-      <motion.div
-        {...animateInConfig1}
-        transition={transitionConfig(0.9)}
-        className="flex flex-col items-center mt-16"
-      >
-        <p className="md:text-[24px] text-center">
-          Be a part of our 2024 event this January!
-        </p>
-        <p className="font-semibold text-[20px] md:text-[36px] text-transparent bg-clip-text bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot w-fit">
-          Register Now
-        </p>
-        <Link
-          className={`drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-royalBlue hover:bg-goldenApricot mx-auto px-5 md:px-10 py-1 mt-3 md:mt-6 text-center rounded-full uppercase md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
-          href={`https://www.tickettailor.com/events/cusec/943944`}
-          target="_blank"
+      <div className="flex flex-col items-center mt-16">
+        <motion.p
+          {...animateInConfig1}
+          transition={transitionConfig(0.3)}
+          className="md:text-[24px] text-center"
         >
-          Sign Up
-        </Link>
-      </motion.div>
+          Be a part of our 2024 event this January!
+        </motion.p>
+        <motion.p
+          {...animateInConfig1}
+          transition={transitionConfig(0.6)}
+          className="font-semibold text-[20px] md:text-[36px] text-transparent bg-clip-text bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot w-fit"
+        >
+          Register Now
+        </motion.p>
+        <motion.div {...animateInConfig2} transition={transitionConfig(0.6)}>
+          <Link
+            className={`flex drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-royalBlue hover:bg-goldenApricot mx-auto px-5 md:px-10 py-1 mt-3 md:mt-6 text-center rounded-full uppercase md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
+            href={`https://www.tickettailor.com/events/cusec/943944`}
+            target="_blank"
+          >
+            Sign Up
+          </Link>
+        </motion.div>
+      </div>
     </section>
   );
 }

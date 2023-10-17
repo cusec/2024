@@ -38,14 +38,15 @@ export default function Sponsors() {
       />
 
       <div className="w-full">
-        {/* Top Left Gradient Lines */}
+
+          {/* Top Left Gradient Lines */}
         <Image
           src={"/images/top_left_gradient_lines.svg"}
           alt="top_left_gradient_lines"
           className="absolute top-[64px] z-10"
           width={200}
           height={250}
-        />
+          />
 
         {/* Bottom Right Gradient Lines */}
         <Image

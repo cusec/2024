@@ -62,7 +62,6 @@ export default function Home() {
               boxShadow:
                 "0px 3px 8px 4px rgba(0, 0, 0, 0.5), 0px -3px 8px 4px rgba(0, 0, 0, 0.5)",
             }}
-            id="faq"
           >
             <Fade>
               <Faq />

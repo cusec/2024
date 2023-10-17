@@ -3,6 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
 import { motion } from "framer-motion";
+import {
+  FaRegEnvelope,
+  FaLinkedinIn,
+  FaGithub,
+  FaGlobe,
+  FaInstagram,
+} from "react-icons/fa";
 
 type TeamCardProps = {
   name: string;
@@ -23,8 +30,8 @@ type TeamCardProps = {
 };
 
 const animateInConfig1 = {
-  initial: { opacity: 0, scale: 0.8},
-  whileInView: { opacity: 1, scale: 1},
+  initial: { opacity: 0, scale: 0.8 },
+  whileInView: { opacity: 1, scale: 1 },
   viewport: { once: true },
 };
 
@@ -57,23 +64,78 @@ export default function TeamCard(props: TeamCardProps) {
             />
           )}
 
+          {/*Email Icon */}
           {props.email && (
-            <a href={`mailto:${props.email}`} className="w-10 h-10 absolute right-1 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out">
-              <Image src={"/email_icon.svg"} alt="Email icon" layout="fill" />
+            <a
+              href={`mailto:${props.email}`}
+              className="w-8 h-8 absolute right-1 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out border border-royalBlue rounded-full flex justify-center items-center p-1 hover:bg-royalBlue text-royalBlue hover:text-white hover:scale-125"
+            >
+              {/* <Image src={"/email_icon.svg"} alt="Email icon" layout="fill" /> */}
+              <FaRegEnvelope className="w-5 h-5" />
             </a>
           )}
 
+          {/* LinkedIn Icon */}
+          {props.linkedin && (
+            <a
+              href={props.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 absolute top-8 -right-4 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out border border-[#05a7ff] rounded-full flex justify-center items-center p-1 hover:bg-[#05a7ff] text-[#05a7ff] hover:text-white hover:scale-125"
+            >
+              <FaLinkedinIn className="w-5 h-5" />
+            </a>
+          )}
+
+          {/* Github Icon */}
+          {props.github && (
+            <a
+              href={props.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 absolute top-[4.5rem] -right-[1.4rem] opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out border border-gray-500 rounded-full flex justify-center items-center p-2 hover:bg-gray-500 text-gray-500 hover:text-white hover:scale-125"
+            >
+              <FaGithub className="w-5 h-5" />
+            </a>
+          )}
+
+          {/* Website Icon */}
+          {/* {props.website && (
+            <a
+              href={props.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 absolute bottom-[1.5rem] -right-[.8rem] opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out border border-green-500 rounded-full flex justify-center items-center p-2 hover:bg-green-500 text-green-500 hover:text-white hover:scale-125"
+            >
+              <FaGlobe className="w-5 h-5" />
+            </a>
+          )} */}
+
+          {/* Instagram Icon */}
+          {/* {props.instagram && (
+            <a
+              href={props.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 absolute -bottom-[0.1rem] right-[1rem] opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out border border-pink-500 rounded-full flex justify-center items-center p-2 hover:bg-pink-500 text-pink-500 hover:text-white hover:scale-125"
+            >
+              <FaInstagram className="w-5 h-5" />
+            </a>
+          )} */}
+
           {/* University logo */}
-          <motion.div 
-          {...animateInConfig1}
-          transition={transitionConfig(.5)}
-          className="absolute rounded-none -top-4 z-100 w-[60px] h-[60px]">
+          <motion.div
+            {...animateInConfig1}
+            transition={transitionConfig(0.5)}
+            className="flex absolute rounded-none -top-4 z-100 w-[60px] h-[60px]"
+          >
             {props.university_image && (
               <Image
                 src={props.university_image}
                 alt={"Image of " + props.university}
                 layout="fill"
                 objectFit="cover"
+                className="group-hover:opacity-0 transition duration-700 ease-in-out"
               />
             )}
           </motion.div>
@@ -82,9 +144,10 @@ export default function TeamCard(props: TeamCardProps) {
         {/* Replacing text on hover with fade in/out animation */}
         {/* Name and University text */}
         <motion.div
-        {...animateInConfig2}
-        transition={transitionConfig(0.7)}
-        className="text-center font-semibold md:text-[20px] whitespace-nowrap relative">
+          {...animateInConfig2}
+          transition={transitionConfig(0.7)}
+          className="text-center font-semibold md:text-[20px] whitespace-nowrap relative"
+        >
           <div className="inline-block relative">
             <span className="invisible">
               {props.name.length > props.university.length
@@ -101,10 +164,11 @@ export default function TeamCard(props: TeamCardProps) {
         </motion.div>
 
         {/* Pronouns and Program text */}
-        <motion.div 
-        {...animateInConfig2}
-        transition={transitionConfig(0.9)}
-        className="text-center whitespace-nowrap relative text-[8px] md:text-[12px]">
+        <motion.div
+          {...animateInConfig2}
+          transition={transitionConfig(0.9)}
+          className="text-center whitespace-nowrap relative text-[8px] md:text-[12px]"
+        >
           <div className="inline-block relative">
             <span className="invisible">
               {props.pronouns.length > props.program.length
@@ -121,10 +185,11 @@ export default function TeamCard(props: TeamCardProps) {
         </motion.div>
 
         {/* Role and Fun Fact text */}
-        <motion.div 
-        {...animateInConfig2}
-        transition={transitionConfig(1.1)}
-        className="text-center whitespace-nowrap relative">
+        <motion.div
+          {...animateInConfig2}
+          transition={transitionConfig(1.1)}
+          className="text-center whitespace-nowrap relative"
+        >
           <div className="inline-block relative">
             <span className="invisible">
               {props.role.length > props.program.length
@@ -142,9 +207,10 @@ export default function TeamCard(props: TeamCardProps) {
 
         {/* Sub-role, email, and fun fact content */}
         <motion.div
-        {...animateInConfig2}
-        transition={transitionConfig(1.3)}
-        className="block relative">
+          {...animateInConfig2}
+          transition={transitionConfig(1.3)}
+          className="block relative"
+        >
           <span className="invisible">
             {props.role.length > props.program.length
               ? props.role
@@ -158,7 +224,7 @@ export default function TeamCard(props: TeamCardProps) {
                 </p>
                 <Link
                   href={`mailto:${props.email}`}
-                  className="text-[10px] md:text-[14px] text-royalBlue hover:scale-105 transition ease-in-out duration-500"
+                  className="text-[10px] md:text-[14px] text-royalBlue hover:scale-105 transition ease-in-out duration-500 flex justify-center"
                 >
                   {props.email}
                 </Link>
@@ -191,10 +257,11 @@ export default function TeamCard(props: TeamCardProps) {
         <p>{props.fun_fact}</p> */}
 
         {/*Pagination circles*/}
-        <motion.div 
-        {...animateInConfig1}
-        transition={transitionConfig(1.5)}
-        className="flex space-x-1 mt-5">
+        <motion.div
+          {...animateInConfig1}
+          transition={transitionConfig(1.5)}
+          className="flex space-x-1 sm:mt-6"
+        >
           <span className="block h-3 w-3 rounded-full bg-purple-400 group-hover:bg-gray-300 transition ease-in-out duration-1000"></span>
           <span className="block h-3 w-3 rounded-full bg-gray-300 group-hover:bg-purple-400 transition ease-in-out duration-100"></span>
         </motion.div>

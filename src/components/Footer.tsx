@@ -33,7 +33,6 @@ export default function Footer() {
         transition={transitionConfig(0.5)}
         className="lg:max-w-screen-2xl flex justify-center lg:justify-between items-center px-6 lg:mx-24 py-4 w-full"
       >
-        {/* TODO: Fix logo shape missing corners*/}
         <Link href={"/"}>
           <Image
             className="hidden lg:block hover:scale-110 transition-all ease-in-out duration-1000"

@@ -80,14 +80,18 @@ export default function CusecSponsors() {
 
   return (
     <div className="relative">
-      <div className="absolute -right-[6vw] -bottom-28 hidden md:block">
+      <motion.div
+        {...animateInConfigImage}
+        transition={transitionConfig(0.6)}
+        className="absolute -right-[6vw] -bottom-28 hidden md:block"
+      >
         <Image
           src={circle_grid_v2}
           alt="Horizontal grid of grey circles"
           className="w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px]"
           priority
         />
-      </div>
+      </motion.div>
 
       <section className="lg:max-w-[1024px] max-w-[768px] px-6 md:px-12 md:mb-20">
         <motion.p
@@ -117,24 +121,28 @@ export default function CusecSponsors() {
           passionate about technology and innovation.
         </motion.p>
       </section>
-        <Image
-          src={circle_grid_v1}
-          alt="Vertical grid of grey circles"
-          className="absolute -top-0 -left-10 scale-125 w-[40px] h-[80px] md:h-[120px] md:top-[80px] md:right-[40px] lg:-top-[20px] lg:right-[40px] lg:h-[160px]"
-        />
+      <motion.div
+        {...animateInConfigImage}
+        transition={transitionConfig(0.6)}
+        className="absolute -top-0 -left-10 scale-125 w-[40px] h-[80px] md:h-[120px] md:top-[80px] md:right-[40px] lg:-top-[20px] lg:right-[40px] lg:h-[160px]"
+      >
+        <Image src={circle_grid_v1} alt="Vertical grid of grey circles" />
+      </motion.div>
 
       <div className="flex justify-end mt-6 translate-x-3 md:hidden">
         <Image src={circle_grid_v2} alt="Horizontal grid of grey circles" />
       </div>
 
       <motion.div
-          {...animateInConfigImage}
-          transition={transitionConfig(0.8)}
-       className="relative max-w-xl aspect-square mx-auto w-full">
+        {...animateInConfigImage}
+        transition={transitionConfig(0.8)}
+        className="relative max-w-xl aspect-square mx-auto w-full"
+      >
         <motion.div
           {...animateInConfigText}
           transition={transitionConfig(0.8)}
-        className="bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-95 md:scale-[.99] top-[-17px] right-[-18px] absolute"></motion.div>
+          className="bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-95 md:scale-[.99] top-[-17px] right-[-18px] absolute"
+        ></motion.div>
 
         <BlueBorderSquareBox>
           {/* <div className="h-[257px] md:h-[500px] md:gap-8 py-5 px-8 md:py-10 md:px-12 relative"> */}
@@ -149,9 +157,10 @@ export default function CusecSponsors() {
               </div>
             ))} */}
           <motion.div
-          {...animateInConfigImage}
-          transition={transitionConfig(1)}
-           className="aspect-square flex flex-col justify-center items-center relative right-4">
+            {...animateInConfigImage}
+            transition={transitionConfig(1)}
+            className="aspect-square flex flex-col justify-center items-center relative right-4"
+          >
             <Image
               // src={sponsor_logos}
               src={sponsor_logos}
