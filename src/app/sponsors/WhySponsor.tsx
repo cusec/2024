@@ -85,6 +85,7 @@ export default function WhyJoin() {
               ]}
               slidesPerView={2}
               initialSlide={1}
+              grabCursor={true}
               centeredSlides={true}
               effect="coverflow"
               coverflowEffect={{
@@ -98,34 +99,46 @@ export default function WhyJoin() {
               keyboard={true}
             >
               <SwiperSlide>
-                <div className="flex justify-center">
+                <motion.div
+                  {...animateInConfigImage}
+                  transition={transitionConfig(0.3)}
+                  className="flex justify-center"
+                >
                   <WhyJoinDecagon
                     BackgroundImage={learn_decagon}
                     IconImage={influence_icon}
                     TitleText="Influence"
                     SubtitleText="through your leadership"
                   />
-                </div>
+                </motion.div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="flex justify-center">
+                <motion.div
+                  {...animateInConfigImage}
+                  transition={transitionConfig(0.9)}
+                  className="flex justify-center"
+                >
                   <WhyJoinDecagon
                     BackgroundImage={connect_decagon}
                     IconImage={recruit_icon}
                     TitleText="Recruit"
                     SubtitleText="top tech talent"
                   />
-                </div>
+                </motion.div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="flex justify-center">
+                <motion.div
+                  {...animateInConfigImage}
+                  transition={transitionConfig(0.6)}
+                  className="flex justify-center"
+                >
                   <WhyJoinDecagon
                     BackgroundImage={discover_decagon}
                     IconImage={promote_icon}
                     TitleText="Promote"
                     SubtitleText="your next big idea"
                   />
-                </div>
+                </motion.div>
               </SwiperSlide>
             </Swiper>
           </div>
