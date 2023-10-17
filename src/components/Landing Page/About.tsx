@@ -38,7 +38,7 @@ const transitionConfig = (delay = 0) => ({
 
 export default function About() {
   return (
-    <>
+    <div className="overflow-hidden">
       {/* Vertical grid of grey circles */}
       <motion.div {...fadeInConfigDecagon} transition={transitionConfig(0.3)}>
         <Image
@@ -158,6 +158,6 @@ export default function About() {
           className="w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] "
         />
       </motion.span>
-    </>
+    </div>
   );
 }
