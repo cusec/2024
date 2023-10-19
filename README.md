@@ -123,5 +123,6 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Routing to sections in different pages using url paths in `href` tag.🛣️
 - Using [Framer Motion](https://www.framer.com/motion) to add smooth, performant, customized animations.🤸
 - Routing to an id on different page and making the scroll behaviour smooth.🧈
+- Refactoring code can be a nightmare🤦‍♂️
  
 </details>
