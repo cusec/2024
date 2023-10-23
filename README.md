@@ -96,6 +96,7 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Using Next.js 13 app router, and using 'Link' and 'Image' components instead of `<a>` and `<img>` tags.🔗🖼️
 - Defining custom types using TypeScript.✅
 - Using Tailwind to rapidly create layouts and basic styling.🚀
+- Making custom tailwind colors and using the `[]` syntax.
 - Soft resetting the head to undo the most recent commit, but not getting rid of the changes locally.🧠
 - Reverting git commits and resetting the head back to past commits.🕜
 - Adding files to past git commits that weren't pushed.➕
