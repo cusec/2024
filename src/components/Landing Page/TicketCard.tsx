@@ -114,7 +114,7 @@ export default function TicketCard({
             target="_blank"
           >
             {/* Buy Now */}
-            Coming soon
+            Buy Now
           </Link>
         </motion.span>
 
