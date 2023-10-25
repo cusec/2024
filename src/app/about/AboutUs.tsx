@@ -110,7 +110,7 @@ export default function AboutUs() {
       </motion.div>
 
       <motion.div
-        {...animateInConfigCarousel}
+        {...animateInConfigText}
         transition={transitionConfig(0.7)}
         className="bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot px-2 py-3 mt-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
         style={{
