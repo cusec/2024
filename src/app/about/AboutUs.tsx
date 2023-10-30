@@ -110,7 +110,7 @@ export default function AboutUs() {
       </motion.div>
 
       <motion.div
-        {...animateInConfigCarousel}
+        {...animateInConfigText}
         transition={transitionConfig(0.7)}
         className="bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot px-2 py-3 mt-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
         style={{
@@ -156,8 +156,14 @@ export default function AboutUs() {
           </SwiperSlide>
           <SwiperSlide>
             <motion.div
-              {...animateInConfigCarousel}
-              transition={transitionConfig(0.8)}
+              {...(typeof window !== "undefined" && window.innerWidth > 1024
+                ? animateInConfigCarousel
+                : {})}
+              transition={
+                typeof window !== "undefined" && window.innerWidth > 1024
+                  ? transitionConfig(0.8)
+                  : {}
+              }
               className="flex justify-center lg:block"
             >
               <Image
@@ -168,8 +174,14 @@ export default function AboutUs() {
           </SwiperSlide>
           <SwiperSlide>
             <motion.div
-              {...animateInConfigCarousel}
-              transition={transitionConfig(1)}
+              {...(typeof window !== "undefined" && window.innerWidth > 1024
+                ? animateInConfigCarousel
+                : {})}
+              transition={
+                typeof window !== "undefined" && window.innerWidth > 1024
+                  ? transitionConfig(1)
+                  : {}
+              }
               className="flex justify-center lg:block"
             >
               <Image src={carousel_image_3} alt="People playing board games" />

@@ -40,7 +40,7 @@ const {
 export default function Main() {
   return (
     <div className="relative min-h-[96vh] w-screen">
-      <div className="absolute inset-0 mx-4">
+      <div className="absolute inset-0 md:mx-4">
         <motion.div {...animateInConfigImage} transition={transitionConfig()}>
           <Image
             className="brightness-50"
