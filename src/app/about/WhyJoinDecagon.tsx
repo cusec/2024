@@ -5,6 +5,7 @@ type Props = {
   IconImage: { src: string };
   TitleText: string;
   SubtitleText: string;
+  mainDecagon?: boolean;
 };
 
 export default function WhyJoinDecagon({
@@ -12,6 +13,7 @@ export default function WhyJoinDecagon({
   IconImage,
   TitleText,
   SubtitleText,
+  mainDecagon,
 }: Props) {
   return (
     <div
@@ -34,13 +36,16 @@ export default function WhyJoinDecagon({
       <p className="text-[24px] md:text-[40px] text-white font-semibold tracking-tight text-center">
         {TitleText}
       </p>
-      <Image
-        src={IconImage.src}
-        alt="Icon"
-        width={50}
-        height={50}
-        className="w-[100px] h-[100px] md:w-[165px] md:h-[165px]"
-      />
+
+      
+        <Image
+          src={IconImage.src}
+          alt="Icon"
+          width={50}
+          height={50}
+          className={`${mainDecagon ? `w-[90px] h-[90px] md:w-[150px] md:h-[150px]` : `w-[60px] h-[60px] md:w-[110px] md:h-[110px] my-1 md:my-3`}`}
+        />
+      
       <p className="text-[16px] md:text-[20px] text-white font-medium text-center max-w-[159px] md:max-w-[266px]">
         {SubtitleText}
       </p>

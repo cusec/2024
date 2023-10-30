@@ -129,9 +129,12 @@ export default function CusecSponsors() {
         <Image src={circle_grid_v1} alt="Vertical grid of grey circles" />
       </motion.div>
 
-      <div className="flex justify-end mt-6 translate-x-3 md:hidden">
+      <motion.div 
+      {...animateInConfigImage}
+        transition={transitionConfig(0.6)}
+      className="flex justify-end mt-6 translate-x-3 md:hidden">
         <Image src={circle_grid_v2} alt="Horizontal grid of grey circles" />
-      </div>
+      </motion.div>
 
       <motion.div
         {...animateInConfigImage}

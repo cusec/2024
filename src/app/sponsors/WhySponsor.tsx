@@ -123,6 +123,7 @@ export default function WhyJoin() {
                     IconImage={recruit_icon}
                     TitleText="Recruit"
                     SubtitleText="top tech talent"
+                    mainDecagon
                   />
                 </motion.div>
               </SwiperSlide>

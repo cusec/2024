@@ -146,6 +146,7 @@ export default function WhyJoin() {
                 IconImage={connect_icon}
                 TitleText="Connect"
                 SubtitleText="with like-minded individuals"
+                mainDecagon
               />
             </motion.div>
           </SwiperSlide>
