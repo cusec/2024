@@ -1,12 +1,22 @@
 import TeamCard from "./TeamCard";
 import teamMembers from "./teamMembers.json";
+import circle_grid_v1 from "@/assets/circle_grid_v1.svg";
+// import circle_grid_v2 from "@/assets/circle_grid_v2.svg";
+// import circle_grid_v3 from "@/assets/circle_grid_v3.svg";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const animateInConfig = {
   initial: { opacity: 0, x: 100 },
   whileInView: { opacity: 1, x: 0 },
   viewport: { once: true },
 };
+
+  const animateInConfig2 = {
+    initial: { opacity: 0, scale: 0.8 },
+    whileInView: { opacity: 1, scale: 1 },
+    viewport: { once: true },
+  };
 
 const transitionConfig = (delay = 0) => ({
   duration: 1.5,
@@ -30,6 +40,19 @@ export default function Team() {
           Meet Our 2024 Team
         </h2>
       </motion.div> */}
+
+      <motion.div
+        {...animateInConfig2}
+        transition={transitionConfig(0.7)}
+        className="hidden lg:flex absolute "
+      >
+        <Image
+          src={circle_grid_v1}
+          alt="Horizontal grid of grey circles"
+          className="scale-[0.9] relative -right-[44rem] -top-[14rem] opacity-50"
+          priority
+        />
+      </motion.div>
 
       {/* Render team member cards */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-24">
@@ -57,6 +80,21 @@ export default function Team() {
           </motion.div>
         ))}
       </div>
+
+
+        {/* <Image
+          src={circle_grid_v3}
+          alt="Horizontal grid of grey circles"
+          className="hidden lg:flex scale-[0.8] relative -right-[12rem] -top-[124rem] opacity-50"
+          priority
+        />
+
+         <Image
+          src={circle_grid_v3}
+          alt="Horizontal grid of grey circles"
+          className="hidden lg:flex scale-[0.8] relative -right-[43rem] -top-[100rem] opacity-50 rotate-90"
+          priority
+        /> */}
     </>
   );
 }
