@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
+import circle_grid_v1 from "@/assets/circle_grid_v1.svg";
+import circle_grid_v2 from "@/assets/circle_grid_v2.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
@@ -60,6 +63,32 @@ export default function WhyJoin() {
   return (
     // The 'WhyJoinSwiperOverride' class is located in the 'globals.css' file
     <section className="flex flex-col items-center SwiperNavigationOverride">
+      <motion.div
+        {...animateInConfig2}
+        transition={transitionConfig(0.7)}
+        className="hidden lg:flex absolute "
+      >
+        <Image
+          src={circle_grid_v1}
+          alt="Horizontal grid of grey circles"
+          className="scale-[0.9] relative left-[25rem] -top-[3.5rem]"
+          priority
+        />
+      </motion.div>
+
+      <motion.div
+        {...animateInConfig2}
+        transition={transitionConfig(0.7)}
+        className="hidden md:flex absolute"
+      >
+        <Image
+          src={circle_grid_v2}
+          alt="Horizontal grid of grey circles"
+          className="scale-[1.9] relative -left-[43rem] lg:-left-[34rem] top-[35rem]"
+          priority
+        />
+      </motion.div>
+
       <motion.h2
         {...animateInConfig1}
         transition={transitionConfig(0.2)}

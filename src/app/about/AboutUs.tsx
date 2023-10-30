@@ -147,7 +147,7 @@ export default function AboutUs() {
               {...animateInConfigCarousel}
               transition={transitionConfig(0.6)}
               className="flex justify-center lg:block"
-              >
+            >
               <Image
                 src={carousel_image_1}
                 alt="People seated watching keynote speech"
@@ -157,7 +157,7 @@ export default function AboutUs() {
           <SwiperSlide>
             <motion.div
               {...(window.innerWidth > 1024 ? animateInConfigCarousel : {})}
-      transition={window.innerWidth > 1024 ? transitionConfig(0.8) : {}}
+              transition={window.innerWidth > 1024 ? transitionConfig(0.8) : {}}
               className="flex justify-center lg:block"
             >
               <Image
@@ -168,10 +168,8 @@ export default function AboutUs() {
           </SwiperSlide>
           <SwiperSlide>
             <motion.div
-              
               {...(window.innerWidth > 1024 ? animateInConfigCarousel : {})}
-      transition={window.innerWidth > 1024 ? transitionConfig(1) : {}}
-
+              transition={window.innerWidth > 1024 ? transitionConfig(1) : {}}
               className="flex justify-center lg:block"
             >
               <Image src={carousel_image_3} alt="People playing board games" />
