@@ -21,7 +21,7 @@ const STAGGER_DELAY = TOTAL_ANIMATION_DURATION / teamMembers.length;
 export default function Team() {
   return (
     <>
-      <motion.div
+      {/* <motion.div
       {...animateInConfig}
       transition = {transitionConfig()}
       className="bg-gradient-to-b from-royalPurple via-roseQuartz to-goldenApricot w-fit flex space-x-5 mt-14">
@@ -29,7 +29,7 @@ export default function Team() {
         <h2 className="text-white text-[28px] md:text-[40px] font-semibold bg-black/[.65] py-3 px-7 tracking-tight">
           Meet Our 2024 Team
         </h2>
-      </motion.div>
+      </motion.div> */}
 
       {/* Render team member cards */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-24">

@@ -11,6 +11,7 @@ import AboutUs from "@/app/about/AboutUs";
 import Team from "./Team";
 import WhyJoin from "./WhyJoin";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 // Had to remove this import because the file was too large to upload to GitHub.
 // import carousel_about_us from "./Carousel Images/carousel_about_us.svg";
@@ -20,6 +21,20 @@ const metadata: Metadata = {
   description:
     "Official website for the 2024 edition of the Canadian University Software Engineering Conference.",
 };
+
+
+const animateInConfig = {
+initial: { opacity: 0, x: 100 },
+whileInView: { opacity: 1, x: 0 },
+viewport: { once: true },
+};
+
+const transitionConfig = (delay = 0) => ({
+duration: 1.5,
+delay: delay,
+type: "spring",
+bounce: 0.5,
+});
 
 export default function About() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -33,7 +48,6 @@ export default function About() {
     };
 
     window.addEventListener("resize", handleResize);
-
     // Cleanup
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -127,6 +141,20 @@ export default function About() {
               <WhyJoin />
             </Fade>
         </div>
+          </div>
+
+        <div className="flex justify-center">
+          <div className="flex justify-start w-full max-w-screen-2xl">
+      <motion.div
+      {...animateInConfig}
+      transition = {transitionConfig()}
+      className="bg-gradient-to-b from-royalPurple via-roseQuartz to-goldenApricot w-fit flex space-x-5 mt-14">
+        <div className="w-6 md:w-12 lg:w-14 bg-black/[.65]"></div>
+        <h2 className="text-white text-[28px] md:text-[40px] font-semibold bg-black/[.65] py-3 px-7 tracking-tight">
+          Meet Our 2024 Team
+        </h2>
+      </motion.div>
+          </div>
           </div>
         <div className="flex flex-col items-center">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full mt-20 md:-mt-3 mb-16">
