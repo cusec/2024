@@ -23,7 +23,7 @@ const speakerSignUpLink =
 const sponsorEmailLink =
   "mailto:sponsor@cusec.net?subject=CUSEC 2024 Sponsorship Information Request";
 const locationLink =
-  "https://www.google.com/maps/place/Le+Centre+Sheraton+Montreal+Hotel/@45.4965835,-73.5735774,15.5z";
+  "https://maps.app.goo.gl/sCnZJ3VJRAM4Z1699";
 
 const Landingbox = () => {
   return (
