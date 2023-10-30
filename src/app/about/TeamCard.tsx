@@ -145,7 +145,7 @@ export default function TeamCard(props: TeamCardProps) {
         {/* Name and University text */}
         <motion.div
           {...animateInConfig2}
-          transition={transitionConfig(0.7)}
+          transition={transitionConfig(0.5)}
           className="text-center font-semibold md:text-[20px] whitespace-nowrap relative"
         >
           <div className="inline-block relative">
@@ -166,7 +166,7 @@ export default function TeamCard(props: TeamCardProps) {
         {/* Pronouns and Program text */}
         <motion.div
           {...animateInConfig2}
-          transition={transitionConfig(0.9)}
+          transition={transitionConfig(0.6)}
           className="text-center whitespace-nowrap relative text-[8px] md:text-[12px]"
         >
           <div className="inline-block relative">
@@ -187,7 +187,7 @@ export default function TeamCard(props: TeamCardProps) {
         {/* Role and Fun Fact text */}
         <motion.div
           {...animateInConfig2}
-          transition={transitionConfig(1.1)}
+          transition={transitionConfig(0.75)}
           className="text-center whitespace-nowrap relative"
         >
           <div className="inline-block relative">
@@ -208,7 +208,7 @@ export default function TeamCard(props: TeamCardProps) {
         {/* Sub-role, email, and fun fact content */}
         <motion.div
           {...animateInConfig2}
-          transition={transitionConfig(1.3)}
+          transition={transitionConfig(0.8)}
           className="block relative"
         >
           <span className="invisible">
@@ -259,7 +259,7 @@ export default function TeamCard(props: TeamCardProps) {
         {/*Pagination circles*/}
         <motion.div
           {...animateInConfig1}
-          transition={transitionConfig(1.5)}
+          transition={transitionConfig(0.75)}
           className="flex space-x-1 sm:mt-6"
         >
           <span className="block h-3 w-3 rounded-full bg-purple-400 group-hover:bg-gray-300 transition ease-in-out duration-1000"></span>

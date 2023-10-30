@@ -12,11 +12,11 @@ const animateInConfig = {
   viewport: { once: true },
 };
 
-  const animateInConfig2 = {
-    initial: { opacity: 0, scale: 0.8 },
-    whileInView: { opacity: 1, scale: 1 },
-    viewport: { once: true },
-  };
+const animateInConfig2 = {
+  initial: { opacity: 0, scale: 0.8 },
+  whileInView: { opacity: 1, scale: 1 },
+  viewport: { once: true },
+};
 
 const transitionConfig = (delay = 0) => ({
   duration: 1.5,
@@ -57,9 +57,10 @@ export default function Team() {
       {/* Render team member cards */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-24">
         {teamMembers.map((member, index) => (
-          <motion.div key={index}
-          {...animateInConfig}
-          transition={transitionConfig(index * STAGGER_DELAY)}
+          <motion.div
+            key={index}
+            {...animateInConfig}
+            transition={transitionConfig(index * STAGGER_DELAY)}
           >
             <TeamCard
               name={member.name}
@@ -81,8 +82,7 @@ export default function Team() {
         ))}
       </div>
 
-
-        {/* <Image
+      {/* <Image
           src={circle_grid_v3}
           alt="Horizontal grid of grey circles"
           className="hidden lg:flex scale-[0.8] relative -right-[12rem] -top-[124rem] opacity-50"
