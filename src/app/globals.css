@@ -90,7 +90,25 @@ html {
   .swiper-pagination-bullet {
     border-radius: 0.2rem;
   }
-  --swiper-navigation-color: #e38ab6;
+  --swiper-navigation-color: white;
+  --swiper-navigation-size: 22px;
+  .swiper-button-next,
+  .swiper-button-prev {
+    border-radius: 50%; /* Makes the shape a circle */
+    --swiper-navigation-size: 18px;
+    width: 30px;
+    height: 30px;
+    @media (min-width: 768px) {
+      --swiper-navigation-size: 20px;
+      width: 44px;
+      height: 44px;
+    }
+    display: flex; /* To center the arrow icon */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background-color: #0569ff;
+    backdrop-filter: blur(1px);
+  }
 }
 
 /*  Override default Swiper parameters in 'WhyJoin' component in about page*/
