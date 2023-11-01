@@ -93,7 +93,7 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 
 - Effectively communicating and collaborating with a designer to build a website from scratch.🤝
 - Using developer mode in figma.🧑‍💻
-- Using Next.js 13 app router, and using 'Link' and 'Image' components instead of `<a>` and `<img>` tags.🔗🖼️
+- Using Next.js 13 app router, and using `<Link>` and `<Image>` components instead of `<a>` and `<img>` tags.🔗🖼️
 - Defining custom types using TypeScript.✅
 - Using Tailwind to rapidly create layouts and basic styling.🚀
 - Making custom tailwind colors and using the `[]` syntax.
@@ -108,7 +108,7 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Creating a custom animated hamburger icon using hover groups, transforms, and transition timing functions.🍔
 - Passing states up and down parent and child components using the 'createContext()' and 'useContext()' React hooks.🪝
 - Creating more complex two-dimensional layouts using grid instead of flexbox.⬛
-- Creating a responsive ribbon in TailwindCSS.🎗️
+- Creating a responsive ribbon in Tailwind CSS.🎗️
 - Making a footer that's fairly responsive and doesn't suck.🦶
 - Finally understanding how absolute and relative positionings work in CSS.🤯
 - Using the 'styles' prop in conjunction to tailwind to add advanced inline styles, such as clip paths and svg rendering.💅
