@@ -106,7 +106,7 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Creating better adaptive layouts with custom breakpoints.🧐
 - Creating a frosted Navbar.❄️
 - Creating a custom animated hamburger icon using hover groups, transforms, and transition timing functions.🍔
-- Passing states up and down parent and child components using the 'createContext()' and 'useContext()' React hooks.🪝
+- Passing states up and down parent and child components using the `createContext()` and `useContext()` React hooks.🪝
 - Creating more complex two-dimensional layouts using grid instead of flexbox.⬛
 - Creating a responsive ribbon in Tailwind CSS.🎗️
 - Making a footer that's fairly responsive and doesn't suck.🦶
