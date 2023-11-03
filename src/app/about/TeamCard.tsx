@@ -100,16 +100,16 @@ export default function TeamCard(props: TeamCardProps) {
           )}
 
           {/* Website Icon */}
-          {/* {props.website && (
+          {props.website && (
             <a
               href={props.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 absolute bottom-[1.5rem] -right-[.8rem] opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out border border-green-500 rounded-full flex justify-center items-center p-2 hover:bg-green-500 text-green-500 hover:text-white hover:scale-125"
+              className="w-8 h-8 absolute bottom-[0.2rem] -right-[0.1rem] md:bottom-[1.5rem] md:-right-[0.8rem] opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out border border-green-500 rounded-full flex justify-center items-center p-2 hover:bg-green-500 text-green-500 hover:text-white hover:scale-125"
             >
               <FaGlobe className="w-5 h-5" />
             </a>
-          )} */}
+          )}
 
           {/* Instagram Icon */}
           {/* {props.instagram && (
