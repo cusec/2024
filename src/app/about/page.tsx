@@ -157,7 +157,7 @@ export default function About() {
           </div>
           </div>
         <div className="flex flex-col items-center">
-          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full mt-20 md:-mt-3 mb-16">
+          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full -mt-10 md:-mt-3 mb-16">
             <Fade>
               <Team />
             </Fade>
