@@ -11,6 +11,8 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
+import { IconType } from "react-icons/lib";
+
 type TeamCardProps = {
   name: string;
   university: string;
@@ -19,13 +21,13 @@ type TeamCardProps = {
   university_image?: string;
   pronouns: string;
   role: string;
-  sub_role?: string; // Optional parameter
+  sub_role?: string;
   program: string;
-  linkedin?: string; // Optional parameter
-  instagram?: string; // Optional parameter
-  github?: string; // Optional parameter
-  website?: string; // Optional parameter
-  email: string;
+  linkedin?: string;
+  instagram?: string;
+  github?: string;
+  website?: string;
+  email?: string;
   fun_fact: string;
 };
 
@@ -48,7 +50,80 @@ const transitionConfig = (delay = 0) => ({
   bounce: 0.5,
 });
 
+// type definition for the contact icons
+type IconConfig = {
+  prop: keyof TeamCardProps;
+  classes: string;
+  IconComponent: React.ElementType;
+};
+
+const iconConfigs: IconConfig[] = [
+  {
+    prop: "email",
+    classes: "border-royalBlue text-royalBlue hover:bg-royalBlue",
+    IconComponent: FaRegEnvelope,
+  },
+  {
+    prop: "linkedin",
+    classes: "border-[#05a7ff] text-[#05a7ff] hover:bg-[#05a7ff]",
+    IconComponent: FaLinkedinIn,
+  },
+  {
+    prop: "github",
+    classes: "border-gray-500 text-gray-500 hover:bg-gray-500",
+    IconComponent: FaGithub,
+  },
+  {
+    prop: "website",
+    classes: "border-green-500 text-green-500 hover:bg-green-500",
+    IconComponent: FaGlobe,
+  },
+];
+
+// Slots for the icons to be placed in
+const iconSlots = [
+  "right-1",
+  "top-8 -right-4",
+  "top-[4.5rem] -right-[1.4rem]",
+  "bottom-[0.2rem] -right-[0.1rem] md:bottom-[1.5rem] md:-right-[0.8rem]",
+];
+
+// Base classes common to all icons
+const baseIconClasses =
+  "w-8 h-8 absolute opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out border rounded-full flex justify-center items-center p-1 hover:text-white hover:scale-125";
+
 export default function TeamCard(props: TeamCardProps) {
+
+  // Dynamically render the icons based on what contact info is provided
+  const renderedIcons = iconConfigs.reduce<React.ReactNode[]>(
+    (acc, { prop, classes, IconComponent }, index) => {
+      // Skip if the prop does not exist on the props object
+      if (!props[prop]) return acc;
+
+      // Determine the href link
+      const href = prop === "email" ? `mailto:${props[prop]}` : props[prop];
+
+      // Get the slot for the current index of accumulated icons
+      const slot = iconSlots[acc.length];
+
+      // Push a new icon into the accumulator
+      acc.push(
+        <a
+          key={prop}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${baseIconClasses} ${slot} ${classes}`}
+        >
+          <IconComponent className="w-5 h-5" />
+        </a>
+      );
+
+      return acc;
+    },
+    []
+  );
+
   return (
     <BlueBorderSquareBox teamCard={true}>
       <div className="flex flex-col items-center justify-center mx-6 mt-8 group self-start mb-2">
@@ -64,52 +139,8 @@ export default function TeamCard(props: TeamCardProps) {
             />
           )}
 
-          {/*Email Icon */}
-          {props.email && (
-            <a
-              href={`mailto:${props.email}`}
-              className="w-8 h-8 absolute right-1 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out border border-royalBlue rounded-full flex justify-center items-center p-1 hover:bg-royalBlue text-royalBlue hover:text-white hover:scale-125"
-            >
-              {/* <Image src={"/email_icon.svg"} alt="Email icon" layout="fill" /> */}
-              <FaRegEnvelope className="w-5 h-5" />
-            </a>
-          )}
-
-          {/* LinkedIn Icon */}
-          {props.linkedin && (
-            <a
-              href={props.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-8 h-8 absolute top-8 -right-4 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out border border-[#05a7ff] rounded-full flex justify-center items-center p-1 hover:bg-[#05a7ff] text-[#05a7ff] hover:text-white hover:scale-125"
-            >
-              <FaLinkedinIn className="w-5 h-5" />
-            </a>
-          )}
-
-          {/* Github Icon */}
-          {props.github && (
-            <a
-              href={props.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-8 h-8 absolute top-[4.5rem] -right-[1.4rem] opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out border border-gray-500 rounded-full flex justify-center items-center p-2 hover:bg-gray-500 text-gray-500 hover:text-white hover:scale-125"
-            >
-              <FaGithub className="w-5 h-5" />
-            </a>
-          )}
-
-          {/* Website Icon */}
-          {props.website && (
-            <a
-              href={props.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-8 h-8 absolute bottom-[0.2rem] -right-[0.1rem] md:bottom-[1.5rem] md:-right-[0.8rem] opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out border border-green-500 rounded-full flex justify-center items-center p-2 hover:bg-green-500 text-green-500 hover:text-white hover:scale-125"
-            >
-              <FaGlobe className="w-5 h-5" />
-            </a>
-          )}
+          {/* Dynamically rendered Contact and Social Media Icons   */}
+          {renderedIcons}
 
           {/* Instagram Icon */}
           {/* {props.instagram && (
