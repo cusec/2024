@@ -136,8 +136,11 @@ export default function About() {
           </motion.div>
         </section>
       </div>
-      <div className="flex justify-center">
-        <motion.div {...fadeInConfigButton} transition={transitionConfig(1.3)}>
+        <motion.div
+          {...fadeInConfigButton}
+          transition={transitionConfig(1.3)}
+          className="flex justify-center"
+        >
           <Link
             className={`drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-royalBlue hover:bg-goldenApricot mx-auto px-5 md:px-10 py-1 mt-3 md:mt-6 text-center rounded-full uppercase md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
             href={`/about`}
@@ -145,7 +148,6 @@ export default function About() {
             Learn More
           </Link>
         </motion.div>
-      </div>
 
       <motion.span
         className="flex justify-end pb-8"
