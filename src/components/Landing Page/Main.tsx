@@ -18,12 +18,12 @@ const transitionConfig = (delay = 0) => ({
   bounce: 0.5,
 });
 
+const signUpLink = "https://www.tickettailor.com/events/cusec/943944";
 const speakerSignUpLink =
   "https://docs.google.com/forms/d/e/1FAIpQLSekk6WN5YEMg-tRza9SbMTIar_mHFEUQ9jjLIgw8eF3YNmIog/viewform";
 const sponsorEmailLink =
   "mailto:sponsor@cusec.net?subject=CUSEC 2024 Sponsorship Information Request";
-const locationLink =
-  "https://maps.app.goo.gl/sCnZJ3VJRAM4Z1699";
+const locationLink = "https://maps.app.goo.gl/sCnZJ3VJRAM4Z1699";
 
 const Landingbox = () => {
   return (
@@ -66,42 +66,70 @@ const Landingbox = () => {
             </Link>
           </motion.p>
 
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <motion.div
               {...fadeInConfig}
               transition={transitionConfig(1.2)}
+              className="flex justify-center"
+            >
+              <a
+                href={signUpLink}
+                target="_blank"
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex justify-center items-center bg-[#FDF3FF] border-2 border-royalPurple px-[3rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalPurple hover:text-white whitespace-nowrap"
+              >
+                Sign Up
+              </a>
+            </motion.div>
+
+            <motion.div
+              {...fadeInConfig}
+              transition={transitionConfig(1.4)}
+              className="flex justify-center md:hidden"
+            >
+              <a
+                href={sponsorEmailLink}
+                className="text-royalBlue font-semibold underline underline-offset-2 decoration-2 transition ease-in-out duration-500 hover:scale-105"
+              >
+                Interested in Sponsoring?
+              </a>
+            </motion.div>
+
+            <motion.div
+              {...fadeInConfig}
+              transition={transitionConfig(1.6)}
+              className="flex justify-center md:hidden"
+            >
+              <a
+                href={sponsorEmailLink}
+                className="text-fuchsia-500 font-semibold underline underline-offset-2 decoration-2 transition ease-in-out duration-500 hover:scale-105"
+              >
+                Want to be a Speaker?
+              </a>
+            </motion.div>
+
+            <motion.div
+              {...fadeInConfig}
+              transition={transitionConfig(1.4)}
+              className="flex"
+            >
+              <a
+                href={sponsorEmailLink}
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] hidden md:flex justify-center items-center bg-[#FDF3FF] border-2 border-royalBlue px-[3rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalBlue hover:text-white"
+              >
+                Sponsor
+              </a>
+            </motion.div>
+            <motion.div
+              {...fadeInConfig}
+              transition={transitionConfig(1.6)}
               className="flex self-center"
             >
               <a
                 href={speakerSignUpLink}
                 target="_blank"
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-5 md:px-20 py-3 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white"
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] hidden md:flex justify-center items-center bg-[#FDF3FF] border-2 border-fuchsia-500 px-[3rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-fuchsia-500 tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-fuchsia-500 hover:text-white"
               >
                 Become a Speaker
-              </a>
-            </motion.div>
-            <motion.div
-              {...fadeInConfig}
-              transition={transitionConfig(1.4)}
-              className="flex"
-            >
-              <a
-                href={sponsorEmailLink}
-                className="flex md:hidden text-royalBlue font-semibold underline underline-offset-2 decoration-2 transition ease-in-out duration-500 hover:scale-105"
-              >
-                Interested in Sponsoring?
-              </a>
-            </motion.div>
-            <motion.div
-              {...fadeInConfig}
-              transition={transitionConfig(1.4)}
-              className="flex"
-            >
-              <a
-                href={sponsorEmailLink}
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] hidden md:inline bg-[#FDF3FF] border-2 border-royalBlue ml-9 px-[85px] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalBlue hover:text-white "
-              >
-                Sponsor
               </a>
             </motion.div>
           </div>
