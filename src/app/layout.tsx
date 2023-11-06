@@ -7,6 +7,7 @@ import { useState } from "react";
 import { createContext, useContext } from "react";
 import { Poppins } from "@next/font/google";
 import Footer from "@/components/Footer";
+import { Analytics } from '@vercel/analytics/react';
 
 const FadeBackgroundContext = createContext(false);
 export const useFadeBackground = () => useContext(FadeBackgroundContext);
@@ -40,6 +41,7 @@ export default function RootLayout({
             <Footer />
           </Fade>
         </FadeBackgroundContext.Provider>
+        <Analytics/>
       </body>
     </html>
   );
