@@ -91,39 +91,39 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 <details>
   <summary>Learning Log</summary>
 
-- Effectively communicating and collaborating with a designer to build a website from scratch.🤝
-- Using developer mode in figma.🧑‍💻
-- Using Next.js 13 app router, and using `<Link>` and `<Image>` components instead of `<a>` and `<img>` tags.🔗🖼️
-- Defining custom types using TypeScript.✅
-- Using Tailwind to rapidly create layouts and basic styling.🚀
-- Making custom tailwind colors and using the `[]` syntax.
-- Soft resetting the head to undo the most recent commit, but not getting rid of the changes locally.🧠
-- Reverting git commits and resetting the head back to past commits.🕜
-- Adding files to past git commits that weren't pushed.➕
-- Adding files to past git commits that were pushed, and force pushing them.➕➕
-- Creating grid backgrounds using vanilla CSS.⏹️
-- Giving texts gradient backgrounds.🟣🟡
-- Creating better adaptive layouts with custom breakpoints.🧐
-- Creating a frosted Navbar.❄️
-- Creating a custom animated hamburger icon using hover groups, transforms, and transition timing functions.🍔
-- Passing states up and down parent and child components using the `createContext()` and `useContext()` React hooks.🪝
-- Creating more complex two-dimensional layouts using grid instead of flexbox.⬛
-- Creating a responsive ribbon in Tailwind CSS.🎗️
-- Making a footer that's fairly responsive and doesn't suck.🦶
-- Finally understanding how absolute and relative positionings work in CSS.🤯
-- Using the 'styles' prop in conjunction to tailwind to add advanced inline styles, such as clip paths and svg rendering.💅
-- Using CSS clip path with the 'path' function to create custom cubic bezier curves for components.🛣️
-- Setting types for images that are expected as props inside a child component.🖼️
-- Making certain props optional using the '?' operator.❓
-- Using the [Swiper.js](https://swiperjs.com/) React API to create image carousels.🎡
-- Customizing pagination bullets and navigation arrows in Swiper.js carousels.🔨
-- Relatively positioning html elements for hover effects.🖱️
-- Selectively merging certain commits from one branch to another using git cherry-pick.🍒
-- Using the `<a>` tag when using the 'mailto:' functionality instead of the `<Link>` tag. The `<Link>` tag is meant to interface with Next.js' file-based routing. Using it for 'mailto:' will result in buggy behaviour. In my case constantly opening the email whenever the page is brought back into window context.📨
-- Next's `<Image>` tag's `width` and `height` properties aren't necessarily for the actual size that the image will be displayed at. That's determined by the 'sizes' property.⁉️
-- Routing to sections in different pages using url paths in `href` tag.🛣️
-- Using [Framer Motion](https://www.framer.com/motion) to add smooth, performant, customized animations.🤸
-- Routing to an id on different page and making the scroll behaviour smooth.🧈
+- Effectively communicating and collaborating with a designer to build a website from scratch🤝
+- Using developer mode in figma🧑‍💻
+- Using Next.js 13 app router, and using `<Link>` and `<Image>` components instead of `<a>` and `<img>` tags🔗🖼️
+- Defining custom types using TypeScript✅
+- Using Tailwind to rapidly create layouts and basic styling🚀
+- Making custom tailwind colors and using the `[]` syntax
+- Soft resetting the head to undo the most recent commit, but not getting rid of the changes locally🧠
+- Reverting git commits and resetting the head back to past commits🕜
+- Adding files to past git commits that weren't pushed➕
+- Adding files to past git commits that were pushed, and force pushing them➕➕
+- Creating grid backgrounds using vanilla CSS⏹️
+- Giving texts gradient backgrounds🟣🟡
+- Creating better adaptive layouts with custom breakpoints🧐
+- Creating a frosted Navbar❄️
+- Creating a custom animated hamburger icon using hover groups, transforms, and transition timing functions🍔
+- Passing states up and down parent and child components using the `createContext()` and `useContext()` React hooks🪝
+- Creating more complex two-dimensional layouts using grid instead of flexbox⬛
+- Creating a responsive ribbon in Tailwind CSS🎗️
+- Making a footer that's fairly responsive and doesn't suck🦶
+- Finally understanding how absolute and relative positionings work in CSS🤯
+- Using the 'styles' prop in conjunction to tailwind to add advanced inline styles, such as clip paths and svg rendering💅
+- Using CSS clip path with the 'path' function to create custom cubic bezier curves for components🛣️
+- Setting types for images that are expected as props inside a child component🖼️
+- Making certain props optional using the '?' operator❓
+- Using the [Swiper.js](https://swiperjs.com/) React API to create image carousels🎡
+- Customizing pagination bullets and navigation arrows in Swiper.js carousels🔨
+- Relatively positioning html elements for hover effects🖱️
+- Selectively merging certain commits from one branch to another using git cherry-pick🍒
+- Using the `<a>` tag when using the 'mailto:' functionality instead of the `<Link>` tag. The `<Link>` tag is meant to interface with Next.js' file-based routing. Using it for 'mailto:' will result in buggy behaviour. In my case constantly opening the email whenever the page is brought back into window context📨
+- Next's `<Image>` tag's `width` and `height` properties aren't necessarily for the actual size that the image will be displayed at. That's determined by the 'sizes' property⁉️
+- Routing to sections in different pages using url paths in `href` tag🛣️
+- Using [Framer Motion](https://www.framer.com/motion) to add smooth, performant, customized animations🤸
+- Routing to an id on different page and making the scroll behaviour smooth🧈
 - Refactoring code can be a nightmare🤦‍♂️
 - Dynamically rendering social media icons📸
 - Creating a counting up effect for numbers when scrolled into viewport⬆️
