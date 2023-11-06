@@ -27,7 +27,7 @@ export default function Decagon2({ image, TitleText, SubtitleText, countUpDelay}
       >
         <div>
           <p className="font-semibold text-[30px] min-[390px]:text-[40px] md:text-[80px] tracking-tight text-center bg-clip-text text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot">
-          {<CountUp end={parseInt(TitleText)} delay={countUpDelay} duration={3} enableScrollSpy/>}+
+          {<CountUp end={parseInt(TitleText)} delay={countUpDelay} duration={4} enableScrollSpy scrollSpyOnce/>}+
           </p>
           <p className="font-regular text-[10px] min-[390px]:text-[12px] md:text-[24px] tracking-tight text-center text-white">
             {SubtitleText}

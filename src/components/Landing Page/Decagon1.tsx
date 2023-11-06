@@ -33,7 +33,7 @@ export default function Decagon1({
     >
       <div>
         <p className="font-semibold text-[18px] min-[390px]:text-[24px] md:text-[50px] tracking-tighter text-center text-white">
-              <CountUp end={parseInt(TitleText)} delay={countUpDelay} duration={3} enableScrollSpy/>
+              <CountUp end={parseInt(TitleText)} delay={countUpDelay} duration={3} enableScrollSpy scrollSpyOnce/>
               {TitleText === "10K+" ? "K+" : "+"}
         </p>
         <p className="font-regular text-[8px] min-[390px]:text-[12px] md:text-[19px] tracking-tight text-center text-white">
