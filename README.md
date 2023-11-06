@@ -127,5 +127,6 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Refactoring code can be a nightmare🤦‍♂️
 - Dynamically rendering social media icons📸
 - Creating a counting up effect for numbers when scrolled into viewport⬆️
+- Setting up Vercel Analytics🔬
  
 </details>
