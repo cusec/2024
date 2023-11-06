@@ -125,5 +125,6 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Using [Framer Motion](https://www.framer.com/motion) to add smooth, performant, customized animations.🤸
 - Routing to an id on different page and making the scroll behaviour smooth.🧈
 - Refactoring code can be a nightmare🤦‍♂️
+- Creating a counting up effect for numbers when scrolled into viewport⬆️
  
 </details>
