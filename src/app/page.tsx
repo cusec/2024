@@ -19,7 +19,7 @@ export default function Home() {
         content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."
       />
 
-      <div className="w-full">
+      <div className="w-full overflow-hidden">
         <div
           className={`${
             fadeBackground

@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 
 const fadeInConfigDecagon = {
   initial: { opacity: 0, scale: 0.8 },
-  whileInView: { opacity: 1, scale: 1 },
+  whileInView: { opacity: 1, scale: 1},
   viewport: { once: true },
 };
 
@@ -38,7 +38,7 @@ const transitionConfig = (delay = 0) => ({
 
 export default function About() {
   return (
-    <div className="overflow-hidden">
+    <div className="">
       {/* Vertical grid of grey circles */}
       <motion.div {...fadeInConfigDecagon} transition={transitionConfig(0.3)}>
         <Image
@@ -68,7 +68,7 @@ export default function About() {
         >
           <p className="font-regular text-[15px]">
             CUSEC is a student-led software engineering conference for students
-            across Canada that has educated and inspired many for the last 21
+            across Canada that has educated and inspired many for the last 22
             years. Founded in 2002 by tech enthusiasts, it offers diverse tech
             knowledge shared by speakers, a chance to network with sponsoring
             companies, and make lifelong friendships within a safe and
@@ -88,6 +88,7 @@ export default function About() {
               image={decagon_gradient_1}
               TitleText={"10K+"}
               SubtitleText={"Attendees"}
+              countUpDelay = {0.5}
             />
           </motion.div>
           <motion.div
@@ -98,6 +99,7 @@ export default function About() {
               image={decagon_gradient_2}
               TitleText={"220+"}
               SubtitleText={"Speakers"}
+              countUpDelay = {0.7}
             />
           </motion.div>
         </section>
@@ -110,6 +112,7 @@ export default function About() {
               image={decagon_gradient_3}
               TitleText={"280+"}
               SubtitleText={"Sponsors"}
+              countUpDelay = {0.3}
             />
           </motion.div>
           <div className="">
@@ -119,8 +122,9 @@ export default function About() {
             >
               <Decagon2
                 image={large_decagon}
-                TitleText={"23"}
+                TitleText={"22"}
                 SubtitleText={"Years"}
+                countUpDelay = {1.1}
               />
             </motion.div>
           </div>
@@ -132,12 +136,18 @@ export default function About() {
               image={decagon_gradient_4}
               TitleText={"500+"}
               SubtitleText={"VIP Members"}
+              countUpDelay = {0.9}
             />
           </motion.div>
         </section>
+
       </div>
-      <div className="flex justify-center">
-        <motion.div {...fadeInConfigButton} transition={transitionConfig(1.3)}>
+
+        <motion.div
+          {...fadeInConfigButton}
+          transition={transitionConfig(1.3)}
+          className="flex justify-center"
+        >
           <Link
             className={`drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-royalBlue hover:bg-goldenApricot mx-auto px-5 md:px-10 py-1 mt-3 md:mt-6 text-center rounded-full uppercase md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
             href={`/about`}
@@ -145,7 +155,6 @@ export default function About() {
             Learn More
           </Link>
         </motion.div>
-      </div>
 
       <motion.span
         className="flex justify-end pb-8"

@@ -29,7 +29,7 @@ export default function CodeofConduct() {
   return (
     <>
       <title>Code of Conduct - CUSEC 2024</title>
-      <div className="w-full gradientGridBackground min-h-screen flex justify-center items-center">
+      <div className="w-full gradientGridBackground min-h-screen flex justify-center items-center overflow-hidden">
         <motion.div
           {...animateInConfigImage}
           transition={transitionConfig()}

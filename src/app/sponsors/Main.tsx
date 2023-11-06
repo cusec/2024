@@ -56,7 +56,7 @@ export default function Main() {
           <motion.h1
             {...animateInConfigText}
             transition={transitionConfig()}
-            className="uppercase text-center text-white font-semibold text-[24px] lg:text-[50px]"
+            className="uppercase text-center text-white font-semibold text-[24px] md:text-[36px] lg:text-[50px]"
           >
             Help Spark inspiration <br className="lg:block" />
             <motion.span
