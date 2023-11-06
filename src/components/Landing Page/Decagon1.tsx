@@ -1,19 +1,26 @@
-import React from "react";
+import CountUp from "react-countup";
 
 type Decagon1Props = {
-  image: {src: string};
+  image: { src: string };
   TitleText: string;
   SubtitleText: string;
+  countUpDelay: number;
 };
 
-export default function Decagon1({ image, TitleText, SubtitleText}:Decagon1Props) {
-    
-    // Didn't pursue the route of using a CSS-generated decagon because it just didn't look the same as the design, and it was also a pain to get it to be responsive.
-    {/* <article className="decagon bg-gradient-to-tr from-royalPurple to-goldenApricot flex items-center justify-center">
+export default function Decagon1({
+  image,
+  TitleText,
+  SubtitleText,
+  countUpDelay,
+}: Decagon1Props) {
+  // Didn't pursue the route of using a CSS-generated decagon because it just didn't look the same as the design, and it was also a pain to get it to be responsive.
+  {
+    /* <article className="decagon bg-gradient-to-tr from-royalPurple to-goldenApricot flex items-center justify-center">
       <div>
       40+ Speakers
       </div>
-    </article> */}
+    </article> */
+  }
 
   return (
     <article
@@ -26,7 +33,8 @@ export default function Decagon1({ image, TitleText, SubtitleText}:Decagon1Props
     >
       <div>
         <p className="font-semibold text-[18px] min-[390px]:text-[24px] md:text-[50px] tracking-tighter text-center text-white">
-        { TitleText}
+              <CountUp end={parseInt(TitleText)} delay={countUpDelay} duration={3} enableScrollSpy/>
+              {TitleText === "10K+" ? "K+" : "+"}
         </p>
         <p className="font-regular text-[8px] min-[390px]:text-[12px] md:text-[19px] tracking-tight text-center text-white">
           {SubtitleText}

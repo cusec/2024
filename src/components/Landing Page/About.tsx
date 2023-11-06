@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 
 const fadeInConfigDecagon = {
   initial: { opacity: 0, scale: 0.8 },
-  whileInView: { opacity: 1, scale: 1 },
+  whileInView: { opacity: 1, scale: 1},
   viewport: { once: true },
 };
 
@@ -88,6 +88,7 @@ export default function About() {
               image={decagon_gradient_1}
               TitleText={"10K+"}
               SubtitleText={"Attendees"}
+              countUpDelay = {0.5}
             />
           </motion.div>
           <motion.div
@@ -98,6 +99,7 @@ export default function About() {
               image={decagon_gradient_2}
               TitleText={"220+"}
               SubtitleText={"Speakers"}
+              countUpDelay = {0.7}
             />
           </motion.div>
         </section>
@@ -110,6 +112,7 @@ export default function About() {
               image={decagon_gradient_3}
               TitleText={"280+"}
               SubtitleText={"Sponsors"}
+              countUpDelay = {0.3}
             />
           </motion.div>
           <div className="">
@@ -121,6 +124,7 @@ export default function About() {
                 image={large_decagon}
                 TitleText={"22"}
                 SubtitleText={"Years"}
+                countUpDelay = {1.1}
               />
             </motion.div>
           </div>
@@ -132,10 +136,13 @@ export default function About() {
               image={decagon_gradient_4}
               TitleText={"500+"}
               SubtitleText={"VIP Members"}
+              countUpDelay = {0.9}
             />
           </motion.div>
         </section>
+
       </div>
+
         <motion.div
           {...fadeInConfigButton}
           transition={transitionConfig(1.3)}
