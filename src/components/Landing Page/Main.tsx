@@ -75,6 +75,7 @@ const Landingbox = () => {
               <a
                 href={signUpLink}
                 target="_blank"
+                rel = "noopener noreferrer"
                 className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex justify-center items-center bg-[#FDF3FF] border-2 border-royalPurple px-[3rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalPurple hover:text-white whitespace-nowrap"
               >
                 Sign Up
@@ -100,7 +101,9 @@ const Landingbox = () => {
               className="flex justify-center md:hidden"
             >
               <a
-                href={sponsorEmailLink}
+                href={speakerSignUpLink}
+                target="_blank"
+                rel = "noopener noreferrer"
                 className="text-fuchsia-500 font-semibold underline underline-offset-2 decoration-2 transition ease-in-out duration-500 hover:scale-105"
               >
                 Want to be a Speaker?
@@ -127,6 +130,7 @@ const Landingbox = () => {
               <a
                 href={speakerSignUpLink}
                 target="_blank"
+                rel = "noopener noreferrer"
                 className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] hidden md:flex justify-center items-center bg-[#FDF3FF] border-2 border-fuchsia-500 px-[3rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-fuchsia-500 tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-fuchsia-500 hover:text-white"
               >
                 Be a Speaker
