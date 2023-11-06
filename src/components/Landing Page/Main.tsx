@@ -127,7 +127,7 @@ const Landingbox = () => {
               <a
                 href={speakerSignUpLink}
                 target="_blank"
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] hidden md:flex justify-center items-center bg-[#FDF3FF] border-2 border-fuchsia-500 px-[3rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-fuchsia-500 tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-fuchsia-500 hover:text-white"
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] hidden md:flex justify-center items-center bg-[#FDF3FF] border-2 border-fuchsia-500 px-[3rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-fuchsia-500 tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-fuchsia-500 hover:text-white"
               >
                 Become a Speaker
               </a>
