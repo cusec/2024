@@ -23,7 +23,7 @@ export default function Faq() {
       <div className="bg-black bg-opacity-60 text-white px-8 overflow-hidden">
         <motion.h2
           {...animateInConfig(true)}
-          transition={transitionConfig(0.3)}
+          transition={transitionConfig(0)}
           className="text-[28px] flex justify-center font-semibold py-14 px-10"
         >
           <hr className="block w-2 h-10 bg-purple-500 mr-4" />
@@ -31,14 +31,14 @@ export default function Faq() {
         </motion.h2>
         <motion.span
           {...animateInConfig(true)}
-          transition={transitionConfig(0.4)}
+          transition={transitionConfig(0.2)}
           className="block max-w-[600px] h-[0.75px] bg-white mb-10 mx-auto"
         ></motion.span>
 
         <div className="mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6">
           <motion.div
             {...animateInConfig(false)}
-            transition={transitionConfig(0.5)}
+            transition={transitionConfig(0.3)}
           >
             <FaqCard
               question="When & Where is CUSEC 2024 happening?"
@@ -73,7 +73,7 @@ export default function Faq() {
           </motion.div>
           <motion.div
             {...animateInConfig(false)}
-            transition={transitionConfig(0.6)}
+            transition={transitionConfig(0.35)}
           >
             <FaqCard
               question="Where can I find the conference schedule, speakers, and sponsors?"
@@ -88,7 +88,7 @@ export default function Faq() {
           </motion.div>
           <motion.div
             {...animateInConfig(false)}
-            transition={transitionConfig(0.7)}
+            transition={transitionConfig(0.4)}
           >
             <FaqCard
               question="Who can attend? Are there any costs?"
@@ -118,7 +118,7 @@ export default function Faq() {
           </motion.div>
           <motion.div
             {...animateInConfig(false)}
-            transition={transitionConfig(0.8)}
+            transition={transitionConfig(0.45)}
           >
             <FaqCard
               question="How can I get a ticket?"
@@ -138,7 +138,7 @@ export default function Faq() {
           </motion.div>
           <motion.div
             {...animateInConfig(false)}
-            transition={transitionConfig(0.9)}
+            transition={transitionConfig(0.5)}
           >
             <FaqCard
               question={`Where should I book my hotel room? How much does it cost?`}
@@ -153,7 +153,7 @@ export default function Faq() {
           </motion.div>
           <motion.div
             {...animateInConfig(false)}
-            transition={transitionConfig(1.0)}
+            transition={transitionConfig(0.55)}
           >
             <FaqCard
               question="Can I get a refund or resell my ticket?"
@@ -177,7 +177,7 @@ export default function Faq() {
 
         <motion.p
           {...animateInConfig(false)}
-          transition={transitionConfig(1.1)}
+          transition={transitionConfig(0.6)}
           className="text-center font-medium py-16 md:px-16"
         >
           Don&apos;t see a question you&apos;re looking for?

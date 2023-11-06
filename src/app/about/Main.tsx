@@ -70,15 +70,15 @@ export default function Main({ isMediumScreen }: MainProps) {
         }}
       >
         <motion.div {...animateInConfigImage} transition={transitionConfig(0)}>
-        <Image
-          className="brightness-50"
-          src={cusec_2023_group_photo}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          alt="CUSEC 2023 Group Photo"
+          <Image
+            className="brightness-50"
+            src={cusec_2023_group_photo}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            alt="CUSEC 2023 Group Photo"
           />
-          </motion.div>
+        </motion.div>
 
         <div className="absolute inset-0 z-1 flex justify-center items-center lg:mx-1">
           {/* Text */}
@@ -99,7 +99,7 @@ export default function Main({ isMediumScreen }: MainProps) {
             <motion.span
               {...getMotionProps(roseQuartz)}
               transition={transitionConfig(0.6)}
-              >
+            >
               inspiration
             </motion.span>
             , &{" "}

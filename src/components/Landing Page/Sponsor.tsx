@@ -37,7 +37,7 @@ export default function Sponsor() {
         <div className="grid grid-cols-1 md:grid-cols-2 py-14 md:py-32 max-w-6xl mx-auto w-fit">
           <motion.span
             {...animateInConfig(true)}
-            transition={transitionConfig(0.3)}
+            transition={transitionConfig(0)}
             className="flex justify-center text-[28px] font-semibold pb-10 md:hidden"
           >
             <h2 className="w-fit">
@@ -48,19 +48,19 @@ export default function Sponsor() {
           <div className="mx-4 md:mx-0">
             <motion.div
               {...animateInConfig(false)}
-              transition={transitionConfig(0.3)}
+              transition={transitionConfig(0)}
               className="relative max-w-md aspect-square mx-auto w-full"
             >
               {/* This div is for the background gradient */}
               <motion.div
                 {...fadeInConfigImage}
-                transition={transitionConfig(0.5)}
+                transition={transitionConfig(0.3)}
                 className="absolute max-w-md aspect-square top-[-17px] right-[-18px] bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-[95%]"
               ></motion.div>
               <BlueBorderSquareBox>
                 <motion.div
                   {...fadeInConfigImage}
-                  transition={transitionConfig(0.7)}
+                  transition={transitionConfig(0.5)}
                   className="aspect-square flex flex-col justify-center items-center relative right-4"
                 >
                   <Image
@@ -80,19 +80,19 @@ export default function Sponsor() {
           <div className="md:text-right mx-auto md:pl-10">
             <motion.h2
               {...animateInConfig(true)}
-              transition={transitionConfig(0.3)}
+              transition={transitionConfig(0)}
               className="text-[28px] md:text-[40px] font-semibold hidden md:block"
             >
               Past CUSEC Sponsors
             </motion.h2>
             <motion.hr
               {...animateInConfig(true)}
-              transition={transitionConfig(0.5)}
+              transition={transitionConfig(0.3)}
               className="hidden md:block max-w-[3rem] md:max-w-[4rem] h-2 bg-orange-300 mb-2 mt-2 ml-auto"
             />
             <motion.p
               {...animateInConfig(true)}
-              transition={transitionConfig(0.7)}
+              transition={transitionConfig(0.5)}
               className="md:text-[20px] font-regular pt-10 pb-6"
             >
               Over the last 21 years, CUSEC has collaborated with an extensive
@@ -102,7 +102,7 @@ export default function Sponsor() {
             </motion.p>
             <motion.div
               {...animateInConfig(true)}
-              transition={transitionConfig(0.9)}
+              transition={transitionConfig(0.7)}
               className="flex justify-center md:justify-end"
             >
               <Link

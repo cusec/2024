@@ -101,7 +101,7 @@ export default function TicketCard({
         <motion.span
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={transitionConfig(0.7)}
+          transition={transitionConfig(0.6)}
           className="flex my-10"
         >
           <Link
@@ -123,7 +123,7 @@ export default function TicketCard({
             {features.map((feature, index) => (
               <motion.li
                 {...animateInConfig}
-                transition={transitionConfig(index * 0.1 + 0.8)}
+                transition={transitionConfig(index * 0.1 + 0.2)}
                 key={index}
                 className="flex align-center group md:text-[20px]"
               >

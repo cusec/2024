@@ -40,7 +40,7 @@ export default function About() {
   return (
     <div className="">
       {/* Vertical grid of grey circles */}
-      <motion.div {...fadeInConfigDecagon} transition={transitionConfig(0.3)}>
+      <motion.div {...fadeInConfigDecagon} transition={transitionConfig(0)}>
         <Image
           src={circle_grid_v1}
           alt="Vertical grid of grey circles"
@@ -51,19 +51,19 @@ export default function About() {
       <section className="lg:max-w-[1024px] max-w-[768px] pl-12 ">
         <motion.p
           {...fadeInConfigText}
-          transition={transitionConfig(0.5)}
+          transition={transitionConfig(0)}
           className="font-semibold text-[28px]"
         >
           Get To Know Us
         </motion.p>
         <motion.hr
           {...fadeInConfigText}
-          transition={transitionConfig(0.7)}
+          transition={transitionConfig(0.3)}
           className="block max-w-[3rem] md:max-w-[2.5rem] h-2 bg-roseQuartz mb-10 mt-2"
         />
         <motion.section
           {...fadeInConfigText}
-          transition={transitionConfig(0.9)}
+          transition={transitionConfig(0.6)}
           className="space-y-6"
         >
           <p className="font-regular text-[15px]">
@@ -145,7 +145,7 @@ export default function About() {
 
         <motion.div
           {...fadeInConfigButton}
-          transition={transitionConfig(1.3)}
+          transition={transitionConfig(0.9)}
           className="flex justify-center"
         >
           <Link

@@ -60,17 +60,17 @@ export default function Contact() {
   return (
     <motion.div
       {...animateInConfig(false)}
-      transition={transitionConfig(0.3)}
+      transition={transitionConfig(0)}
     >
       <BlueBorderSquareBox>
         <motion.form
           {...animateInConfig(false)}
-          transition={transitionConfig(0.5)}
+          transition={transitionConfig(0.1)}
           className="py-16 px-8 md:px-12"
         >
           <motion.h2
             {...animateInConfig(true)}
-            transition={transitionConfig(0.6)}
+            transition={transitionConfig(0.2)}
             className="font-semibold text-[28px] md:text-[40px] tracking-tight"
           >
             Contact Us
@@ -78,12 +78,12 @@ export default function Contact() {
           <div className="space-y-3">
             <motion.hr
               {...animateInConfig(true)}
-              transition={transitionConfig(0.7)}
+              transition={transitionConfig(0.3)}
               className="block max-w-[3rem] md:max-w-[4rem] h-2 bg-purple-500"
             />
             <motion.div
               {...animateInConfig(true)}
-              transition={transitionConfig(0.8)}
+              transition={transitionConfig(0.4)}
             >
               <a
                 href={"mailto:info@cusec.net"}
@@ -98,7 +98,7 @@ export default function Contact() {
 
             <motion.p
               {...animateInConfig(true)}
-              transition={transitionConfig(0.9)}
+              transition={transitionConfig(0.5)}
               className="text-[12px] md:text-[16px]"
             >
               Leave us a message regarding sponsorship, hotel bookings, or any
@@ -110,7 +110,7 @@ export default function Contact() {
             <div className="flex space-x-4">
               <motion.input
                 {...animateInConfig(false)}
-                transition={transitionConfig(0.9)}
+                transition={transitionConfig(0.5)}
                 type="text"
                 id="fullName"
                 name="fullName"
@@ -122,7 +122,7 @@ export default function Contact() {
               {/* Email Input */}
               <motion.input
                 {...animateInConfig(false)}
-                transition={transitionConfig(0.9)}
+                transition={transitionConfig(0.5)}
                 type="email"
                 id="email"
                 name="email"
@@ -135,7 +135,7 @@ export default function Contact() {
             {/* Subject Input */}
             <motion.input
               {...animateInConfig(false)}
-              transition={transitionConfig(0.9)}
+              transition={transitionConfig(0.5)}
               type="text"
               id="subject"
               name="subject"
@@ -147,7 +147,7 @@ export default function Contact() {
             {/* Message Input */}
             <motion.div
               {...animateInConfig(false)}
-              transition={transitionConfig(0.9)}
+              transition={transitionConfig(0.5)}
               className="mt-4"
             >
               <textarea
@@ -163,7 +163,7 @@ export default function Contact() {
           </div>
           <motion.span
             {...animateInConfig(false)}
-            transition={transitionConfig(1.1)}
+            transition={transitionConfig(0.6)}
             className="flex justify-center mt-4"
           >
             <button

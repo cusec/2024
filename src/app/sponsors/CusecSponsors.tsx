@@ -103,12 +103,12 @@ export default function CusecSponsors() {
         </motion.p>
         <motion.hr
           {...animateInConfigText}
-          transition={transitionConfig(0.3)}
+          transition={transitionConfig(0.2)}
           className="block max-w-[2.5rem] md:max-w-[3.75rem] h-2 bg-roseQuartz mb-10"
         />
         <motion.p
           {...animateInConfigText}
-          transition={transitionConfig(0.6)}
+          transition={transitionConfig(0.4)}
           className="font-regular text-[15px] md:text-[20px]"
         >
           Each year our sponsors play a crucial role in making CUSEC an exciting
@@ -138,7 +138,7 @@ export default function CusecSponsors() {
 
       <motion.div
         {...animateInConfigImage}
-        transition={transitionConfig(0.8)}
+        transition={transitionConfig(0.6)}
         className="relative max-w-xl aspect-square mx-auto w-full"
       >
         <motion.div
@@ -161,7 +161,7 @@ export default function CusecSponsors() {
             ))} */}
           <motion.div
             {...animateInConfigImage}
-            transition={transitionConfig(1)}
+            transition={transitionConfig(0.9)}
             className="aspect-square flex flex-col justify-center items-center relative right-4"
           >
             <Image

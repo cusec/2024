@@ -61,7 +61,7 @@ export default function Sponsor() {
       <div className="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-10">
         <motion.div
           {...animateInConfig(false)}
-          transition={transitionConfig(0.3)}
+          transition={transitionConfig(0)}
         >
           <TicketCard
             title={"Basic"}
@@ -79,7 +79,7 @@ export default function Sponsor() {
         </motion.div>
         <motion.div
           {...animateInConfig(false)}
-          transition={transitionConfig(0.6)}
+          transition={transitionConfig(0)}
         >
           <TicketCard
             title={"VIP"}
