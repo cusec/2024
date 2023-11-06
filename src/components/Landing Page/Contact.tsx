@@ -61,7 +61,6 @@ export default function Contact() {
     <motion.div
       {...animateInConfig(false)}
       transition={transitionConfig(0.3)}
-      className="overflow-hidden"
     >
       <BlueBorderSquareBox>
         <motion.form
