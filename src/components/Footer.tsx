@@ -30,7 +30,7 @@ export default function Footer() {
     >
       <motion.div
         {...animateInConfig}
-        transition={transitionConfig(0.5)}
+        transition={transitionConfig(0)}
         className="lg:max-w-screen-2xl flex justify-center lg:justify-between items-center px-6 lg:mx-24 py-4 w-full"
       >
         <Link href={"/"}>

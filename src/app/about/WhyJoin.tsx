@@ -91,7 +91,7 @@ export default function WhyJoin() {
 
       <motion.h2
         {...animateInConfig1}
-        transition={transitionConfig(0.2)}
+        transition={transitionConfig(0)}
         className="flex items-center font-semibold text-[28px] md:text-[40px] tracking-tight mb-16"
       >
         <hr className="block w-2 h-10 bg-orange-300 mr-4" />
@@ -101,7 +101,7 @@ export default function WhyJoin() {
       {/* Decagon Carousel*/}
       <motion.div
         {...animateInConfig2}
-        transition={transitionConfig(0.4)}
+        transition={transitionConfig(0.2)}
         className="w-full h-[270px] md:h-[450px]"
       >
         <Swiper
@@ -124,7 +124,7 @@ export default function WhyJoin() {
           <SwiperSlide>
             <motion.div
               {...animateInConfig2}
-              transition={transitionConfig(0.7)}
+              transition={transitionConfig(0.3)}
               className="flex justify-center"
             >
               <WhyJoinDecagon
@@ -138,7 +138,7 @@ export default function WhyJoin() {
           <SwiperSlide>
             <motion.div
               {...animateInConfig2}
-              transition={transitionConfig(1.1)}
+              transition={transitionConfig(0.9)}
               className="flex justify-center"
             >
               <WhyJoinDecagon
@@ -153,7 +153,7 @@ export default function WhyJoin() {
           <SwiperSlide>
             <motion.div
               {...animateInConfig2}
-              transition={transitionConfig(0.9)}
+              transition={transitionConfig(0.6)}
               className="flex justify-center"
             >
               <WhyJoinDecagon
@@ -170,14 +170,14 @@ export default function WhyJoin() {
       <div className="flex flex-col items-center mt-16">
         <motion.p
           {...animateInConfig1}
-          transition={transitionConfig(0.3)}
+          transition={transitionConfig(0)}
           className="md:text-[24px] text-center"
         >
           Be a part of our 2024 event this January!
         </motion.p>
         <motion.p
           {...animateInConfig1}
-          transition={transitionConfig(0.6)}
+          transition={transitionConfig(0.3)}
           className="font-semibold text-[20px] md:text-[36px] text-transparent bg-clip-text bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot w-fit"
         >
           Register Now

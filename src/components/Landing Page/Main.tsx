@@ -30,7 +30,7 @@ const Landingbox = () => {
     <motion.main {...fadeInConfig} transition={transitionConfig()}>
       <BlueBorderSquareBox>
         <section className="py-8 px-8 text-center space-y-5 flex flex-col justify-center items-center">
-          <motion.div {...fadeInConfig} transition={transitionConfig(0.3)}>
+          <motion.div {...fadeInConfig} transition={transitionConfig(0.2)}>
             <Image
               src={logoPrimaryDark}
               alt="CUSEC 2024 logo primary dark"
@@ -41,14 +41,14 @@ const Landingbox = () => {
           </motion.div>
           <motion.p
             {...fadeInConfig}
-            transition={transitionConfig(0.6)}
+            transition={transitionConfig(0.4)}
             className="font-semibold text-[18px] leading-[25px] tracking-wider"
           >
             Canadian University Software Engineering Conference
           </motion.p>
           <motion.p
             {...fadeInConfig}
-            transition={transitionConfig(0.9)}
+            transition={transitionConfig(0.6)}
             className="text-[15px] text-[#615757]"
           >
             January 11-13
@@ -69,7 +69,7 @@ const Landingbox = () => {
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <motion.div
               {...fadeInConfig}
-              transition={transitionConfig(1.2)}
+              transition={transitionConfig(0.8)}
               className="flex justify-center"
             >
               <a
@@ -84,7 +84,7 @@ const Landingbox = () => {
 
             <motion.div
               {...fadeInConfig}
-              transition={transitionConfig(1.4)}
+              transition={transitionConfig(1)}
               className="flex justify-center md:hidden"
             >
               <a
@@ -97,7 +97,7 @@ const Landingbox = () => {
 
             <motion.div
               {...fadeInConfig}
-              transition={transitionConfig(1.6)}
+              transition={transitionConfig(1.2)}
               className="flex justify-center md:hidden"
             >
               <a
@@ -112,7 +112,7 @@ const Landingbox = () => {
 
             <motion.div
               {...fadeInConfig}
-              transition={transitionConfig(1.4)}
+              transition={transitionConfig(1)}
               className="flex"
             >
               <a
@@ -124,7 +124,7 @@ const Landingbox = () => {
             </motion.div>
             <motion.div
               {...fadeInConfig}
-              transition={transitionConfig(1.6)}
+              transition={transitionConfig(1.2)}
               className="flex self-center"
             >
               <a
