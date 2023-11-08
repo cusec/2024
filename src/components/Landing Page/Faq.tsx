@@ -160,7 +160,11 @@ export default function Faq() {
               content={
                 <>
                   It is strictly forbidden to re-sell a CUSEC ticket above the
-                  purchased price. If you cannot attend anymore, reach out to{" "}
+                  purchased price. Refunds are available 30 days after purchase
+                  or until December 22, 2023 at 11:59 PM (EST), whichever is
+                  earlier. <br />
+                  <br />
+                  If you cannot attend anymore, reach out to{" "}
                   <a
                     href={"mailto:info@cusec.net"}
                     className="hover:text-blue-500 transition ease-in-out duration-500"
