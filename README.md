@@ -126,7 +126,10 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Routing to an id on different page and making the scroll behaviour smooth🧈
 - Refactoring code can be a nightmare🤦‍♂️
 - Dynamically rendering social media icons📸
-- Creating a counting up effect for numbers when scrolled into viewport⬆️
-- Setting up Vercel Analytics🔬
+- Using [react-countup](https://www.npmjs.com/package/react-countup) to implement a counting up effect for numbers when they're scrolled into the viewport⬆️
+- Setting up [Vercel Analytics](https://vercel.com/analytics)🔬
+- Using [Google Search Console](https://search.google.com/search-console/about) to debug SEO issues🕷️
+- Generating a sitemap with a script to improve SEO.🗺️
+- Learning about DNS and configuring domains🌐
  
 </details>
