@@ -1,7 +1,6 @@
 ## [CUSEC 2024 Website](https://2024.cusec.net)
 
-![image](https://github.com/cusec/2024/assets/54924158/8c92dd8b-2cae-465b-9a08-155233e979a5)
-
+![image](https://github.com/cusec/2024/assets/54924158/dd2e480b-88b1-40f9-b024-b3394ca3a4d4)
 
 This is the official repository for the 2024 edition of the CUSEC website.
 
