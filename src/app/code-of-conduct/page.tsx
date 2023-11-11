@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import Link from "next/link";
 import Fade from "@/components/Fade";
 import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
 import { motion } from "framer-motion";
@@ -215,12 +214,12 @@ export default function CodeofConduct() {
                   className="font-regular text-[10px] sm:text-[12px] md:text-[16px]"
                 >
                   <strong>Email Address:</strong>
-                  <Link href={"mailto:incidents@cusec.net"}>
+                  <a href={"mailto:incidents@cusec.net"} rel="noopener noreferrer">
                     {" "}
                     <span className="text-royalBlue underline underline-offset-2">
                       incidents@cusec.net
                     </span>
-                  </Link>
+                  </a>
                 </motion.p>
                 <motion.p
                   {...animateInConfigText}
@@ -228,12 +227,12 @@ export default function CodeofConduct() {
                   className="font-regular text-[10px] sm:text-[12px] md:text-[16px]"
                 >
                   <strong>Non-Emergency Local Law Enforcement (SPVM):</strong>
-                  <Link href={"tel:+1-(514)-280-2222"}>
+                  <a href={"tel:+1-(514)-280-2222"} rel="noopener noreferrer">
                     {" "}
                     <span className="text-royalBlue underline underline-offset-2">
                       +1-(514)-280-2222
                     </span>
-                  </Link>
+                  </a>
                 </motion.p>
                 <motion.p
                   {...animateInConfigText}
@@ -241,12 +240,12 @@ export default function CodeofConduct() {
                   className="font-regular text-[10px] sm:text-[12px] md:text-[16px]"
                 >
                   <strong>Emergency and Urgent Calls:</strong>
-                  <Link href={"tel:911"}>
+                  <a href={"tel:911"} rel="noopener noreferrer">
                     {" "}
                     <span className="text-royalBlue underline underline-offset-2">
                       911
                     </span>
-                  </Link>
+                  </a>
                 </motion.p>
               </motion.div>
             </BlueBorderSquareBox>
