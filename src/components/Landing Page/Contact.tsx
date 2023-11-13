@@ -2,6 +2,8 @@ import { useState } from "react";
 import BlueBorderSquareBox from "./BlueBorderSquareBox";
 import { HiEnvelope } from "react-icons/hi2";
 import { motion } from "framer-motion";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function animateInConfig(text: boolean) {
   return {
@@ -20,6 +22,14 @@ const transitionConfig = (delay = 0) => ({
 
 // Functionality for the contact form
 export default function Contact() {
+  // Display a toast notification indicating that the email has been sent
+  const notify = (success: boolean) =>
+    success
+      ? toast.success("Your message has been sent!")
+      : toast.error(
+          "Your message has not been sent! Please email us directly at info@cusec.net, and also let us know that the contact form is not working."
+        );
+
   const [data, setData] = useState({
     fullName: "",
     email: "",
@@ -33,6 +43,11 @@ export default function Contact() {
 
   const sendEmail = async (e: any) => {
     e.preventDefault();
+    // Display a toast notification indicating that the email is being sent
+    const sendingToastId = toast.info("Sending your message...", {
+      autoClose: false, // Prevent the toast from closing automatically
+      style: { backgroundColor: '#0569FF' },
+    });
     try {
       const res = await fetch("/api/send", {
         method: "POST",
@@ -44,6 +59,9 @@ export default function Contact() {
 
       const resData = await res.json(); // Get the response data
 
+      // Remove the 'sending' toast
+      toast.dismiss(sendingToastId);
+
       // The request was successful is the message is undefined
       if (resData.message == undefined) {
         setData({
@@ -52,10 +70,12 @@ export default function Contact() {
           subject: "",
           message: "",
         });
+        notify(true);
       } else {
         // If the request was not successful
         // console.log("Your message has not been sent!");
         // console.log(resData.message); // Display error message from the response
+        notify(false);
       }
     } catch (error: any) {
       console.log("An error occurred:", error.message);
@@ -185,6 +205,19 @@ export default function Contact() {
           </motion.span>
         </motion.form>
       </BlueBorderSquareBox>
+      <ToastContainer
+        style={{ marginTop: "50px" }} // Offset so that the toast container doesn't overlap the navbar
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </motion.div>
   );
 }

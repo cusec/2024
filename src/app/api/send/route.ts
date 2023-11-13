@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     const emailToTeam = await resend.emails.send({
       from: `${body.fullName} <formsubmission@2024.cusec.net>`,
-      to: "web@cusec.net",
+      to: "info@cusec.net",
       subject: body.subject,
       react: EmailTemplate({ message: body.message, toTeam: true }),
       text: "",
