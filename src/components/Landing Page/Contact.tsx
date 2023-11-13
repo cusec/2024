@@ -11,9 +11,6 @@ function animateInConfig(text: boolean) {
   };
 }
 
-const disabledMessage =
-  "The contact form is currently disabled for maintenance. It'll be back soon, we promise :) Meanwhile, you can still send us an email at info@cusec.net.";
-
 const transitionConfig = (delay = 0) => ({
   duration: 1.5,
   delay: delay,
@@ -21,13 +18,18 @@ const transitionConfig = (delay = 0) => ({
   bounce: 0.5,
 });
 
+// Functionality for the contact form
 export default function Contact() {
   const [data, setData] = useState({
     fullName: "",
     email: "",
     subject: "",
-    Message: "",
+    message: "",
   });
+
+  const handleChange = (e: any) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
 
   const sendEmail = async (e: any) => {
     e.preventDefault();
@@ -40,30 +42,31 @@ export default function Contact() {
         body: JSON.stringify(data),
       });
 
-      if (res.status === 200) {
+      const resData = await res.json(); // Get the response data
+
+      // The request was successful is the message is undefined
+      if (resData.message == undefined) {
         setData({
           fullName: "",
           email: "",
           subject: "",
-          Message: "",
+          message: "",
         });
-        console.log("Your message has been sent!");
+      } else {
+        // If the request was not successful
+        // console.log("Your message has not been sent!");
+        // console.log(resData.message); // Display error message from the response
       }
-
-      const resData = await res.json();
-      console.log(resData);
-    } catch (error) {
-      console.log(error);
+    } catch (error: any) {
+      console.log("An error occurred:", error.message);
     }
   };
 
   return (
-    <motion.div
-      {...animateInConfig(false)}
-      transition={transitionConfig(0)}
-    >
+    <motion.div {...animateInConfig(false)} transition={transitionConfig(0)}>
       <BlueBorderSquareBox>
         <motion.form
+          onSubmit={sendEmail}
           {...animateInConfig(false)}
           transition={transitionConfig(0.1)}
           className="py-16 px-8 md:px-12"
@@ -109,41 +112,46 @@ export default function Contact() {
             {/* Full Name Input */}
             <div className="flex space-x-4">
               <motion.input
+                onChange={handleChange}
                 {...animateInConfig(false)}
                 transition={transitionConfig(0.5)}
                 type="text"
                 id="fullName"
                 name="fullName"
+                value={data.fullName}
                 className="w-1/2 outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
                 placeholder="Full Name*"
                 required
-                disabled
               ></motion.input>
+
               {/* Email Input */}
               <motion.input
+                onChange={handleChange}
                 {...animateInConfig(false)}
                 transition={transitionConfig(0.5)}
                 type="email"
                 id="email"
                 name="email"
+                value={data.email}
                 className="w-1/2 outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
                 placeholder="Your Email Address*"
                 required
-                disabled
               ></motion.input>
             </div>
             {/* Subject Input */}
             <motion.input
+              onChange={handleChange}
               {...animateInConfig(false)}
               transition={transitionConfig(0.5)}
               type="text"
               id="subject"
               name="subject"
+              value={data.subject}
               className="w-full outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
               placeholder="Subject*"
               required
-              disabled
             ></motion.input>
+
             {/* Message Input */}
             <motion.div
               {...animateInConfig(false)}
@@ -151,16 +159,18 @@ export default function Contact() {
               className="mt-4"
             >
               <textarea
-                id="Message"
-                name="Message"
+                onChange={handleChange}
+                id="message"
+                name="message"
+                value={data.message}
                 rows={4}
                 className="w-full resize-y outline-none focus:ring ring-royalPurple rounded-md text-[12px] md:text-[16px] py-1 px-2 border"
                 placeholder="Message*"
                 required
-                disabled
               ></textarea>
             </motion.div>
           </div>
+
           <motion.span
             {...animateInConfig(false)}
             transition={transitionConfig(0.6)}
@@ -168,15 +178,7 @@ export default function Contact() {
           >
             <button
               type="submit"
-              // className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-white px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalBlue hover:text-white border-2 border-royalBlue"
-              // onClick={sendEmail}
-              className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-gray-400 px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-110 border-2 border-royalBlue"
-              onClick={(e) => {
-                e.preventDefault();
-
-                alert(disabledMessage); // Display message when clicked
-              }}
-              // disabled
+              className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-white px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalBlue hover:text-white border-2 border-royalBlue"
             >
               Submit
             </button>
