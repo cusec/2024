@@ -25,11 +25,11 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
           </p>
           <p>Here is a copy of your message.</p>
           <p>
-            <strong>Subject:</strong>
+            <strong>Subject: </strong>
             {subject}
           </p>
           <p>
-            <strong>Message:</strong>
+            <strong>Message: </strong>
             {message}
           </p>
         </div>
