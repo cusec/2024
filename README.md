@@ -130,5 +130,9 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Using [Google Search Console](https://search.google.com/search-console/about) to debug SEO issues🕷️
 - Generating a sitemap with a script to improve SEO.🗺️
 - Learning about DNS and configuring domains🌐
- 
+- Sending emails through code is a nightmare💀
+- Using the [Resend](https://resend.com/home) email service to verify domain, generate API key, and implement a functional contact form.📨
+- Creating email templates for automatic responses from the [Resend](https://resend.com/home) server to user that filled out the contact form; thus providing confirmation that their message has been received by the team.👍
+- Using the [react-toastify](https://www.npmjs.com/package/react-toastify) library to display notifications to the user once they hit the submit button on the contact form.🔔
+  
 </details>
