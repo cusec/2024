@@ -144,9 +144,29 @@ export default function Faq() {
               question={`Where should I book my hotel room? How much does it cost?`}
               content={
                 <>
-                  Information about room rates and booking will be released as
-                  soon as possible. We are working our hardest to provide
-                  affordable room rates for delegates at our venue.
+                  We’ve worked with Le Centre Sheraton to provide you with great
+                  rates on-site during the conference. You may book them{" "}
+                  <a
+                    href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1698351860401&key=GRP&app=resvlink"
+                    target="_blank"
+                    className="text-blue-500"
+                  >
+                    here
+                  </a>
+                  , at the discounted rate of $200 CAD per room per night for up
+                  to 2 adults. You can add up to 2 additional adults for $10 per
+                  night per additional person. Note that the extra adult fee has
+                  been adjusted to $10 rather than the stated $40 on the
+                  confirmation screen. This will be manually adjusted prior to
+                  check-in.
+                  <br />
+                  <br />
+                  These rates are good until December 11th, 2023. Please book
+                  before then to secure your rate. Please{" "}
+                  <a href="mailto:info@cusec.net" className="text-blue-500">
+                    contact us
+                  </a>{" "}
+                  if you have any questions.
                 </>
               }
             />
