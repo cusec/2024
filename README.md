@@ -110,7 +110,7 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Creating a responsive ribbon in Tailwind CSS🎗️
 - Making a footer that's fairly responsive and doesn't suck🦶
 - Finally understanding how absolute and relative positionings work in CSS🤯
-- Using the 'styles' prop in conjunction to tailwind to add advanced inline styles, such as clip paths and svg rendering💅
+- Using the 'styles' prop in conjunction with Tailwind to add advanced inline styles, such as clip paths and svg rendering💅
 - Using CSS clip path with the 'path' function to create custom cubic bezier curves for components🛣️
 - Setting types for images that are expected as props inside a child component🖼️
 - Making certain props optional using the '?' operator❓
