@@ -7,13 +7,14 @@ This is the official repository for the 2024 edition of the CUSEC website.
 ## Project Brief
 <details>
 <summary>Introduction</summary>
-
+</br>
 The purpose of this project is to develop a dynamic and visually appealing website for the Canadian Universities Software Engineering Conference (CUSEC) to be held in 2024. The website will serve as a central hub of information for attendees, sponsors, speakers, and volunteers, providing a seamless and intuitive user experience.
 
 </details>
 
 <details>
 <summary>Objectives</summary>
+</br>
 
 The main objectives of the CUSEC website are as follows:
 
@@ -30,7 +31,7 @@ e. Social Interaction: The website should integrate social media platforms to en
 
 <details>
 <summary>Key Features and Functionality</summary>
-
+</br>
 The CUSEC website should include the following features and functionality:
 
 a. Home Page: A visually appealing landing page with essential conference details, highlights, and a prominent call to action for registration.
@@ -57,6 +58,7 @@ i. Mobile Responsiveness: Ensuring the website is optimized for mobile devices t
 <details>
 
 <summary>Design and Visual Elements</summary>
+</br>
 The website's design should reflect the professional yet vibrant nature of the conference. Consider the following design elements:
 
 a. Visual Appeal: Engaging and modern design elements, including high-quality images, videos, and graphics.
@@ -74,6 +76,7 @@ d. Branding: Incorporate the CUSEC logo and branding elements throughout the web
 
 <details>
 <summary>Technical Requirements</summary>
+</br>
 The website should be built using industry-standard technologies and frameworks. Consider the following technical requirements:
 
 a. Content Management System (CMS): Implement a user-friendly CMS to allow conference organizers to easily update and manage website content.
