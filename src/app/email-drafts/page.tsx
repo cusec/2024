@@ -318,7 +318,7 @@ Cheers,
                 available options.
               </li>
               <li>
-                Integrate authetication to allow users to save their drafts and
+                Integrate authentication to allow users to save their drafts and
                 access them later.
               </li>
             </ul>
