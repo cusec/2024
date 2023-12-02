@@ -207,7 +207,7 @@ export default function Faq() {
                 <>
                   Snacks and refreshments will be available to delegates that
                   have bought a ticket to attend. Although we will not be
-                  providing meals there are various locations nearby. Here&apos;s a
+                  providing meals, there are various locations nearby. Here&apos;s a
                   chance to explore Montreal!
                 </>
               }
