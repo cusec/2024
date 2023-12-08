@@ -19,8 +19,10 @@ const transitionConfig = (delay = 0) => ({
 });
 
 const signUpLink = "https://www.tickettailor.com/events/cusec/943944";
-const speakerSignUpLink =
-  "https://docs.google.com/forms/d/e/1FAIpQLSekk6WN5YEMg-tRza9SbMTIar_mHFEUQ9jjLIgw8eF3YNmIog/viewform";
+
+// Commented out after deadline to sign up as a speaker
+// const speakerSignUpLink ="https://docs.google.com/forms/d/e/1FAIpQLSekk6WN5YEMg-tRza9SbMTIar_mHFEUQ9jjLIgw8eF3YNmIog/viewform";
+
 const sponsorEmailLink =
   "mailto:sponsor@cusec.net?subject=CUSEC 2024 Sponsorship Information Request";
 const locationLink = "https://maps.app.goo.gl/sCnZJ3VJRAM4Z1699";
@@ -75,8 +77,8 @@ const Landingbox = () => {
               <a
                 href={signUpLink}
                 target="_blank"
-                rel = "noopener noreferrer"
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex justify-center items-center bg-[#FDF3FF] border-2 border-royalPurple px-[3rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalPurple hover:text-white whitespace-nowrap"
+                rel="noopener noreferrer"
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex justify-center items-center bg-[#FDF3FF] border-2 border-royalPurple px-[6rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalPurple hover:text-white whitespace-nowrap"
               >
                 Sign Up
               </a>
@@ -95,7 +97,8 @@ const Landingbox = () => {
               </a>
             </motion.div>
 
-            <motion.div
+            {/* Commented out after deadline to sign up as a speaker */}
+            {/* <motion.div
               {...fadeInConfig}
               transition={transitionConfig(1.2)}
               className="flex justify-center md:hidden"
@@ -108,7 +111,7 @@ const Landingbox = () => {
               >
                 Want to be a Speaker?
               </a>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               {...fadeInConfig}
@@ -117,12 +120,14 @@ const Landingbox = () => {
             >
               <a
                 href={sponsorEmailLink}
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] hidden md:flex justify-center items-center bg-[#FDF3FF] border-2 border-royalBlue px-[3rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalBlue hover:text-white"
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] hidden md:flex justify-center items-center bg-[#FDF3FF] border-2 border-royalBlue px-[6rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalBlue hover:text-white"
               >
                 Sponsor
               </a>
             </motion.div>
-            <motion.div
+
+            {/* Commented out after deadline to sign up as a speaker */}
+            {/* <motion.div
               {...fadeInConfig}
               transition={transitionConfig(1.2)}
               className="flex self-center"
@@ -135,7 +140,7 @@ const Landingbox = () => {
               >
                 Be a Speaker
               </a>
-            </motion.div>
+            </motion.div> */}
           </div>
         </section>
       </BlueBorderSquareBox>
