@@ -161,7 +161,7 @@ export default function Faq() {
                   check-in.
                   <br />
                   <br />
-                  These rates are good until December 11th, 2023. Please book
+                  These rates are good until December 18th, 2023. Please book
                   before then to secure your rate. Please{" "}
                   <a href="mailto:info@cusec.net" className="text-blue-500">
                     contact us
