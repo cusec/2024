@@ -86,7 +86,7 @@ export default function AboutUs() {
           transition={transitionConfig(0.6)}
           className="font-regular text-[15px] md:text-[20px] mt-6"
         >
-          These set of values have been integrated into CUSEC for the last 21
+          These set of values have been integrated into CUSEC for the last 22
           years while enabling attendees to discover knowledgeable speakers,
           connect with sponsoring companies, and make lifelong friends in a safe
           and comfortable space.
