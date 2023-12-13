@@ -320,36 +320,20 @@
     "fun_fact": "I jumped out of a flying plane twice."
   },
   {
-    "name": "Ryan Chisholm",
-    "university": "LaurierU",
-    "image": "ryan_image.png",
-    "university_image": "laurieru_logo.png",
-    "pronouns": "He/Him",
-    "role": "Head Delegate",
-    "sub_role": "",
-    "program": "Computer Science",
-    "linkedin": "https://www.linkedin.com/in/ryan-chisholm-wlu/",
-    "instagram": "",
-    "github": "",
-    "website": "",
-    "email": "wilfredlaurier@cusec.net",
-    "fun_fact": "I once ate a five pound chocolate bar in 3 days."
-  },
-  {
-    "name": "Samih Karroum",
+    "name": "Tara Denaud Joseph",
     "university": "UOttawa",
-    "image": "samih_karroum_image.png",
+    "image": "tara_image.png",
     "university_image": "uottawa_logo.png",
     "pronouns": "He/Him",
     "role": "Head Delegate",
     "sub_role": "",
     "program": "Computer Science",
-    "linkedin": "https://www.linkedin.com/in/samihkarroum/",
+    "linkedin": "https://www.linkedin.com/in/taradenaud/",
     "instagram": "",
     "github": "",
     "website": "",
     "email": "ottawa@cusec.net",
-    "fun_fact": "I coach a high school's boys basketball team."
+    "fun_fact": "Growing up I did cheerleading, dance, and gymnastics!"
   },
   {
     "name": "Julie Wechsler",
