@@ -78,7 +78,7 @@ const Landingbox = () => {
                 href={signUpLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex justify-center items-center bg-[#FDF3FF] border-2 border-royalPurple px-[6rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalPurple hover:text-white whitespace-nowrap"
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex justify-center items-center bg-[#FDF3FF] border-2 border-royalPurple px-[4rem] md:px-[6rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalPurple hover:text-white whitespace-nowrap"
               >
                 Sign Up
               </a>
