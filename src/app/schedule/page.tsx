@@ -28,7 +28,7 @@ export default function Schedule() {
         content="Official schedule for the 2024 edition of the Canadian University Software Engineering Conference."
       />
       <div className="w-full flex justify-center">
-        <div className="w-full max-w-screen-2xl mx-6 lg:mx-24 overflow-hidden mt-20">
+        <div className="w-full max-w-screen-2xl mx-6 lg:mx-24 overflow-scroll mt-20">
           <Fade>
             {/* Title */}
             <motion.span className="flex justify-center">
@@ -74,117 +74,172 @@ export default function Schedule() {
                   <span className="font-semibold">{schedule[0]["Date"]}, </span>{" "}
                   <span>{schedule[0]["Day"]}</span>
                 </h2>
-                {schedule[0].items.map((item, index) =>
-                  (() => {
-                    // Determine the color class for the border based on the current index
-                        const borderColorClass = colors[index % colors.length]; // Cycle through colors
-                        
+                {schedule[0].items.map((item, index) => {
+                  // Determine the color class for the border based on the current index
+                  const borderColorClass = colors[index % colors.length]; // Cycle through colors
+
+                  return (() => {
                     switch (item.category) {
-                      // Category 1 events
                       case "1":
+                        // Category 1 events
                         return (
-                          <div key={index} className="m-1 flex">
+                          <div
+                            key={index}
+                            className="m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] gap-4 align-items-center my-6"
+                          >
                             {/* Time column */}
-                                <div className={`flex flex-col pr-4 border-r-2 ${borderColorClass}`}>
+                            <div
+                              className={`flex flex-col justify-center pr-4 border-r-2 md:text-[20px] ${borderColorClass}`}
+                            >
                               <span>{item.start_time}</span>
                               <span>{item.end_time}</span>
                             </div>
 
                             {/* Event info column */}
-                            <div className="flex flex-col ml-4">
+                            <div className="flex flex-col md:text-[24px] ">
                               <span className="font-semibold">
                                 {item.title}
                               </span>
-                              <span className="text-zinc-400 text-[12px]">
+                              <span className="text-zinc-400 text-[12px] md:text-[20px]">
                                 {item.location}
                               </span>
                             </div>
                           </div>
                         );
 
-                      //   Category 2 events
                       case "2":
+                        // Category 2 events
                         return (
-                          <div key={index} className="m-1 flex">
+                          <div
+                            key={index}
+                            className="m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] gap-4 align-items-center my-6"
+                          >
                             {/* Time column */}
-                            <div className={`flex flex-col pr-4 border-r-2 ${borderColorClass}`}>
+                            <div
+                              className={`flex flex-col justify-center pr-4 border-r-2 md:text-[20px] ${borderColorClass}`}
+                            >
                               <span>{item.start_time}</span>
                               <span>{item.end_time}</span>
                             </div>
 
                             {/* Event Info column */}
-                            <div className="flex flex-col ml-4">
+                            <div className="flex flex-col md:text-[24px] ">
                               <span className="font-semibold">
                                 {item.speaker}
                               </span>
                               <span className="text-zinc-500">
                                 {item.title}
                               </span>
-                              <span className="text-zinc-400 text-[12px]">
+                              <span className="text-zinc-400 text-[12px] md:text-[20px]">
                                 {item.location}
                               </span>
                             </div>
                           </div>
                         );
 
-                      //Category 3 events
                       case "3":
+                        // Category 3 events
                         return (
                           <div
                             key={index}
-                            className="m-1 flex"
+                            className="m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] gap-4 align-items-center my-6"
                           >
                             {/* Time column */}
-                            <div className={`flex flex-col pr-4 border-r-2 ${borderColorClass}`}>
+                            <div
+                              className={`flex flex-col justify-center pr-4 border-r-2 md:text-[20px] ${borderColorClass}`}
+                            >
                               <span>{item.start_time}</span>
                               <span>{item.end_time}</span>
                             </div>
 
                             {/* Events container */}
-                            <div className="flex ml-4">
-                              {/* First event */}
-                              <div className="flex flex-col pr-4">
-                                <span className="font-semibold">
-                                  {item.items &&
-                                    item.items.length > 0 &&
-                                    item.items[0].title}
-                                </span>
-                                <span className="text-zinc-500 text-[12px]">
-                                  {item.items &&
-                                    item.items.length > 0 &&
-                                    item.items[0].location}
-                                </span>
-                              </div>
-                              {/* Second event */}
-                              <div className="flex flex-col pl-4 border-l-2 border-royalBlue">
-                                <span className="font-semibold">
-                                  {item.items &&
-                                    item.items.length > 0 &&
-                                    item.items[1].title}
-                                </span>
-                                <span className="text-zinc-500 text-[12px]">
-                                  {item.items &&
-                                    item.items.length > 0 &&
-                                    item.items[1].location}
-                                </span>
-                              </div>
-                              <span className="font-semibold">
-                                {item.title}
-                              </span>
-                              <span className="text-zinc-500 text-[12px]">
-                                {item.location}
-                              </span>
+                            <div className="flex">
+                              {/* Iterate through sub-events */}
+                              {item.items &&
+                                item.items.map((subItem, subIndex, array) => (
+                                  <div
+                                    key={subIndex}
+                                    className={`flex flex-col  md:text-[24px] ${
+                                      subIndex === array.length - 1
+                                        ? "pl-4 border-l-2 border-royalBlue"
+                                        : "mr-4"
+                                    }`}
+                                  >
+                                    <span className="font-semibold">
+                                      {subItem.title}
+                                    </span>
+                                    <span className="text-zinc-500 text-[12px] md:text-[20px]">
+                                      {subItem.location}
+                                    </span>
+                                  </div>
+                                ))}
                             </div>
                           </div>
                         );
-                      // Category 4 events
-                      case "4":
-                        return <div>Category 4 Component</div>;
+
+                      case "4a":
+                        // Category 4 events
+                        return (
+                          <div
+                            key={index}
+                            className="m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] gap-4 align-items-center my-6"
+                          >
+                            {/* Time column */}
+                            <div
+                              className={`flex flex-col justify-center pr-4 border-r-2 md:text-[20px] ${borderColorClass}`}
+                            >
+                              <div className="flex flex-col">
+                                  <span className="pb-12">{item.start_time}</span>
+                                  <span>{item.mid_time_1}</span>
+                              </div>
+                              <div className="flex flex-col">
+                                  <span className="pb-12">{item.mid_time_2}</span>
+                                  <span>{item.end_time}</span>
+                              </div>
+                            </div>
+
+{/* Events container */}
+<div className="grid grid-cols-2 h-full">
+  {/* First half split into two horizontally */}
+  <div className="flex flex-col">
+    {/* First event (top of the first half) */}
+    {item.items && item.items.length >= 1 && (
+      <div className="flex flex-col md:text-[24px]">
+        <span className="font-semibold">{item.items[0].title}</span>
+        <span className="text-zinc-500 text-[12px] md:text-[20px]">{item.items[0].location}</span>
+      </div>
+    )}
+
+    {/* Third event (bottom of the first half) */}
+    {item.items && item.items.length >= 3 && (
+      <div className="flex flex-col md:text-[24px] pl-4 ml-1 border-l-2 border-royalBlue my-[9px] md:my-[14px]">
+        <span className="font-semibold">{item.items[2].title}</span>
+        <span className="text-zinc-500 text-[12px] md:text-[20px]">{item.items[2].location}</span>
+      </div>
+    )}
+  </div>
+
+  {/* Second event (entirely in the second half) */}
+  {item.items && item.items.length >= 2 && (
+    <div className="flex flex-col md:text-[24px] pl-4 ml-4 border-l-2 border-goldenApricot">
+      <span className="font-semibold">{item.items[1].title}</span>
+      <span className="text-zinc-500 text-[12px] md:text-[20px]">{item.items[1].location}</span>
+    </div>
+  )}
+
+  {/* Second half left blank */}
+  <div></div>
+</div>
+
+                          </div>
+                        );
+
                       default:
-                        return null; // Or some default component for other categories
+                        // Default case for other categories
+                        return null;
                     }
-                  })()
-                )}
+                  })();
+                })}
               </div>
             </motion.div>
           </Fade>
