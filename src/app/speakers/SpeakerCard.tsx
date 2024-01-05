@@ -110,7 +110,7 @@ export default function SpeakerCard(props: SpeakerCardProps) {
     <BlueBorderSquareBox teamCard={true}>
       <div>
         {/* Description text */}
-        <div className="absolute opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 px-4 -mt-4 text-[12px] md:text-[14px] overflow-y-auto max-h-[230px] md:max-h-[250px] scrollbar-thin scrollbar-thumb-gray-400">
+        <div className="absolute opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 px-4 -mt-4 text-[12px] md:text-[14px] overflow-y-auto max-h-[230px] md:max-h-[250px] scrollbar-thin scrollbar-thumb-lavenderFog">
           {props.description.split("\\n").map((line, index) => (
             <span key={index}>
               {line}
