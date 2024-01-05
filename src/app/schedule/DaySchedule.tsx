@@ -5,6 +5,9 @@ import scheduleData from "./schedule.json"; // Adjust the path if necessary
 type ScheduleItem = {
   category: string;
   start_time: string;
+  mid_time: string;
+  mid_time_1: string;
+  mid_time_2: string;
   end_time: string;
   title: string;
   location: string;
@@ -35,7 +38,7 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
     return null; // or render an error message
   }
 
-  const daySchedule: Schedule = scheduleData[dayIndex];
+const daySchedule: Schedule = scheduleData[dayIndex] as unknown as Schedule;
   const gridLayoutClasses =
     "m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] md:grid-cols-[minmax(100px,_1.5fr)_10fr] gap-4  my-6";
   const timeColumnClasses =
