@@ -63,17 +63,9 @@ const iconConfigs: IconConfig[] = [
   },
 ];
 
-// Slots for the icons to be placed in
-const iconSlots = [
-  "right-1",
-  "top-8 -right-4",
-  "top-[4.5rem] -right-[1.4rem]",
-  "bottom-[0.2rem] -right-[0.1rem] md:bottom-[1.5rem] md:-right-[0.8rem]",
-];
-
 // Base classes common to all icons
 const baseIconClasses =
-  "w-8 h-8 absolute opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out border rounded-full flex justify-center items-center p-1 hover:text-white hover:scale-125";
+  "w-8 h-8 transition duration-700 ease-in-out border rounded-full flex justify-center items-center p-1 hover:text-white hover:scale-125";
 
 export default function SpeakerCard(props: SpeakerCardProps) {
   // Dynamically render the icons based on what contact info is provided
@@ -85,9 +77,6 @@ export default function SpeakerCard(props: SpeakerCardProps) {
       // Determine the href link
       const href = props[prop];
 
-      // Get the slot for the current index of accumulated icons
-      const slot = iconSlots[acc.length];
-
       // Push a new icon into the accumulator
       acc.push(
         <a
@@ -95,12 +84,11 @@ export default function SpeakerCard(props: SpeakerCardProps) {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${baseIconClasses} ${slot} ${classes}`}
+          className={`${baseIconClasses} ${classes}`}
         >
           <IconComponent className="w-5 h-5" />
         </a>
       );
-
       return acc;
     },
     []
@@ -109,15 +97,20 @@ export default function SpeakerCard(props: SpeakerCardProps) {
   return (
     <BlueBorderSquareBox teamCard={true}>
       <div>
-        {/* Description text */}
         <div className="absolute opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 px-4 -mt-4 text-[12px] md:text-[14px] overflow-y-auto max-h-[230px] md:max-h-[250px] scrollbar-thin scrollbar-thumb-lavenderFog">
-          {props.description.split("\\n").map((line, index) => (
-            <span key={index}>
-              {line}
-              <br />
-              <br />
-            </span>
-          ))}
+          {/* Dynamically rendered Social Media Icons */}
+          <span className="flex justify-center space-x-5">{renderedIcons}</span>
+
+          {/* Description text */}
+          <div className="mt-4">
+            {props.description.split("\\n").map((line, index) => (
+              <span key={index}>
+                {line}
+                <br />
+                <br />
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className="flex flex-col justify-center items-center mx-6 mt-8 group self-start mb-2">
@@ -132,9 +125,6 @@ export default function SpeakerCard(props: SpeakerCardProps) {
                 className="overflow-none p-1"
               />
             )}
-
-            {/* Dynamically rendered Contact and Social Media Icons */}
-            {renderedIcons}
           </div>
 
           {/* Replacing text on hover with fade in/out animation */}
@@ -156,12 +146,6 @@ export default function SpeakerCard(props: SpeakerCardProps) {
               {props.role}
             </div>
           </motion.div>
-
-          {/* Social Media Links */}
-          <p>{props.linkedin}</p>
-          {/* <p>{props.instagram}</p> */}
-          <p>{props.github}</p>
-          <p>{props.website}</p>
 
           {/* Pagination circles */}
           <motion.div

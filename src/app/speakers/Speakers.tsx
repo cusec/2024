@@ -55,17 +55,16 @@ export default function Team() {
           transition={transitionConfig(0.4)}
           className="font-regular text-[15px] md:text-[20px]"
         >
-          Distinguished speakers are at the heart of CUSEC,
-          igniting minds and inspiring futures. These leaders, innovators, and
-          pioneers in the technology industry bring a wealth of
-          knowledge and experience to the stage. Their insightful presentations,
-          engaging workshops, and stimulating discussions elevate the conference
-          experience, offering students and professionals invaluable
-          opportunities to dive deep into the latest trends and emerging
-          technologies. Our speakers are central to fostering a vibrant,
-          educational, and thought-provoking environment, ensuring that CUSEC
-          remains an essential event for anyone eager to shape the future of
-          technology and innovation.
+          Distinguished speakers are at the heart of CUSEC, igniting minds and
+          inspiring futures. These leaders, innovators, and pioneers in the
+          technology industry bring a wealth of knowledge and experience to the
+          stage. Their insightful presentations, engaging workshops, and
+          stimulating discussions elevate the conference experience, offering
+          students and professionals invaluable opportunities to dive deep into
+          the latest trends and emerging technologies. Our speakers are central
+          to fostering a vibrant, educational, and thought-provoking
+          environment, ensuring that CUSEC remains an essential event for anyone
+          eager to shape the future of technology and innovation.
         </motion.p>
       </section>
       <motion.div
@@ -93,20 +92,11 @@ export default function Team() {
               name={speaker.name}
               role={speaker.role}
               image={`/images/speaker images/${speaker.image}`}
-              description = {speaker.description}
-              // university={member.university}
-              // image={`/images/team member images/${member.image}`}
-              // university_image={`/images/university logos/${member.university_image}`}
-              // pronouns={member.pronouns}
-              // role={member.role}
-              // sub_role={member.sub_role}
-              // program={member.program}
-              // linkedin={member.linkedin}
-              // instagram={member.instagram}
-              // github={member.github}
-              // website={member.website}
-              // email={member.email}
-              // fun_fact={member.fun_fact}
+              description={speaker.description}
+              twitter={speaker.twitter}
+              linkedin={speaker.linkedin}
+              github={speaker.github}
+              website={speaker.website}
             />
           </motion.div>
         ))}
