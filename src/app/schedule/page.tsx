@@ -28,7 +28,7 @@ export default function Schedule() {
         content="Official schedule for the 2024 edition of the Canadian University Software Engineering Conference."
       />
       <div className="w-full flex justify-center">
-        <div className="w-full max-w-screen-2xl mx-6 lg:mx-24 overflow-scroll mt-20">
+        <div className="w-full max-w-screen-2xl mx-6 lg:mx-24 mt-20">
           <Fade>
             {/* Title */}
             <motion.span className="flex justify-center">
@@ -68,8 +68,9 @@ export default function Schedule() {
             </motion.div>
 
             {/* Schedule of events */}
-            <motion.div className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]">
-              <div className="bg-white rounded-lg py-5 px-6">
+                      <motion.div className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]">
+                          <div className="bg-white rounded-lg py-5 px-6">
+                              
                 <h2 className="text-[16px] md:text-[30px]">
                   <span className="font-semibold">{schedule[0]["Date"]}, </span>{" "}
                   <span>{schedule[0]["Day"]}</span>
@@ -85,7 +86,7 @@ export default function Schedule() {
                         return (
                           <div
                             key={index}
-                            className="m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] gap-4 align-items-center my-6"
+                            className="m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] md:grid-cols-[minmax(100px,_1.5fr)_10fr] gap-4 align-items-center my-6"
                           >
                             {/* Time column */}
                             <div
@@ -96,7 +97,7 @@ export default function Schedule() {
                             </div>
 
                             {/* Event info column */}
-                            <div className="flex flex-col md:text-[24px] ">
+                            <div className="flex flex-col md:text-[24px] md:pl-10">
                               <span className="font-semibold">
                                 {item.title}
                               </span>
@@ -112,7 +113,7 @@ export default function Schedule() {
                         return (
                           <div
                             key={index}
-                            className="m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] gap-4 align-items-center my-6"
+                            className="m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] gap-4 align-items-center md:grid-cols-[minmax(100px,_1.5fr)_10fr] my-6"
                           >
                             {/* Time column */}
                             <div
@@ -123,7 +124,7 @@ export default function Schedule() {
                             </div>
 
                             {/* Event Info column */}
-                            <div className="flex flex-col md:text-[24px] ">
+                            <div className="flex flex-col md:text-[24px] md:pl-10">
                               <span className="font-semibold">
                                 {item.speaker}
                               </span>
@@ -142,7 +143,7 @@ export default function Schedule() {
                         return (
                           <div
                             key={index}
-                            className="m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] gap-4 align-items-center my-6"
+                            className="m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] gap-4 align-items-center md:grid-cols-[minmax(100px,_1.5fr)_10fr] my-6"
                           >
                             {/* Time column */}
                             <div
@@ -153,7 +154,7 @@ export default function Schedule() {
                             </div>
 
                             {/* Events container */}
-                            <div className="flex">
+                            <div className="flex md:pl-10">
                               {/* Iterate through sub-events */}
                               {item.items &&
                                 item.items.map((subItem, subIndex, array) => (
@@ -182,55 +183,128 @@ export default function Schedule() {
                         return (
                           <div
                             key={index}
-                            className="m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] gap-4 align-items-center my-6"
+                            className="m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] gap-4 align-items-center md:grid-cols-[minmax(100px,_1.5fr)_10fr] my-6"
                           >
                             {/* Time column */}
                             <div
                               className={`flex flex-col justify-center pr-4 border-r-2 md:text-[20px] ${borderColorClass}`}
                             >
                               <div className="flex flex-col">
-                                  <span className="pb-12">{item.start_time}</span>
-                                  <span>{item.mid_time_1}</span>
+                                <span className="pb-12">{item.start_time}</span>
+                                <span>{item.mid_time_1}</span>
                               </div>
                               <div className="flex flex-col">
-                                  <span className="pb-12">{item.mid_time_2}</span>
-                                  <span>{item.end_time}</span>
+                                <span className="pb-12">{item.mid_time_2}</span>
+                                <span>{item.end_time}</span>
                               </div>
                             </div>
 
-{/* Events container */}
-<div className="grid grid-cols-2 h-full">
-  {/* First half split into two horizontally */}
-  <div className="flex flex-col">
-    {/* First event (top of the first half) */}
-    {item.items && item.items.length >= 1 && (
-      <div className="flex flex-col md:text-[24px]">
-        <span className="font-semibold">{item.items[0].title}</span>
-        <span className="text-zinc-500 text-[12px] md:text-[20px]">{item.items[0].location}</span>
-      </div>
-    )}
+                            {/* Events container */}
+                            <div className="grid grid-cols-2 h-full md:pl-10">
+                              {/* First half split into two horizontally */}
+                              <div className="flex flex-col h-full">
+                                {/* First event (top of the first half) */}
+                                {item.items && item.items.length >= 1 && (
+                                  <div className="flex flex-col md:text-[24px]">
+                                    <span className="font-semibold">
+                                      {item.items[0].title}
+                                    </span>
+                                    <span className="text-zinc-500 text-[12px] md:text-[20px]">
+                                      {item.items[0].location}
+                                    </span>
+                                  </div>
+                                )}
 
-    {/* Third event (bottom of the first half) */}
-    {item.items && item.items.length >= 3 && (
-      <div className="flex flex-col md:text-[24px] pl-4 ml-1 border-l-2 border-royalBlue my-[9px] md:my-[14px]">
-        <span className="font-semibold">{item.items[2].title}</span>
-        <span className="text-zinc-500 text-[12px] md:text-[20px]">{item.items[2].location}</span>
-      </div>
-    )}
-  </div>
+                                {/* Third event (bottom of the first half) */}
+                                {item.items && item.items.length >= 3 && (
+                                  <div className="flex flex-col md:text-[24px] pl-4 ml-1 border-l-2 border-royalBlue my-[9px] md:my-[14px]">
+                                    <span className="font-semibold">
+                                      {item.items[2].title}
+                                    </span>
+                                    <span className="text-zinc-500 text-[12px] md:text-[20px]">
+                                      {item.items[2].location}
+                                    </span>
+                                  </div>
+                                )}
+                              </div>
 
-  {/* Second event (entirely in the second half) */}
-  {item.items && item.items.length >= 2 && (
-    <div className="flex flex-col md:text-[24px] pl-4 ml-4 border-l-2 border-goldenApricot">
-      <span className="font-semibold">{item.items[1].title}</span>
-      <span className="text-zinc-500 text-[12px] md:text-[20px]">{item.items[1].location}</span>
-    </div>
-  )}
+                              {/* Second column split into two vertically */}
+                              <div className="grid grid-rows-2 h-full">
+                                {/* Second event (top half of the second column) */}
+                                {item.items && item.items.length >= 2 && (
+                                  <div className="flex flex-col md:text-[24px] pl-4 ml-4 border-l-2 border-goldenApricot">
+                                    <span className="font-semibold">
+                                      {item.items[1].title}
+                                    </span>
+                                    <span className="text-zinc-500 text-[12px] md:text-[20px]">
+                                      {item.items[1].location}
+                                    </span>
+                                  </div>
+                                )}
 
-  {/* Second half left blank */}
-  <div></div>
-</div>
+                                {/* Bottom half of the second column left blank */}
+                                <div></div>
+                              </div>
+                            </div>
+                          </div>
+                        );
 
+                      case "4b":
+                        // Category 4b events
+                        return (
+                          <div
+                            key={index}
+                            className="m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] gap-4 align-items-center md:grid-cols-[minmax(100px,_1.5fr)_10fr] my-6"
+                          >
+                            {/* Time column */}
+                            <div
+                              className={`flex flex-col justify-center pr-4  border-r-2 md:text-[20px] ${borderColorClass}`}
+                            >
+                              <div className="flex flex-col">
+                                <span className="pb-12">{item.start_time}</span>
+                                <span>{item.mid_time_1}</span>
+                              </div>
+                              <div className="flex flex-col">
+                                <span className="pb-12">{item.mid_time_2}</span>
+                                <span>{item.end_time}</span>
+                              </div>
+                            </div>
+
+                            {/* Events container */}
+                            <div className="grid grid-cols-2 h-full md:pl-10">
+                              {/* First half split into two horizontally */}
+                              <div className="flex flex-col h-full">
+                                {/* First event (top of the first half) */}
+                                {item.items && item.items.length >= 1 && (
+                                  <div className="flex flex-col md:text-[24px]">
+                                    <span className="font-semibold">
+                                      {item.items[0].title}
+                                    </span>
+                                    <span className="text-zinc-500 text-[12px] md:text-[20px]">
+                                      {item.items[0].location}
+                                    </span>
+                                  </div>
+                                )}
+
+                                {/* Second event (bottom of the first half) */}
+                                {item.items && item.items.length >= 2 && (
+                                  <div className="flex flex-col md:text-[24px] pl-4 ml-1 border-l-2 border-royalBlue my-[33px] md:my-[14px]">
+                                    <span className="font-semibold">
+                                      {item.items[1].title}
+                                    </span>
+                                    <span className="text-zinc-500 text-[12px] md:text-[20px]">
+                                      {item.items[1].location}
+                                    </span>
+                                  </div>
+                                )}
+                              </div>
+
+                              {/* Second column split into two vertically */}
+                              <div className="grid grid-rows-2 h-full">
+                                {/* Bottom half of the second column left blank */}
+                                <div></div>
+                              </div>
+                            </div>
                           </div>
                         );
 
@@ -240,6 +314,8 @@ export default function Schedule() {
                     }
                   })();
                 })}
+                              
+                              
               </div>
             </motion.div>
           </Fade>
