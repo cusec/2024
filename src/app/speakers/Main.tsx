@@ -58,28 +58,28 @@ export default function Main() {
             transition={transitionConfig()}
             className="uppercase text-center text-white font-semibold text-[24px] md:text-[36px] lg:text-[50px]"
           >
-            Empower Young Minds
+            Empowering Young Minds
             <br className="lg:block" />
             <motion.span
               {...getMotionProps(purple400)}
               transition={transitionConfig(0.3)}
               className="text-purple-400"
             >
-              Become
+              Meet
             </motion.span>{" "}
             <motion.span
               {...getMotionProps(roseQuartz)}
               transition={transitionConfig(0.6)}
               className="text-roseQuartz"
             >
-              A
+              Our
             </motion.span>{" "}
             <motion.span
               {...getMotionProps(goldenApricot)}
               transition={transitionConfig(0.9)}
               className="text-goldenApricot"
             >
-              Speaker
+              Speakers
             </motion.span>
           </motion.h1>
         </div>
