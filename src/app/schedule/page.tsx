@@ -8,6 +8,25 @@ import schedule from "./schedule.json";
 import DaySchedule from "./DaySchedule";
 
 export default function Schedule() {
+  const fadeInConfig = {
+    initial: { opacity: 0, scale: 0.8 },
+    whileInView: { opacity: 1, scale: 1 },
+    viewport: { once: true },
+  };
+
+    const fadeInConfigText = {
+  initial: { opacity: 0, x: 100 },
+  whileInView: { opacity: 1, x: 0 },
+  viewport: { once: true },
+};
+
+  const transitionConfig = (delay = 0) => ({
+    duration: 1.5,
+    delay: delay,
+    type: "spring",
+    bounce: 0.2,
+  });
+
   // Assume the identifier is the titleText for simplicity, you can use more unique identifiers if necessary
   const [selectedDay, setSelectedDay] = useState<string>("Day One");
 
@@ -23,7 +42,7 @@ export default function Schedule() {
 
   // Map the selectedDay string to a day index
   const dayIndexMap: { [key: string]: number } = {
-    "Day One": 0,
+    "Day One": 0,   
     "Day Two": 1,
     "Day Three": 2,
   };
@@ -31,7 +50,7 @@ export default function Schedule() {
   const selectedDayIndex = dayIndexMap[selectedDay] ?? 0; // Default to 0 if not found
 
   return (
-    <div className="bg-pink-100">
+    <div className="bg-pink-100 overflow-hidden">
       <title>Schedule - CUSEC 2024</title>
       <meta
         name="description"
@@ -41,7 +60,7 @@ export default function Schedule() {
         <div className="w-full max-w-screen-2xl mx-6 lg:mx-24 mt-20">
           <Fade>
             {/* Title */}
-            <motion.span className="flex justify-center">
+            <motion.span {...fadeInConfig} transition={transitionConfig()} className="flex justify-center">
               <h1 className="text-center text-[28px] md:text-[40px] font-semibold tracking-tight w-fit">
                 January 2024 Schedule
                 <hr className="max-w-[3rem] md:max-w-[4rem] h-2 bg-pink-300 mb-2 ml-[9rem] md:ml-[13rem]" />
@@ -49,7 +68,7 @@ export default function Schedule() {
             </motion.span>
 
             {/* Button to select the day */}
-            <motion.div className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]">
+            <motion.div {...fadeInConfig} transition={transitionConfig(0.2)} className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]">
               <div className="flex bg-white justify-evenly rounded-lg py-5 px-6">
                 <DayButton
                   titleText="Day One"
@@ -78,7 +97,7 @@ export default function Schedule() {
             </motion.div>
 
             {/* Schedule of events */}
-            <motion.div className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]">
+            <motion.div {...fadeInConfigText} transition={transitionConfig(0.4)} className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]">
               <div className="bg-white rounded-lg py-5 px-6">
                 <DaySchedule dayIndex={selectedDayIndex} />
               </div>
