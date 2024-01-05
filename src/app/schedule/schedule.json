@@ -49,7 +49,7 @@
       {
         "category": "2",
         "speaker": "Matthew MacRae-Bovell",
-        "title": "Four Years of Word Experience Before Graduation",
+        "title": "Four Years of Work Experience Before Graduation",
         "location": "RBC Theatre",
         "start_time": "2:00 PM",
         "end_time": "2:25 PM"
@@ -105,10 +105,10 @@
       },
       {
         "category": "4b",
-        "start_time": "4:00 PM",
-        "mid_time_1": "4:30 PM",
-        "mid_time_2": "4:55 PM",
-        "end_time": "5:25 PM",
+        "start_time": "8:00 PM",
+        "mid_time_1": "9:30 PM",
+        "mid_time_2": "11:00 PM",
+        "end_time": "12:00 AM",
         "items": [
           {
             "title": "Game Night",
