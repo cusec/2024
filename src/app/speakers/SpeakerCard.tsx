@@ -65,7 +65,7 @@ const iconConfigs: IconConfig[] = [
 
 // Base classes common to all icons
 const baseIconClasses =
-  "w-8 h-8 transition duration-700 ease-in-out border rounded-full flex justify-center items-center p-1 hover:text-white hover:scale-125";
+  "w-8 h-8 transition duration-700 ease-in-out border rounded-full flex justify-center items-center p-1 hover:text-white";
 
 export default function SpeakerCard(props: SpeakerCardProps) {
   // Dynamically render the icons based on what contact info is provided
