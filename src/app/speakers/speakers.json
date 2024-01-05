@@ -1,0 +1,143 @@
+[
+  {
+    "name": "Antonio Gutierrez",
+    "role": "Developer @ InnerSloth",
+    "image": "antonio_gutierrez_image.png",
+    "description": "Antonio Gutiérrez is a game developer with over ten years of experience in the game development field. Starting his career as a programmer and game director in the Mexican studio Bromio, he helped develop over 10 different titles available in several platforms in collaboration with a variety of studios from all around the world.\\n During his career, he has attended several international events as an exhibitor like PAX West, PAX East, PAX South, BitSummit (Kyoto) and the Tokyo Game show.\\nAntonio is currently a Unity programmer at Innersloth, developers of the award-winning game Among Us, where he is specialized in console work and software development.",
+    "twitter": "https://twitter.com/tonyel3",
+    "linkedin": "https://www.linkedin.com/in/adrian-antonio-gutierrez-gallardo-0b339287",
+    "website": "",
+    "github": ""
+  },
+  {
+    "name": "Gazi Jarin",
+    "role": "SWE @ Amazon",
+    "image": "gazi_jarin_image.png",
+    "description": "I'm Gazi, a software engineer at Amazon who's currently embarking on a part-time Master's journey at Oxford. In addition to my professional pursuits, I love creating engaging tech content on TikTok.",
+    "twitter": "",
+    "linkedin": "https://www.linkedin.com/in/gazijarin/",
+    "website": "https://gazijarin.com/",
+    "github": "https://github.com/gazijarin"
+  },
+  {
+    "name": "Fatima Taj",
+    "role": "SWE @ Yelp",
+    "image": "fatima_taj_image.png",
+    "description": "Fatima is a University of Waterloo graduate. Post graduation, she's worked full-time as a Software Developer at DRW, a trading firm, and currently works at Yelp as a Senior Software Engineer.\\nFatima has spoken at over 80 hackathons across North America in 2022.\\nIn addition, she's also been a panelist at Harvard WeCode (2022 and 2023), presented at the Women Who Code Connect Event 2022, Black is Tech Conference 2022, Tapia Conference 2022, Women of Silicon Roundabout 2022 (London's biggest event for women in technology), Scale (Southern California Linux Expo) 2023, WITS MidAtlantic (Women in Tech Summit) 2023, and delivered a keynote at cdCon+GitOpsCon 2023.",
+    "twitter": "",
+    "linkedin": "https://www.linkedin.com/in/fatima-taj-37363a109/",
+    "website": "",
+    "github": ""
+  },
+  {
+    "name": "Prashanthi Ramesh",
+    "role": "Programmer @ Ubisoft",
+    "image": "prashanthi_ramesh_image.png",
+    "description": "As a Tools Programmer<Web>, you'll find me either grappling with JavaScript or CSS, nonetheless being always ready to defend them.\\nI spend my days tinkering with code to make the web tools a little bit better than they were found. Here's to coding quietly and crafting web tools that just work.",
+    "twitter": "",
+    "linkedin": "https://www.linkedin.com/in/prashanthiramesh/",
+    "website": "",
+    "github": ""
+  },
+  {
+    "name": "Georges-Antoine Assi",
+    "role": "Lead Engineer @ Fellow",
+    "image": "georges_antoine_assi_image.png",
+    "description": "Georges-Antoine is the Lead Engineer for the Growth team at Fellow.app. \\nHe holds a Bachelors of Computer Engineering from the University of Ottawa.\\nAn advocate of open-source software, he actively maintains a small number of popular tools and projects.",
+    "twitter": "",
+    "linkedin": "https://www.linkedin.com/in/georgesantoineassi/",
+    "website": "",
+    "github": "https://github.com/gantoine"
+  },
+  {
+    "name": "Eleanor Rumsey",
+    "role": "SWE @ Fellow",
+    "image": "eleanor_rumsey_image.png",
+    "description": "I'm a fullstack software engineer at Fellow, an Ottawa-based startup. I've been full-time there for about a year and a half after graduating from uOttawa in 2021.\\nI love to talk about imposter syndrome and other emotional obstacles that almost everyone experiences early in their software careers (and later on as well).",
+    "twitter": "https://twitter.com/ellierumsey",
+    "linkedin": "https://www.linkedin.com/in/eleanorrumsey/",
+    "website": "",
+    "github": "https://github.com/eleanorRumsey"
+  },
+  {
+    "name": "Samuel Cormier-Iijima",
+    "role": "Co-founder @ Fellow",
+    "image": "samuel_cormier_iijima_image.png",
+    "description": "Samuel Cormier-Iijima is an experienced engineering leader and entrepreneur. He is currently the co-founder and CTO of Fellow, the AI-enabled meeting productivity platform that makes every meeting worth showing up to.\\nHe has been working in the technology industry for over 15 years and has broad experience with SaaS and building high-performing engineering teams.\\nHe also enjoys contributing to open source, playing music and spending time with his wife and daughter.",
+    "twitter": "https://twitter.com/sciyoshi",
+    "linkedin": "https://linkedin.com/in/sciyoshi",
+    "website": "https://sciyoshi.com",
+    "github": ""
+  },
+  {
+    "name": "Michael Chan",
+    "role": "HR Head @ Compulsion Games",
+    "image": "michael_chan_image.png",
+    "description": "Michael Chan is the Head of People & Operations at Compulsion Games, an Xbox Game Studio located in Montreal.\\nWith over a decade of experience in HR, Michael has honed his skills in various HR generalist positions, gaining invaluable insights into diverse team dynamics.\\nCurrently, Michael's primary focus lies in fostering a culture of inclusivity, where every individual feels valued for who they are. He believes that a thriving work environment stems from recognizing and celebrating the unique strengths and perspectives that each team member brings to the table.\\nBeyond the realm of HR, Michael is an avid enthusiast of pop culture and leisure activities. His passion for Taylor Swift's music is only surpassed by his love for impromptu living room dance sessions. \\nWhen he's not immersed in HR initiatives, you can find him honing his tennis skills on the court.",
+    "twitter": "",
+    "linkedin": "https://www.linkedin.com/in/michaelelliottchan/",
+    "website": "",
+    "github": ""
+  },
+  {
+    "name": "Devon Knight",
+    "role": "SWE Intern @ RBC",
+    "image": "devon_knight_image.png",
+    "description": "👋 Hey, I’m Devon! A second-degree student at uOttawa Software Engineering with a previous degree in biomedical sciences.\\nI am a proponent in embracing diverse experiences, taking risks and passionate about game development and improving healthcare with technology. I am excited to be a CUSEC speaker and share my experiences, philosophy, and my unique perspectives!\\nSome fun things about me: \\n👾 I’m a Director at uOttaHack, Ottawa’s longest-running and largest hackathon est. 2018. \\n🔬 Published children’s cancer research at Western and continued at UofT at St. Michaels Hospital with machine learning and orthopaedics. \\n🏆 I’m an awarded public speaker and prolific student leader representing Software Engineering students at uOttawa. \\n💪 I’m a championship dragon-boater & powerlifter, model-painter, cook, and Dungeons & Dragons cultivator. \\n👩🏻‍💻 Last summer/fall, my first co-op was as a software developer at Ciena. Currently, I am at my next co-op at RBC in Toronto.",
+    "twitter": "",
+    "linkedin": "https://www.linkedin.com/in/devonknight",
+    "website": "",
+    "github": "https://github.com/devcon324"
+  },
+  {
+    "name": "Aaditya Chopra",
+    "role": "Ex SWE Intern @ Amazon",
+    "image": "aaditya_chopra_image.png",
+    "description": "Hi! I'm Aaditya (you can just call me Adi). I'm a new graduate from the Computer Science program at Carleton University.\\nI was the Head Delegate for Carleton at CUSEC 2022 (back in the online era).\\nI've previously interned in the government as well as at RBC and Amazon!",
+    "twitter": "",
+    "linkedin": "https://linkedin.com/in/aaditya-chopra",
+    "website": "https://adichops.github.io/",
+    "github": "https://github.com/AdiChops"
+  },
+  {
+    "name": "Claudiu Scotnotis",
+    "role": "Professor @ John Abbott College",
+    "image": "claudiu_scotnotis_image.png",
+    "description": "Driven by a passion for programming ignited when I wrote my first BASIC program at the tender age of 7, my journey in the realm of coding has been nothing short of thrilling.\\nOver the past 13 years, I've dedicated myself to nurturing young minds in the field of Computer Science, imparting both knowledge and practical insights at the college and university levels.\\nAs a seasoned educator, my commitment to instilling a profound understanding of computer science is enriched by my hands-on experience as a web developer and programmer in the industry.\\nBeyond the academic arena, you'll catch me delving into conversations about space travel and exploring new exotic destinations. Otherwise, I enjoy long walks on the beach and a sense of humor.",
+    "twitter": "",
+    "linkedin": "linkedin.com/in/claudiuscotnotis",
+    "website": "",
+    "github": ""
+  },
+  {
+    "name": "Victor Li",
+    "role": "SWE Intern @ Cerio",
+    "image": "victor_li_image.png",
+    "description": "Hey! My name is Victor Li, and I'm a 4th year Computer Science Student studying at Carleton University.\\nI have done research in maritime ship prediction modeling and game theory at university and in a previous co-op. I'm currently a Software Developer at Cerio for an 8-month co-op.\\nA fun fact about me is that I am participating in the Pan-Am games next year and going to Italy for Worlds for a dragon boat competition.\\nOn top of that, I am also training to participate in a triathlon next summer, and one of my 'training exercises' was biking to Kingston from Ottawa last summer, which took me eight and a half hours. See you at CUSEC!!!",
+    "twitter": "",
+    "linkedin": "www.linkedin.com/in/victorli5611",
+    "website": "",
+    "github": ""
+  },
+  {
+    "name": "Matthew Macrae-Bovell",
+    "role": "SWE @ Jobber",
+    "image": "matthew_macrae_bovell_image.png",
+    "description": "Carleton University computer science student and previous President of the Carleton Computer Science Society.\\nSoftware Developer with 4+ years of experience across freelance, internships, and more.\\nInterned with various startups as well as The Bank of Canada, Kinaxis, and RBC, followed by a two-year tenure at Shopify.\\nCurrently working as a Software Developer II at Jobber (a SAAS for service providers).",
+    "twitter": "",
+    "linkedin": "https://www.linkedin.com/in/matthewmacraebovell/",
+    "website": "https://matthewmacraebovell.com/",
+    "github": "https://github.com/MathyouMB"
+  },
+
+  {
+    "name": "Rue Sriharsha",
+    "role": "Student @ UofT",
+    "image": "rue_sriharsha_image.png",
+    "description": "Rue is a 4th year at the University of Toronto (UofT). She is majoring in Computational Cognitive Science with triple minors in Computer Science, Statistics and Business.\\nThroughout her undergrad, Rue has interned at six companies: 3 Canadian startups, Microsoft, Amazon and with a research professor at UofT. She is also the VP of Sponsorship for UofTHacks.\\nRue is also an avid hackathon attendee. She has demoed at over 30 hackathons, winning 5 of them, and now mentors at these events.",
+    "twitter": "",
+    "linkedin": "https://www.linkedin.com/in/ruesriharsha/",
+    "website": "",
+    "github": ""
+  }
+]
