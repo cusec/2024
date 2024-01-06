@@ -5,7 +5,8 @@ import Head from "next/head";
 import Fade from "@/components/Fade";
 import Image from "next/image";
 import Main from "@/app/sponsors/Main";
-import CusecSponsors from "@/app/sponsors/CusecSponsors";
+import PastSponsors from "@/app/sponsors/PastSponsors";
+import CurrentSponsors from "./CurrentSponsors"
 import WhySponsor from "./WhySponsor";
 import { motion } from "framer-motion";
 
@@ -73,11 +74,17 @@ export default function Sponsors() {
             </Fade>
           </div>
         </div>
-
+ <div className="flex flex-col items-center mt-20">
+          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full md:-mt-3 mb-16">
+            <Fade>
+              <CurrentSponsors />
+            </Fade>
+          </div>
+        </div>
         <div className="flex flex-col items-center mt-20">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full md:-mt-3 mb-16">
             <Fade>
-              <CusecSponsors />
+              <PastSponsors />
             </Fade>
           </div>
         </div>
