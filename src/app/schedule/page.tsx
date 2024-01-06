@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef} from "react";
+import { useState, useRef } from "react";
 import Fade from "@/components/Fade";
 import { motion } from "framer-motion";
 import DayButton from "./DayButton";
@@ -40,23 +40,23 @@ export default function Schedule() {
   // Assume the identifier is the titleText for simplicity, you can use more unique identifiers if necessary
   const [selectedDay, setSelectedDay] = useState<string>("Day One");
 
-const swiperRef = useRef<Swiper>(null);
+  // @ts-ignore
+  const swiperRef = useRef<Swiper>(null);
 
+  const handleDayButtonClick = (day: "Day One" | "Day Two" | "Day Three") => {
+    setSelectedDay(day);
+    const dayIndexMap = {
+      "Day One": 0,
+      "Day Two": 1,
+      "Day Three": 2,
+    };
 
-const handleDayButtonClick = (day: "Day One" | "Day Two" | "Day Three") => {
-  setSelectedDay(day);
-  const dayIndexMap = {
-    "Day One": 0,
-    "Day Two": 1,
-    "Day Three": 2,
+    const index = dayIndexMap[day];
+
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideTo(index); // Navigate to the corresponding slide
+    }
   };
-
-  const index = dayIndexMap[day];
-
-  if (swiperRef.current && swiperRef.current.swiper) {
-    swiperRef.current.swiper.slideTo(index);  // Navigate to the corresponding slide
-  }
-};
 
   const handleSlideChange = () => {
     return (swiper: any) => {
@@ -64,7 +64,7 @@ const handleDayButtonClick = (day: "Day One" | "Day Two" | "Day Three") => {
       const day = ["Day One", "Day Two", "Day Three"][dayIndex];
       setSelectedDay(day);
     };
-  }
+  };
 
   const colors = [
     "border-royalPurple",
@@ -190,7 +190,7 @@ const handleDayButtonClick = (day: "Day One" | "Day Two" | "Day Three") => {
                 keyboard={true}
                 scrollbar={{ draggable: true }}
                 onSlideChange={handleSlideChange()}
-                ref = {swiperRef}
+                ref={swiperRef}
                 className="SwiperScheduleNavigation"
               >
                 <SwiperSlide>
