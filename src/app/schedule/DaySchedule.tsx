@@ -1,4 +1,5 @@
-import scheduleData from "./schedule.json"; // Adjust the path if necessary
+import scheduleData from "./schedule.json";
+import { AddToCalendarButton } from "add-to-calendar-button-react";
 
 // Define the types for your schedule items
 type ScheduleItem = {
@@ -72,17 +73,88 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
     </div>
   );
 
+  const convertTo24Hour = (time: string | undefined): string => {
+    // Guard clause for undefined or empty time strings
+    if (!time || typeof time !== "string") {
+      console.error("Invalid time provided:", time);
+      return "00:00"; // Return a default or error value
+    }
+
+    let [hoursStr, minutes] = time.match(/\d+/g) || ["0", "0"];
+    const modifier = (time.match(/[APap][mM]/) || [""])[0].toUpperCase();
+
+    // Convert hours to number
+    let hours = parseInt(hoursStr, 10);
+
+    // Adjust hours based on the period (AM/PM)
+    if (modifier === "PM" && hours < 12) {
+      hours += 12;
+    } else if (modifier === "AM" && hours === 12) {
+      hours = 0;
+    }
+
+    // Return the formatted time
+    return `${hours.toString().padStart(2, "0")}:${minutes}`;
+  };
+
   // Rendering function for Event Information
-  const renderEventInfo = (item: ScheduleItem, isSpeaker: boolean) => (
-    <div className={`${eventInfoClasses} transition ease-in-out duration-500 hover:scale-105 hover:text-purple-600 cursor-pointer group`
-}>
-      {isSpeaker && <span className={speakerClasses}>{item.speaker}</span>}
-      <span className={isSpeaker ? `${speakerTitleClasses} group-hover:text-pink-500` : "font-semibold"}>
-        {item.title}
+  const renderEventInfo = (item: ScheduleItem, isSpeaker: boolean) => {
+    // Define AddToCalendarButton
+    const addToCalendarButton = (
+      <span className="opacity-0 group-hover:opacity-100 transition ease-in-out duration-700 ml-2">
+        <AddToCalendarButton
+          name={item.speaker ? `${item.speaker} - ${item.title}` : item.title}
+          description="Event at CUSEC 2024"
+          startDate={`2024-01-${dayIndex + 11}`}
+          startTime={convertTo24Hour(item.start_time)}
+          endTime={convertTo24Hour(item.end_time)}
+          timeZone="America/Toronto"
+          location={item.location}
+          options="'Apple','Google','iCal','Outlook.com','Yahoo','Microsoft365','MicrosoftTeams'"
+          hideTextLabelButton
+          hideTextLabelList
+          hideBackground
+          inline
+          hideBranding
+          size="0"
+          // debug
+        />
       </span>
-      <span className={`${locationTextClasses} group-hover:text-roseQuartz`}>{item.location}</span>
-    </div>
-  );
+    );
+
+    return (
+      <div
+        className={`${eventInfoClasses} transition ease-in-out duration-500 hover:scale-105 hover:text-purple-600 cursor-pointer group`}
+      >
+        {isSpeaker && (
+          <span className={`${speakerClasses}`}>
+            {item.speaker}
+            {/* {addToCalendarButton} */}
+          </span>
+        )}
+        <span
+          className={
+            isSpeaker
+              ? `${speakerTitleClasses} group-hover:text-pink-500`
+              : "font-semibold"
+          }
+        >
+          {item.title}
+          {item.speaker ? (
+            ""
+          ) : (
+            <span className="opacity-0 group-hover:opacity-100 transition ease-in-out duration-700">
+              {/* {addToCalendarButton}  */}
+            </span>
+          )}
+        </span>
+        <span className={`${locationTextClasses} group-hover:text-roseQuartz`}>
+          {item.location}
+          {addToCalendarButton}
+        </span>
+      </div>
+    );
+  };
 
   // Rendering function for Event Details
   const renderEventCategory = (item: ScheduleItem, index: number) => {
