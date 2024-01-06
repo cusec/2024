@@ -61,7 +61,6 @@ const Landingbox = () => {
             />
             <Link
               href={locationLink}
-              target="_blank"
               className="hover:text-blue-500 transition ease-in-out duration-500"
             >
               Le Centre Sheraton, Montreal, QC
@@ -74,73 +73,39 @@ const Landingbox = () => {
               transition={transitionConfig(0.8)}
               className="flex justify-center"
             >
-              <a
-                href={signUpLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex justify-center items-center bg-[#FDF3FF] border-2 border-royalPurple px-[4rem] md:px-[6rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalPurple hover:text-white whitespace-nowrap"
+              <Link
+                href={"/schedule"}
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex justify-center items-center bg-[#FDF3FF] border-2 border-royalPurple px-[4rem] md:px-[6rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-royalPurple hover:text-white whitespace-nowrap"
               >
-                Sign Up
-              </a>
+              Schedule
+              </Link>
             </motion.div>
 
             <motion.div
               {...fadeInConfig}
               transition={transitionConfig(1)}
-              className="flex justify-center md:hidden"
+              className="flex justify-center"
             >
-              <a
-                href={sponsorEmailLink}
-                className="text-royalBlue font-semibold underline underline-offset-2 decoration-2 transition ease-in-out duration-500 hover:scale-105"
+              <Link
+                href={"/speakers"}
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex justify-center items-center bg-[#FDF3FF] border-2 border-royalBlue px-[4rem] md:px-[6rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-royalBlue hover:text-white whitespace-nowrap"
               >
-                Interested in Sponsoring?
-              </a>
+              Speakers
+              </Link>
             </motion.div>
-
-            {/* Commented out after deadline to sign up as a speaker */}
-            {/* <motion.div
-              {...fadeInConfig}
-              transition={transitionConfig(1.2)}
-              className="flex justify-center md:hidden"
-            >
-              <a
-                href={speakerSignUpLink}
-                target="_blank"
-                rel = "noopener noreferrer"
-                className="text-fuchsia-500 font-semibold underline underline-offset-2 decoration-2 transition ease-in-out duration-500 hover:scale-105"
-              >
-                Want to be a Speaker?
-              </a>
-            </motion.div> */}
 
             <motion.div
               {...fadeInConfig}
-              transition={transitionConfig(1)}
-              className="flex"
-            >
-              <a
-                href={sponsorEmailLink}
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] hidden md:flex justify-center items-center bg-[#FDF3FF] border-2 border-royalBlue px-[6rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalBlue hover:text-white"
-              >
-                Sponsor
-              </a>
-            </motion.div>
-
-            {/* Commented out after deadline to sign up as a speaker */}
-            {/* <motion.div
-              {...fadeInConfig}
               transition={transitionConfig(1.2)}
-              className="flex self-center"
+              className="flex justify-center"
             >
-              <a
-                href={speakerSignUpLink}
-                target="_blank"
-                rel = "noopener noreferrer"
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] hidden md:flex justify-center items-center bg-[#FDF3FF] border-2 border-fuchsia-500 px-[3rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-fuchsia-500 tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-fuchsia-500 hover:text-white"
+              <Link
+                href={"/sponsors"}
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] justify-center items-center bg-[#FDF3FF] border-2 border-fuchsia-500 px-[4.1rem] md:px-[6rem] py-3 md:py-4 text-center rounded-full uppercase text-[18px] font-semibold text-fuchsia-500 tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-fuchsia-500 hover:text-white"
               >
-                Be a Speaker
-              </a>
-            </motion.div> */}
+                Sponsors
+              </Link>
+            </motion.div>
           </div>
         </section>
       </BlueBorderSquareBox>
