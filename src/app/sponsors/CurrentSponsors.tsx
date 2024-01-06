@@ -63,7 +63,7 @@ export default function CurrentSponsors() {
         >
           Each year our sponsors play a crucial role in making CUSEC an exciting
           and enriching experience for tech-savvy students. Their generous
-          support fuels the conference's activities and enhances the overall
+          support fuels the conference&apos;s activities and enhances the overall
           atmosphere for students and professionals to connect, learn, and
           explore new horizons in software engineering. Our sponsors are
           essential in keeping the conference dynamic and full of opportunities,
