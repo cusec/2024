@@ -1,10 +1,8 @@
 "use client";
 import { useState } from "react";
 import Fade from "@/components/Fade";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import DayButton from "./DayButton";
-import schedule from "./schedule.json";
 import DaySchedule from "./DaySchedule";
 
 export default function Schedule() {

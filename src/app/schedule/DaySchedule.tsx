@@ -1,4 +1,3 @@
-import React from "react";
 import scheduleData from "./schedule.json"; // Adjust the path if necessary
 
 // Define the types for your schedule items
