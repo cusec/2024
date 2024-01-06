@@ -35,19 +35,22 @@ const colors = [
 const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
   if (dayIndex < 0 || dayIndex > 2) {
     console.error("dayIndex must be between 0 and 2");
-    return null; // or render an error message
+    return null;
   }
 
   const daySchedule: Schedule = scheduleData[dayIndex] as unknown as Schedule;
   const gridLayoutClasses =
-    "m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] md:grid-cols-[minmax(100px,_1.5fr)_10fr] gap-4  my-6";
+    "grid grid-cols-[minmax(60px,_1fr)_10fr] xs:grid-cols-[minmax(70px,_1fr)_10fr] sm:grid-cols-[minmax(100px,_1.5fr)_10fr] gap-4 my-6";
   const timeColumnClasses =
-    "flex flex-col justify-center pr-4 border-r-2 md:border-r-[3px] md:text-[20px]";
+    "flex flex-col justify-center pr-4 border-r-2 md:border-r-[3px] xs:text-[20px]";
   const eventInfoClasses =
-    "flex flex-col md:text-[24px] md:pl-10 justify-center";
-  const locationTextClasses = "text-zinc-400 text-[12px] md:text-[20px]";
-  const speakerTitleClasses = "text-zinc-500 md:text-[24px]";
-  const speakerClasses = "md:text-[24px] font-semibold";
+    "flex flex-col md:pl-10 justify-center break-words sm:break-normal";
+  const titleClasses =
+    "font-semibold text-[10px] xs:text-[16px] sm:text-[24px]";
+  const subTitleClasses =
+    "text-zinc-500 text-[10px] xs:text-[16px] sm:text-[24px]";
+  const locationTextClasses =
+    "text-zinc-400 text-[9px] xs:text-[14px] sm:text-[20px]";
 
   // Rendering function for Time Column
   const renderTimeColumn = (
@@ -73,32 +76,33 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
     </div>
   );
 
-  const convertTo24Hour = (time: string | undefined): string => {
-    // Guard clause for undefined or empty time strings
-    if (!time || typeof time !== "string") {
-      console.error("Invalid time provided:", time);
-      return "00:00"; // Return a default or error value
-    }
-
-    let [hoursStr, minutes] = time.match(/\d+/g) || ["0", "0"];
-    const modifier = (time.match(/[APap][mM]/) || [""])[0].toUpperCase();
-
-    // Convert hours to number
-    let hours = parseInt(hoursStr, 10);
-
-    // Adjust hours based on the period (AM/PM)
-    if (modifier === "PM" && hours < 12) {
-      hours += 12;
-    } else if (modifier === "AM" && hours === 12) {
-      hours = 0;
-    }
-
-    // Return the formatted time
-    return `${hours.toString().padStart(2, "0")}:${minutes}`;
-  };
-
   // Rendering function for Event Information
   const renderEventInfo = (item: ScheduleItem, isSpeaker: boolean) => {
+    // Function to convert 12 hour time to 24 hour time (for AddToCalendarButton)
+    const convertTo24Hour = (time: string | undefined): string => {
+      // Guard clause for undefined or empty time strings
+      if (!time || typeof time !== "string") {
+        console.error("Invalid time provided:", time);
+        return "00:00"; // Return a default or error value
+      }
+
+      let [hoursStr, minutes] = time.match(/\d+/g) || ["0", "0"];
+      const modifier = (time.match(/[APap][mM]/) || [""])[0].toUpperCase();
+
+      // Convert hours to number
+      let hours = parseInt(hoursStr, 10);
+
+      // Adjust hours based on the period (AM/PM)
+      if (modifier === "PM" && hours < 12) {
+        hours += 12;
+      } else if (modifier === "AM" && hours === 12) {
+        hours = 0;
+      }
+
+      // Return the formatted time
+      return `${hours.toString().padStart(2, "0")}:${minutes}`;
+    };
+
     // Define AddToCalendarButton
     const addToCalendarButton = (
       <span className="opacity-0 group-hover:opacity-100 transition ease-in-out duration-700 ml-2">
@@ -126,27 +130,17 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
       <div
         className={`${eventInfoClasses} transition ease-in-out duration-500 hover:scale-105 hover:text-purple-600 cursor-pointer group`}
       >
-        {isSpeaker && (
-          <span className={`${speakerClasses}`}>
-            {item.speaker}
-            {/* {addToCalendarButton} */}
-          </span>
-        )}
+        <span className={titleClasses}>
+          {isSpeaker ? item.speaker : item.title}
+        </span>
         <span
           className={
             isSpeaker
-              ? `${speakerTitleClasses} group-hover:text-pink-500`
+              ? `${subTitleClasses} group-hover:text-pink-500`
               : "font-semibold"
           }
         >
-          {item.title}
-          {item.speaker ? (
-            ""
-          ) : (
-            <span className="opacity-0 group-hover:opacity-100 transition ease-in-out duration-700">
-              {/* {addToCalendarButton}  */}
-            </span>
-          )}
+          {isSpeaker && item.title}
         </span>
         <span className={`${locationTextClasses} group-hover:text-roseQuartz`}>
           {item.location}
@@ -167,9 +161,9 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
             {item.items?.slice(0, 2).map((subItem, subIndex) => (
               <div
                 key={subIndex}
-                className={`flex flex-col md:text-[24px] ${
+                className={`flex flex-col ${
                   subIndex === 1
-                    ? "pl-4 md:pl-2 border-l-2 md:border-l-[3px] border-royalBlue"
+                    ? "ml-2 pl-4 md:pl-2 border-l-2 md:border-l-[3px] border-royalBlue"
                     : ""
                 }`}
               >
@@ -181,29 +175,25 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
       }
     }
 
-    if (["4a", "4b"].includes(item.category)) {
+    if (item.category === "4a") {
       return (
         <div className="grid grid-cols-2 h-full">
           {/* First column for the first and last events */}
-          <div className="flex flex-col h-full md:text-[24px]">
+          <div className="flex flex-col h-full">
             {/* First event */}
             {item.items && item.items.length >= 1 && (
               <div>{renderEventInfo(item.items[0], false)}</div>
             )}
             {/* Last event (with blue border) */}
             {item.items && (
-              <div
-                className={`pl-4 md:ml-10 md:pl-0 border-l-2 md:border-l-[3px] border-royalBlue my-[9px] md:my-[14px] ${
-                  item.category === "4b" ? "mt-[2.2rem]" : ""
-                }`}
-              >
+              <div className="pl-4 ml-1 border-l-2 md:border-l-[3px] border-royalBlue my-[9px] md:my-[14px]">
                 {renderEventInfo(item.items[item.items.length - 1], false)}
               </div>
             )}
           </div>
-          {/* Second column for the second event (only for category 4a) */}
-          {item.category === "4a" && item.items && item.items.length > 1 && (
-            <div className="flex flex-col md:text-[24px] pl-4 ml-4 border-l-2 md:border-l-[3px] border-goldenApricot md:pl-0">
+          {/* Second column for the second event */}
+          {item.items && item.items.length > 1 && (
+            <div className="flex flex-col pl-4 ml-4 border-l-2 md:border-l-[3px] border-goldenApricot md:pl-0">
               {renderEventInfo(item.items[1], false)}
             </div>
           )}
@@ -213,14 +203,37 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
       );
     }
 
+    // Deprecated, the game night + jeopardy event had 4 times, I changed it to have 3 times so it became a category 4c event
+    // if (item.category === "4b") {
+    //   return (
+    //     <div className="grid grid-cols-2 h-full">
+    //       {/* First column for the first and last events */}
+    //       <div className="flex flex-col h-full">
+    //         {/* First event */}
+    //         {item.items && item.items.length >= 1 && (
+    //           <div>{renderEventInfo(item.items[0], false)}</div>
+    //         )}
+    //         {/* Last event (with blue border and added margin-top) */}
+    //         {item.items && (
+    //           <div className="pl-4 md:ml-10 md:pl-0 border-l-2 md:border-l-[3px] border-royalBlue my-[9px] md:my-[14px] mt-[2.2rem]">
+    //             {renderEventInfo(item.items[item.items.length - 1], false)}
+    //           </div>
+    //         )}
+    //       </div>
+    //       {/* Second column left blank */}
+    //       <div></div>
+    //     </div>
+    //   );
+    // }
+
     if (item.category === "4c") {
       return (
-        <div key={index} className={gridLayoutClasses}>
+        <div key={index}>
           {/* Grid split into 40/60 rows */}
-          <div className="grid grid-rows-[2fr_3fr] h-full md:text-[24px]">
+          <div className="grid grid-rows-[2fr_3fr] h-full">
             {/* First event in the first row */}
             {item.items && item.items.length >= 1 && (
-              <div className="row-span-1">
+              <div className="row-span-1 w-full">
                 {renderEventInfo(item.items[0], false)}
               </div>
             )}

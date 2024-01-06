@@ -73,7 +73,7 @@
         "title": "Growth Engineering: The Art & Science of Making Things People Love",
         "location": "RBC Theatre",
         "start_time": "3:00 PM",
-        "end_time": "3:55 PM"
+        "end_time": "3:25 PM"
       },
       {
         "category": "2",
@@ -93,8 +93,8 @@
           {
             "title": "Generative AI Workshop",
             "location": "Workshop Room",
-            "start_time": "4:30 PM",
-            "end_time": "5:25 PM"
+            "start_time": "4:00 PM",
+            "end_time": "4:55 PM"
           },
           {
             "title": "General Career Fair",
@@ -105,7 +105,7 @@
           {
             "title": "Hot Takes",
             "location": "RBC Theatre",
-            "start_time": "4:00 PM",
+            "start_time": "4:30 PM",
             "end_time": "4:55 PM"
           }
         ]
@@ -118,10 +118,9 @@
         "end_time": "7:55 PM"
       },
       {
-        "category": "4b",
+        "category": "4c",
         "start_time": "8:00 PM",
-        "mid_time_1": "9:30 PM",
-        "mid_time_2": "11:00 PM",
+        "mid_time": "9:00 PM",
         "end_time": "12:00 AM",
         "items": [
           {
@@ -133,7 +132,7 @@
           {
             "title": "Jeopardy",
             "location": "Workshop Room",
-            "start_time": "9:30 PM",
+            "start_time": "9:00 PM",
             "end_time": "11:59 PM"
           }
         ]
@@ -233,7 +232,7 @@
           {
             "title": "Dev's Den",
             "location": "RBC Theatre",
-            "start_time": "3:00 PM",
+            "start_time": "3:15 PM",
             "end_time": "3:55 PM"
           }
         ]
@@ -244,7 +243,7 @@
         "title": "From Algorithms to Content Creation: The Dual Life of a Software Engineer and TikToker",
         "location": "RBC Theatre",
         "start_time": "4:00 PM",
-        "end_time": "4:25 PM"
+        "end_time": "4:55 PM"
       },
       {
         "category": "1",
@@ -260,7 +259,7 @@
         "end_time": "12:00 AM",
         "items": [
           {
-            "title": "Game Night",
+            "title": "Kareoke Night",
             "location": "RBC Theatre",
             "start_time": "8:00 PM",
             "end_time": "11:59 PM"

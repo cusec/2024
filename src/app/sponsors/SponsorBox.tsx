@@ -24,10 +24,10 @@ const transitionConfig = (delay = 0) => ({
 });
 
 const sizeClasses = {
-  lg: "w-full md:w-3/4",
-  md: "w-3/4 md:w-2/3",
-  sm: "w-2/3 md:w-1/2",
-  xs: "w-1/2 md:w-1/2",
+  lg: "w-full 2xs:w-full",
+  md: "w-3/4 2xs:w-3/4",
+  sm: "w-2/3 2xs:w-2/3",
+  xs: "w-1/2 xs:w-3/4",
 };
 
 const SponsorBox = ({ logo, link, size }: Sponsor) => (

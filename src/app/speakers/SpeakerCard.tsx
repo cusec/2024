@@ -99,7 +99,10 @@ export default function SpeakerCard(props: SpeakerCardProps) {
       <div>
         <div className="absolute opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 px-4 -mt-4 text-[12px] md:text-[14px] overflow-y-auto max-h-[230px] md:max-h-[250px] scrollbar-thin scrollbar-thumb-lavenderFog">
           {/* Dynamically rendered Social Media Icons */}
-          <span className="flex justify-center space-x-5">{renderedIcons}</span>
+          <span 
+          // className="flex justify-center space-x-1 xs:space-x-2 sm:space-x-5"
+          className="flex justify-center space-x-5 xs:space-x-2 sm:space-x-5"
+          >{renderedIcons}</span>
 
           {/* Description text */}
           <div className="mt-4">

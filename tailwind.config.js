@@ -6,6 +6,16 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      '2xs': '280px',
+      xs: '375px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1280px',
+
+    },
     extend: {
       backgroundImage: {
         // 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -15,7 +25,7 @@ module.exports = {
       colors: {
         royalPurple: '#AC65E3',
         lavenderFog: '#CA78CC',
-        roseQuartz: '#E087BB',
+        roseQuartz: '#E087BB',  
         goldenApricot: '#FFB963',
         royalBlue: '#0569FF',
       },
