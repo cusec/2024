@@ -6,7 +6,7 @@ import Fade from "@/components/Fade";
 import Image from "next/image";
 import Main from "@/app/sponsors/Main";
 import PastSponsors from "@/app/sponsors/PastSponsors";
-import CurrentSponsors from "./CurrentSponsors"
+import CurrentSponsors from "./CurrentSponsors";
 import WhySponsor from "./WhySponsor";
 import { motion } from "framer-motion";
 
@@ -39,15 +39,14 @@ export default function Sponsors() {
       />
 
       <div className="w-full">
-
-          {/* Top Left Gradient Lines */}
+        {/* Top Left Gradient Lines */}
         <Image
           src={"/images/top_left_gradient_lines.svg"}
           alt="top_left_gradient_lines"
           className="absolute top-[64px] z-10"
           width={200}
           height={250}
-          />
+        />
 
         {/* Bottom Right Gradient Lines */}
         <Image
@@ -74,7 +73,7 @@ export default function Sponsors() {
             </Fade>
           </div>
         </div>
- <div className="flex flex-col items-center mt-20">
+        <div className="flex flex-col items-center mt-20">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full md:-mt-3 mb-16">
             <Fade>
               <CurrentSponsors />
