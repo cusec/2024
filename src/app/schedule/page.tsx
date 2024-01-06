@@ -191,6 +191,7 @@ export default function Schedule() {
                 scrollbar={{ draggable: true }}
                 onSlideChange={handleSlideChange()}
                 ref={swiperRef}
+                autoHeight={true}
                 className="SwiperScheduleNavigation"
               >
                 <SwiperSlide>
