@@ -186,7 +186,7 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
             )}
             {/* Last event (with blue border) */}
             {item.items && (
-              <div className="pl-4 md:ml-10 border-l-2 md:border-l-[3px] border-royalBlue my-[9px] md:my-[14px]">
+              <div className="pl-4 md:pl-0 md:ml-10 border-l-2 md:border-l-[3px] border-royalBlue my-[9px] md:my-[14px]">
                 {renderEventInfo(item.items[item.items.length - 1], false)}
               </div>
             )}
