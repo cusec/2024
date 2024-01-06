@@ -66,9 +66,7 @@ export default function Sponsor() {
               ></motion.div>
 
               <BlueBorderSquareBox>
-                <motion.div
-                  {...fadeInConfigImage}
-                  transition={transitionConfig(0.5)}
+                <div
                   className="grid grid-rows-[20%_1fr_20%] grid-cols-2 gap-2 p-4"
                   style={{ aspectRatio: "1 / 1" }}
                 >
@@ -77,7 +75,11 @@ export default function Sponsor() {
 
                   {/* Middle row containing all logos */}
                   {/* Left column for RBC */}
-                  <div className="row-span-1 flex justify-center items-center relative">
+                  <motion.div
+                    {...fadeInConfigImage}
+                    transition={transitionConfig(0.4)}
+                    className="row-span-1 flex justify-center items-center relative"
+                  >
                     <a
                       href="https://www.rbcroyalbank.com/personal.html"
                       target="_blank"
@@ -92,12 +94,16 @@ export default function Sponsor() {
                         priority
                       />
                     </a>
-                  </div>
+                  </motion.div>
 
                   {/* Right column split into smaller rows for other logos */}
                   <div className="row-span-1 grid grid-rows-3 content-center gap-2">
                     {/* CSE logo */}
-                    <div className="flex justify-center items-center">
+                    <motion.div
+                      {...fadeInConfigImage}
+                      transition={transitionConfig(0.5)}
+                      className="flex justify-center items-center"
+                    >
                       <a
                         href="https://www.cse-cst.gc.ca/"
                         target="_blank"
@@ -112,9 +118,13 @@ export default function Sponsor() {
                           priority
                         />
                       </a>
-                    </div>
+                    </motion.div>
                     {/* Kinaxis logo */}
-                    <div className="flex justify-center items-center">
+                    <motion.div
+                      {...fadeInConfigImage}
+                      transition={transitionConfig(0.6)}
+                      className="flex justify-center items-center"
+                    >
                       <a
                         href="https://www.kinaxis.com/en"
                         target="_blank"
@@ -129,10 +139,14 @@ export default function Sponsor() {
                           priority
                         />
                       </a>
-                    </div>
+                    </motion.div>
                     {/* Accenture and Fellow logos */}
                     <div className="grid grid-cols-2 gap-2">
-                      <div className="flex justify-center items-center">
+                      <motion.div
+                        {...fadeInConfigImage}
+                        transition={transitionConfig(0.7)}
+                        className="flex justify-center items-center"
+                      >
                         <a
                           href="https://www.accenture.com/"
                           target="_blank"
@@ -147,8 +161,12 @@ export default function Sponsor() {
                             priority
                           />
                         </a>
-                      </div>
-                      <div className="flex justify-center items-center">
+                      </motion.div>
+                      <motion.div
+                        {...fadeInConfigImage}
+                        transition={transitionConfig(0.8)}
+                        className="flex justify-center items-center"
+                      >
                         <a
                           href="https://fellow.app/"
                           target="_blank"
@@ -163,13 +181,13 @@ export default function Sponsor() {
                             priority
                           />
                         </a>
-                      </div>
+                      </motion.div>
                     </div>
                   </div>
 
                   {/* Blank bottom row */}
                   <div className="row-span-1 col-span-2"></div>
-                </motion.div>
+                </div>
               </BlueBorderSquareBox>
             </motion.div>
           </div>
