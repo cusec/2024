@@ -1,10 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef} from "react";
 import Fade from "@/components/Fade";
 import { motion } from "framer-motion";
 import DayButton from "./DayButton";
 import DaySchedule from "./DaySchedule";
-
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -41,9 +40,31 @@ export default function Schedule() {
   // Assume the identifier is the titleText for simplicity, you can use more unique identifiers if necessary
   const [selectedDay, setSelectedDay] = useState<string>("Day One");
 
-  const handleDayButtonClick = (day: string) => {
-    setSelectedDay(day);
+const swiperRef = useRef<Swiper>(null);
+
+
+const handleDayButtonClick = (day: "Day One" | "Day Two" | "Day Three") => {
+  setSelectedDay(day);
+  const dayIndexMap = {
+    "Day One": 0,
+    "Day Two": 1,
+    "Day Three": 2,
   };
+
+  const index = dayIndexMap[day];
+
+  if (swiperRef.current && swiperRef.current.swiper) {
+    swiperRef.current.swiper.slideTo(index);  // Navigate to the corresponding slide
+  }
+};
+
+  const handleSlideChange = () => {
+    return (swiper: any) => {
+      const dayIndex = swiper.activeIndex;
+      const day = ["Day One", "Day Two", "Day Three"][dayIndex];
+      setSelectedDay(day);
+    };
+  }
 
   const colors = [
     "border-royalPurple",
@@ -67,8 +88,8 @@ export default function Schedule() {
         name="description"
         content="Official schedule for the 2024 edition of the Canadian University Software Engineering Conference."
       />
-      <div className="w-full flex justify-center">
-        <div className="w-full max-w-screen-2xl mx-6 lg:mx-24 mt-20">
+      <div className="flex justify-center mx-6 lg:mx-24">
+        <div className="w-full mt-20 max-w-screen-2xl">
           <Fade>
             {/* Title */}
             <motion.span
@@ -159,23 +180,31 @@ export default function Schedule() {
             <motion.div
               {...fadeInConfigText}
               transition={transitionConfig(0.6)}
-              className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]"
             >
-              <div className="bg-white rounded-lg py-5 px-6">
-                <DaySchedule dayIndex={selectedDayIndex} />
-              </div>
+              <Swiper
+                spaceBetween={50}
+                modules={[Navigation, Pagination, A11y, Keyboard]}
+                grabCursor={true}
+                initialSlide={0}
+                navigation={true}
+                keyboard={true}
+                scrollbar={{ draggable: true }}
+                onSlideChange={handleSlideChange()}
+                ref = {swiperRef}
+                className="SwiperScheduleNavigation"
+              >
+                <SwiperSlide>
+                  <DaySchedule dayIndex={0} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <DaySchedule dayIndex={1} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <DaySchedule dayIndex={2} />
+                </SwiperSlide>
+              </Swiper>
             </motion.div>
           </Fade>
-
-          {/* Back to Top Button */}
-          <div className="flex justify-center mb-10">
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white"
-            >
-              Back to Top
-            </button>
-          </div>
         </div>
       </div>
     </div>

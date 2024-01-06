@@ -137,6 +137,13 @@ html {
   }
 }
 
+/*  Override default Swiper parameters in 'DaySchedule' component in Schedule page*/
+.SwiperScheduleNavigation{
+  --swiper-navigation-size: 35px;
+  --swiper-navigation-top-offset: 1%;
+  --swiper-navigation-sides-offset: 1%;
+}
+
 /* #46529800 calc(95 * var(--square-size)) */
 
 .decagon {
