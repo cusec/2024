@@ -54,7 +54,7 @@ const SponsorBox = ({ logo, link, size }: Sponsor) => (
                     transition={transitionConfig(0.9)}
                     className="z-10 p-6 md:p-10"
                 >
-                    <Image src={logo.src} alt={logo.alt} layout="responsive" priority />
+                    <Image src={logo.src} alt={logo.alt} layout="responsive" priority className="group-hover:scale-110 transition ease-in-out duration-700"/>
                 </motion.div>
             </a>
         </BlueBorderSquareBox>

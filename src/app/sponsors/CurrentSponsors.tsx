@@ -85,7 +85,7 @@ export default function CurrentSponsors() {
   <div className="flex flex-col justify-center">
     {/* Render RBC, CSE, and Kinaxis */}
     {sponsors.filter(sponsor => sponsor.size !== 'xs').map((sponsor) => (
-      <div key={sponsor.name} className="flex justify-center w-full my-5">
+      <div key={sponsor.name} className="flex justify-center w-full my-5 group">
         <SponsorBox {...sponsor} />
       </div>
     ))}
@@ -94,12 +94,12 @@ export default function CurrentSponsors() {
 {/* Container for Accenture and Fellow */}
 <div className="flex space-x-4 mt-15">
   {/* Manually render Accenture */}
-  <div className="w-1/2 my-5">
+  <div className="w-1/2 my-5 group">
     <SponsorBox {...sponsors.find(sponsor => sponsor.name === 'Accenture')} />
   </div>
 
   {/* Manually render Fellow */}
-  <div className="w-1/2 my-5">
+  <div className="w-1/2 my-5 group">
     <SponsorBox {...sponsors.find(sponsor => sponsor.name === 'Fellow')} />
   </div>
 </div>
