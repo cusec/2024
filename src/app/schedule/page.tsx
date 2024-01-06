@@ -5,6 +5,19 @@ import { motion } from "framer-motion";
 import DayButton from "./DayButton";
 import DaySchedule from "./DaySchedule";
 
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Keyboard,
+} from "swiper/modules";
+
+// import "swiper/css";
+import "swiper/css/bundle";
+
 export default function Schedule() {
   const fadeInConfig = {
     initial: { opacity: 0, scale: 0.8 },

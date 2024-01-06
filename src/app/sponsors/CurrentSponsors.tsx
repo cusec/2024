@@ -81,7 +81,7 @@ export default function CurrentSponsors() {
       </motion.div>
 
       {/* Sponsor Logos */}
-      The reason they're rendered one by one instead of mapping is because I had to give each a different animation
+      {/* The reason they're rendered one by one instead of mapping is because I had to give each a different animation */}
       <section className="mt-10">
         <div className="flex flex-col justify-center">
           {/* Manually render RBC */}
