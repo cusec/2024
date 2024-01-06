@@ -77,11 +77,12 @@ export default function Sponsor() {
 
                   {/* Middle row containing all logos */}
                   {/* Left column for RBC */}
-                  <div className="row-span-1 flex justify-center items-center relative transition ease-in-out duration-700 hover:scale-110">
+                  <div className="row-span-1 flex justify-center items-center relative">
                     <a
                       href="https://www.rbcroyalbank.com/personal.html"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="transition ease-in-out duration-700 hover:scale-110"
                     >
                       <Image
                         src={rbc_logo_2}
@@ -96,11 +97,12 @@ export default function Sponsor() {
                   {/* Right column split into smaller rows for other logos */}
                   <div className="row-span-1 grid grid-rows-3 content-center gap-2">
                     {/* CSE logo */}
-                    <div className="flex justify-center items-center transition ease-in-out duration-700 hover:scale-110">
+                    <div className="flex justify-center items-center">
                       <a
                         href="https://www.cse-cst.gc.ca/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="transition ease-in-out duration-700 hover:scale-110"
                       >
                         <Image
                           src={cse_logo}
@@ -112,11 +114,12 @@ export default function Sponsor() {
                       </a>
                     </div>
                     {/* Kinaxis logo */}
-                    <div className="flex justify-center items-center transition ease-in-out duration-700 hover:scale-110">
+                    <div className="flex justify-center items-center">
                       <a
                         href="https://www.kinaxis.com/en"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="transition ease-in-out duration-700 hover:scale-110"
                       >
                         <Image
                           src={kinaxis_logo}
@@ -129,11 +132,12 @@ export default function Sponsor() {
                     </div>
                     {/* Accenture and Fellow logos */}
                     <div className="grid grid-cols-2 gap-2">
-                      <div className="flex justify-center items-center transition ease-in-out duration-700 hover:scale-110">
+                      <div className="flex justify-center items-center">
                         <a
                           href="https://www.accenture.com/"
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="transition ease-in-out duration-700 hover:scale-110"
                         >
                           <Image
                             src={accenture_logo}
@@ -144,11 +148,12 @@ export default function Sponsor() {
                           />
                         </a>
                       </div>
-                      <div className="flex justify-center items-center transition ease-in-out duration-700 hover:scale-110">
+                      <div className="flex justify-center items-center">
                         <a
                           href="https://fellow.app/"
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="transition ease-in-out duration-700 hover:scale-110"
                         >
                           <Image
                             src={fellow_logo}
