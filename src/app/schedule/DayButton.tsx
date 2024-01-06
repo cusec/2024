@@ -23,7 +23,7 @@ export default function DayButton(props: DayButtonProps) {
     >
       {/* Text for day of the conference, for example: 'Day One' */}
       <span
-        className={`text-[16px] md:text-[24px] font-semibold text-gray-600 transition-all ease-in-out duration-1000`}
+        className={`text-[16px] md:text-[24px] font-semibold text-gray-600 transition-all ease-in-out duration-1000 text-center`}
       >
         {props.titleText}
       </span>
