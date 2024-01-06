@@ -141,4 +141,6 @@ e. Analytics and Reporting: Integrate analytics tools to track website performan
 - Carefully architecting a page before jumping into development. Deeply thinking about the html structure first🏗️
 - Storing data in nested JSON files and accessing them📃
 - You can't use for loops, if...else statements, and switch...case statements directly inside jsx🤯
+- Setting custom screen breakpoints on tailwind📱
+- Adding calendar integration using the [Add to Calendar Button](https://add-to-calendar-button.com/) package📅
 </details>
