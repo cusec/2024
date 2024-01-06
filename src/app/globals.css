@@ -158,3 +158,29 @@ html {
     20% 10%
   );
 }
+
+@keyframes bobbing {
+  0%, 100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+.bobbing-animation-1 {
+  animation: bobbing 4s ease-in-out infinite;
+}
+
+.bobbing-animation-2 {
+  animation: bobbing 3.5s ease-in-out infinite;
+}
+.bobbing-animation-3 {
+  animation: bobbing 3s ease-in-out infinite;
+}
+.bobbing-animation-4 {
+  animation: bobbing 2.5s ease-in-out infinite;
+}
+.bobbing-animation-5 {
+  animation: bobbing 2s ease-in-out infinite;
+}
