@@ -4,10 +4,9 @@ import type { Metadata } from "next";
 import Head from "next/head";
 import Fade from "@/components/Fade";
 import Image from "next/image";
-import Main from "@/app/sponsors/Main";
-import PastSponsors from "@/app/sponsors/PastSponsors";
-import CurrentSponsors from "./CurrentSponsors";
-import WhySponsor from "./WhySponsor";
+import Main from "@/app/speakers/Main";
+import WhySpeak from "./WhySpeak";
+import Team from "./Speakers"
 import { motion } from "framer-motion";
 
 const animateInConfigImage = {
@@ -29,24 +28,25 @@ const transitionConfig = (delay = 0) => ({
   bounce: 0.1,
 });
 
-export default function Sponsors() {
+export default function Speakers() {
   return (
     <div className="overflow-hidden">
-      <title>Sponsors - CUSEC 2024</title>
+      <title>Speakers - CUSEC 2024</title>
       <meta
         name="description"
         content="Official website for the 2024 edition of the Canadian University Software Engineering Conference."
       />
 
       <div className="w-full">
-        {/* Top Left Gradient Lines */}
+
+          {/* Top Left Gradient Lines */}
         <Image
           src={"/images/top_left_gradient_lines.svg"}
           alt="top_left_gradient_lines"
           className="absolute top-[64px] z-10"
           width={200}
           height={250}
-        />
+          />
 
         {/* Bottom Right Gradient Lines */}
         <Image
@@ -73,17 +73,12 @@ export default function Sponsors() {
             </Fade>
           </div>
         </div>
+
         <div className="flex flex-col items-center mt-20">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full md:-mt-3 mb-16">
             <Fade>
-              <CurrentSponsors />
-            </Fade>
-          </div>
-        </div>
-        <div className="flex flex-col items-center mt-20">
-          <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full md:-mt-3 mb-16">
-            <Fade>
-              <PastSponsors />
+              <Team/>
+              <div></div>
             </Fade>
           </div>
         </div>
@@ -91,7 +86,7 @@ export default function Sponsors() {
         <div className="flex flex-col items-center">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full md:-mt-3 mb-16">
             <Fade>
-              <WhySponsor />
+              <WhySpeak />
             </Fade>
           </div>
         </div>
@@ -111,22 +106,22 @@ export default function Sponsors() {
                   transition={transitionConfig()}
                   className="text-white text-[16px] md:text-[26px]"
                 >
-                  Want to help spark inspiration into tech-savvy minds?
+                  Want to empower and inspire the future generation?
                 </motion.p>
                 <motion.p
                   {...animateInConfigText}
                   transition={transitionConfig(0.3)}
                   className="font-semibold text-[20px] md:text-[40px] w-fit text-transparent bg-clip-text bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot"
                 >
-                  Become a 2024 Sponsor
+                  Become a 2024 Speaker
                 </motion.p>
                 <motion.div
                   {...animateInConfigImage}
                   transition={transitionConfig(0.6)}
                 >
                   <a
-                    href="mailto:sponsor@cusec.net?subject=CUSEC 2024 Sponsorship Information Request"
-                    className="flex drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-10 md:px-20 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white"
+                    href="mailto:talks@cusec.net?subject=CUSEC 2024 Request to Become a Speaker"
+                    className="flex drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-roseQuartz px-3 min-[390px]:px-10 md:px-20 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white"
                   >
                     Contact Us
                   </a>

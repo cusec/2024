@@ -168,11 +168,21 @@ export default function Navbar({ clicked }: ChildProps) {
                   </span>
                   <div
                     className={`absolute top-full mt-3 left-0 right-5 text-xl transition-all ease-in-out duration-1000 overflow-hidden ${
-                      isEventDetailsClicked ? "max-h-0" : "max-h-40"
+                      isEventDetailsClicked ? "max-h-0" : "max-h-72"
                     }`}
                   >
                     <div className="bg-gradient-to-br from-lavenderFog to-goldenApricot rounded-2xl">
                       <ul className="space-y-2 flex flex-col bg-black/[.65] rounded-2xl p-4">
+                        <li>
+                          <NavLink href="/schedule">Schedule</NavLink>
+                        </li>
+                        <li>
+                          <NavLink href="/speakers">Speakers</NavLink>
+                        </li>
+                        <li>
+                          {/* <NavLink href="/">Schedule</NavLink> */}
+                          <NavLink href="/sponsors">Sponsors</NavLink>
+                        </li>
                         <li>
                           <NavLink
                             href="https://www.tickettailor.com/events/cusec/943944"
@@ -188,10 +198,6 @@ export default function Navbar({ clicked }: ChildProps) {
                           >
                             Hotel
                           </NavLink>
-                        </li>
-                        <li>
-                          {/* <NavLink href="/">Schedule</NavLink> */}
-                          <NavLink href="/sponsors">Sponsors</NavLink>
                         </li>
                       </ul>
                     </div>
@@ -299,10 +305,35 @@ export default function Navbar({ clicked }: ChildProps) {
             </span>
             <div
               className={`top-full left-0 right-5 mt-3 text-xl transition-all ease-in-out duration-1000 overflow-hidden ${
-                isEventDetailsClicked ? "max-h-0" : "max-h-40"
+                isEventDetailsClicked ? "max-h-0" : "max-h-52"
               }`}
             >
               <ul className="space-y-2 flex flex-col p-4">
+                {" "}
+                <li>
+                  {/* <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
+                  Schedule
+                </NavLink> */}
+                  <NavLink toggleMobileMenu={toggleMobileMenu} href="/schedule">
+                  Schedule
+                  </NavLink>
+                </li>{" "}
+                <li>
+                  {/* <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
+                  Schedule
+                </NavLink> */}
+                  <NavLink toggleMobileMenu={toggleMobileMenu} href="/speakers">
+                  Speakers
+                  </NavLink>
+                </li>
+                <li>
+                  {/* <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
+                  Schedule
+                </NavLink> */}
+                  <NavLink toggleMobileMenu={toggleMobileMenu} href="/sponsors">
+                    Sponsors
+                  </NavLink>
+                </li>
                 <li>
                   <NavLink
                     toggleMobileMenu={toggleMobileMenu}
@@ -319,14 +350,6 @@ export default function Navbar({ clicked }: ChildProps) {
                     target="_blank"
                   >
                     Hotel
-                  </NavLink>
-                </li>
-                <li>
-                  {/* <NavLink toggleMobileMenu={toggleMobileMenu} href="/">
-                  Schedule
-                </NavLink> */}
-                  <NavLink toggleMobileMenu={toggleMobileMenu} href="/sponsors">
-                    Sponsors
                   </NavLink>
                 </li>
               </ul>

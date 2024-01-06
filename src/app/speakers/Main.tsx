@@ -1,5 +1,5 @@
 import Image from "next/image";
-import cusec_2023_keynote_speaker from "./cusec_2023_keynote_speaker.png";
+import cusec_2023_keynote_speaker from "./cusec_2023_panel.png";
 import { motion } from "framer-motion";
 
 const animateInConfigText = {
@@ -58,7 +58,8 @@ export default function Main() {
             transition={transitionConfig()}
             className="uppercase text-center text-white font-semibold text-[24px] md:text-[36px] lg:text-[50px]"
           >
-            Building Brighter Futures <br className="lg:block" />
+            Empowering Young Minds
+            <br className="lg:block" />
             <motion.span
               {...getMotionProps(purple400)}
               transition={transitionConfig(0.3)}
@@ -78,7 +79,7 @@ export default function Main() {
               transition={transitionConfig(0.9)}
               className="text-goldenApricot"
             >
-              Sponsors
+              Speakers
             </motion.span>
           </motion.h1>
         </div>

@@ -1,6 +1,4 @@
-import { StaticImageData } from "next/image";
 import Image from "next/image";
-import Link from "next/link";
 import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
 import { motion } from "framer-motion";
 import {

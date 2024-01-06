@@ -2,6 +2,13 @@ import BlueBorderSquareBox from "./BlueBorderSquareBox";
 import Link from "next/link";
 import Image from "next/image";
 import sponsor_logos from "@/assets/sponsor_logos.png";
+import rbc_logo_2 from "public/images/sponsor logos/rbc_logo_2.svg";
+import cse_logo from "public/images/sponsor logos/cse_logo.svg";
+import kinaxis_logo from "public/images/sponsor logos/kinaxis_logo.svg";
+import accenture_logo from "public/images/sponsor logos/accenture_logo.svg";
+import fellow_logo from "public/images/sponsor logos/fellow_logo.svg";
+import { useState } from "react";
+
 import { motion } from "framer-motion";
 
 function animateInConfig(text: boolean) {
@@ -41,7 +48,7 @@ export default function Sponsor() {
             className="flex justify-center text-[28px] font-semibold pb-10 md:hidden"
           >
             <h2 className="w-fit">
-              Past CUSEC Sponsors
+              CUSEC 2024 Sponsors
               <hr className="max-w-[3rem] md:max-w-[4rem] h-2 bg-orange-300 mb-2 mt-2 ml-auto" />
             </h2>
           </motion.span>
@@ -51,28 +58,136 @@ export default function Sponsor() {
               transition={transitionConfig(0)}
               className="relative max-w-md aspect-square mx-auto w-full"
             >
-              {/* This div is for the background gradient */}
+              {/* Background gradient */}
               <motion.div
                 {...fadeInConfigImage}
                 transition={transitionConfig(0.3)}
-                className="absolute max-w-md aspect-square top-[-17px] right-[-18px] bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-[95%]"
+                className="absolute max-w-md aspect-square top-[-20px] right-[-20px] bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-[95%]"
               ></motion.div>
+
               <BlueBorderSquareBox>
-                <motion.div
-                  {...fadeInConfigImage}
-                  transition={transitionConfig(0.5)}
-                  className="aspect-square flex flex-col justify-center items-center relative right-4"
+                <div
+                  className="grid grid-rows-[20%_1fr_20%] grid-cols-2 gap-2 p-4"
+                  style={{ aspectRatio: "1 / 1" }}
                 >
-                  <Image
-                    src={sponsor_logos}
-                    height={40}
-                    width={40}
-                    alt="Sponsor Logos"
-                    layout="responsive"
-                    className=""
-                    priority
-                  />
-                </motion.div>
+                  {/* Blank top row */}
+                  <div className="row-span-1 col-span-2"></div>
+
+                  {/* Middle row containing all logos */}
+                  {/* Left column for RBC */}
+                  <motion.div
+                    {...fadeInConfigImage}
+                    transition={transitionConfig(0.4)}
+                    className="row-span-1 flex justify-center items-center relative"
+                  >
+                    <a
+                      href="https://www.rbcroyalbank.com/personal.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition ease-in-out duration-700 hover:scale-110"
+                    >
+                      <Image
+                        src={rbc_logo_2}
+                        alt="RBC Logo"
+                        layout="responsive"
+                        objectFit="contain"
+                        priority
+                      />
+                    </a>
+                  </motion.div>
+
+                  {/* Right column split into smaller rows for other logos */}
+                  <div className="row-span-1 grid grid-rows-3 content-center gap-2">
+                    {/* CSE logo */}
+                    <motion.div
+                      {...fadeInConfigImage}
+                      transition={transitionConfig(0.5)}
+                      className="flex justify-center items-center"
+                    >
+                      <a
+                        href="https://www.cse-cst.gc.ca/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition ease-in-out duration-700 hover:scale-110"
+                      >
+                        <Image
+                          src={cse_logo}
+                          alt="CSE Logo"
+                          layout="responsive"
+                          objectFit="contain"
+                          priority
+                        />
+                      </a>
+                    </motion.div>
+                    {/* Kinaxis logo */}
+                    <motion.div
+                      {...fadeInConfigImage}
+                      transition={transitionConfig(0.6)}
+                      className="flex justify-center items-center"
+                    >
+                      <a
+                        href="https://www.kinaxis.com/en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition ease-in-out duration-700 hover:scale-110"
+                      >
+                        <Image
+                          src={kinaxis_logo}
+                          alt="Kinaxis Logo"
+                          layout="responsive"
+                          objectFit="contain"
+                          priority
+                        />
+                      </a>
+                    </motion.div>
+                    {/* Accenture and Fellow logos */}
+                    <div className="grid grid-cols-2 gap-2">
+                      <motion.div
+                        {...fadeInConfigImage}
+                        transition={transitionConfig(0.7)}
+                        className="flex justify-center items-center"
+                      >
+                        <a
+                          href="https://www.accenture.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="transition ease-in-out duration-700 hover:scale-110"
+                        >
+                          <Image
+                            src={accenture_logo}
+                            alt="Accenture Logo"
+                            layout="responsive"
+                            objectFit="contain"
+                            priority
+                          />
+                        </a>
+                      </motion.div>
+                      <motion.div
+                        {...fadeInConfigImage}
+                        transition={transitionConfig(0.8)}
+                        className="flex justify-center items-center"
+                      >
+                        <a
+                          href="https://fellow.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="transition ease-in-out duration-700 hover:scale-110"
+                        >
+                          <Image
+                            src={fellow_logo}
+                            alt="Fellow Logo"
+                            layout="responsive"
+                            objectFit="contain"
+                            priority
+                          />
+                        </a>
+                      </motion.div>
+                    </div>
+                  </div>
+
+                  {/* Blank bottom row */}
+                  <div className="row-span-1 col-span-2"></div>
+                </div>
               </BlueBorderSquareBox>
             </motion.div>
           </div>
@@ -83,7 +198,7 @@ export default function Sponsor() {
               transition={transitionConfig(0)}
               className="text-[28px] md:text-[40px] font-semibold hidden md:block"
             >
-              Past CUSEC Sponsors
+              CUSEC 2024 Sponsors
             </motion.h2>
             <motion.hr
               {...animateInConfig(true)}
@@ -95,7 +210,7 @@ export default function Sponsor() {
               transition={transitionConfig(0.5)}
               className="md:text-[20px] font-regular pt-10 pb-6"
             >
-              Over the last 21 years, CUSEC has collaborated with an extensive
+              Over the last 22 years, CUSEC has collaborated with an extensive
               array of industry leaders. These partnerships have helped make
               CUSEC possible while providing students invaluable opportunities
               to create lasting connections with seasoned professionals.
