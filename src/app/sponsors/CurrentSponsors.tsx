@@ -63,9 +63,9 @@ export default function CurrentSponsors() {
         >
           Each year our sponsors play a crucial role in making CUSEC an exciting
           and enriching experience for tech-savvy students. Their generous
-          support fuels the conference&apos;s activities and enhances the overall
-          atmosphere for students and professionals to connect, learn, and
-          explore new horizons in software engineering. Our sponsors are
+          support fuels the conference&apos;s activities and enhances the
+          overall atmosphere for students and professionals to connect, learn,
+          and explore new horizons in software engineering. Our sponsors are
           essential in keeping the conference dynamic and full of opportunities,
           ensuring that CUSEC continues to be a must-attend event for those
           passionate about technology and innovation.
@@ -80,35 +80,39 @@ export default function CurrentSponsors() {
         <Image src={circle_grid_v1} alt="Vertical grid of grey circles" />
       </motion.div>
 
-{/* Sponsor Logos */}
-<section className="mt-10">
-  <div className="flex flex-col justify-center">
-    {/* Render RBC, CSE, and Kinaxis */}
-    {sponsors.filter(sponsor => sponsor.size !== 'xs').map((sponsor) => (
-      <div key={sponsor.name} className="flex justify-center w-full my-5 group">
-        <SponsorBox {...sponsor} />
-      </div>
-    ))}
-  </div>
+      {/* Sponsor Logos */}
+      <section className="mt-10">
+        <div className="flex flex-col justify-center">
+          {/* Render RBC, CSE, and Kinaxis */}
+          {sponsors
+            .filter((sponsor) => sponsor.size !== "xs")
+            .map((sponsor) => (
+              <div
+                key={sponsor.name}
+                className="flex justify-center w-full my-5 group"
+              >
+                <SponsorBox {...sponsor} />
+              </div>
+            ))}
+        </div>
 
-{/* Container for Accenture and Fellow */}
-<div className="flex space-x-4 mt-15">
-  {/* Manually render Accenture */}
-  <div className="w-1/2 my-5 group">
-    <SponsorBox {...sponsors.find(sponsor => sponsor.name === 'Accenture')} />
-  </div>
+        {/* Container for Accenture and Fellow */}
+        <div className="flex space-x-4 mt-15">
+          {/* Manually render Accenture */}
+          <div className="w-1/2 my-5 group">
+            <SponsorBox
+              {...sponsors.find((sponsor) => sponsor.name === "Accenture")!}
+            />
+          </div>
 
-  {/* Manually render Fellow */}
-  <div className="w-1/2 my-5 group">
-    <SponsorBox {...sponsors.find(sponsor => sponsor.name === 'Fellow')} />
-  </div>
-</div>
-
-</section>
-
-
-
-
+          {/* Manually render Fellow */}
+          <div className="w-1/2 my-5 group">
+            <SponsorBox
+              {...sponsors.find((sponsor) => sponsor.name === "Fellow")!}
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
