@@ -66,49 +66,86 @@ export default function Schedule() {
               <h1 className="text-center text-[28px] md:text-[40px] font-semibold tracking-tight w-fit">
                 January 2024 Schedule
                 <motion.hr
-              {...fadeInConfigText}
-              transition={transitionConfig(0.2)}
-                  className="max-w-[3rem] md:max-w-[4rem] h-2 bg-pink-300 mb-2 ml-[9rem] md:ml-[13rem]" />
+                  {...fadeInConfigText}
+                  transition={transitionConfig(0.2)}
+                  className="max-w-[3rem] md:max-w-[4rem] h-2 bg-pink-300 mb-2 ml-[9rem] md:ml-[13rem]"
+                />
               </h1>
             </motion.span>
 
-            {/* Button to select the day */}
+            {/* Buttons to select the day */}
             <motion.div
-              {...fadeInConfig}
-              transition={transitionConfig(0.2)}
+              {...fadeInConfigText}
+              transition={transitionConfig(0.4)}
               className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]"
             >
-              <div className="flex bg-white justify-evenly rounded-lg py-5 px-6">
-                <DayButton
-                  titleText="Day One"
-                  Day="Thu"
-                  Date="11"
-                  selected={selectedDay === "Day One"}
-                  onDayButtonClick={() => handleDayButtonClick("Day One")}
-                />
-                <div className="flex-1 border-b-4 md:border-b-8 border-dotted border-gray-400 my-[50px] md:my-[58px] mx-2 md:mx-0"></div>
-                <DayButton
-                  titleText="Day Two"
-                  Day="Fri"
-                  Date="12"
-                  selected={selectedDay === "Day Two"}
-                  onDayButtonClick={() => handleDayButtonClick("Day Two")}
-                />
-                <div className="flex-1 border-b-4 md:border-b-8 border-dotted border-gray-400 my-[50px] md:my-[58px] mx-2 md:mx-0"></div>
-                <DayButton
-                  titleText="Day Three"
-                  Day="Sat"
-                  Date="13"
-                  selected={selectedDay === "Day Three"}
-                  onDayButtonClick={() => handleDayButtonClick("Day Three")}
-                />
-              </div>
+              <motion.div
+                {...fadeInConfig}
+                transition={transitionConfig(0.6)}
+                className="flex bg-white justify-evenly rounded-lg py-5 px-6"
+              >
+                {/* Day One Button */}
+                <motion.div
+                  {...fadeInConfig}
+                  transition={transitionConfig(0.8)}
+                >
+                  <DayButton
+                    titleText="Day One"
+                    Day="Thu"
+                    Date="11"
+                    selected={selectedDay === "Day One"}
+                    onDayButtonClick={() => handleDayButtonClick("Day One")}
+                  />
+                </motion.div>
+
+                {/* Dotted line */}
+                <motion.div
+                  {...fadeInConfig}
+                  transition={transitionConfig(1.6)}
+                  className="flex-1 border-b-4 md:border-b-8 border-dotted border-gray-400 my-[50px] md:my-[58px] mx-2 md:mx-0"
+                ></motion.div>
+
+                {/* Day Two Button */}
+                <motion.div
+                  {...fadeInConfig}
+                  transition={transitionConfig(1.2)}
+                >
+                  <DayButton
+                    titleText="Day Two"
+                    Day="Fri"
+                    Date="12"
+                    selected={selectedDay === "Day Two"}
+                    onDayButtonClick={() => handleDayButtonClick("Day Two")}
+                  />
+                </motion.div>
+
+                {/* Dotted Line */}
+                <motion.div
+                  {...fadeInConfig}
+                  transition={transitionConfig(1.8)}
+                  className="flex-1 border-b-4 md:border-b-8 border-dotted border-gray-400 my-[50px] md:my-[58px] mx-2 md:mx-0"
+                ></motion.div>
+
+                {/* Day Three Button */}
+                <motion.div
+                  {...fadeInConfig}
+                  transition={transitionConfig(1.4)}
+                >
+                  <DayButton
+                    titleText="Day Three"
+                    Day="Sat"
+                    Date="13"
+                    selected={selectedDay === "Day Three"}
+                    onDayButtonClick={() => handleDayButtonClick("Day Three")}
+                  />
+                </motion.div>
+              </motion.div>
             </motion.div>
 
             {/* Schedule of events */}
             <motion.div
               {...fadeInConfigText}
-              transition={transitionConfig(0.4)}
+              transition={transitionConfig(0.6)}
               className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]"
             >
               <div className="bg-white rounded-lg py-5 px-6">

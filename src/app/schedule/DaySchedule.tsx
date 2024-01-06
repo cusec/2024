@@ -37,7 +37,7 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
     return null; // or render an error message
   }
 
-const daySchedule: Schedule = scheduleData[dayIndex] as unknown as Schedule;
+  const daySchedule: Schedule = scheduleData[dayIndex] as unknown as Schedule;
   const gridLayoutClasses =
     "m-1 grid grid-cols-[minmax(100px,_1fr)_10fr] md:grid-cols-[minmax(100px,_1.5fr)_10fr] gap-4  my-6";
   const timeColumnClasses =
@@ -74,12 +74,13 @@ const daySchedule: Schedule = scheduleData[dayIndex] as unknown as Schedule;
 
   // Rendering function for Event Information
   const renderEventInfo = (item: ScheduleItem, isSpeaker: boolean) => (
-    <div className={eventInfoClasses}>
+    <div className={`${eventInfoClasses} transition ease-in-out duration-500 hover:scale-105 hover:text-purple-600 cursor-pointer group`
+}>
       {isSpeaker && <span className={speakerClasses}>{item.speaker}</span>}
-      <span className={isSpeaker ? speakerTitleClasses : "font-semibold"}>
+      <span className={isSpeaker ? `${speakerTitleClasses} group-hover:text-pink-500` : "font-semibold"}>
         {item.title}
       </span>
-      <span className={locationTextClasses}>{item.location}</span>
+      <span className={`${locationTextClasses} group-hover:text-roseQuartz`}>{item.location}</span>
     </div>
   );
 
@@ -96,7 +97,7 @@ const daySchedule: Schedule = scheduleData[dayIndex] as unknown as Schedule;
                 key={subIndex}
                 className={`flex flex-col md:text-[24px] ${
                   subIndex === 1
-                    ? "pl-4 border-l-2 md:border-l-[3px] border-royalBlue"
+                    ? "pl-4 md:pl-2 border-l-2 md:border-l-[3px] border-royalBlue"
                     : ""
                 }`}
               >
@@ -130,7 +131,7 @@ const daySchedule: Schedule = scheduleData[dayIndex] as unknown as Schedule;
           </div>
           {/* Second column for the second event (only for category 4a) */}
           {item.category === "4a" && item.items && item.items.length > 1 && (
-            <div className="flex flex-col md:text-[24px] pl-4 ml-4 border-l-2 md:border-l-[3px] border-goldenApricot md:pl-10">
+            <div className="flex flex-col md:text-[24px] pl-4 ml-4 border-l-2 md:border-l-[3px] border-goldenApricot md:pl-0">
               {renderEventInfo(item.items[1], false)}
             </div>
           )}
