@@ -12,11 +12,11 @@ export default function Schedule() {
     viewport: { once: true },
   };
 
-    const fadeInConfigText = {
-  initial: { opacity: 0, x: 100 },
-  whileInView: { opacity: 1, x: 0 },
-  viewport: { once: true },
-};
+  const fadeInConfigText = {
+    initial: { opacity: 0, x: 100 },
+    whileInView: { opacity: 1, x: 0 },
+    viewport: { once: true },
+  };
 
   const transitionConfig = (delay = 0) => ({
     duration: 1.5,
@@ -40,7 +40,7 @@ export default function Schedule() {
 
   // Map the selectedDay string to a day index
   const dayIndexMap: { [key: string]: number } = {
-    "Day One": 0,   
+    "Day One": 0,
     "Day Two": 1,
     "Day Three": 2,
   };
@@ -58,15 +58,26 @@ export default function Schedule() {
         <div className="w-full max-w-screen-2xl mx-6 lg:mx-24 mt-20">
           <Fade>
             {/* Title */}
-            <motion.span {...fadeInConfig} transition={transitionConfig()} className="flex justify-center">
+            <motion.span
+              {...fadeInConfig}
+              transition={transitionConfig()}
+              className="flex justify-center"
+            >
               <h1 className="text-center text-[28px] md:text-[40px] font-semibold tracking-tight w-fit">
                 January 2024 Schedule
-                <hr className="max-w-[3rem] md:max-w-[4rem] h-2 bg-pink-300 mb-2 ml-[9rem] md:ml-[13rem]" />
+                <motion.hr
+              {...fadeInConfigText}
+              transition={transitionConfig(0.2)}
+                  className="max-w-[3rem] md:max-w-[4rem] h-2 bg-pink-300 mb-2 ml-[9rem] md:ml-[13rem]" />
               </h1>
             </motion.span>
 
             {/* Button to select the day */}
-            <motion.div {...fadeInConfig} transition={transitionConfig(0.2)} className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]">
+            <motion.div
+              {...fadeInConfig}
+              transition={transitionConfig(0.2)}
+              className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]"
+            >
               <div className="flex bg-white justify-evenly rounded-lg py-5 px-6">
                 <DayButton
                   titleText="Day One"
@@ -95,12 +106,26 @@ export default function Schedule() {
             </motion.div>
 
             {/* Schedule of events */}
-            <motion.div {...fadeInConfigText} transition={transitionConfig(0.4)} className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]">
+            <motion.div
+              {...fadeInConfigText}
+              transition={transitionConfig(0.4)}
+              className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]"
+            >
               <div className="bg-white rounded-lg py-5 px-6">
                 <DaySchedule dayIndex={selectedDayIndex} />
               </div>
             </motion.div>
           </Fade>
+
+          {/* Back to Top Button */}
+          <div className="flex justify-center mb-10">
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white"
+            >
+              Back to Top
+            </button>
+          </div>
         </div>
       </div>
     </div>
