@@ -81,19 +81,32 @@ export default function CurrentSponsors() {
       </motion.div>
 
       {/* Sponsor Logos */}
+      {/* The reason they're rendered one by one instead of mapping is because I had to give each a different animation */}
       <section className="mt-10">
         <div className="flex flex-col justify-center">
-          {/* Render RBC, CSE, and Kinaxis */}
-          {sponsors
-            .filter((sponsor) => sponsor.size !== "xs")
-            .map((sponsor) => (
-              <div
-                key={sponsor.name}
-                className="flex justify-center w-full my-5 group"
-              >
-                <SponsorBox {...sponsor} />
-              </div>
-            ))}
+          {/* Manually render RBC */}
+          <div className="flex justify-center w-full my-5 group">
+            <SponsorBox
+              {...sponsors.find((sponsor) => sponsor.name === "RBC")!}
+            animationClass="bobbing-animation-1" 
+            />
+          </div>
+
+          {/* Manually render CSE */}
+          <div className="flex justify-center w-full my-5 group">
+            <SponsorBox
+              {...sponsors.find((sponsor) => sponsor.name === "CSE")!}
+            animationClass="bobbing-animation-2" 
+            />
+          </div>
+
+          {/* Manually render Kinaxis */}
+          <div className="flex justify-center w-full my-5 group">
+            <SponsorBox
+              {...sponsors.find((sponsor) => sponsor.name === "Kinaxis")!}
+            animationClass="bobbing-animation-3" 
+            />
+          </div>
         </div>
 
         {/* Container for Accenture and Fellow */}
@@ -102,6 +115,7 @@ export default function CurrentSponsors() {
           <div className="w-1/2 my-5 group">
             <SponsorBox
               {...sponsors.find((sponsor) => sponsor.name === "Accenture")!}
+            animationClass="bobbing-animation-4" 
             />
           </div>
 
@@ -109,6 +123,7 @@ export default function CurrentSponsors() {
           <div className="w-1/2 my-5 group">
             <SponsorBox
               {...sponsors.find((sponsor) => sponsor.name === "Fellow")!}
+            animationClass="bobbing-animation-5" 
             />
           </div>
         </div>

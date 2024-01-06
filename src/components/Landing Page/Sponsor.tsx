@@ -7,7 +7,7 @@ import cse_logo from "public/images/sponsor logos/cse_logo.svg";
 import kinaxis_logo from "public/images/sponsor logos/kinaxis_logo.svg";
 import accenture_logo from "public/images/sponsor logos/accenture_logo.svg";
 import fellow_logo from "public/images/sponsor logos/fellow_logo.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
 
@@ -70,6 +70,9 @@ export default function Sponsor() {
                   className="grid grid-rows-[20%_1fr_20%] grid-cols-2 gap-2 p-4"
                   style={{ aspectRatio: "1 / 1" }}
                 >
+
+                  {/* The bobbing animation is defined in globals.css */}
+
                   {/* Blank top row */}
                   <div className="row-span-1 col-span-2"></div>
 
@@ -78,7 +81,7 @@ export default function Sponsor() {
                   <motion.div
                     {...fadeInConfigImage}
                     transition={transitionConfig(0.4)}
-                    className="row-span-1 flex justify-center items-center relative"
+                    className="row-span-1 flex justify-center items-center relative bobbing-animation-1"
                   >
                     <a
                       href="https://www.rbcroyalbank.com/personal.html"
@@ -102,7 +105,7 @@ export default function Sponsor() {
                     <motion.div
                       {...fadeInConfigImage}
                       transition={transitionConfig(0.5)}
-                      className="flex justify-center items-center"
+                      className="flex justify-center items-center bobbing-animation-2"
                     >
                       <a
                         href="https://www.cse-cst.gc.ca/"
@@ -123,7 +126,7 @@ export default function Sponsor() {
                     <motion.div
                       {...fadeInConfigImage}
                       transition={transitionConfig(0.6)}
-                      className="flex justify-center items-center"
+                      className="flex justify-center items-center bobbing-animation-3"
                     >
                       <a
                         href="https://www.kinaxis.com/en"
@@ -145,7 +148,7 @@ export default function Sponsor() {
                       <motion.div
                         {...fadeInConfigImage}
                         transition={transitionConfig(0.7)}
-                        className="flex justify-center items-center"
+                        className="flex justify-center items-center bobbing-animation-4"
                       >
                         <a
                           href="https://www.accenture.com/"
@@ -165,7 +168,7 @@ export default function Sponsor() {
                       <motion.div
                         {...fadeInConfigImage}
                         transition={transitionConfig(0.8)}
-                        className="flex justify-center items-center"
+                        className="flex justify-center items-center bobbing-animation-5"
                       >
                         <a
                           href="https://fellow.app/"

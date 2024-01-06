@@ -84,7 +84,7 @@ export default function PastSponsors() {
           <motion.div
             {...animateInConfigImage}
             transition={transitionConfig(0.9)}
-            className="aspect-square flex flex-col justify-center items-center relative right-4"
+            className="aspect-square flex flex-col justify-center items-center relative right-4 bobbing-animation-4"
           >
             <Image
               src={sponsor_logos}

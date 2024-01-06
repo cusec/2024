@@ -30,7 +30,11 @@ const sizeClasses = {
   xs: "w-1/2 xs:w-3/4",
 };
 
-const SponsorBox = ({ logo, link, size }: Sponsor) => (
+interface SponsorBoxProps extends Sponsor {
+  animationClass: string; 
+}
+
+const SponsorBox = ({ logo, link, size, animationClass }: SponsorBoxProps) => (
 <motion.div
     {...animateInConfigImage}
     transition={transitionConfig(0.6)}
@@ -54,7 +58,7 @@ const SponsorBox = ({ logo, link, size }: Sponsor) => (
                     transition={transitionConfig(0.9)}
                     className="z-10 p-6 md:p-10"
                 >
-                    <Image src={logo.src} alt={logo.alt} layout="responsive" priority className="group-hover:scale-110 transition ease-in-out duration-700"/>
+                    <Image src={logo.src} alt={logo.alt} layout="responsive" priority className={`group-hover:scale-110 transition ease-in-out duration-700 ${animationClass}`}/>
                 </motion.div>
             </a>
         </BlueBorderSquareBox>

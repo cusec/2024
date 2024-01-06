@@ -40,17 +40,17 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
 
   const daySchedule: Schedule = scheduleData[dayIndex] as unknown as Schedule;
   const gridLayoutClasses =
-    "grid grid-cols-[minmax(60px,_1fr)_10fr] xs:grid-cols-[minmax(70px,_1fr)_10fr] sm:grid-cols-[minmax(100px,_1.5fr)_10fr] gap-4 my-6";
+    "grid grid-cols-[minmax(50px,_1fr)_10fr] xs:grid-cols-[minmax(70px,_1fr)_10fr] sm:grid-cols-[minmax(100px,_1.5fr)_10fr] gap-4 my-6";
   const timeColumnClasses =
     "flex flex-col justify-center pr-4 border-r-2 md:border-r-[3px] xs:text-[20px]";
   const eventInfoClasses =
-    "flex flex-col md:pl-10 justify-center break-words sm:break-normal";
+    "flex flex-col md:pl-10 justify-center break-words sm272:break-normal";
   const titleClasses =
-    "font-semibold text-[10px] xs:text-[16px] sm:text-[24px]";
+    "font-semibold text-[14px] xs:text-[16px] sm:text-[24px]";
   const subTitleClasses =
-    "text-zinc-500 text-[10px] xs:text-[16px] sm:text-[24px]";
+    "text-zinc-500 text-[14px] xs:text-[16px] sm:text-[24px]";
   const locationTextClasses =
-    "text-zinc-400 text-[9px] xs:text-[14px] sm:text-[20px]";
+    "text-zinc-400 text-[12px] xs:text-[14px] sm:text-[20px]";
 
   // Rendering function for Time Column
   const renderTimeColumn = (
@@ -128,7 +128,7 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
 
     return (
       <div
-        className={`${eventInfoClasses} transition ease-in-out duration-500 hover:scale-105 hover:text-purple-600 cursor-pointer group`}
+        className={`${eventInfoClasses} transition ease-in-out duration-500 hover:scale-105 hover:text-purple-600 group`}
       >
         <span className={titleClasses}>
           {isSpeaker ? item.speaker : item.title}
@@ -186,7 +186,7 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
             )}
             {/* Last event (with blue border) */}
             {item.items && (
-              <div className="pl-4 ml-1 border-l-2 md:border-l-[3px] border-royalBlue my-[9px] md:my-[14px]">
+              <div className="pl-4 md:pl-0 md:ml-10 border-l-2 md:border-l-[3px] border-royalBlue my-[9px] md:my-[14px]">
                 {renderEventInfo(item.items[item.items.length - 1], false)}
               </div>
             )}
@@ -250,26 +250,37 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
   };
 
   return (
-    <>
-      {/* Text for the date and day */}
-      <h2 className="text-[16px] md:text-[30px]">
-        <span className="font-semibold">{daySchedule["Date"]}, </span>
-        <span>{daySchedule["Day"]}</span>
-      </h2>
-      {/* Render all events and times */}
-      {daySchedule.items.map((item, index) => (
-        <div key={index} className={gridLayoutClasses}>
-          {/* Column of times */}
-          {renderTimeColumn(
-            item,
-            ["4a", "4b", "4c"].includes(item.category),
-            index
-          )}
-          {/* Event details */}
-          {renderEventCategory(item, index)}
+    <div className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]">
+      <div className="bg-white rounded-lg py-5 px-6">
+        {/* Text for the date and day */}
+        <h2 className="text-[16px] md:text-[30px]">
+          <span className="font-semibold">{daySchedule["Date"]}, </span>
+          <span>{daySchedule["Day"]}</span>
+        </h2>
+        {/* Render all events and times */}
+        {daySchedule.items.map((item, index) => (
+          <div key={index} className={gridLayoutClasses}>
+            {/* Column of times */}
+            {renderTimeColumn(
+              item,
+              ["4a", "4b", "4c"].includes(item.category),
+              index
+            )}
+            {/* Event details */}
+            {renderEventCategory(item, index)}
+          </div>
+        ))}
+        {/* Back to Top Button */}
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white"
+          >
+            Back to Top
+          </button>
         </div>
-      ))}
-    </>
+      </div>
+    </div>
   );
 };
 
