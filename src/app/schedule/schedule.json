@@ -243,7 +243,7 @@
         "title": "From Algorithms to Content Creation: The Dual Life of a Software Engineer and TikToker",
         "location": "RBC Theatre",
         "start_time": "4:00 PM",
-        "end_time": "4:55 PM"
+        "end_time": "4:25 PM"
       },
       {
         "category": "1",
@@ -259,14 +259,14 @@
         "end_time": "12:00 AM",
         "items": [
           {
-            "title": "Kareoke Night",
-            "location": "RBC Theatre",
+            "title": "Pub Night",
+            "location": "1420 Peel Street",
             "start_time": "8:00 PM",
             "end_time": "11:59 PM"
           },
           {
-            "title": "Jeopardy",
-            "location": "Workshop Room",
+            "title": "Kareoke Night",
+            "location": "RBC Theatre",
             "start_time": "9:00 PM",
             "end_time": "11:59 PM"
           }
