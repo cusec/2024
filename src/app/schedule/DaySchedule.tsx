@@ -40,17 +40,17 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
 
   const daySchedule: Schedule = scheduleData[dayIndex] as unknown as Schedule;
   const gridLayoutClasses =
-    "grid grid-cols-[minmax(60px,_1fr)_10fr] xs:grid-cols-[minmax(70px,_1fr)_10fr] sm:grid-cols-[minmax(100px,_1.5fr)_10fr] gap-4 my-6";
+    "grid grid-cols-[minmax(50px,_1fr)_10fr] xs:grid-cols-[minmax(70px,_1fr)_10fr] sm:grid-cols-[minmax(100px,_1.5fr)_10fr] gap-4 my-6";
   const timeColumnClasses =
     "flex flex-col justify-center pr-4 border-r-2 md:border-r-[3px] xs:text-[20px]";
   const eventInfoClasses =
-    "flex flex-col md:pl-10 justify-center break-words sm:break-normal";
+    "flex flex-col md:pl-10 justify-center break-words sm272:break-normal";
   const titleClasses =
-    "font-semibold text-[10px] xs:text-[16px] sm:text-[24px]";
+    "font-semibold text-[14px] xs:text-[16px] sm:text-[24px]";
   const subTitleClasses =
-    "text-zinc-500 text-[10px] xs:text-[16px] sm:text-[24px]";
+    "text-zinc-500 text-[14px] xs:text-[16px] sm:text-[24px]";
   const locationTextClasses =
-    "text-zinc-400 text-[9px] xs:text-[14px] sm:text-[20px]";
+    "text-zinc-400 text-[12px] xs:text-[14px] sm:text-[20px]";
 
   // Rendering function for Time Column
   const renderTimeColumn = (

@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     screens: {
+'sm272':'272px',
       '2xs': '280px',
       xs: '375px',
       sm: '640px',
@@ -14,7 +15,6 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
       '2xl': '1280px',
-
     },
     extend: {
       backgroundImage: {
