@@ -4,6 +4,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
+  FaGithub
 } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
@@ -105,6 +106,13 @@ export default function Footer() {
             className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-3 max-[370px]:mb-4 md:px-4"
           >
             <FaYoutube style={{ fill: "url(#footer-icons-gradient)" }} />
+          </Link>
+          <Link
+            href={"https://github.com/cusec/2024"}
+            target="_blank"
+            className="transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 px-3 max-[370px]:mb-4 md:px-4"
+          >
+            <FaGithub style={{ fill: "url(#footer-icons-gradient)" }} />
           </Link>
         </section>
       </motion.div>
