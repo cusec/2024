@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-<h4>Designed with 💜 by <a href="https://bavneetsandhu.com/" target="_blank">Bavneet Sandhu</a>, developed with 🧡 by <a href="https://www.linkedin.com/in/mfarabi/" target="_blank">Mumtahin Farabi</a></h4>
+<h4>Designed with 💜 by <a href="https://bavneetsandhu.com/" target="_blank">Bavneet Sandhu</a>, and developed with 🧡 by <a href="https://www.linkedin.com/in/mfarabi/" target="_blank">Mumtahin Farabi</a></h4>
 </div>
 
 ![image](https://github.com/cusec/2024/assets/54924158/dd2e480b-88b1-40f9-b024-b3394ca3a4d4)
