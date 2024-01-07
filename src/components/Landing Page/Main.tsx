@@ -18,20 +18,14 @@ const transitionConfig = (delay = 0) => ({
   bounce: 0.5,
 });
 
-const signUpLink = "https://www.tickettailor.com/events/cusec/943944";
-
-// Commented out after deadline to sign up as a speaker
-// const speakerSignUpLink ="https://docs.google.com/forms/d/e/1FAIpQLSekk6WN5YEMg-tRza9SbMTIar_mHFEUQ9jjLIgw8eF3YNmIog/viewform";
-
-const sponsorEmailLink =
-  "mailto:sponsor@cusec.net?subject=CUSEC 2024 Sponsorship Information Request";
 const locationLink = "https://maps.app.goo.gl/sCnZJ3VJRAM4Z1699";
 
 const Landingbox = () => {
   return (
     <motion.main {...fadeInConfig} transition={transitionConfig()}>
       <BlueBorderSquareBox>
-        <section className="py-8 px-8 text-center space-y-5 flex flex-col justify-center items-center">
+        <section className="pt-8 pb-4 px-8 text-center space-y-5 flex flex-col justify-center items-center">
+          {/* Logo Image */}
           <motion.div {...fadeInConfig} transition={transitionConfig(0.2)}>
             <Image
               src={logoPrimaryDark}
@@ -41,6 +35,8 @@ const Landingbox = () => {
               priority
             />
           </motion.div>
+
+          {/* Text */}
           <motion.p
             {...fadeInConfig}
             transition={transitionConfig(0.4)}
@@ -67,7 +63,7 @@ const Landingbox = () => {
             </Link>
           </motion.p>
 
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+          <div className="flex flex-col md:flex-row flex-wrap justify-center items-center md:space-x-4">
             <motion.div
               {...fadeInConfig}
               transition={transitionConfig(0.8)}
@@ -75,9 +71,9 @@ const Landingbox = () => {
             >
               <Link
                 href={"/schedule"}
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex justify-center items-center bg-[#FDF3FF] border-2 border-royalPurple px-[4rem] md:px-[6rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-royalPurple hover:text-white whitespace-nowrap"
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex justify-center items-center bg-pink-50 border-2 border-royalPurple px-[4rem] md:px-[6rem] py-3 mb-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-royalPurple hover:text-white whitespace-nowrap"
               >
-              Schedule
+                Schedule
               </Link>
             </motion.div>
 
@@ -88,9 +84,9 @@ const Landingbox = () => {
             >
               <Link
                 href={"/speakers"}
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex justify-center items-center bg-[#FDF3FF] border-2 border-royalBlue px-[4rem] md:px-[6rem] py-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-royalBlue hover:text-white whitespace-nowrap"
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex justify-center items-center bg-pink-50 border-2 border-royalBlue px-[4rem] md:px-[6rem] py-3 mb-3 text-center rounded-full uppercase text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-royalBlue hover:text-pink-50 whitespace-nowrap"
               >
-              Speakers
+                Speakers
               </Link>
             </motion.div>
 
@@ -101,7 +97,7 @@ const Landingbox = () => {
             >
               <Link
                 href={"/sponsors"}
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] justify-center items-center bg-[#FDF3FF] border-2 border-fuchsia-500 px-[4.1rem] md:px-[6rem] py-3 md:py-4 text-center rounded-full uppercase text-[18px] font-semibold text-fuchsia-500 tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-fuchsia-500 hover:text-white"
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] justify-center items-center bg-pink-50 border-2 border-fuchsia-500 px-[4.1rem] md:px-[6rem] py-3 mb-3 md:py-4 text-center rounded-full uppercase text-[18px] font-semibold text-fuchsia-500 tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-fuchsia-500 hover:text-pink-50 whitespace-nowrap"
               >
                 Sponsors
               </Link>
