@@ -151,6 +151,7 @@ export default function AboutUs() {
               <Image
                 src={carousel_image_1}
                 alt="People seated watching keynote speech"
+                priority
               />
             </motion.div>
           </SwiperSlide>
@@ -169,6 +170,7 @@ export default function AboutUs() {
               <Image
                 src={carousel_image_2}
                 alt="CUSEC 2023 team holding up banner"
+                priority
               />
             </motion.div>
           </SwiperSlide>
@@ -184,22 +186,38 @@ export default function AboutUs() {
               }
               className="flex justify-center lg:block"
             >
-              <Image src={carousel_image_3} alt="People playing board games" />
+              <Image
+                src={carousel_image_3}
+                alt="People playing board games"
+                priority
+              />
             </motion.div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="flex justify-center lg:block">
-              <Image src={carousel_image_4} alt="People during a workshop" />
+              <Image
+                src={carousel_image_4}
+                alt="People during a workshop"
+                priority
+              />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="flex justify-center lg:block">
-              <Image src={carousel_image_5} alt="Attendees under chandelier" />
+              <Image
+                src={carousel_image_5}
+                alt="Attendees under chandelier"
+                priority
+              />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="flex justify-center lg:block">
-              <Image src={carousel_image_6} alt="People playing card games" />
+              <Image
+                src={carousel_image_6}
+                alt="People playing card games"
+                priority
+              />
             </div>
           </SwiperSlide>
         </Swiper>
