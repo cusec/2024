@@ -37,7 +37,7 @@ const Landingbox = () => {
               src={logoPrimaryDark}
               alt="CUSEC 2024 logo primary dark"
               layout="responsive"
-              className="max-w-lg mx-auto"
+              className="max-w-lg mx-auto bobbing-animation-1"
               priority
             />
           </motion.div>
