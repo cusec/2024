@@ -1,5 +1,7 @@
 ## [CUSEC 2024 Website](https://2024.cusec.net)
 
+Designed with 💜 by [Bavneet Sandhu](https://bavneetsandhu.com/), developed with 🧡 by [Mumtahin Farabi](https://www.linkedin.com/in/mfarabi/)
+
 ![image](https://github.com/cusec/2024/assets/54924158/dd2e480b-88b1-40f9-b024-b3394ca3a4d4)
 
 This is the official repository for the 2024 edition of the CUSEC website.
