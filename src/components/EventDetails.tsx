@@ -37,6 +37,7 @@ export default function EventDetails({
   if (!isMobileScreen) {
     return (
       <button
+      aria-label="Event Details Button"
         className="relative uppercase text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium tracking-wider"
         onMouseEnter={() => toggleEventDetails()}
         onMouseLeave={() => toggleEventDetails()}

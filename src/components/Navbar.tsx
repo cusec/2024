@@ -127,7 +127,7 @@ export default function Navbar({ clicked }: ChildProps) {
                 transition={transitionConfig(0.9)}
               >
                 <button
-                  aria-label="Hamburger Button on Navbar"
+                  aria-label="Event Details Button"
                   className="relative uppercase text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium tracking-wider"
                   onMouseEnter={() => toggleEventDetails()}
                   onMouseLeave={() => toggleEventDetails()}
@@ -265,6 +265,7 @@ export default function Navbar({ clicked }: ChildProps) {
             About Us
           </NavLink>
           <button
+          aria-label="Event Details Button"
             className="relative uppercase text-white text-2xl font-semibold w-fit bg-clip-text hover:text-transparent bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot transition-all ease-in-out duration-500 hover:scale-110 md:hover:scale-125 md:text-sm md:px-3 md:py-2 md:font-medium tracking-wider"
             onMouseEnter={() => toggleEventDetails()}
             onMouseLeave={() => toggleEventDetails()}

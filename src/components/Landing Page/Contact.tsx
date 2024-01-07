@@ -197,6 +197,7 @@ export default function Contact() {
             className="flex justify-center mt-4"
           >
             <button
+            aria-label="Submit Button"
               type="submit"
               className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-white px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-royalBlue tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-royalBlue hover:text-white border-2 border-royalBlue"
             >

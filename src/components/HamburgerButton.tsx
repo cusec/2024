@@ -29,6 +29,7 @@ export default function HamburgerButton({
       className="flex md:hidden"
     >
       <button
+      aria-label="Hamburger Menu Button"
         className="transform transition ease-in-out duration-500 hover:scale-125 group"
         onClick={toggleMobileMenu}
       >
