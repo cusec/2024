@@ -80,6 +80,7 @@ export default function Footer() {
             </svg>
 
             <a
+            aria-label="Visit CUSEC's Facebook Page"
               href={"https://www.facebook.com/cusecofficial/"}
               target="_blank"
               rel="noopener noreferrer"
@@ -88,6 +89,7 @@ export default function Footer() {
               <FaFacebookF style={{ fill: "url(#footer-icons-gradient)" }} />
             </a>
             <a
+            aria-label="Visit CUSEC's Instagram Page"
               href={"https://www.instagram.com/cusecofficial/?hl=en"}
               target="_blank"
               rel="noopener noreferrer"
@@ -97,6 +99,7 @@ export default function Footer() {
             </a>
 
             <a
+            aria-label="Visit CUSEC's LinkedIn Page"
               href={"https://www.linkedin.com/company/cusec/mycompany/"}
               target="_blank"
               rel="noopener noreferrer"
@@ -106,6 +109,7 @@ export default function Footer() {
             </a>
 
             <a
+            aria-label="Visit CUSEC's YouTube Channel"
               href={"https://www.youtube.com/channel/UCZ7j8F6h1CxD-uC0od9rHBw"}
               target="_blank"
               rel="noopener noreferrer"
@@ -114,6 +118,7 @@ export default function Footer() {
               <FaYoutube style={{ fill: "url(#footer-icons-gradient)" }} />
             </a>
             <a
+            aria-label="Visit CUSEC's GitHub"
               href={"https://github.com/cusec/2024"}
               target="_blank"
               rel="noopener noreferrer"
@@ -126,6 +131,7 @@ export default function Footer() {
 
         <section className="text-pink-50 text-xs text-center flex px-6 lg:mx-24">
           <a
+          aria-label="Visit Bavneet's LinkedIn"
             href="https://www.linkedin.com/in/bavneetsandhu/"
             target="_blank"
             rel="noopener noreferrer"
@@ -135,6 +141,7 @@ export default function Footer() {
           </a>
           &nbsp;
           <a
+          aria-label="Visit Farabi's LinkedIn"
             href="https://www.linkedin.com/in/mfarabi/"
             target="_blank"
             rel="noopener noreferrer"
