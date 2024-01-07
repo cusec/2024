@@ -2,7 +2,13 @@
   {
     "Date": "January 11",
     "Day": "Thursday",
-    "items": [
+    "items": [{
+        "category": "1",
+        "title": "Conference Check-In",
+        "location": "Registration and Help Desk",
+        "start_time": "9:00 AM",
+        "end_time": "9:55 AM"
+      },
       {
         "category": "1",
         "title": "Opening Ceremony",
