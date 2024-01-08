@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 
 const fadeInConfigDecagon = {
   initial: { opacity: 0, scale: 0.8 },
-  whileInView: { opacity: 1, scale: 1},
+  whileInView: { opacity: 1, scale: 1 },
   viewport: { once: true },
 };
 
@@ -36,7 +36,7 @@ const transitionConfig = (delay = 0) => ({
   bounce: 0.5,
 });
 
-export default function About() {
+export default function GetToKnowUs() {
   return (
     <div className="">
       {/* Vertical grid of grey circles */}
@@ -83,23 +83,25 @@ export default function About() {
           <motion.div
             {...fadeInConfigDecagon}
             transition={transitionConfig(0.5)}
+            className="bobbing-animation-1"
           >
             <Decagon1
               image={decagon_gradient_1}
               TitleText={"10K+"}
               SubtitleText={"Attendees"}
-              countUpDelay = {0.5}
+              countUpDelay={0.5}
             />
           </motion.div>
           <motion.div
             {...fadeInConfigDecagon}
             transition={transitionConfig(0.7)}
+            className="bobbing-animation-4"
           >
             <Decagon1
               image={decagon_gradient_2}
               TitleText={"220+"}
               SubtitleText={"Speakers"}
-              countUpDelay = {0.7}
+              countUpDelay={0.7}
             />
           </motion.div>
         </section>
@@ -107,54 +109,54 @@ export default function About() {
           <motion.div
             {...fadeInConfigDecagon}
             transition={transitionConfig(0.3)}
+            className="bobbing-animation-3"
           >
             <Decagon1
               image={decagon_gradient_3}
               TitleText={"280+"}
               SubtitleText={"Sponsors"}
-              countUpDelay = {0.3}
+              countUpDelay={0.3}
             />
           </motion.div>
-          <div className="">
-            <motion.div
-              {...fadeInConfigDecagon}
-              transition={transitionConfig(1.1)}
-            >
-              <Decagon2
-                image={large_decagon}
-                TitleText={"22"}
-                SubtitleText={"Years"}
-                countUpDelay = {1.1}
-              />
-            </motion.div>
-          </div>
+          <motion.div
+            {...fadeInConfigDecagon}
+            transition={transitionConfig(1.1)}
+            className="bobbing-animation-1"
+          >
+            <Decagon2
+              image={large_decagon}
+              TitleText={"22"}
+              SubtitleText={"Years"}
+              countUpDelay={1.1}
+            />
+          </motion.div>
           <motion.div
             {...fadeInConfigDecagon}
             transition={transitionConfig(0.9)}
+            className="bobbing-animation-5"
           >
             <Decagon1
               image={decagon_gradient_4}
               TitleText={"500+"}
               SubtitleText={"VIP Members"}
-              countUpDelay = {0.9}
+              countUpDelay={0.9}
             />
           </motion.div>
         </section>
-
       </div>
 
-        <motion.div
-          {...fadeInConfigButton}
-          transition={transitionConfig(0.9)}
-          className="flex justify-center"
+      <motion.div
+        {...fadeInConfigButton}
+        transition={transitionConfig(0.9)}
+        className="flex justify-center"
+      >
+        <Link
+          className={`drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-royalBlue hover:bg-goldenApricot mx-auto px-5 md:px-10 py-1 mt-3 md:mt-6 text-center rounded-full uppercase md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
+          href={`/about`}
         >
-          <Link
-            className={`drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-royalBlue hover:bg-goldenApricot mx-auto px-5 md:px-10 py-1 mt-3 md:mt-6 text-center rounded-full uppercase md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-white`}
-            href={`/about`}
-          >
-            Learn More
-          </Link>
-        </motion.div>
+          Learn More
+        </Link>
+      </motion.div>
 
       <motion.span
         className="flex justify-end pb-8"
