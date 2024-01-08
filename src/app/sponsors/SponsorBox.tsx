@@ -31,41 +31,48 @@ const sizeClasses = {
 };
 
 interface SponsorBoxProps extends Sponsor {
-  animationClass: string; 
+  animationClass: string;
 }
 
 const SponsorBox = ({ logo, link, size, animationClass }: SponsorBoxProps) => (
-<motion.div
+  <motion.div
     {...animateInConfigImage}
     transition={transitionConfig(0.6)}
     className={`flex relative mx-auto w-full ${sizeClasses[size]}`}
->
+  >
     {/* This div acts as a container for the BlueBorderSquareBox and its gradient background */}
     <div className="relative w-full">
+      {/* Gradient Background */}
+      <motion.div
+        {...animateInConfigText}
+        transition={transitionConfig(0.8)}
+        className="bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-75 md:scale-[.99] top-[-17px] right-[-18px] absolute"
+      ></motion.div>
 
-        {/* Gradient Background */}
-        <motion.div
-            {...animateInConfigText}
-            transition={transitionConfig(0.8)}
-            className="bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-full h-full scale-75 md:scale-[.99] top-[-17px] right-[-18px] absolute"
-        ></motion.div>
-
-        {/* BlueBorderSquareBox */}
-        <BlueBorderSquareBox>
-            <a href={link} target="_blank" rel="noopener noreferrer">
-                <motion.div
-                    {...animateInConfigImage}
-                    transition={transitionConfig(0.9)}
-                    className="z-10 p-6 md:p-10 "
+      {/* BlueBorderSquareBox */}
+      <BlueBorderSquareBox>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <motion.div
+            {...animateInConfigImage}
+            transition={transitionConfig(0.9)}
+            className="z-10 p-6 md:p-10 "
           >
             <div className="group-hover:scale-110 transition ease-in-out duration-700">
-                    <Image src={logo.src} alt={logo.alt} layout="responsive" priority className={` ${animationClass}`}/>
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                layout="responsive"
+                priority
+                className={` ${animationClass}`}
+                width={100}
+                height={100}
+              />
             </div>
-                </motion.div>
-            </a>
-        </BlueBorderSquareBox>
+          </motion.div>
+        </a>
+      </BlueBorderSquareBox>
     </div>
-</motion.div>
+  </motion.div>
 );
 
 export default SponsorBox;
