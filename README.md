@@ -33,7 +33,6 @@ c. Speaker and Sponsor Promotion: The website should highlight the speakers and 
 
 d. Seamless User Experience: The website should be user-friendly, responsive, and accessible across various devices and browsers. It should offer intuitive navigation, quick access to information, and clear calls to action to enhance user engagement.
 
-e. Social Interaction: The website should integrate social media platforms to encourage networking, information sharing, and collaboration among attendees before, during, and after the conference.
 </details>
 
 <details>
@@ -53,11 +52,9 @@ e. News and Updates: A section for news and updates related to the conference, i
 
 f. FAQ and Support: A comprehensive FAQ section addressing common queries and providing support to attendees, speakers, sponsors, and volunteers.
 
-g. Social Media Integration: Integration with popular social media platforms to enable attendees to share conference updates, connect with fellow participants, and engage in discussions.
+g. Contact and Feedback: A contact form for general inquiries and feedback, along with contact information for specific conference organizers and departments.
 
-h. Contact and Feedback: A contact form for general inquiries and feedback, along with contact information for specific conference organizers and departments.
-
-i. Mobile Responsiveness: Ensuring the website is optimized for mobile devices to provide a seamless experience for users on smartphones and tablets.
+h. Mobile Responsiveness: Ensuring the website is optimized for mobile devices to provide a seamless experience for users on smartphones and tablets.
 
 </details>
 
