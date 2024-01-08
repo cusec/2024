@@ -1,8 +1,6 @@
-import { StaticImageData } from "next/image";
-
 // Structure for each sponsor's information
 export interface SponsorLogo {
-  src: StaticImageData;
+  src: string; // Changed from StaticImageData to string
   alt: string;
 }
 
@@ -13,41 +11,34 @@ export interface Sponsor {
   size: "lg" | "md" | "sm" | "xs";
 }
 
-// Import all sponsor logos
-import rbc_logo from "public/images/sponsor logos/rbc_logo.svg";
-import cse_logo from "public/images/sponsor logos/cse_logo.svg";
-import kinaxis_logo from "public/images/sponsor logos/kinaxis_logo.svg";
-import accenture_logo from "public/images/sponsor logos/accenture_logo.svg";
-import fellow_logo from "public/images/sponsor logos/fellow_logo.svg";
-
 export const sponsors: Sponsor[] = [
   {
     name: "RBC",
-    logo: { src: rbc_logo, alt: "RBC Logo" },
+    logo: { src: "/images/sponsor logos/rbc_logo.svg", alt: "RBC Logo" }, // Direct path as a string
     link: "https://www.rbcroyalbank.com/personal.html",
     size: "lg"
   },
   {
     name: "CSE",
-    logo: { src: cse_logo, alt: "CSE Logo" },
+    logo: { src: "/images/sponsor logos/cse_logo.svg", alt: "CSE Logo" }, // Direct path as a string
     link: "https://www.cse-cst.gc.ca/",
     size: "md"
   },
   {
     name: "Kinaxis",
-    logo: { src: kinaxis_logo, alt: "Kinaxis Logo" },
+    logo: { src: "/images/sponsor logos/kinaxis_logo.svg", alt: "Kinaxis Logo" }, // Direct path as a string
     link: "https://www.kinaxis.com/en",
     size: "sm"
   },
   {
     name: "Accenture",
-    logo: { src: accenture_logo, alt: "Accenture Logo" },
+    logo: { src: "/images/sponsor logos/accenture_logo.svg", alt: "Accenture Logo" }, // Direct path as a string
     link: "https://www.accenture.com/",
     size: "xs"
   },
   {
     name: "Fellow",
-    logo: { src: fellow_logo, alt: "Fellow Logo" },
+    logo: { src: "/images/sponsor logos/fellow_logo.svg", alt: "Fellow Logo" }, // Direct path as a string
     link: "https://fellow.app/",
     size: "xs"
   }

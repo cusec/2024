@@ -2,7 +2,7 @@
 
 import Fade from "@/components/Fade";
 import Main from "@/components/Landing Page/Main";
-import About from "@/components/Landing Page/About";
+import GetToKnowUs from "@/components/Landing Page/GetToKnowUs";
 import Sponsor from "@/components/Landing Page/Sponsor";
 import Tickets from "@/components/Landing Page/Tickets";
 import Contact from "@/components/Landing Page/Contact";
@@ -43,7 +43,7 @@ export default function Home() {
             id="about"
           >
             <Fade>
-              <About />
+              <GetToKnowUs />
             </Fade>
           </div>
           <div className="w-full gradientBackground" id="sponsor">

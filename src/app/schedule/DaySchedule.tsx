@@ -1,5 +1,8 @@
 import scheduleData from "./schedule.json";
 import { AddToCalendarButton } from "add-to-calendar-button-react";
+import Popup from "reactjs-popup";
+import BlueBorderSquareBox from "@/components/Landing Page/BlueBorderSquareBox";
+import Image from "next/image";
 
 // Define the types for your schedule items
 type ScheduleItem = {
@@ -252,11 +255,42 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
   return (
     <div className="my-10 rounded-lg bg-gradient-to-r from-royalPurple via-roseQuartz to-goldenApricot p-[2px] shadow-[0_0px_8px_rgba(0,0,0,0.5)]">
       <div className="bg-white rounded-lg py-5 px-6">
-        {/* Text for the date and day */}
-        <h2 className="text-[16px] md:text-[30px]">
-          <span className="font-semibold">{daySchedule["Date"]}, </span>
-          <span>{daySchedule["Day"]}</span>
-        </h2>
+        <div className="flex justify-between">
+          {/* Text for the date and day */}
+          <h2 className="text-[16px] md:text-[30px]">
+            <span className="font-semibold">{daySchedule["Date"]}, </span>
+            <span>{daySchedule["Day"]}</span>
+          </h2>
+
+          {/* View Map Button */}
+          <Popup
+            trigger={
+              <button
+                aria-label="View Map Button"
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] border-2 border-royalPurple hover:bg-royalPurple px-3 min-[390px]:px-5 md:px-8 2xs:py-2 text-center rounded-full uppercase text-[10px] xs:text-[12px] sm:text-[14px] md:text-[18px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-pink-50 whitespace-nowrap"
+              >
+                View Map
+              </button>
+            }
+            position="right center"
+            modal
+          >
+            {/* Map Popup */}
+            {/* Styled in globals.css */}
+            <BlueBorderSquareBox>
+              <div className="w-sm">
+
+              <Image
+                src="/images/conference_map.png"
+                alt="Conference Map"
+                layout="responsive"
+                width={1000}
+                height={1000}
+                />
+                </div>
+            </BlueBorderSquareBox>
+          </Popup>
+        </div>
         {/* Render all events and times */}
         {daySchedule.items.map((item, index) => (
           <div key={index} className={gridLayoutClasses}>
@@ -273,7 +307,7 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ dayIndex }) => {
         {/* Back to Top Button */}
         <div className="flex justify-center mt-10">
           <button
-          aria-label="Back to Top Button"
+            aria-label="Back to Top Button"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#AD65E3] px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[14px] md:text-[18px] font-semibold text-white tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:bg-goldenApricot hover:text-white"
           >

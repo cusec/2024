@@ -6,6 +6,8 @@ const { resolve } = require('path');
 const pages = [
   { url: '/', changefreq: 'daily', priority: 0.7 },
   { url: '/about', changefreq: 'daily', priority: 0.5 },
+  { url: '/schedule', changefreq: 'daily', priority: 0.5 },
+  { url: '/speakers', changefreq: 'daily', priority: 0.5 },
   { url: '/sponsors', changefreq: 'daily', priority: 0.5 },
   { url: '/privacy', changefreq: 'daily', priority: 0.5 },
   { url: '/code-of-conduct', changefreq: 'daily', priority: 0.5 },

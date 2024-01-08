@@ -20,6 +20,16 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://2024.cusec.net/schedule</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://2024.cusec.net/speakers</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://2024.cusec.net/privacy</loc>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
