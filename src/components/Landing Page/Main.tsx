@@ -101,7 +101,7 @@ const Landingbox = () => {
             >
               <Link
                 href={"/sponsors"}
-                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] justify-center items-center bg-pink-50 border-2 border-fuchsia-500 px-[4.1rem] md:px-[6rem] py-3 mb-3 md:py-4 text-center rounded-full uppercase text-[18px] font-semibold text-fuchsia-500 tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-fuchsia-500 hover:text-pink-50 whitespace-nowrap"
+                className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] justify-center items-center bg-pink-50 border-2 border-fuchsia-500 px-[4.1rem] md:px-[6rem] py-3 mb-3 text-center rounded-full uppercase text-[18px] font-semibold text-fuchsia-500 tracking-wide transition ease-in-out duration-500 hover:scale-105 hover:bg-fuchsia-500 hover:text-pink-50 whitespace-nowrap"
               >
                 Sponsors
               </Link>
