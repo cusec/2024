@@ -12,14 +12,16 @@ export default function DayButton(props: DayButtonProps) {
   // Determine the class names based on the 'selected' prop
   const bgColor = props.selected
     ? "bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot"
-    : "bg-gray-200";
+    : "bg-gray-200 group-hover:bg-pink-300";
   const textColor = props.selected ? "text-transparent" : "text-black";
   const dotColor = props.selected ? "bg-pink-50" : "bg-transparent";
-  const dayTextColor = props.selected ? "text-transparent" : "text-gray-600";
+  const dayTextColor = props.selected
+    ? "text-transparent"
+    : "text-gray-600 group-hover:text-purple-400";
 
   return (
     <section
-      className="flex flex-col justify-center items-center rounded-lg hover:cursor-pointer transition-all ease-in-out duration-1000"
+      className="flex flex-col justify-center items-center rounded-lg hover:cursor-pointer transition-all ease-in-out duration-1000 group"
       onClick={props.onDayButtonClick}
     >
       {/* Text for day of the conference, for example: 'Day One' */}
