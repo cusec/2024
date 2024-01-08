@@ -1,12 +1,11 @@
 import BlueBorderSquareBox from "./BlueBorderSquareBox";
 import Link from "next/link";
 import Image from "next/image";
-import sponsor_logos from "@/assets/sponsor_logos.png";
-import rbc_logo_2 from "public/images/sponsor logos/rbc_logo_2.svg";
-import cse_logo from "public/images/sponsor logos/cse_logo.svg";
-import kinaxis_logo from "public/images/sponsor logos/kinaxis_logo.svg";
-import accenture_logo from "public/images/sponsor logos/accenture_logo.svg";
-import fellow_logo from "public/images/sponsor logos/fellow_logo.svg";
+// import rbc_logo_2 from "public/images/sponsor logos/rbc_logo_2.svg";
+// import cse_logo from "public/images/sponsor logos/cse_logo.svg";
+// import kinaxis_logo from "public/images/sponsor logos/kinaxis_logo.svg";
+// import accenture_logo from "public/images/sponsor logos/accenture_logo.svg";
+// import fellow_logo from "public/images/sponsor logos/fellow_logo.svg";
 import { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
@@ -90,11 +89,13 @@ export default function Sponsor() {
                       className="transition ease-in-out duration-700 hover:scale-110"
                     >
                       <Image
-                        src={rbc_logo_2}
+                        src={"/images/sponsor logos/rbc_logo_2.svg"}
                         alt="RBC Logo"
                         layout="responsive"
                         objectFit="contain"
                         priority
+                        width={50}
+                        height={50}
                       />
                     </a>
                   </motion.div>
@@ -114,11 +115,13 @@ export default function Sponsor() {
                         className="transition ease-in-out duration-700 hover:scale-110"
                       >
                         <Image
-                          src={cse_logo}
+                          src={"/images/sponsor logos/cse_logo.svg"}
                           alt="CSE Logo"
                           layout="responsive"
                           objectFit="contain"
                           priority
+                          width={50}
+                          height={50}
                         />
                       </a>
                     </motion.div>
@@ -135,11 +138,13 @@ export default function Sponsor() {
                         className="transition ease-in-out duration-700 hover:scale-110"
                       >
                         <Image
-                          src={kinaxis_logo}
+                          src={"/images/sponsor logos/kinaxis_logo.svg"}
                           alt="Kinaxis Logo"
                           layout="responsive"
                           objectFit="contain"
                           priority
+                          width={50}
+                          height={50}
                         />
                       </a>
                     </motion.div>
@@ -157,11 +162,13 @@ export default function Sponsor() {
                           className="transition ease-in-out duration-700 hover:scale-110"
                         >
                           <Image
-                            src={accenture_logo}
+                            src={"images/sponsor logos/accenture_logo.svg"}
                             alt="Accenture Logo"
                             layout="responsive"
                             objectFit="contain"
                             priority
+                            width={50}
+                            height={50}
                           />
                         </a>
                       </motion.div>
@@ -177,11 +184,13 @@ export default function Sponsor() {
                           className="transition ease-in-out duration-700 hover:scale-110"
                         >
                           <Image
-                            src={fellow_logo}
+                            src={"images/sponsor logos/fellow_logo.svg"}
                             alt="Fellow Logo"
                             layout="responsive"
                             objectFit="contain"
                             priority
+                            width={50}
+                            height={50}
                           />
                         </a>
                       </motion.div>
