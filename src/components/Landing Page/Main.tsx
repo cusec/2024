@@ -51,11 +51,11 @@ const Landingbox = () => {
           >
             January 11-13
             <Image
-              src="/images/grey-ellipse.svg"
+              src="/images/cusec logos/grey-ellipse.svg"
               alt="Grey Ellipse Icon"
               className="inline-block mx-3"
-              width={5}
-              height={5}
+              width={6}
+              height={6}
             />
             <Link
               href={locationLink}
