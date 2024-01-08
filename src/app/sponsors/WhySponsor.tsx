@@ -102,7 +102,7 @@ export default function WhyJoin() {
                 <motion.div
                   {...animateInConfigImage}
                   transition={transitionConfig(0.3)}
-                  className="flex justify-center"
+                  className="flex justify-center bobbing-animation-3"
                 >
                   <WhyJoinDecagon
                     BackgroundImage={learn_decagon}
@@ -116,7 +116,7 @@ export default function WhyJoin() {
                 <motion.div
                   {...animateInConfigImage}
                   transition={transitionConfig(0.9)}
-                  className="flex justify-center"
+                  className="flex justify-center bobbing-animation-1"
                 >
                   <WhyJoinDecagon
                     BackgroundImage={connect_decagon}
@@ -131,7 +131,7 @@ export default function WhyJoin() {
                 <motion.div
                   {...animateInConfigImage}
                   transition={transitionConfig(0.6)}
-                  className="flex justify-center"
+                  className="flex justify-center bobbing-animation-5"
                 >
                   <WhyJoinDecagon
                     BackgroundImage={discover_decagon}
