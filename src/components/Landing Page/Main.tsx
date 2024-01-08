@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoPrimaryDark from "src/assets/logo-primary-dark.svg";
-import greyEllipse from "src/assets/grey-ellipse.svg";
 import BlueBorderSquareBox from "./BlueBorderSquareBox";
 import { motion } from "framer-motion";
 
@@ -28,10 +26,12 @@ const Landingbox = () => {
           {/* Logo Image */}
           <motion.div {...fadeInConfig} transition={transitionConfig(0.2)}>
             <Image
-              src={logoPrimaryDark}
+              src="/images/cusec logos/logo-primary-dark.svg"
               alt="CUSEC 2024 logo primary dark"
               layout="responsive"
               className="max-w-lg mx-auto bobbing-animation-1"
+              width={50}
+              height={50}
               priority
             />
           </motion.div>
@@ -51,9 +51,11 @@ const Landingbox = () => {
           >
             January 11-13
             <Image
-              src={greyEllipse}
+              src="/images/grey-ellipse.svg"
               alt="Grey Ellipse Icon"
               className="inline-block mx-3"
+              width={5}
+              height={5}
             />
             <Link
               href={locationLink}
