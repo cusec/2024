@@ -2,11 +2,11 @@ import BlueBorderSquareBox from "./BlueBorderSquareBox";
 import Link from "next/link";
 import Image from "next/image";
 import sponsor_logos from "@/assets/sponsor_logos.png";
-// import rbc_logo_2 from "public/images/sponsor logos/rbc_logo_2.svg";
-// import cse_logo from "public/images/sponsor logos/cse_logo.svg";
-// import kinaxis_logo from "public/images/sponsor logos/kinaxis_logo.svg";
-// import accenture_logo from "public/images/sponsor logos/accenture_logo.svg";
-// import fellow_logo from "public/images/sponsor logos/fellow_logo.svg";
+import rbc_logo_2 from "public/images/sponsor logos/rbc_logo_2.svg";
+import cse_logo from "public/images/sponsor logos/cse_logo.svg";
+import kinaxis_logo from "public/images/sponsor logos/kinaxis_logo.svg";
+import accenture_logo from "public/images/sponsor logos/accenture_logo.svg";
+import fellow_logo from "public/images/sponsor logos/fellow_logo.svg";
 import { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
@@ -70,6 +70,7 @@ export default function Sponsor() {
                   className="grid grid-rows-[20%_1fr_20%] grid-cols-2 gap-2 p-4"
                   style={{ aspectRatio: "1 / 1" }}
                 >
+
                   {/* The bobbing animation is defined in globals.css */}
 
                   {/* Blank top row */}
@@ -89,13 +90,11 @@ export default function Sponsor() {
                       className="transition ease-in-out duration-700 hover:scale-110"
                     >
                       <Image
-                        src="/images/sponsor logos/rbc_logo_2.svg"
+                        src={rbc_logo_2}
                         alt="RBC Logo"
                         layout="responsive"
                         objectFit="contain"
                         priority
-                        width={100}
-                        height={100}
                       />
                     </a>
                   </motion.div>
@@ -115,13 +114,11 @@ export default function Sponsor() {
                         className="transition ease-in-out duration-700 hover:scale-110"
                       >
                         <Image
-                          src="/images/sponsor logos/cse_logo.svg"
+                          src={cse_logo}
                           alt="CSE Logo"
                           layout="responsive"
                           objectFit="contain"
                           priority
-                          width={100}
-                          height={100}
                         />
                       </a>
                     </motion.div>
@@ -138,13 +135,11 @@ export default function Sponsor() {
                         className="transition ease-in-out duration-700 hover:scale-110"
                       >
                         <Image
-                          src="/images/sponsor logos/kinaxis_logo.svg"
+                          src={kinaxis_logo}
                           alt="Kinaxis Logo"
                           layout="responsive"
                           objectFit="contain"
                           priority
-                          width={100}
-                          height={100}
                         />
                       </a>
                     </motion.div>
@@ -162,13 +157,11 @@ export default function Sponsor() {
                           className="transition ease-in-out duration-700 hover:scale-110"
                         >
                           <Image
-                            src="/images/sponsor logos/accenture_logo.svg"
+                            src={accenture_logo}
                             alt="Accenture Logo"
                             layout="responsive"
                             objectFit="contain"
                             priority
-                            width={100}
-                            height={100}
                           />
                         </a>
                       </motion.div>
@@ -184,13 +177,11 @@ export default function Sponsor() {
                           className="transition ease-in-out duration-700 hover:scale-110"
                         >
                           <Image
-                            src="/images/sponsor logos/fellow_logo.svg"
+                            src={fellow_logo}
                             alt="Fellow Logo"
                             layout="responsive"
                             objectFit="contain"
                             priority
-                            width={100}
-                            height={100}
                           />
                         </a>
                       </motion.div>
