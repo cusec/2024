@@ -185,7 +185,7 @@ export default function SpeakerCard(props: SpeakerCardProps) {
                   </div>
                   {/* Wrapper for centering icons */}
                     {/* Dynamically rendered Social Media Icons */}
-                    <span className="flex justify-">
+                    <span className="flex justify-center space-x-5 xs:space-x-2 sm:space-x-5">
                       {renderedIcons}
                     </span>
 
