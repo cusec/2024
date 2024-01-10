@@ -170,7 +170,10 @@ export default function SpeakerCard(props: SpeakerCardProps) {
               <div className="flex flex-col items-center transition-opacity duration-700 ease-in-out px-4 py-6 text-[12px] md:text-[16px] max-h-[60vh] overflow-y-auto">
                 <div className="flex justify-between items-center w-full">
                   {/* Invisible Spacer button to align the icons to the center */}
-                  <div className="invisible hidden sm390:block">
+                  <div
+                    className="invisible"
+                    // className="invisible hidden sm390:block"
+                  >
                     <button
                       aria-label="Invisible Spacer"
                       className="opacity-0 pointer-events-none drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] border-2 border-royalPurple hover:bg-royalPurple rounded-full uppercase px-3 text-[30px] font-semibold text-royalPurple transition ease-in-out duration-500 hover:scale-110 hover:text-pink-50"
@@ -179,12 +182,10 @@ export default function SpeakerCard(props: SpeakerCardProps) {
                     </button>
                   </div>
                   {/* Wrapper for centering icons */}
-                  <span className="flex-grow flex justify-center">
                     {/* Dynamically rendered Social Media Icons */}
                     <span className="flex justify-center space-x-5 xs:space-x-2 sm:space-x-5">
                       {renderedIcons}
                     </span>
-                  </span>
 
                   {/* Cross Button aligned to the right */}
                   <button
