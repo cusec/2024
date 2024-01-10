@@ -96,86 +96,96 @@ export default function SpeakerCard(props: SpeakerCardProps) {
   );
 
   return (
-    <BlueBorderSquareBox teamCard={true}>
-      <div>
-        <div className="flex flex-col justify-center items-center mx-6 mt-8 group self-start mb-2">
-          <div className="aspect-square rounded-full bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-[140px] md:w-[165px] relative transition-opacity duration-700 ease-in-out">
-            {/* Picture of speaker */}
-            {props.image && (
-              <Image
-                src={props.image}
-                alt={"Image of " + props.name}
-                layout="fill"
-                objectFit="cover"
-                className="overflow-none p-1"
-              />
-            )}
-          </div>
-
-          {/* Name */}
-          <motion.div {...animateInConfig2} transition={transitionConfig(0.5)}>
-            <div className="relative">
-              <span
-                className="whitespace-nowrap font-semibold md:text-[20px]
-            absolute transition-opacity duration-700 ease-in-out top-0 left-1/2 transform -translate-x-1/2 mt-2"
-              >
-                {props.name}
-              </span>
-            </div>
-          </motion.div>
-
-          {/* Role text */}
-          <motion.div {...animateInConfig2} transition={transitionConfig(0.75)}>
-            <div className="text-center transition-opacity duration-700 ease-in-out text-[12px] md:text-[18px] mt-8 md:mt-10">
-              {props.role}
-            </div>
-          </motion.div>
-
-          {/* Pagination circles */}
-          <motion.div
-            {...animateInConfig1}
-            transition={transitionConfig(0.75)}
-            className="flex space-x-1 sm:mt-8 mt-8"
-          >
-            <Popup
-              trigger={
-                <button
-                  aria-label="View Map Button"
-                  className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] border-2 border-royalPurple hover:bg-royalPurple px-3 min-[390px]:px-5 md:px-8 py-2 text-center rounded-full uppercase text-[10px] xs:text-[12px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 group-hover:scale-110 hover:text-pink-50 whitespace-nowrap"
-                >
-                  Learn more
-                </button>
-              }
-              position="right center"
-              modal
-            >
-              {/* Map Popup */}
-              {/* Styled in globals.css */}
-              <BlueBorderSquareBox>
-                <div className="bg-pink-50">
-                  <div className="transition-opacity duration-700 ease-in-out px-4 py-6 text-[12px] md:text-[16px] max-h-[60vh] overflow-y-auto">
-                    {/* Dynamically rendered Social Media Icons */}
-                    <span className="flex justify-center space-x-5 xs:space-x-2 sm:space-x-5">
-                      {renderedIcons}
-                    </span>
-
-                    {/* Description text */}
-                    <div className="mt-4">
-                      {props.description.split("\\n").map((line, index) => (
-                        <span key={index}>
-                          {line}
-                          <br />
-                          <br />
-                        </span>
-                      ))}
-                    </div>
+    <motion.div
+      {...animateInConfig1}
+      transition={transitionConfig(0)}
+      className="sm:mt-8 mt-8 group hover:cursor-pointer"
+    >
+      <Popup
+        trigger={
+          <div>
+            <BlueBorderSquareBox teamCard={true}>
+              <div>
+                <div className="flex flex-col justify-center items-center mx-6 mt-8 self-start mb-2">
+                  <div className="aspect-square rounded-full bg-gradient-to-br from-royalPurple via-roseQuartz to-goldenApricot w-[140px] md:w-[165px] relative transition-opacity duration-700 ease-in-out">
+                    {/* Picture of speaker */}
+                    {props.image && (
+                      <Image
+                        src={props.image}
+                        alt={"Image of " + props.name}
+                        layout="fill"
+                        objectFit="cover"
+                        className="overflow-none p-1"
+                      />
+                    )}
                   </div>
+
+                  {/* Name */}
+                  <motion.div
+                    {...animateInConfig2}
+                    transition={transitionConfig(0.5)}
+                  >
+                    <div className="relative">
+                      <span
+                        className="whitespace-nowrap font-semibold md:text-[20px]
+              absolute transition-opacity duration-700 ease-in-out top-0 left-1/2 transform -translate-x-1/2 mt-2"
+                      >
+                        {props.name}
+                      </span>
+                    </div>
+                  </motion.div>
+
+                  {/* Role text */}
+                  <motion.div
+                    {...animateInConfig2}
+                    transition={transitionConfig(0.75)}
+                  >
+                    <div className="text-center transition-opacity duration-700 ease-in-out text-[12px] md:text-[18px] mt-8 md:mt-10">
+                      {props.role}
+                    </div>
+                  </motion.div>
+
+                  {/* Learn More Button */}
+                  <motion.div>
+                    <button
+                      aria-label="View Map Button"
+                      className="mt-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] border-2 border-royalPurple group-hover:bg-royalPurple px-3 min-[390px]:px-4 md:px-5 py-2 text-center rounded-full uppercase text-[10px] xs:text-[12px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 group-hover:scale-110 group-hover:text-pink-50 whitespace-nowrap"
+                    >
+                      Learn more
+                    </button>
+                  </motion.div>
                 </div>
-              </BlueBorderSquareBox>
-            </Popup>
-          </motion.div>
-        </div>
-      </div>
-    </BlueBorderSquareBox>
+              </div>
+            </BlueBorderSquareBox>
+          </div>
+        }
+        position="right center"
+        modal
+      >
+        {/* Map Popup */}
+        {/* Styled in globals.css */}
+        <BlueBorderSquareBox>
+          <div className="bg-pink-50">
+            <div className="transition-opacity duration-700 ease-in-out px-4 py-6 text-[12px] md:text-[16px] max-h-[60vh] overflow-y-auto">
+              {/* Dynamically rendered Social Media Icons */}
+              <span className="flex justify-center space-x-5 xs:space-x-2 sm:space-x-5">
+                {renderedIcons}
+              </span>
+
+              {/* Description text */}
+              <div className="mt-4">
+                {props.description.split("\\n").map((line, index) => (
+                  <span key={index}>
+                    {line}
+                    <br />
+                    <br />
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </BlueBorderSquareBox>
+      </Popup>
+    </motion.div>
   );
 }
