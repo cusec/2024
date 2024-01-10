@@ -6,13 +6,7 @@ import DayButton from "./DayButton";
 import DaySchedule from "./DaySchedule";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Keyboard,
-} from "swiper/modules";
+import { Navigation, Pagination, A11y, Keyboard } from "swiper/modules";
 
 // import "swiper/css";
 import "swiper/css/bundle";
@@ -98,13 +92,17 @@ export default function Schedule() {
               className="flex justify-center"
             >
               <h1 className="text-center text-[28px] md:text-[40px] font-semibold tracking-tight w-fit">
-                January 2024 Schedule
+                January 2024 Schedule{" "}
+                {/* <section className="tooltip tooltip-bottom border border-red-500 text-[20px]" data-tip="Hover/Click on an event to add it to your calendar!">
+                  <button> Info</button>
+                </section> */}
                 <motion.hr
                   {...fadeInConfigText}
                   transition={transitionConfig(0.2)}
                   className="max-w-[3rem] md:max-w-[4rem] h-2 bg-pink-300 mb-2 ml-[9rem] md:ml-[13rem]"
                 />
               </h1>
+              &nbsp;
             </motion.span>
 
             {/* Buttons to select the day */}
