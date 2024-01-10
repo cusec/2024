@@ -123,7 +123,7 @@ export default function SpeakerCard(props: SpeakerCardProps) {
                   {/* Name */}
                   <motion.div
                     {...animateInConfig2}
-                    transition={transitionConfig(0.5)}
+                    transition={transitionConfig(0)}
                   >
                     <div className="relative">
                       <span
@@ -138,7 +138,7 @@ export default function SpeakerCard(props: SpeakerCardProps) {
                   {/* Role text */}
                   <motion.div
                     {...animateInConfig2}
-                    transition={transitionConfig(0.75)}
+                    transition={transitionConfig(0.1)}
                   >
                     <div className="text-center transition-opacity duration-700 ease-in-out text-[12px] md:text-[18px] mt-8 md:mt-10">
                       {props.role}
@@ -146,7 +146,9 @@ export default function SpeakerCard(props: SpeakerCardProps) {
                   </motion.div>
 
                   {/* Learn More Button */}
-                  <motion.div>
+                  <motion.div
+                  {...animateInConfig2}
+                    transition={transitionConfig(0.2)}>
                     <button
                       aria-label="Learn More Button"
                       className="mt-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] border-2 border-royalPurple group-hover:bg-royalPurple px-3 min-[390px]:px-4 md:px-5 py-2 text-center rounded-full uppercase text-[10px] xs:text-[12px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 group-hover:scale-110 group-hover:text-pink-50 whitespace-nowrap"
@@ -211,7 +213,7 @@ export default function SpeakerCard(props: SpeakerCardProps) {
                     </span>
                   ))}
                 </div>
-                {/* Learn More Button */}
+                {/* Close Button */}
                 <motion.div>
                   <button
                     onClick={() => {
