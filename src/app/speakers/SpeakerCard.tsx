@@ -164,7 +164,9 @@ export default function SpeakerCard(props: SpeakerCardProps) {
         closeOnDocumentClick={false}
       >
         {/* Not sure if this is the best way to do this, but it works for now. */}
-        {(close) => (
+        {
+        // @ts-ignore
+          (close) => (
           <BlueBorderSquareBox>
             <div className="bg-pink-50">
               <div className="flex flex-col items-center transition-opacity duration-700 ease-in-out px-4 py-6 text-[12px] md:text-[16px] max-h-[60vh] overflow-y-auto">
@@ -183,7 +185,7 @@ export default function SpeakerCard(props: SpeakerCardProps) {
                   </div>
                   {/* Wrapper for centering icons */}
                     {/* Dynamically rendered Social Media Icons */}
-                    <span className="flex justify-center space-x-5 xs:space-x-2 sm:space-x-5">
+                    <span className="flex justify-">
                       {renderedIcons}
                     </span>
 
