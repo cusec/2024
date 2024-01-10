@@ -73,6 +73,7 @@ export default function Sponsors() {
             </Fade>
           </div>
         </div>
+
         <div className="flex flex-col items-center mt-20">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full md:-mt-3 mb-16">
             <Fade>
@@ -80,13 +81,14 @@ export default function Sponsors() {
             </Fade>
           </div>
         </div>
-        <div className="flex flex-col items-center mt-20">
+
+        {/* <div className="flex flex-col items-center mt-20">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full md:-mt-3 mb-16">
             <Fade>
               <PastSponsors />
             </Fade>
           </div>
-        </div>
+        </div> */}
 
         <div className="flex flex-col items-center">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full md:-mt-3 mb-16">
