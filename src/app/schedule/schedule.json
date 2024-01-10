@@ -211,7 +211,7 @@
         "end_time": "2:55 PM",
         "items": [
           {
-            "title": "CSE Workshop",
+            "title": "CSE Workshop - My First Cyber Security Chatbot",
             "location": "Workshop Room",
             "start_time": "2:00 PM",
             "end_time": "2:55 PM"
@@ -230,7 +230,7 @@
         "end_time": "3:55 PM",
         "items": [
           {
-            "title": "RBC Workshop - Kube 101: Run your workloads on K8s!",
+            "title": "RBC Workshop - Kube 101: Run Your Workloads on K8s!",
             "location": "Workshop Room",
             "start_time": "3:00 PM",
             "end_time": "3:55 PM"
