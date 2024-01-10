@@ -66,7 +66,7 @@ const iconConfigs: IconConfig[] = [
 
 // Base classes common to all icons
 const baseIconClasses =
-  "w-8 h-8 transition duration-700 ease-in-out border rounded-full flex justify-center items-center p-1 hover:text-white";
+  "w-8 h-8 transition duration-700 ease-in-out border rounded-full flex justify-center items-center p-1 hover:text-white hover:scale-125";
 
 export default function SpeakerCard(props: SpeakerCardProps) {
   // Dynamically render the icons based on what contact info is provided
@@ -148,7 +148,7 @@ export default function SpeakerCard(props: SpeakerCardProps) {
                   {/* Learn More Button */}
                   <motion.div>
                     <button
-                      aria-label="View Map Button"
+                      aria-label="Learn More Button"
                       className="mt-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] border-2 border-royalPurple group-hover:bg-royalPurple px-3 min-[390px]:px-4 md:px-5 py-2 text-center rounded-full uppercase text-[10px] xs:text-[12px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 group-hover:scale-110 group-hover:text-pink-50 whitespace-nowrap"
                     >
                       Learn more
@@ -161,30 +161,54 @@ export default function SpeakerCard(props: SpeakerCardProps) {
         }
         position="right center"
         modal
+        closeOnDocumentClick={false}
       >
-        {/* Map Popup */}
-        {/* Styled in globals.css */}
-        <BlueBorderSquareBox>
-          <div className="bg-pink-50">
-            <div className="transition-opacity duration-700 ease-in-out px-4 py-6 text-[12px] md:text-[16px] max-h-[60vh] overflow-y-auto">
-              {/* Dynamically rendered Social Media Icons */}
-              <span className="flex justify-center space-x-5 xs:space-x-2 sm:space-x-5">
-                {renderedIcons}
-              </span>
 
-              {/* Description text */}
-              <div className="mt-4">
-                {props.description.split("\\n").map((line, index) => (
-                  <span key={index}>
-                    {line}
-                    <br />
-                    <br />
-                  </span>
-                ))}
+        {/* Not sure if this is the best way to do this, but it works for now. */}
+        {(close) => (
+          <BlueBorderSquareBox>
+            <div className="bg-pink-50">
+              <button
+                onClick={() => {
+                  close();
+                }}
+                aria-label="Close Speaker Description Button Cross Symbol"
+                className="absolute right-5 top-2 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] border-2 border-royalPurple hover:bg-royalPurple rounded-full uppercase px-3 text-[30px] font-semibold text-royalPurple transition ease-in-out duration-500 hover:scale-110 hover:text-pink-50"
+              >
+                &times;
+              </button>
+              <div className="flex flex-col items-center transition-opacity duration-700 ease-in-out px-4 py-6 text-[12px] md:text-[16px] max-h-[60vh] overflow-y-auto">
+                {/* Dynamically rendered Social Media Icons */}
+                <span className="flex justify-center space-x-5 xs:space-x-2 sm:space-x-5">
+                  {renderedIcons}
+                </span>
+
+                {/* Description text */}
+                <div className="mt-4">
+                  {props.description.split("\\n").map((line, index) => (
+                    <span key={index}>
+                      {line}
+                      <br />
+                      <br />
+                    </span>
+                  ))}
+                </div>
+                {/* Learn More Button */}
+                <motion.div>
+                  <button
+                    onClick={() => {
+                      close();
+                    }}
+                    aria-label="Close Speaker Description Button"
+                    className="mt-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] border-2 border-royalPurple hover:bg-royalPurple px-3 min-[390px]:px-4 md:px-5 py-2 text-center rounded-full uppercase text-[10px] xs:text-[12px] font-semibold text-royalPurple tracking-wide transition ease-in-out duration-500 hover:scale-110 hover:text-pink-50 whitespace-nowrap"
+                  >
+                    Close
+                  </button>
+                </motion.div>
               </div>
             </div>
-          </div>
-        </BlueBorderSquareBox>
+          </BlueBorderSquareBox>
+        )}
       </Popup>
     </motion.div>
   );
