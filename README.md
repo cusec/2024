@@ -76,7 +76,7 @@ d. Branding: Incorporate the CUSEC logo and branding elements throughout the web
 
 [Figma Branding and Style Guide](https://www.figma.com/file/uvPCog1QeAfpLkw3eRxLF1/CUSEC-2024-Branding?type=design&node-id=183-2&mode=design&t=5TeTLy17LDfCZWSR-0)
 
-[Figma Design](https://www.figma.com/file/yx6j4khgn9WgRMLfq8o0kV/Website-Design%2FWireframing?type=design&node-id=1940-86&mode=design&t=smy2YQmjZ1dFw6Id-0)
+[Figma Design](https://www.figma.com/file/YIXUF9Ph6T0ZT2o7gk9QN9/CUSEC-Website-Design?type=design&node-id=6%3A1406&mode=design&t=wJ4S4yLATSqyw3WI-1)
 
 <details>
 <summary>Technical Requirements</summary>
