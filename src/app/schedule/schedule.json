@@ -131,13 +131,13 @@
         "items": [
           {
             "title": "Game Night",
-            "location": "RBC Theatre",
+            "location": "Workshop Room",
             "start_time": "8:00 PM",
             "end_time": "11:59 PM"
           },
           {
             "title": "Jeopardy",
-            "location": "Workshop Room",
+            "location": "RBC Theatre",
             "start_time": "9:00 PM",
             "end_time": "11:59 PM"
           }
