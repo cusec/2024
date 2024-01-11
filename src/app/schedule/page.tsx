@@ -31,7 +31,7 @@ export default function Schedule() {
     bounce: 0.2,
   });
 
-  // Assume the identifier is the titleText for simplicity, you can use more unique identifiers if necessary
+  // Selected Day 
   const [selectedDay, setSelectedDay] = useState<string>("Day One");
 
   // @ts-ignore
