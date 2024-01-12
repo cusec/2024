@@ -183,7 +183,7 @@ export default function Schedule() {
                 spaceBetween={50}
                 modules={[Navigation, Pagination, A11y, Keyboard]}
                 grabCursor={true}
-                initialSlide={0}
+                initialSlide={1}
                 navigation={true}
                 keyboard={true}
                 scrollbar={{ draggable: true }}
