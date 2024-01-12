@@ -32,7 +32,7 @@ export default function Schedule() {
   });
 
   // Selected Day 
-  const [selectedDay, setSelectedDay] = useState<string>("Day One");
+  const [selectedDay, setSelectedDay] = useState<string>("Day Two");
 
   // @ts-ignore
   const swiperRef = useRef<Swiper>(null);
