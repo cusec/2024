@@ -32,7 +32,7 @@ export default function Schedule() {
   });
 
   // Selected Day 
-  const [selectedDay, setSelectedDay] = useState<string>("Day Three");
+  const [selectedDay, setSelectedDay] = useState<string>("Day One");
 
   // @ts-ignore
   const swiperRef = useRef<Swiper>(null);
@@ -183,7 +183,7 @@ export default function Schedule() {
                 spaceBetween={50}
                 modules={[Navigation, Pagination, A11y, Keyboard]}
                 grabCursor={true}
-                initialSlide={2}
+                initialSlide={0}
                 navigation={true}
                 keyboard={true}
                 scrollbar={{ draggable: true }}
