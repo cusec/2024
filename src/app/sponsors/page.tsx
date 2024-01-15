@@ -90,7 +90,7 @@ export default function Sponsors() {
           </div>
         </div> */}
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mt-20 md:mt-0">
           <div className="mx-6 lg:mx-24 max-w-screen-lg lg:w-full md:-mt-3 mb-16">
             <Fade>
               <WhySponsor />
